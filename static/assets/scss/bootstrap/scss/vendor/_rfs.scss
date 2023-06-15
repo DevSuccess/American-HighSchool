@@ -49,10 +49,10 @@ $rfs-safari-iframe-resize-bug-fix: false !default;
 // Disable RFS by setting $enable-rfs to false
 $enable-rfs: true !default;
 
-// Cache $rfs-base-value unit
+// Cache $rfs-assets-value unit
 $rfs-base-value-unit: unit($rfs-base-value);
 
-// Remove px-unit from $rfs-base-value for calculations
+// Remove px-unit from $rfs-assets-value for calculations
 @if $rfs-base-value-unit == px {
   $rfs-base-value: $rfs-base-value / ($rfs-base-value * 0 + 1);
 }
