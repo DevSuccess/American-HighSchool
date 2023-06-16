@@ -1,8 +1,9 @@
+from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
-from home.models import upload_path
-
+import os
+import imghdr
 
 # Create your models here.
 DAYS = (
@@ -263,6 +264,30 @@ STATES = sorted([
 ], key=lambda x: x[1])
 
 
+def filetype(filename):
+    # Vérification si c'est une image
+    image_type = imghdr.what(filename)
+    if image_type:
+        return 'image'
+
+    # Vérification si c'est une vidéo (vous pouvez ajouter d'autres extensions de fichier vidéo si nécessaire)
+    video_extensions = ['.mp4', '.avi', '.mov']
+    if any(filename.lower().endswith(ext) for ext in video_extensions):
+        return 'video'
+
+    # Aucun type correspondant trouvé
+    return 'unknown'
+
+
+def upload_path(instance, filename):
+    title = instance.title.replace("'", "")
+    # Remplacer les espaces par des underscores et mettre tout en minuscule
+    title = title.lower().replace(" ", "_")
+    title = title.lower().replace(".", "_")
+    # Retourner le chemin complet avec le nom du fichier
+    return os.path.join(str(filetype(filename)), f"{title}", filename)
+
+
 # Create your models here.
 class Contact(models.Model):
     contact = models.CharField(max_length=200)
@@ -341,6 +366,7 @@ class Information(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()  # Valider avant de sauvegarder
         super().save(*args, **kwargs)
+
 
 class AboutList(models.Model):
     title = models.CharField(max_length=150)
