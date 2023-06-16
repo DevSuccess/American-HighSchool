@@ -12,7 +12,7 @@ Home
             class="header-bg h-100 d-flex flex-column justify-content-center p-5"
           >
             <h1 class="display-4 text-light mb-5">
-              Enjoy the best and a wonderful with AMHS
+              {{ video_description }}
             </h1>
             <div class="d-flex align-items-center pt-4 animated slideInDown">
               <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5"
@@ -22,7 +22,7 @@ Home
                 type="button"
                 class="btn-play"
                 data-bs-toggle="modal"
-                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
+                data-src="{{ video_url }}"
                 data-bs-target="#videoModal"
               >
                 <span></span>
@@ -55,7 +55,7 @@ Home
       <div class="modal-dialog">
         <div class="modal-content rounded-0">
           <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+            <h3 class="modal-title" id="exampleModalLabel">{{ video_title }}</h3>
             <button
               type="button"
               class="btn-close"
@@ -66,14 +66,15 @@ Home
           <div class="modal-body">
             <!-- 16:9 aspect ratio -->
             <div class="ratio ratio-16x9">
-              <iframe
-                class="embed-responsive-item"
-                src=""
-                id="video"
-                allowfullscreen
-                allowscriptaccess="always"
-                allow="autoplay"
-              ></iframe>
+{#              <iframe#}
+{#                class="embed-responsive-item"#}
+{#                    src=""#}
+{#                id="video"#}
+{#                allowfullscreen#}
+{#                allowscriptaccess="always"#}
+{#                allow="autoplay"#}
+{#              ></iframe>#}
+                <video width='150' controls ><source  type='video/mp4' src='{{ video_url }}'></video>
             </div>
           </div>
         </div>

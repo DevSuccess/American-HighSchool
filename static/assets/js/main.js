@@ -2,7 +2,7 @@
     "use strict";
 
     // Spinner
-    var spinner = function () {
+    let spinner = function () {
         setTimeout(function () {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
@@ -86,17 +86,26 @@
 
 
     // Modal Video
-    var $videoSrc;
+    let $videoSrc;
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
     console.log($videoSrc);
     $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        $("#video").attr('src', $videoSrc);
     })
     $('#videoModal').on('hide.bs.modal', function (e) {
         $("#video").attr('src', $videoSrc);
     })
+
+    // // Récupérer l'élément de la vidéo et le bouton de fermeture
+    // let videoPlayer = $('#videoPlayer')[0];
+    // let closeButton = $('#videoModal .btn-close');
+    //
+    // // Ajouter un gestionnaire d'événement de clic au bouton de fermeture
+    // closeButton.on('click', function() {
+    // // Mettre en pause la vidéo
+    // videoPlayer.pause();
 
     
 })(jQuery);
