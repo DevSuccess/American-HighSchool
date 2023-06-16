@@ -8,7 +8,8 @@ class ClassModelAdmin(admin.ModelAdmin):
     list_display = ['contact', 'contact_type', 'active', 'created_at', 'updated_at']
     list_editable = ['contact_type']
     filter = ['created_at', 'updated_at', 'active']
-    fields = ['contact','contact_type', 'active']
+    fields = ['contact', 'contact_type', 'active']
+    readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Information)
