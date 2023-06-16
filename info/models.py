@@ -1,6 +1,9 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
+import os
+import mimetypes
 
 # Create your models here.
 DAYS = (
@@ -261,6 +264,29 @@ STATES = sorted([
 ], key=lambda x: x[1])
 
 
+def filetype(filename):
+    mime_type, _ = mimetypes.guess_type(filename)
+    _, extension = os.path.splitext(filename)
+    image_extensions = [".png", ".jpg", ".jpeg", ".webp", ".gif", '.svg', ".bmp"]
+    video_extensions = [".mp4", ".avi", ".mov"]
+    if extension.lower() in image_extensions:
+        return 'image'
+    elif extension.lower() in video_extensions:
+        return 'video'
+    else:
+        return 'unknown'
+
+
+def upload_path(instance, filename):
+    title = instance.title.replace("'", "")
+    # Remplacer les espaces par des underscores et mettre tout en minuscule
+    title = title.lower().replace(" ", "_")
+    title = title.lower().replace(".", "_")
+
+    # Retourner le chemin complet avec le nom du fichier
+    return os.path.join(str(filetype(filename)), f"{title}", filename)
+
+
 # Create your models here.
 class Contact(models.Model):
     contact = models.CharField(max_length=200)
@@ -302,23 +328,36 @@ class Address(models.Model):
         return mark_safe(f"{self.url}")
 
 
-class Information(models.Model):
-    localisation = models.CharField(max_length=250)
-    day_begin = models.CharField(max_length=3, choices=DAYS)
-    day_end = models.CharField(max_length=3, choices=DAYS)
-    time_begin = models.TimeField()
-    time_end = models.TimeField()
-    contacts = models.ManyToManyField(Contact)
-    socials = models.ManyToManyField(Social)
-    addresses = models.ManyToManyField(Address)
-
-    def __str__(self):
-        return self.localisation
+class Hour(models.Model):
+    day = models.CharField(max_length=5, choices=DAYS)
+    open = models.TimeField()
+    close = models.TimeField()
+    active = models.BooleanField(default=True, null=True)
+    message = models.CharField(max_length=250, default='')
 
     def clean(self):
-        if self.day_begin == self.day_end or self.time_begin == self.time_end:
+        if self.open == self.close:
             raise ValidationError('Values must be different')
 
+    def __str__(self):
+        return self.day
+
+    def save(self, *args, **kwargs):
+        self.full_clean()  # Valider avant de sauvegarder
+        super().save(*args, **kwargs)
+
+
+class Information(models.Model):
+    name = models.CharField(max_length=150)
+    addresses = models.ForeignKey(Address, on_delete=models.CASCADE, null=True)
+    contacts = models.ForeignKey(Contact, on_delete=models.CASCADE, null=True)
+    hours = models.ForeignKey(Hour, on_delete=models.CASCADE)
+    socials = models.ForeignKey(Social, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    def clean(self):
         exist_records = Information.objects.count()
         if exist_records >= 1 and not self.pk:
             raise ValidationError('One values only')
@@ -326,3 +365,29 @@ class Information(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()  # Valider avant de sauvegarder
         super().save(*args, **kwargs)
+
+
+class AboutList(models.Model):
+    title = models.CharField(max_length=150)
+    status = models.BooleanField(default=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+
+class About(models.Model):
+    title = models.CharField(max_length=150)
+    libel = models.CharField(max_length=250)
+    active = models.BooleanField(default=True)
+    image = models.FileField(
+        upload_to=upload_path,
+        validators=[
+            FileExtensionValidator(allowed_extensions=['png', 'jpg', 'gif', 'jpeg', 'webp', 'svg', 'bmp'])
+        ], default='', null=True, blank=True)
+    content = models.TextField()
+    lists = models.ForeignKey(AboutList, on_delete=models.CASCADE, null=True)
+    created_at = models.DateTimeField(auto_now=True, null=True)
+    updated_at = models.DateTimeField(auto_now_add=True, null=True)
+
+    def admin_photo(self):
+        return mark_safe(f"<a href='{self.image.url}'><img src='{self.image.url}' width='100' /><a/>")

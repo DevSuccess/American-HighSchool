@@ -4,7 +4,7 @@ from . import models
 
 # Register your models here.
 @admin.register(models.Contact)
-class ClassModelAdmin(admin.ModelAdmin):
+class ContactModelAdmin(admin.ModelAdmin):
     list_display = ['contact', 'contact_type', 'active', 'created_at', 'updated_at']
     list_editable = ['contact_type']
     filter = ['created_at', 'updated_at', 'active']
@@ -14,9 +14,8 @@ class ClassModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Information)
 class InformationModelAdmin(admin.ModelAdmin):
-    list_display = ['localisation', 'day_begin', 'day_end', 'time_begin', 'time_end']
-    fields = ['localisation', 'day_begin', 'day_end', 'time_begin', 'time_end', 'contacts', 'socials']
-    list_editable = ['day_begin', 'day_end', 'time_begin', 'time_end']
+    list_display = ['name', 'addresses', 'contacts', 'hours', 'socials']
+    fields = ['name', 'addresses', 'contacts', 'hours', 'socials']
 
 
 @admin.register(models.Social)
@@ -27,5 +26,26 @@ class SocialModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Address)
 class AddressModelAdmin(admin.ModelAdmin):
-    fields = ['street', 'city', 'url', 'state', 'zip_code', 'active']
-    list_display = ['street', 'city', 'admin_url', 'state', 'zip_code', 'active', 'updated_at']
+    fields = ['street', 'city', 'active', 'url', 'state', 'zip_code', ]
+    list_display = ['street', 'city', 'active', 'url', 'state', 'zip_code', 'updated_at']
+
+
+@admin.register(models.Hour)
+class HourModelAdmin(admin.ModelAdmin):
+    list_display_links = ['day']
+    list_display = ['day', 'open', 'close', 'active', 'message']
+    fields = ['day', 'open', 'close', 'active', 'message']
+    list_editable = ['open', 'close']
+
+
+@admin.register(models.About)
+class AboutModelAdmin(admin.ModelAdmin):
+    fields = ['title', 'libel', 'image', 'active', 'content', 'lists']
+    list_display = ['title', 'libel', 'admin_photo', 'active', 'content']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.AboutList)
+class AboutModelAdmin(admin.ModelAdmin):
+    fields = ['title', 'status']
+    list_display = ['title', 'status']

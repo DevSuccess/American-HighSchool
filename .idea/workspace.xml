@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_topbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/migrations/0002_address_information_addresses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/migrations/0003_address_url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/migrations/0004_alter_address_state.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/migrations/0005_alter_address_url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +104,8 @@
       <updated>1686851814056</updated>
       <workItem from="1686851941012" duration="14081000" />
       <workItem from="1686892033068" duration="26373000" />
-      <workItem from="1686921781074" duration="831000" />
+      <workItem from="1686921781074" duration="1271000" />
+      <workItem from="1686930463244" duration="7867000" />
     </task>
     <servers />
   </component>
