@@ -6,5 +6,4 @@ from django.views import View
 class HomeView(View):
     @staticmethod
     def get(request):
-
         return render(request, 'home/index.html')

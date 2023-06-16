@@ -2,6 +2,7 @@ from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
+from django.contrib import admin
 import os
 import imghdr
 
