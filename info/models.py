@@ -289,7 +289,7 @@ class Address(models.Model):
     street = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100, choices=STATES)
-    url = models.URLField(null=True, blank=True)
+    url = models.TextField(null=True, blank=True)
     zip_code = models.CharField(max_length=10)
     active = models.BooleanField(default=True, null=True)
     created_at = models.DateTimeField(auto_now=True)
@@ -299,7 +299,7 @@ class Address(models.Model):
         return self.street
 
     def admin_url(self):
-        return mark_safe(f"<iframe width='150' src='{self.url}'><iframe/>")
+        return mark_safe(f"{self.url}")
 
 
 class Information(models.Model):

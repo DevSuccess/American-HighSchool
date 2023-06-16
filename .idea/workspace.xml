@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0002_contact_active_social_active.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0003_alter_contact_contact.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0004_video_remove_information_contacts_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0005_alter_video_description_alter_video_file_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0006_video_created_at_video_updated_at.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/video/test_video_video/pexels-2022395.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/video/test_video_video/pexels.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686851814056</updated>
       <workItem from="1686851941012" duration="14081000" />
-      <workItem from="1686892033068" duration="20082000" />
+      <workItem from="1686892033068" duration="23480000" />
     </task>
     <servers />
   </component>
