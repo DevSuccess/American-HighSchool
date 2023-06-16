@@ -1,74 +1,31 @@
 from django.db import models
-from django.core.exceptions import ValidationError
-
-DAYS = (
-    ('Mon', 'Monday'),
-    ('Tue', 'Tuesday'),
-    ('Wed', 'Wednesday'),
-    ('Thu', 'Thursday'),
-    ('Fri', 'Friday'),
-    ('Sat', 'Saturday'),
-    ('Sun', 'Sunday'),
-)
-
-CONTACTS = (
-    ('fa-envelope', 'Email'),
-    ('fa-phone-alt', 'Phone'),
-    ('fa-whatsapp', 'WhatsApp'),
-)
-
-SOCIALS = (
-    ('fa-linkedin-in', 'LinkedIn'),
-    ('fa-twitter', 'Twitter'),
-    ('fa-facebook-f', 'Facebook'),
-    ('fa-instagram', 'Instagram'),
-)
+from django.core.validators import FileExtensionValidator
+from django.utils.safestring import mark_safe
+import os
 
 
-# Create your models here.
-class Contact(models.Model):
-    contact = models.CharField(max_length=200)
-    contact_type = models.CharField(max_length=25, choices=CONTACTS)
-    active = models.BooleanField(default=True, null=True)
-    created_at = models.DateTimeField(auto_now=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.contact
+def video_upload_path(instance, filename):
+    title = instance.title.replace("'", "")
+    # Remplacer les espaces par des underscores et mettre tout en minuscule
+    title = title.lower().replace(" ", "_")
+    title = title.lower().replace(".", "_")
+    # Retourner le chemin complet avec le nom du fichier
+    return os.path.join("video", f"{title}_video", filename)
 
 
-class Social(models.Model):
-    network_name = models.CharField(max_length=200)
-    social_type = models.CharField(max_length=25, choices=SOCIALS)
+class Video(models.Model):
+    title = models.CharField(max_length=250)
     url = models.URLField()
-    active = models.BooleanField(default=True, null=True)
-    created_at = models.DateTimeField(auto_now=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=True)
+    description = models.TextField(default='')
+    file = models.FileField(
+        upload_to=video_upload_path,
+        validators=[
+            FileExtensionValidator(allowed_extensions=['mp4'])
+        ])
 
     def __str__(self):
-        return self.network_name
+        return self.title
 
-
-class Information(models.Model):
-    localisation = models.CharField(max_length=250)
-    day_begin = models.CharField(max_length=3, choices=DAYS)
-    day_end = models.CharField(max_length=3, choices=DAYS)
-    time_begin = models.TimeField()
-    time_end = models.TimeField()
-    contacts = models.ManyToManyField(Contact)
-    socials = models.ManyToManyField(Social)
-
-    def __str__(self):
-        return self.localisation
-
-    def clean(self):
-        if self.day_begin == self.day_end or self.time_begin == self.time_end:
-            raise ValidationError('Values must be different')
-
-        exist_records = Information.objects.count()
-        if exist_records >= 1 and not self.pk:
-            raise ValidationError('One values only')
-
-    def save(self, *args, **kwargs):
-        self.full_clean()  # Valider avant de sauvegarder
-        super().save(*args, **kwargs)
+    def admin_video(self):
+        return mark_safe('<a href="{}"><img src="{}" width="70"/></a>'.format(self.file.url, self.file.url))
