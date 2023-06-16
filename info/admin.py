@@ -23,3 +23,9 @@ class InformationModelAdmin(admin.ModelAdmin):
 class SocialModelAdmin(admin.ModelAdmin):
     list_display = ['network_name', 'social_type', 'url', 'active', 'created_at', 'updated_at']
     fields = ['network_name', 'social_type', 'url', 'active']
+
+
+@admin.register(models.Address)
+class AddressModelAdmin(admin.ModelAdmin):
+    fields = ['street', 'city', 'url', 'state', 'zip_code', 'active']
+    list_display = ['street', 'city', 'admin_url', 'state', 'zip_code', 'active', 'updated_at']

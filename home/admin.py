@@ -10,3 +10,11 @@ class VideoModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'active', 'admin_video', 'description', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
+
+@admin.register(models.Image)
+class ImageModelAdmin(admin.ModelAdmin):
+    search_fields = ['title']
+    fields = ['title', 'image', 'active', 'description', 'created_at', 'updated_at']
+    list_display = ['title', 'active', 'admin_photo', 'description', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']
+
