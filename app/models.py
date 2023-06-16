@@ -1,9 +1,8 @@
 from django.db import models
-from django.core.validators import FileExtensionValidator
 from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
-import os
-import mimetypes
+from home.models import upload_path
+
 
 # Create your models here.
 DAYS = (
@@ -264,29 +263,6 @@ STATES = sorted([
 ], key=lambda x: x[1])
 
 
-def filetype(filename):
-    mime_type, _ = mimetypes.guess_type(filename)
-    _, extension = os.path.splitext(filename)
-    image_extensions = [".png", ".jpg", ".jpeg", ".webp", ".gif", '.svg', ".bmp"]
-    video_extensions = [".mp4", ".avi", ".mov"]
-    if extension.lower() in image_extensions:
-        return 'image'
-    elif extension.lower() in video_extensions:
-        return 'video'
-    else:
-        return 'unknown'
-
-
-def upload_path(instance, filename):
-    title = instance.title.replace("'", "")
-    # Remplacer les espaces par des underscores et mettre tout en minuscule
-    title = title.lower().replace(" ", "_")
-    title = title.lower().replace(".", "_")
-
-    # Retourner le chemin complet avec le nom du fichier
-    return os.path.join(str(filetype(filename)), f"{title}", filename)
-
-
 # Create your models here.
 class Contact(models.Model):
     contact = models.CharField(max_length=200)
@@ -365,7 +341,6 @@ class Information(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()  # Valider avant de sauvegarder
         super().save(*args, **kwargs)
-
 
 class AboutList(models.Model):
     title = models.CharField(max_length=150)
