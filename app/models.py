@@ -34,7 +34,7 @@ class ImageModel(models.Model):
 
 
 class VideoModel(models.Model):
-    file = models.FileField(
+    video = models.FileField(
         upload_to=upload_path,
         validators=[
             FileExtensionValidator(allowed_extensions=['mp4', 'avi', 'mov'])
@@ -50,23 +50,24 @@ class VideoModel(models.Model):
 class Address(BaseModel):
     street = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
+    lot = models.CharField(max_length=100)
     state = models.CharField(max_length=100, choices=STATES)
-    url = models.TextField(null=True, blank=True)
-    zip_code = models.CharField(max_length=10)
+    zip_code = models.CharField(verbose_name='Postal Code', max_length=10)
+    map = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.street
 
     def admin_url(self):
-        return mark_safe(f"{self.url}")
+        return mark_safe(f"{self.map}")
 
 
 class AboutList(models.Model):
-    title = models.CharField(max_length=150)
+    name = models.CharField(max_length=150)
     status = models.BooleanField(default=True, null=True)
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class About(BaseModel, ImageModel):
@@ -102,7 +103,7 @@ class Accreditation(BaseModel, ImageModel):
 
 class Contact(BaseModel):
     contact = models.CharField(max_length=200)
-    contact_type = models.CharField(max_length=25, choices=CONTACTS)
+    type = models.CharField(max_length=25, choices=CONTACTS)
 
     def __str__(self):
         return self.contact
@@ -125,27 +126,6 @@ class Hour(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()
         super().save(*args, **kwargs)
-
-
-# class Information(models.Model):
-#     name = models.CharField(max_length=150)
-#     addresses = models.ForeignKey(Address, on_delete=models.CASCADE, null=True)
-#     contacts = models.ForeignKey(Contact, on_delete=models.CASCADE, null=True)
-#     hours = models.ForeignKey(Hour, on_delete=models.CASCADE)
-#     socials = models.ForeignKey(Social, on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return self.name
-#
-#     def clean(self):
-#         exist_records = Information.objects.count()
-#         if exist_records >= 1 and not self.pk:
-#             raise ValidationError('One value only')
-#
-#     def save(self, *args, **kwargs):
-#         self.full_clean()
-#         super().save(*args, **kwargs)
-
 
 class Members(BaseModel, ImageModel):
     lastname = models.CharField(max_length=100)
@@ -186,6 +166,16 @@ class Price(BaseModel, ImageModel):
 
     def __str__(self):
         return self.academic
+
+
+class Query(models.Model):
+    name = models.CharField(max_length=250)
+    email = models.EmailField(max_length=250)
+    subject = models.CharField(max_length=150)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
 
 
 class Service(BaseModel, ImageModel):
