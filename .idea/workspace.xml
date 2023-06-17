@@ -6,28 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_1/311219067_5456672221106401_1638763118420764120_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_1/311525034_5456663277773962_7088309276842738225_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_2/298270547_5453288028027858_6183458202425150095_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_2/311219067_5456672221106401_1638763118420764120_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_2/311525034_5456663277773962_7088309276842738225_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_3/297188003_467272422074638_8555996572870690047_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_3/311525034_5456663277773962_7088309276842738225_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_4/297188003_467272422074638_8555996572870690047_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_4/298270547_5453288028027858_6183458202425150095_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_rené_2021/297188003_467272422074638_8555996572870690047_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_rené_2022/311219067_5456672221106401_1638763118420764120_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/image_rené_2022_version_2/311525034_5456663277773962_7088309276842738225_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/programme_de_publicite/298270547_5453288028027858_6183458202425150095_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/welcome_to_ahsm/311525034_5456663277773962_7088309276842738225_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/video/enjoy_the_best_and_a_wonderful_with_ahsm/310234696_1079575346044179_1960246752496145774_n.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/video/presentation_de_american_high_school/310234696_1079575346044179_1960246752496145774_n.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/video/presentation_de_american_high_school/310234696_1079575346044179_196024675249614577_m6j33Oy.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/video/présentation_de_american_hight_school_mdagascar/310234696_1079575346044179_1960246_SGZ6hR2.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +102,7 @@
       <workItem from="1686892033068" duration="26373000" />
       <workItem from="1686921781074" duration="1271000" />
       <workItem from="1686930463244" duration="16453000" />
+      <workItem from="1686979240355" duration="7657000" />
     </task>
     <servers />
   </component>
