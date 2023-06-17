@@ -27,7 +27,10 @@ class ImageModel(models.Model):
     )
 
     def admin_photo(self):
-        return mark_safe(f"<a href='{self.image.url}'><img src='{self.image.url}' width='100' /></a>")
+        if self.image:
+            return mark_safe(f"<a href='{self.image.url}'><img src='{self.image.url}' width='100' /></a>")
+        else:
+            return ""
 
     class Meta:
         abstract = True
@@ -41,10 +44,39 @@ class VideoModel(models.Model):
         ], default='', null=True, blank=True)
 
     def admin_video(self):
-        return mark_safe(f"<video width='150' controls ><source  type='video/mp4' src='{self.file.url}'></video>")
+        if self.video:
+            return mark_safe(f"<video width='150' controls ><source  type='video/mp4' src='{self.file.url}'></video>")
+        else:
+            return ""
 
     class Meta:
         abstract = True
+
+
+class AboutList(models.Model):
+    name = models.CharField(max_length=150)
+    status = models.BooleanField(default=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+
+class About(BaseModel, ImageModel):
+    title = models.CharField(max_length=150)
+    key = models.CharField(max_length=100)
+    libel = models.CharField(max_length=250)
+    lists = models.ManyToManyField(AboutList)
+    content = models.TextField(null=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Activity(BaseModel, ImageModel):
+    title = models.CharField(max_length=150, null=True)
+
+    def __str__(self):
+        return self.title
 
 
 class Address(BaseModel):
@@ -58,37 +90,13 @@ class Address(BaseModel):
     def __str__(self):
         return self.street
 
-    def admin_url(self):
+    def admin_map(self):
         return mark_safe(f"{self.map}")
-
-
-class AboutList(models.Model):
-    name = models.CharField(max_length=150)
-    status = models.BooleanField(default=True, null=True)
-
-    def __str__(self):
-        return self.name
-
-
-class About(BaseModel, ImageModel):
-    title = models.CharField(max_length=150)
-    libel = models.CharField(max_length=250)
-    lists = models.ForeignKey(AboutList, on_delete=models.CASCADE, null=True)
-    content = models.TextField(null=True)
-
-    def __str__(self):
-        return self.title
-
-
-class Activity(BaseModel, ImageModel):
-    name = models.CharField(max_length=150)
-
-    def __str__(self):
-        return self.name
 
 
 class Collaborator(BaseModel, ImageModel):
     name = models.CharField(max_length=150)
+    date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -96,7 +104,7 @@ class Collaborator(BaseModel, ImageModel):
 
 class Accreditation(BaseModel, ImageModel):
     content = models.CharField(max_length=150)
-    collaborators = models.ForeignKey(Collaborator, on_delete=models.CASCADE)
+    collaborators = models.ManyToManyField(Collaborator)
 
     def __str__(self):
         return self.content
@@ -128,12 +136,13 @@ class Hour(models.Model):
         self.full_clean()
         super().save(*args, **kwargs)
 
+
 class Members(BaseModel, ImageModel):
     lastname = models.CharField(max_length=100)
     firstname = models.CharField(max_length=150)
     occupation = models.CharField(max_length=100)
     email = models.EmailField(max_length=250, unique=True)
-    contacts = models.ForeignKey(Contact, on_delete=models.CASCADE)
+    contacts = models.ManyToManyField(Contact)
 
     def __str__(self):
         return self.lastname

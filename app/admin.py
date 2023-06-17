@@ -1,23 +1,126 @@
 from django.contrib import admin
 from . import models
 
-admin.site.index_title = "Manageur"
-admin.site.site_header = "Admin American High School"
-admin.site.site_title = "American High School"
+
+@admin.register(models.AboutList)
+class AboutListModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'status']
+    fields = ['name', 'status']
 
 
-class BaseModelAdmin(admin.ModelAdmin):
+@admin.register(models.Activity)
+class ActivityModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'active', 'admin_photo']
+    fields = [('title', 'active'), 'image', 'created_at', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Address)
+class AddressModelAdmin(admin.ModelAdmin):
+    list_display = ['lot', 'street', 'admin_map']
+    fields = [('lot', 'street'), 'city', 'active', 'state', 'map', 'zip_code', 'created_at', 'updated_at']
+    list_display_links = ['lot', 'street']
+    readonly_fields = ['created_at', 'updated_at']
+
+    def admin_map(self, obj):
+        return obj.admin_map()
+
+    admin_map.short_description = 'Map'
+
+
+@admin.register(models.Collaborator)
+class CollaboratorModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'date', 'admin_photo']
+    fields = ['name', 'date', 'image', 'created_at', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Contact)
+class ContactModelAdmin(admin.ModelAdmin):
+    list_display = ['contact', 'type']
+    fields = ['contact', 'type', 'created_at', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Hour)
+class HourModelAdmin(admin.ModelAdmin):
+    list_display = ['day', 'open', 'close', 'active', 'message']
+    fields = ['day', 'open', 'close', 'active', 'message']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Possibility)
+class PossibilityModelAdmin(admin.ModelAdmin):
+    list_display = ['value']
+    fields = ['value']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Query)
+class QueryModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', 'subject']
+    fields = ['name', 'email', 'subject', 'message']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Service)
+class ServiceModelAdmin(admin.ModelAdmin):
+    list_display = ['label', 'admin_photo']
+    fields = ['label', 'description', 'image']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Social)
+class SocialModelAdmin(admin.ModelAdmin):
+    list_display = ['network_name', 'social_type', 'url']
+    fields = ['network_name', 'social_type', 'url']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Testimonial)
+class TestimonialModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'content', 'start', 'occupation', 'admin_photo']
+    fields = ['name', 'content', 'start', 'occupation', 'image']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Value)
+class ValueModelAdmin(admin.ModelAdmin):
+    list_display = ['admin_photo']
+    fields = ['content', 'image']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Vision)
+class VisionModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'content', 'admin_photo']
+    fields = ['title', 'content', 'image']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Price)
+class PriceModelAdmin(admin.ModelAdmin):
+    list_display = ['academic', 'price', 'registration', 'promotion', 'birth', 'possibilities']
+    fields = ['academic', 'price', 'registration', 'promotion', 'birth', 'possibilities']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Members)
+class MembersModelAdmin(admin.ModelAdmin):
+    list_display = ['lastname', 'firstname', 'occupation', 'email']
+    fields = ['lastname', 'firstname', 'occupation', 'email', 'contacts']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Accreditation)
+class AccreditationModelAdmin(admin.ModelAdmin):
+    list_display = ['content', 'admin_photo']
+    fields = ['content', 'collaborators', 'image']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.About)
-class AboutModelAdmin(BaseModelAdmin):
-    list_display = ['title', 'libel', 'active', 'admin_photo']
-    list_display_links = ['title', 'libel']
-    fields = [('title', 'active'), ('image', 'lists'), 'libel', 'content', 'created_at', 'updated_at']
-
-
-@admin.register(models.AboutList)
-class AboutListModelAdmin(admin.ModelAdmin):
-    fields = ['name', 'status']
-    list_display = ['name', 'status']
+class AboutModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'key', 'libel', 'content', 'admin_photo']
+    fields = ['title', 'key', 'libel', 'lists', 'content', 'image']
+    readonly_fields = ['created_at', 'updated_at']

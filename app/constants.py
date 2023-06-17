@@ -1,4 +1,4 @@
-import imghdr
+from uuid import uuid4
 import os
 
 DAYS = (
@@ -287,7 +287,11 @@ def filetype(filename):
 
 
 def upload_path(instance, filename):
-    title = instance.title.replace("'", "")
-    title = title.lower().replace(" ", "_")
-    title = title.lower().replace(".", "_")
-    return os.path.join(str(filetype(filename)), f"{title}", filename)
+    # Obtenir l'extension du fichier
+    _, ext = os.path.splitext(filename)
+    ext = ext.lower()
+
+    # Générer un nom de fichier unique
+    unique_filename = f"{uuid4().hex}{ext}"
+
+    return os.path.join(str(filetype(filename)), unique_filename)
