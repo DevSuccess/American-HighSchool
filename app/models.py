@@ -74,6 +74,7 @@ class About(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
     libel = models.CharField(max_length=250)
     lists = models.ForeignKey(AboutList, on_delete=models.CASCADE, null=True)
+    content = models.TextField(null=True)
 
     def __str__(self):
         return self.title

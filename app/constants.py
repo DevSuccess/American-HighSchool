@@ -268,14 +268,18 @@ STATES = sorted([
 
 
 def filetype(filename):
+    # Obtenir l'extension du fichier
+    _, ext = os.path.splitext(filename)
+    ext = ext.lower()
+
     # Vérification si c'est une image
-    image_type = imghdr.what(filename)
-    if image_type:
+    image_extensions = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp', '.svg']
+    if ext in image_extensions:
         return 'image'
 
-    # Vérification si c'est une vidéo (vous pouvez ajouter d'autres extensions de fichier vidéo si nécessaire)
+    # Vérification si c'est une vidéo
     video_extensions = ['.mp4', '.avi', '.mov']
-    if any(filename.lower().endswith(ext) for ext in video_extensions):
+    if ext in video_extensions:
         return 'video'
 
     # Aucun type correspondant trouvé
@@ -284,8 +288,6 @@ def filetype(filename):
 
 def upload_path(instance, filename):
     title = instance.title.replace("'", "")
-    # Remplacer les espaces par des underscores et mettre tout en minuscule
     title = title.lower().replace(" ", "_")
     title = title.lower().replace(".", "_")
-    # Retourner le chemin complet avec le nom du fichier
     return os.path.join(str(filetype(filename)), f"{title}", filename)
