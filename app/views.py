@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 import random
+from django.core.exceptions import ObjectDoesNotExist
 from . import models
 
 
@@ -12,18 +13,35 @@ class HomeView(View):
         contacts = models.Contact.objects.all()
         hours = models.Hour.get_current_hours()
         socials = models.Social.objects.all()
-        movies = models.PresentationVideo.objects.latest('created_at')
+
+        try:
+            movies = models.PresentationVideo.objects.latest('created_at')
+        except ObjectDoesNotExist:
+            movies = None
+
         pictures = models.PresentationImage.objects.all()
+
         try:
             abouts = models.About.objects.latest('created_at')
         except models.About.DoesNotExist:
             abouts = None
+
         services = models.Service.objects.all()
 
-        # Obtenir les membres dans un ordre aléatoire par catégorie
-        members_direction = models.Members.objects.filter(category='A').order_by('?')
-        members_administration = models.Members.objects.filter(category='B').order_by('?')
-        members_enseignants = models.Members.objects.filter(category='C').order_by('?')
+        try:
+            members_direction = models.Members.objects.filter(category='A').order_by('?')
+        except models.Members.DoesNotExist:
+            members_direction = None
+
+        try:
+            members_administration = models.Members.objects.filter(category='B').order_by('?')
+        except models.Members.DoesNotExist:
+            members_administration = None
+
+        try:
+            members_enseignants = models.Members.objects.filter(category='C').order_by('?')
+        except models.Members.DoesNotExist:
+            members_enseignants = None
 
         hour_lists = models.Hour.objects.all()
         prices = models.Price.objects.all()

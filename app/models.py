@@ -8,9 +8,9 @@ from .constants import DAYS, STATES, SOCIALS, upload_path, CATEGORY
 
 
 class BaseModel(models.Model):
-    active = models.BooleanField(default=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True, null=True)
-    updated_at = models.DateTimeField(auto_now=True, null=True)
+    active = models.BooleanField(default=True,)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         abstract = True
@@ -22,8 +22,7 @@ class ImageModel(models.Model):
         validators=[
             FileExtensionValidator(allowed_extensions=['png', 'jpg', 'gif', 'jpeg', 'webp', 'svg', 'bmp'])
         ],
-        default='',
-        null=True
+        default=''
     )
 
     def admin_photo(self):
@@ -41,7 +40,7 @@ class VideoModel(models.Model):
         upload_to=upload_path,
         validators=[
             FileExtensionValidator(allowed_extensions=['mp4', 'avi', 'mov'])
-        ], default='', null=True)
+        ], default='')
 
     def admin_video(self):
         if self.video:
@@ -61,7 +60,7 @@ class Price(BaseModel):
             MinValueValidator(0)
         ], blank=True
     )
-    price_promo = models.FloatField(blank=True, null=True)
+    price_promo = models.FloatField(blank=True)
     registration = models.FloatField(blank=True)
     birth = models.IntegerField(
         validators=[
@@ -90,7 +89,7 @@ class Price(BaseModel):
 
 class Level(BaseModel, ImageModel):
     name = models.CharField(max_length=150)
-    status = models.BooleanField(default=True, null=True)
+    status = models.BooleanField(default=True)
     prices = models.ForeignKey(Price, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -104,7 +103,7 @@ class About(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
     key = models.CharField(max_length=100)
     libel = models.CharField(max_length=250)
-    content = models.TextField(null=True)
+    content = models.TextField()
 
     class Meta:
         verbose_name_plural = 'Les Propos'
@@ -114,7 +113,7 @@ class About(BaseModel, ImageModel):
 
 
 class Activity(BaseModel, ImageModel):
-    title = models.CharField(max_length=150, null=True)
+    title = models.CharField(max_length=150)
 
     class Meta:
         verbose_name_plural = 'Les Activités'
@@ -129,7 +128,7 @@ class Address(BaseModel):
     lot = models.CharField(max_length=100)
     state = models.CharField(max_length=100, choices=STATES)
     zip_code = models.CharField(verbose_name='Postal Code', max_length=10)
-    map = models.TextField(null=True, blank=True)
+    map = models.TextField(blank=True)
 
     class Meta:
         verbose_name_plural = 'Les Adrèsses'
@@ -143,7 +142,7 @@ class Address(BaseModel):
 
 class Collaborator(BaseModel, ImageModel):
     name = models.CharField(max_length=150)
-    date = models.DateField(null=True, blank=True)
+    date = models.DateField(blank=True)
 
     def __str__(self):
         return self.name
@@ -197,11 +196,10 @@ class Info(BaseModel):
         verbose_name_plural = 'Les Informations lier à AHSM'
 
 
-class Hour(models.Model):
+class Hour(BaseModel):
     day = models.CharField(max_length=15, choices=DAYS)
     open = models.TimeField()
     close = models.TimeField()
-    active = models.BooleanField(default=True, null=True)
     message = models.CharField(max_length=250, default='')
 
     def clean(self):
@@ -233,8 +231,8 @@ class Hour(models.Model):
 class Members(BaseModel, ImageModel):
     lastname = models.CharField(max_length=100)
     firstname = models.CharField(max_length=150)
-    category = models.CharField(max_length=2, choices=CATEGORY, null=True)
-    occupation = models.CharField(max_length=100, null=True)
+    category = models.CharField(max_length=2, choices=CATEGORY)
+    occupation = models.CharField(max_length=100)
     email = models.EmailField(max_length=250, unique=True)
     contacts = models.ManyToManyField(Contact)
 
@@ -269,8 +267,8 @@ class Query(BaseModel):
 
 
 class Service(BaseModel, ImageModel):
-    name = models.CharField(max_length=150, null=True)
-    description = models.TextField(blank=True, null=True)
+    name = models.CharField(max_length=150)
+    description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
