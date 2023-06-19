@@ -45,7 +45,7 @@ class VideoModel(models.Model):
 
     def admin_video(self):
         if self.video:
-            return mark_safe(f"<video width='150' controls ><source  type='video/mp4' src='{self.file.url}'></video>")
+            return mark_safe(f"<video width='150' controls ><source  type='video/mp4' src='{self.video.url}'></video>")
         else:
             return ""
 
@@ -228,3 +228,13 @@ class Value(BaseModel, ImageModel):
 class Vision(BaseModel, ImageModel):
     title = models.CharField(max_length=150, blank=True)
     content = models.TextField()
+
+
+class PresentationVideo(BaseModel, VideoModel):
+    title = models.CharField(max_length=150)
+    description = models.TextField(blank=True)
+
+
+class PresentationImage(BaseModel, ImageModel):
+    title = models.CharField(max_length=150)
+    description = models.TextField(blank=True)

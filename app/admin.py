@@ -45,14 +45,13 @@ class ContactModelAdmin(admin.ModelAdmin):
 @admin.register(models.Hour)
 class HourModelAdmin(admin.ModelAdmin):
     list_display = ['day', 'open', 'close', 'active', 'message']
-    fields = ['day', 'open', 'close', 'active', 'message']
-    readonly_fields = ['created_at', 'updated_at']
+    fields = ['day', ('open', 'close'), 'active', 'message']
 
 
 @admin.register(models.Possibility)
 class PossibilityModelAdmin(admin.ModelAdmin):
-    list_display = ['value']
-    fields = ['value']
+    list_display = ['value', 'active']
+    fields = ['value', 'active']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -60,47 +59,46 @@ class PossibilityModelAdmin(admin.ModelAdmin):
 class QueryModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'subject']
     fields = ['name', 'email', 'subject', 'message']
-    readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Service)
 class ServiceModelAdmin(admin.ModelAdmin):
-    list_display = ['label', 'admin_photo']
-    fields = ['label', 'description', 'image']
+    list_display = ['label', 'active', 'admin_photo']
+    fields = ['label', 'description', 'image', 'active']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Social)
 class SocialModelAdmin(admin.ModelAdmin):
-    list_display = ['network_name', 'social_type', 'url']
-    fields = ['network_name', 'social_type', 'url']
+    list_display = ['network_name', 'social_type', 'active', 'url']
+    fields = ['network_name', 'social_type', 'url', 'active']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Testimonial)
 class TestimonialModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'content', 'start', 'occupation', 'admin_photo']
-    fields = ['name', 'content', 'start', 'occupation', 'image']
+    fields = ['name', 'content', 'start', 'occupation', 'image', 'active']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Value)
 class ValueModelAdmin(admin.ModelAdmin):
-    list_display = ['admin_photo']
-    fields = ['content', 'image']
+    list_display = ['content', 'admin_photo']
+    fields = ['content', 'image', 'active']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Vision)
 class VisionModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'content', 'admin_photo']
-    fields = ['title', 'content', 'image']
+    fields = ['title', 'content', 'image', 'active']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Price)
 class PriceModelAdmin(admin.ModelAdmin):
-    list_display = ['academic', 'price', 'registration', 'promotion', 'birth', 'possibilities']
+    list_display = ['academic', 'price', 'registration', 'promotion', 'birth']
     fields = ['academic', 'price', 'registration', 'promotion', 'birth', 'possibilities']
     readonly_fields = ['created_at', 'updated_at']
 
@@ -123,4 +121,18 @@ class AccreditationModelAdmin(admin.ModelAdmin):
 class AboutModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'key', 'libel', 'content', 'admin_photo']
     fields = ['title', 'key', 'libel', 'lists', 'content', 'image']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.PresentationVideo)
+class PresentationVideoModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'admin_video']
+    fields = ['title', 'active', 'video']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.PresentationImage)
+class PresentationImageModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'admin_photo']
+    fields = ['title', 'active', 'image']
     readonly_fields = ['created_at', 'updated_at']
