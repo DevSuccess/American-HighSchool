@@ -11,5 +11,6 @@ class HomeView(View):
         contacts = models.Contact.objects.all()
         hours = models.Hour.get_current_hours()
         socials = models.Social.objects.all()
-
+        movies = models.PresentationVideo.objects.latest('created_at')
+        pictures = models.PresentationImage.objects.all()
         return render(request, 'home/index.html', locals())
