@@ -13,4 +13,8 @@ class HomeView(View):
         socials = models.Social.objects.all()
         movies = models.PresentationVideo.objects.latest('created_at')
         pictures = models.PresentationImage.objects.all()
+        try:
+            abouts = models.About.objects.latest('created_at')
+        except models.About.DoesNotExist:
+            abouts = None
         return render(request, 'home/index.html', locals())
