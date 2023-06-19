@@ -2,28 +2,15 @@ from uuid import uuid4
 import os
 
 DAYS = (
-    ('Mon', 'Monday'),
-    ('Tue', 'Tuesday'),
-    ('Wed', 'Wednesday'),
-    ('Thu', 'Thursday'),
-    ('Fri', 'Friday'),
-    ('Sat', 'Saturday'),
-    ('Sun', 'Sunday'),
+    ('Monday', 'Monday'),
+    ('Tuesday', 'Tuesday'),
+    ('Wednesday', 'Wednesday'),
+    ('Thursday', 'Thursday'),
+    ('Thursday', 'Thursday'),
+    ('Saturday', 'Saturday'),
+    ('Sunday', 'Sunday'),
 )
 
-CONTACTS = (
-    ('fa fa-envelope text-primary me-2', 'Email'),
-    ('fa fa-phone text-primary me-2', 'Phone'),
-    ('fa fa-whatsapp text-primary me-2', 'WhatsApp'),
-)
-
-ACADEMICS = (
-    ('level-0', 'Pre-Kindergarten'),
-    ('level-1', 'Elementary School'),
-    ('level-2', 'Middle School'),
-    ('level-3', 'High School'),
-    ('level-4', 'VIP'),
-)
 
 SOCIALS = (
     ('fab fa-linkedin-in', 'LinkedIn'),

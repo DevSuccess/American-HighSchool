@@ -75,7 +75,7 @@ Home
 {#                allow="autoplay"#}
 {#              ></iframe>#}
 
-                <video id="video" width='150' controls autoplay ><source  type='video/mp4' src='{{ movies.video.url }}'></video>
+                <video width='150' controls autoplay ><source  type='video/mp4' src='{{ movies.video.url }}'></video>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ Home
         <div class="row g-5">
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
           {% if abouts %}
-            <p><span class="text-primary me-2">#</span>{{ abouts.title }}</p>
+            <p><span class="text-primary me-2">#</span>Welcome To AHSM</p>
             <h1 class="display-5 mb-4">
                 {{ abouts.libel }}
               <span class="text-primary">{{ abouts.key }}</span>!
@@ -162,13 +162,13 @@ Home
     <!-- Service Start -->
     <div class="container-xxl py-5">
       <div class="container">
-          {% for service in services %}
+
         <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
           <div class="col-lg-6">
-            <p><span class="text-primary me-2">#</span>{{ service.title }}</p>
+            <p><span class="text-primary me-2">#</span>Our Services</p>
             <h1 class="display-5 mb-0">
-              {{ service.label }}
-              <span class="text-primary">{{ service.key }}</span>
+              Extracurricular Activities For
+              <span class="text-primary">AHSM</span> Student
             </h1>
           </div>
           <div class="col-lg-6">
@@ -178,27 +178,25 @@ Home
               <i class="fa fa-3x fa-mobile-alt text-white"></i>
               <div class="ms-4">
                 <p class="text-white mb-0">Call for more info</p>
-                <h2 class="text-white mb-0">{{ service.info_line }}</h2>
+                <h2 class="text-white mb-0">{{ number_info }}</h2>
               </div>
             </div>
           </div>
         </div>
         <div class="row gy-5 gx-4">
-        {% for type in service.all_service.all %}
+        {% for service in services %}
           <div
             class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
             data-wow-delay="0.1s"
           >
-            <img class="img-fluid mb-3" src="{{ type.image.url }}" alt="Icon" />
-            <h5 class="mb-3">{{ type.name }}</h5>
+            <img class="img-fluid mb-3" src="{{ service.image.url }}" alt="Icon" />
+            <h5 class="mb-3">{{ service.name }}</h5>
             <span
-              >{{ type.description }}</span
+              >{{ service.description }}</span
             >
           </div>
         {% endfor %}
         </div>
-
-          {% endfor %}
 
       </div>
     </div>
@@ -212,10 +210,10 @@ Home
           data-wow-delay="0.1s"
         >
           <div class="col-lg-6">
-            <p><span class="text-primary me-2">#</span>Our Animals</p>
+            <p><span class="text-primary me-2">#</span>Our Members</p>
             <h1 class="display-5 mb-0">
               Let`s See Our <span class="text-primary">AHSM</span> Awsome
-              Animals
+              Members
             </h1>
           </div>
           <div class="col-lg-6 text-lg-end">
@@ -317,14 +315,16 @@ Home
                   <td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
                 {% endfor %}
                 </tr>
-                {% for contact_info in contact_infos %}
-                <tr>
-                  <td>{{ contact_info.title }}</td>
-                  <td>
-                    <p class="mb-2">{{ contact_info.phone | phone2numeric }}</p>
-                    <p class="mb-0">{{ contact_info.email }}</p>
-                  </td>
-                </tr>
+                {% for info in infos %}
+                    <tr>
+                      <td>Acceuil</td>
+                      <td>
+                    {% for phone in info.phones.all %}
+                        <p class="mb-2">{{ phone.number | phone2numeric }}</p>
+                    {% endfor %}
+                        <p class="mb-0">{{ info.email }}</p>
+                      </td>
+                    </tr>
                 {% endfor %}
               </tbody>
             </table>

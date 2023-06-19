@@ -4,13 +4,13 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
 from django.core.validators import MaxValueValidator, MinValueValidator
-from .constants import ACADEMICS, DAYS, CONTACTS, STATES, SOCIALS, upload_path, CATEGORY
+from .constants import DAYS, STATES, SOCIALS, upload_path, CATEGORY
 
 
 class BaseModel(models.Model):
     active = models.BooleanField(default=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
     class Meta:
         abstract = True
@@ -23,8 +23,7 @@ class ImageModel(models.Model):
             FileExtensionValidator(allowed_extensions=['png', 'jpg', 'gif', 'jpeg', 'webp', 'svg', 'bmp'])
         ],
         default='',
-        null=True,
-        blank=True
+        null=True
     )
 
     def admin_photo(self):
@@ -42,7 +41,7 @@ class VideoModel(models.Model):
         upload_to=upload_path,
         validators=[
             FileExtensionValidator(allowed_extensions=['mp4', 'avi', 'mov'])
-        ], default='', null=True, blank=True)
+        ], default='', null=True)
 
     def admin_video(self):
         if self.video:
@@ -54,26 +53,61 @@ class VideoModel(models.Model):
         abstract = True
 
 
-class AboutList(models.Model):
+class Price(BaseModel):
+    price = models.FloatField()
+    promotion = models.IntegerField(
+        validators=[
+            MaxValueValidator(100),
+            MinValueValidator(0)
+        ], blank=True
+    )
+    price_promo = models.FloatField(blank=True, null=True)
+    registration = models.FloatField(blank=True)
+    birth = models.IntegerField(
+        validators=[
+            MaxValueValidator(70),
+            MinValueValidator(2)
+        ],
+        choices=[(i, str(i)) for i in range(72)]
+    )
+
+    def calculate_price_promo(self):
+        if self.promotion is not None:
+            self.price_promo = self.price * (1 - self.promotion / 100)
+        else:
+            self.price_promo = self.price
+
+    def save(self, *args, **kwargs):
+        self.calculate_price_promo()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.price
+
+    class Meta:
+        verbose_name_plural = 'Les Prix'
+
+
+class Level(BaseModel, ImageModel):
     name = models.CharField(max_length=150)
     status = models.BooleanField(default=True, null=True)
+    prices = models.ForeignKey(Price, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'A Propos : Listes'
+        verbose_name_plural = 'Les Niveaux'
 
 
 class About(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
     key = models.CharField(max_length=100)
     libel = models.CharField(max_length=250)
-    lists = models.ManyToManyField(AboutList)
     content = models.TextField(null=True)
 
     class Meta:
-        verbose_name_plural = 'A Propos'
+        verbose_name_plural = 'Les Propos'
 
     def __str__(self):
         return self.title
@@ -83,7 +117,7 @@ class Activity(BaseModel, ImageModel):
     title = models.CharField(max_length=150, null=True)
 
     class Meta:
-        verbose_name_plural = 'Activités'
+        verbose_name_plural = 'Les Activités'
 
     def __str__(self):
         return self.title
@@ -98,7 +132,7 @@ class Address(BaseModel):
     map = models.TextField(null=True, blank=True)
 
     class Meta:
-        verbose_name_plural = 'Adresses'
+        verbose_name_plural = 'Les Adrèsses'
 
     def __str__(self):
         return self.street
@@ -115,33 +149,56 @@ class Collaborator(BaseModel, ImageModel):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Collaborateur'
+        verbose_name_plural = 'Les Collaborateurs'
 
 
 class Accreditation(BaseModel, ImageModel):
     content = models.CharField(max_length=150)
-    collaborators = models.ManyToManyField(Collaborator)
 
     def __str__(self):
         return self.content
 
     class Meta:
-        verbose_name_plural = 'Accreditation'
+        verbose_name_plural = 'Les Accreditations'
 
 
 class Contact(BaseModel):
-    contact = models.CharField(max_length=200)
-    type = models.CharField(max_length=50, choices=CONTACTS)
+    number = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.contact
+        return self.number
 
     class Meta:
-        verbose_name_plural = 'Contacts'
+        verbose_name_plural = 'Les Contacts'
+
+
+class Social(BaseModel):
+    network_name = models.CharField(max_length=200)
+    social_type = models.CharField(max_length=25, choices=SOCIALS)
+    url = models.URLField()
+
+    def __str__(self):
+        return self.network_name
+
+    class Meta:
+        verbose_name_plural = 'Les Réseau Sociaux'
+
+
+class Info(BaseModel):
+    title = models.CharField(max_length=100)
+    email = models.EmailField(max_length=150)
+    phones = models.ManyToManyField(Contact)
+    socials = models.ManyToManyField(Social)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Les Informations lier à AHSM'
 
 
 class Hour(models.Model):
-    day = models.CharField(max_length=5, choices=DAYS)
+    day = models.CharField(max_length=15, choices=DAYS)
     open = models.TimeField()
     close = models.TimeField()
     active = models.BooleanField(default=True, null=True)
@@ -152,7 +209,7 @@ class Hour(models.Model):
             raise ValidationError('Values must be different')
 
     class Meta:
-        verbose_name_plural = 'Horaires'
+        verbose_name_plural = 'Les Horaires'
 
     def __str__(self):
         return self.day
@@ -185,7 +242,7 @@ class Members(BaseModel, ImageModel):
         return self.lastname
 
     class Meta:
-        verbose_name_plural = 'Membres'
+        verbose_name_plural = 'Les Membres'
 
 
 class Possibility(BaseModel):
@@ -195,35 +252,10 @@ class Possibility(BaseModel):
         return self.value
 
     class Meta:
-        verbose_name_plural = 'Possibilités'
+        verbose_name_plural = 'Les Possibilités'
 
 
-class Price(BaseModel, ImageModel):
-    academic = models.CharField(max_length=10, choices=ACADEMICS, unique=True)
-    price = models.FloatField()
-    registration = models.FloatField()
-    promotion = models.IntegerField(
-        validators=[
-            MaxValueValidator(100),
-            MinValueValidator(0)
-        ]
-    )
-    birth = models.IntegerField(
-        validators=[
-            MaxValueValidator(70),
-            MinValueValidator(2)
-        ],
-        choices=[(i, str(i)) for i in range(72)]
-    )
-
-    def __str__(self):
-        return self.academic
-
-    class Meta:
-        verbose_name_plural = 'Prix'
-
-
-class Query(models.Model):
+class Query(BaseModel):
     name = models.CharField(max_length=250)
     email = models.EmailField(max_length=250)
     subject = models.CharField(max_length=150)
@@ -233,39 +265,18 @@ class Query(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Démandes'
+        verbose_name_plural = 'Les Démandes Utilisateurs'
 
 
-class ServiceType(BaseModel, ImageModel):
+class Service(BaseModel, ImageModel):
     name = models.CharField(max_length=150, null=True)
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.name
 
-
-class Service(BaseModel):
-    title = models.CharField(max_length=150, null=True)
-    email = models.EmailField(max_length=150, null=True, blank=True)
-    key = models.CharField(max_length=150, null=True, blank=True)
-    label = models.CharField(max_length=150, unique=True)
-    info_line = models.CharField(max_length=15, null=True)
-    all_service = models.ManyToManyField(ServiceType, verbose_name='Tout les Services', null=True)
-
-    def __str__(self):
-        return self.label
-
-
-class Social(BaseModel):
-    network_name = models.CharField(max_length=200)
-    social_type = models.CharField(max_length=25, choices=SOCIALS)
-    url = models.URLField()
-
-    def __str__(self):
-        return self.network_name
-
     class Meta:
-        verbose_name_plural = 'Réseau Sociaux'
+        verbose_name_plural = 'Les Services'
 
 
 class Testimonial(BaseModel, ImageModel):
@@ -284,11 +295,7 @@ class Testimonial(BaseModel, ImageModel):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Témoignages'
-
-
-class Value(BaseModel, ImageModel):
-    content = models.TextField()
+        verbose_name_plural = 'Les Témoignages'
 
 
 class Vision(BaseModel, ImageModel):
@@ -296,7 +303,7 @@ class Vision(BaseModel, ImageModel):
     content = models.TextField()
 
     class Meta:
-        verbose_name_plural = 'Visions'
+        verbose_name_plural = 'Les Visions'
 
     def __str__(self):
         return self.title
@@ -309,6 +316,9 @@ class PresentationVideo(BaseModel, VideoModel):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name_plural = 'La Présentation Vidéo'
+
 
 class PresentationImage(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
@@ -317,16 +327,5 @@ class PresentationImage(BaseModel, ImageModel):
     def __str__(self):
         return self.title
 
-
-class ContactInfo(BaseModel):
-    title = models.CharField(max_length=100)
-    phone = models.CharField(max_length=150)
-    email = models.EmailField(max_length=150)
-
-    def __str__(self):
-        return self.title
-
     class Meta:
-        verbose_name_plural = 'Contact Info'
-
-
+        verbose_name_plural = 'La Présentation Photo'

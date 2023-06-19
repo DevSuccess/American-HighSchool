@@ -2,10 +2,11 @@ from django.contrib import admin
 from . import models
 
 
-@admin.register(models.AboutList)
-class AboutListModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'status']
-    fields = ['name', 'status']
+@admin.register(models.Level)
+class LevelModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'status', 'admin_photo', 'created_at', 'updated_at']
+    fields = ['name', 'status', 'image', 'prices', 'created_at', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Activity)
@@ -37,8 +38,8 @@ class CollaboratorModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Contact)
 class ContactModelAdmin(admin.ModelAdmin):
-    list_display = ['contact', 'type']
-    fields = ['contact', 'type', 'created_at', 'updated_at']
+    list_display = ['number', 'active', 'created_at', 'updated_at']
+    fields = ['number', 'active', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -50,28 +51,22 @@ class HourModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Possibility)
 class PossibilityModelAdmin(admin.ModelAdmin):
-    list_display = ['value', 'active']
-    fields = ['value', 'active']
+    list_display = ['value', 'active', 'created_at', 'updated_at']
+    fields = ['value', 'active', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Query)
 class QueryModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'email', 'subject']
-    fields = ['name', 'email', 'subject', 'message']
-
-
-@admin.register(models.ServiceType)
-class ServiceTypeModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'description', 'admin_photo']
-    fields = ['name', 'description', 'image', 'active']
+    list_display = ['name', 'email', 'subject', 'created_at', 'updated_at']
+    fields = ['name', 'email', 'subject', 'message', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.Service)
 class ServiceModelAdmin(admin.ModelAdmin):
-    list_display = ['title', 'key', 'label', 'info_line', 'active']
-    fields = ['title', 'label', 'key', 'info_line', 'all_service', 'active']
+    list_display = ['name', 'description', 'admin_photo', 'active']
+    fields = ['name', 'description', 'image', 'active', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -89,13 +84,6 @@ class TestimonialModelAdmin(admin.ModelAdmin):
     readonly_fields = ['created_at', 'updated_at']
 
 
-@admin.register(models.Value)
-class ValueModelAdmin(admin.ModelAdmin):
-    list_display = ['content', 'admin_photo']
-    fields = ['content', 'image', 'active']
-    readonly_fields = ['created_at', 'updated_at']
-
-
 @admin.register(models.Vision)
 class VisionModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'content', 'admin_photo']
@@ -105,9 +93,9 @@ class VisionModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Price)
 class PriceModelAdmin(admin.ModelAdmin):
-    list_display = ['academic', 'price', 'registration', 'admin_photo', 'promotion', 'birth']
-    fields = ['academic', 'price', 'registration', 'image', 'promotion', 'birth']
-    readonly_fields = ['created_at', 'updated_at']
+    list_display = ['price', 'registration', 'promotion', 'price_promo', 'birth']
+    fields = ['price', 'registration', 'promotion', 'price_promo', 'birth', 'created_at', 'updated_at']
+    readonly_fields = ['price_promo', 'created_at', 'updated_at']
 
 
 @admin.register(models.Members)
@@ -129,7 +117,7 @@ class AccreditationModelAdmin(admin.ModelAdmin):
 @admin.register(models.About)
 class AboutModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'key', 'libel', 'content', 'admin_photo', 'created_at', 'updated_at']
-    fields = ['title', 'key', 'libel', 'lists', 'content', 'image', 'created_at', 'updated_at']
+    fields = ['title', 'key', 'libel', 'content', 'image', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -147,8 +135,8 @@ class PresentationImageModelAdmin(admin.ModelAdmin):
     readonly_fields = ['created_at', 'updated_at']
 
 
-@admin.register(models.ContactInfo)
-class ContactInfoModelAdmin(admin.ModelAdmin):
-    list_display = ['title', 'phone', 'email', 'active']
-    fields = ['title', 'phone', 'email', 'active', 'created_at', 'updated_at']
+@admin.register(models.Info)
+class InfoModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'email', 'active']
+    fields = ['title', ('phones', 'email'), 'socials', 'active', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']

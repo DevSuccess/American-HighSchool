@@ -14,25 +14,26 @@
       </div>
     </div>
     <div class="col-lg-6 px-5 text-end">
-        {% for con in contact_infos %}
-      <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-        <i class="fa fa-phone text-primary me-2"></i>
-        <small>{{ con.phone }}</small>
-      </div>
+        {% for info in infos %}
+            {% for phone in info.phones.all %}
+              <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <i class="fa fa-phone text-primary me-2"></i>
+                <small>{{ phone.number }}</small>
+              </div>
+            {% endfor %}
+
+            <div class="h-100 d-inline-flex align-items-center">
+            {% if socials %}
+            {% for social in info.socials.all %}
+            <a class="btn btn-sm-square bg-white text-primary me-1" href="{{ social.url }}"
+              ><i class="{{ social.social_type }}"></i
+            ></a>
+              {% endfor %}
+            {% else %}
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+              ></a>
+            {% endif %}
         {% endfor %}
-
-      <div class="h-100 d-inline-flex align-items-center">
-        {% if socials %}
-          {% for social in socials %}
-        <a class="btn btn-sm-square bg-white text-primary me-1" href="{{ social.url }}"
-          ><i class="{{ social.social_type }}"></i
-        ></a>
-          {% endfor %}
-        {% else %}
-            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
-          ></a>
-        {% endif %}
-
       </div>
     </div>
   </div>

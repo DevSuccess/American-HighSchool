@@ -26,8 +26,18 @@ class HomeView(View):
         members_enseignants = models.Members.objects.filter(category='C').order_by('?')
 
         hour_lists = models.Hour.objects.all()
-        contact_infos = models.ContactInfo.objects.all()
         prices = models.Price.objects.all()
         testimonials = models.Testimonial.objects.all()
+        infos = models.Info.objects.all()
+
+        # Liste pour stocker les numéros de téléphone
+        phone_numbers = []
+
+        # Parcourir les objets Info et obtenir les numéros de téléphone associés
+        for info in infos:
+            phone_numbers.extend([phone.number for phone in info.phones.all()])
+
+        # Sélectionner un numéro aléatoire parmi les numéros disponibles
+        number_info = random.choice(phone_numbers) if phone_numbers else ""
 
         return render(request, 'home/index.html', locals())
