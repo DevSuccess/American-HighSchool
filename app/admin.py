@@ -105,8 +105,8 @@ class VisionModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Price)
 class PriceModelAdmin(admin.ModelAdmin):
-    list_display = ['academic', 'price', 'registration', 'promotion', 'birth']
-    fields = ['academic', 'price', 'registration', 'promotion', 'birth', 'possibilities']
+    list_display = ['academic', 'price', 'registration', 'admin_photo', 'promotion', 'birth']
+    fields = ['academic', 'price', 'registration', 'image', 'promotion', 'birth']
     readonly_fields = ['created_at', 'updated_at']
 
 

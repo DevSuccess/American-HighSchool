@@ -205,7 +205,7 @@ class Price(BaseModel, ImageModel):
     promotion = models.IntegerField(
         validators=[
             MaxValueValidator(100),
-            MinValueValidator(1)
+            MinValueValidator(0)
         ]
     )
     birth = models.IntegerField(
@@ -215,7 +215,6 @@ class Price(BaseModel, ImageModel):
         ],
         choices=[(i, str(i)) for i in range(72)]
     )
-    possibilities = models.ForeignKey(Possibility, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.academic
@@ -329,3 +328,5 @@ class ContactInfo(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Contact Info'
+
+

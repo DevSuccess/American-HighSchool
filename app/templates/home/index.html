@@ -321,7 +321,7 @@ Home
                 <tr>
                   <td>{{ contact_info.title }}</td>
                   <td>
-                    <p class="mb-2">{{ contact_info.phone }}</p>
+                    <p class="mb-2">{{ contact_info.phone | phone2numeric }}</p>
                     <p class="mb-0">{{ contact_info.email }}</p>
                   </td>
                 </tr>
@@ -342,10 +342,10 @@ Home
           data-wow-delay="0.1s"
         >
           <div class="col-lg-6">
-            <p><span class="text-primary me-2">#</span>Membership</p>
+            <p><span class="text-primary me-2">#</span>Price</p>
             <h1 class="display-5 mb-0">
               You Can Be A Proud Member Of
-              <span class="text-primary">ITTI</span>
+              <span class="text-primary">ITTI AHSM</span>
             </h1>
           </div>
           <div class="col-lg-6 text-lg-end">
@@ -353,57 +353,25 @@ Home
           </div>
         </div>
         <div class="row g-4">
+            {% for price in prices %}
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="membership-item position-relative">
-              <img class="img-fluid" src="{% static 'assets/img/animal-lg-1.jpg' %}" alt="" />
-              <h1 class="display-1">01</h1>
-              <h4 class="text-white mb-3">Popular</h4>
-              <h3 class="text-primary mb-4">$99.00</h3>
-              <p><i class="fa fa-check text-primary me-3"></i>10% discount</p>
+              <img class="img-fluid" src="{{ price.image.url }}" alt="" />
+              <h1 class="display-1">{{ forloop.counter }}</h1>
+              <h4 class="text-white mb-3">{{ price.academic }}</h4>
+              <h3 class="text-primary mb-4">{{ price.price }}</h3>
+              <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }} % discount</p>
               <p>
-                <i class="fa fa-check text-primary me-3"></i>2 adult and 2 child
+                <i class="fa fa-check text-primary me-3"></i>{{ price.birth }} years
               </p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>Free animal
-                exhibition
-              </p>
+                <p>
+                <i class="fa fa-check text-primary me-3"></i>
+                Registration fee : {{ price.registration }}
+                </p>
               <a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="membership-item position-relative">
-              <img class="img-fluid" src="{% static 'assets/img/animal-lg-2.jpg' %}" alt="" />
-              <h1 class="display-1">02</h1>
-              <h4 class="text-white mb-3">Standard</h4>
-              <h3 class="text-primary mb-4">$149.00</h3>
-              <p><i class="fa fa-check text-primary me-3"></i>15% discount</p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>4 adult and 4 child
-              </p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>Free animal
-                exhibition
-              </p>
-              <a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="membership-item position-relative">
-              <img class="img-fluid" src="{% static 'assets/img/animal-lg-3.jpg' %}" alt="" />
-              <h1 class="display-1">03</h1>
-              <h4 class="text-white mb-3">Premium</h4>
-              <h3 class="text-primary mb-4">$199.00</h3>
-              <p><i class="fa fa-check text-primary me-3"></i>20% discount</p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>6 adult and 6 child
-              </p>
-              <p>
-                <i class="fa fa-check text-primary me-3"></i>Free animal
-                exhibition
-              </p>
-              <a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
-            </div>
-          </div>
+            {% endfor %}
         </div>
       </div>
     </div>
