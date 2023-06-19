@@ -14,10 +14,10 @@
       </div>
     </div>
     <div class="col-lg-6 px-5 text-end">
-        {% for con in contacts %}
+        {% for con in contact_infos %}
       <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-        <i class="{{ con.type }}"></i>
-        <small>{{ con.contact }}</small>
+        <i class="fa fa-phone text-primary me-2"></i>
+        <small>{{ con.phone }}</small>
       </div>
         {% endfor %}
 
