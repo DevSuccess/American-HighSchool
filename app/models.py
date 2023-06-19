@@ -60,6 +60,9 @@ class AboutList(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'A Propos : Listes'
+
 
 class About(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
