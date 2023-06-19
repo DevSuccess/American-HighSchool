@@ -247,6 +247,7 @@ class ServiceType(BaseModel, ImageModel):
 
 class Service(BaseModel):
     title = models.CharField(max_length=150, null=True)
+    email = models.EmailField(max_length=150, null=True, blank=True)
     key = models.CharField(max_length=150, null=True, blank=True)
     label = models.CharField(max_length=150, unique=True)
     info_line = models.CharField(max_length=15, null=True)
@@ -298,12 +299,33 @@ class Vision(BaseModel, ImageModel):
     class Meta:
         verbose_name_plural = 'Visions'
 
+    def __str__(self):
+        return self.title
+
 
 class PresentationVideo(BaseModel, VideoModel):
     title = models.CharField(max_length=150)
     description = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.title
+
 
 class PresentationImage(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
     description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.title
+
+
+class ContactInfo(BaseModel):
+    title = models.CharField(max_length=100)
+    phone = models.CharField(max_length=150)
+    email = models.EmailField(max_length=150)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Contact Info'

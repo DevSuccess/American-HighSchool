@@ -71,7 +71,7 @@ class ServiceTypeModelAdmin(admin.ModelAdmin):
 @admin.register(models.Service)
 class ServiceModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'key', 'label', 'info_line', 'active']
-    fields = ['title', 'label', 'key', 'info_line', 'all_service',  'active']
+    fields = ['title', 'label', 'key', 'info_line', 'all_service', 'active']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -112,8 +112,10 @@ class PriceModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Members)
 class MembersModelAdmin(admin.ModelAdmin):
-    list_display = ['lastname', 'firstname', 'occupation', 'category', 'email', 'admin_photo', 'created_at', 'updated_at']
-    fields = ['lastname', 'firstname', 'image', ('occupation', 'category'), 'email', 'contacts', 'created_at', 'updated_at']
+    list_display = ['lastname', 'firstname', 'occupation', 'category', 'email', 'admin_photo', 'created_at',
+                    'updated_at']
+    fields = ['lastname', 'firstname', 'image', ('occupation', 'category'), 'email', 'contacts', 'created_at',
+              'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -142,4 +144,11 @@ class PresentationVideoModelAdmin(admin.ModelAdmin):
 class PresentationImageModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'active', 'admin_photo', 'created_at', 'updated_at']
     fields = ['title', 'description', 'active', 'image', 'created_at', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.ContactInfo)
+class ContactInfoModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'phone', 'email', 'active']
+    fields = ['title', 'phone', 'email', 'active', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']

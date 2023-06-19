@@ -297,34 +297,14 @@ Home
           <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
             <h1 class="display-6 text-white mb-5">Visiting Hours</h1>
             <ul class="list-group list-group-flush">
+                {% for hour_list in hour_lists %}
               <li class="list-group-item">
-                <span>Monday</span>
-                <span>9:00AM - 6:00PM</span>
+                <span>{{ hour_list.day }}</span>
+                <span>{{ hour_list.message }}</span>
+                <span>{{ hour_list.open }} - {{ hour_list.close }}</span>
               </li>
-              <li class="list-group-item">
-                <span>Tuesday</span>
-                <span>9:00AM - 6:00PM</span>
-              </li>
-              <li class="list-group-item">
-                <span>Wednesday</span>
-                <span>9:00AM - 6:00PM</span>
-              </li>
-              <li class="list-group-item">
-                <span>Thursday</span>
-                <span>9:00AM - 6:00PM</span>
-              </li>
-              <li class="list-group-item">
-                <span>Friday</span>
-                <span>9:00AM - 6:00PM</span>
-              </li>
-              <li class="list-group-item">
-                <span>Saturday</span>
-                <span>9:00AM - 6:00PM</span>
-              </li>
-              <li class="list-group-item">
-                <span>Sunday</span>
-                <span>Closed</span>
-              </li>
+                {% endfor %}
+
             </ul>
           </div>
           <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
@@ -333,26 +313,19 @@ Home
               <tbody>
                 <tr>
                   <td>Office</td>
-                  <td>123 Street, New York, USA</td>
+                {% for address in addresses %}
+                  <td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
+                {% endfor %}
                 </tr>
+                {% for contact_info in contact_infos %}
                 <tr>
-                  <td>Zoo</td>
-                  <td>123 Street, New York, USA</td>
-                </tr>
-                <tr>
-                  <td>Ticket</td>
+                  <td>{{ contact_info.title }}</td>
                   <td>
-                    <p class="mb-2">+012 345 6789</p>
-                    <p class="mb-0">ticket@example.com</p>
+                    <p class="mb-2">{{ contact_info.phone }}</p>
+                    <p class="mb-0">{{ contact_info.email }}</p>
                   </td>
                 </tr>
-                <tr>
-                  <td>Support</td>
-                  <td>
-                    <p class="mb-2">+012 345 6789</p>
-                    <p class="mb-0">support@example.com</p>
-                  </td>
-                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </div>

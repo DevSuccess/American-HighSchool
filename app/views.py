@@ -25,4 +25,7 @@ class HomeView(View):
         members_administration = models.Members.objects.filter(category='B').order_by('?')
         members_enseignants = models.Members.objects.filter(category='C').order_by('?')
 
+        hour_lists = models.Hour.objects.all()
+        contact_infos = models.ContactInfo.objects.all()
+
         return render(request, 'home/index.html', locals())
