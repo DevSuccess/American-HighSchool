@@ -105,8 +105,8 @@ class PriceModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Members)
 class MembersModelAdmin(admin.ModelAdmin):
-    list_display = ['lastname', 'firstname', 'occupation', 'email']
-    fields = ['lastname', 'firstname', 'occupation', 'email', 'contacts']
+    list_display = ['lastname', 'firstname', 'occupation', 'email', 'created_at', 'updated_at']
+    fields = ['lastname', 'firstname', 'occupation', 'email', 'contacts', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -119,15 +119,15 @@ class AccreditationModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.About)
 class AboutModelAdmin(admin.ModelAdmin):
-    list_display = ['title', 'key', 'libel', 'content', 'admin_photo']
-    fields = ['title', 'key', 'libel', 'lists', 'content', 'image']
+    list_display = ['title', 'key', 'libel', 'content', 'admin_photo', 'created_at', 'updated_at']
+    fields = ['title', 'key', 'libel', 'lists', 'content', 'image', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
 @admin.register(models.PresentationVideo)
 class PresentationVideoModelAdmin(admin.ModelAdmin):
-    list_display = ['title', 'admin_video']
-    fields = ['title', 'active', 'video']
+    list_display = ['title', 'active', 'admin_video', 'created_at', 'updated_at']
+    fields = ['title', 'active', 'video', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 

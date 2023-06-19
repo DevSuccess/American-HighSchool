@@ -68,12 +68,18 @@ class About(BaseModel, ImageModel):
     lists = models.ManyToManyField(AboutList)
     content = models.TextField(null=True)
 
+    class Meta:
+        verbose_name_plural = 'A Propos'
+
     def __str__(self):
         return self.title
 
 
 class Activity(BaseModel, ImageModel):
     title = models.CharField(max_length=150, null=True)
+
+    class Meta:
+        verbose_name_plural = 'Activités'
 
     def __str__(self):
         return self.title
@@ -86,6 +92,9 @@ class Address(BaseModel):
     state = models.CharField(max_length=100, choices=STATES)
     zip_code = models.CharField(verbose_name='Postal Code', max_length=10)
     map = models.TextField(null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = 'Adresses'
 
     def __str__(self):
         return self.street
@@ -101,6 +110,9 @@ class Collaborator(BaseModel, ImageModel):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Collaborateur'
+
 
 class Accreditation(BaseModel, ImageModel):
     content = models.CharField(max_length=150)
@@ -109,6 +121,9 @@ class Accreditation(BaseModel, ImageModel):
     def __str__(self):
         return self.content
 
+    class Meta:
+        verbose_name_plural = 'Accreditation'
+
 
 class Contact(BaseModel):
     contact = models.CharField(max_length=200)
@@ -116,6 +131,9 @@ class Contact(BaseModel):
 
     def __str__(self):
         return self.contact
+
+    class Meta:
+        verbose_name_plural = 'Contacts'
 
 
 class Hour(models.Model):
@@ -128,6 +146,9 @@ class Hour(models.Model):
     def clean(self):
         if self.open == self.close:
             raise ValidationError('Values must be different')
+
+    class Meta:
+        verbose_name_plural = 'Horaires'
 
     def __str__(self):
         return self.day
@@ -147,12 +168,18 @@ class Members(BaseModel, ImageModel):
     def __str__(self):
         return self.lastname
 
+    class Meta:
+        verbose_name_plural = 'Membres'
+
 
 class Possibility(BaseModel):
     value = models.CharField(max_length=150)
 
     def __str__(self):
         return self.value
+
+    class Meta:
+        verbose_name_plural = 'Possibilités'
 
 
 class Price(BaseModel, ImageModel):
@@ -177,6 +204,9 @@ class Price(BaseModel, ImageModel):
     def __str__(self):
         return self.academic
 
+    class Meta:
+        verbose_name_plural = 'Prix'
+
 
 class Query(models.Model):
     name = models.CharField(max_length=250)
@@ -186,6 +216,9 @@ class Query(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = 'Démandes'
 
 
 class Service(BaseModel, ImageModel):
@@ -204,6 +237,9 @@ class Social(BaseModel):
     def __str__(self):
         return self.network_name
 
+    class Meta:
+        verbose_name_plural = 'Réseau Sociaux'
+
 
 class Testimonial(BaseModel, ImageModel):
     name = models.CharField(max_length=250)
@@ -220,6 +256,9 @@ class Testimonial(BaseModel, ImageModel):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Témoignages'
+
 
 class Value(BaseModel, ImageModel):
     content = models.TextField()
@@ -228,6 +267,9 @@ class Value(BaseModel, ImageModel):
 class Vision(BaseModel, ImageModel):
     title = models.CharField(max_length=150, blank=True)
     content = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'Visions'
 
 
 class PresentationVideo(BaseModel, VideoModel):
