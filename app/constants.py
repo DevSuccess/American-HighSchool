@@ -12,9 +12,9 @@ DAYS = (
 )
 
 CONTACTS = (
-    ('fab fa-envelope', 'Email'),
-    ('fab fa-phone-alt', 'Phone'),
-    ('fab fa-whatsapp', 'WhatsApp'),
+    ('fa fa-envelope text-primary me-2', 'Email'),
+    ('fa fa-phone text-primary me-2', 'Phone'),
+    ('fa fa-whatsapp text-primary me-2', 'WhatsApp'),
 )
 
 ACADEMICS = (

@@ -8,5 +8,8 @@ class HomeView(View):
     @staticmethod
     def get(request):
         addresses = models.Address.objects.all()
+        contacts = models.Contact.objects.all()
+        hours = models.Hour.get_current_hours()
+        socials = models.Social.objects.all()
 
         return render(request, 'home/index.html', locals())

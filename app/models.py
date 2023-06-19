@@ -1,5 +1,6 @@
 from django.core.validators import FileExtensionValidator
 from django.db import models
+from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
 from django.core.validators import MaxValueValidator, MinValueValidator
@@ -130,7 +131,7 @@ class Accreditation(BaseModel, ImageModel):
 
 class Contact(BaseModel):
     contact = models.CharField(max_length=200)
-    type = models.CharField(max_length=25, choices=CONTACTS)
+    type = models.CharField(max_length=50, choices=CONTACTS)
 
     def __str__(self):
         return self.contact
@@ -159,6 +160,17 @@ class Hour(models.Model):
     def save(self, *args, **kwargs):
         self.full_clean()
         super().save(*args, **kwargs)
+
+    @classmethod
+    def get_current_hours(cls):
+        now = timezone.now()
+        current_day = now.strftime('%a')
+
+        try:
+            hour = cls.objects.get(day=current_day, active=True)
+            return f"{hour.day}: {hour.open.strftime('%I.%M %p')} - {hour.close.strftime('%I.%M %p')}"
+        except cls.DoesNotExist:
+            return 'Closed'
 
 
 class Members(BaseModel, ImageModel):
