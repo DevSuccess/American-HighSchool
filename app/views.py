@@ -27,7 +27,7 @@ class HomeView(View):
 
         hour_lists = models.Hour.objects.all()
         contact_infos = models.ContactInfo.objects.all()
-
         prices = models.Price.objects.all()
+        testimonials = models.Testimonial.objects.all()
 
         return render(request, 'home/index.html', locals())
