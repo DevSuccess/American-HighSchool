@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View
+import random
 from . import models
 
 
@@ -18,4 +19,10 @@ class HomeView(View):
         except models.About.DoesNotExist:
             abouts = None
         services = models.Service.objects.all()
+
+        # Obtenir les membres dans un ordre aléatoire par catégorie
+        members_direction = models.Members.objects.filter(category='A').order_by('?')
+        members_administration = models.Members.objects.filter(category='B').order_by('?')
+        members_enseignants = models.Members.objects.filter(category='C').order_by('?')
+
         return render(request, 'home/index.html', locals())

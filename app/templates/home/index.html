@@ -227,104 +227,59 @@ Home
         <div class="row g-4">
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="row g-4">
-              <div class="col-12">
-                <a
-                  class="animal-item"
-                  href="{% static 'assets/img/animal-md-1.jpg' %}"
-                  data-lightbox="animal"
-                >
-                  <div class="position-relative">
-                    <img class="img-fluid" src="{% static 'assets/img/animal-md-1.jpg' %}" alt="" />
-                    <div class="animal-text p-4">
-                      <p class="text-white small text-uppercase mb-0">Animal</p>
-                      <h5 class="text-white mb-0">Elephant</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12">
-                <a
-                  class="animal-item"
-                  href="{% static 'assets/img/animal-lg-1.jpg' %}"
-                  data-lightbox="animal"
-                >
-                  <div class="position-relative">
-                    <img class="img-fluid" src="{% static 'assets/img/animal-lg-1.jpg' %}" alt="" />
-                    <div class="animal-text p-4">
-                      <p class="text-white small text-uppercase mb-0">Animal</p>
-                      <h5 class="text-white mb-0">Elephant</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              {% for direction in members_direction %}
+                <div class="col-12">
+                  {% if direction.image %}
+                    <a class="animal-item" href="{{ direction.image.url }}" data-lightbox="animal">
+                      <div class="position-relative">
+                        <img class="img-fluid" src="{{ direction.image.url }}" alt="" />
+                        <div class="animal-text p-4">
+                          <p class="text-white small text-uppercase mb-0">{{ direction.lastname }}</p>
+                          <h5 class="text-white mb-0">{{ direction.occupation }}</h5>
+                        </div>
+                      </div>
+                    </a>
+                  {% endif %}
+                </div>
+              {% endfor %}
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="row g-4">
-              <div class="col-12">
-                <a
-                  class="animal-item"
-                  href="{% static 'assets/img/animal-lg-2.jpg' %}"
-                  data-lightbox="animal"
-                >
-                  <div class="position-relative">
-                    <img class="img-fluid" src="{% static 'assets/img/animal-lg-2.jpg' %}" alt="" />
-                    <div class="animal-text p-4">
-                      <p class="text-white small text-uppercase mb-0">Animal</p>
-                      <h5 class="text-white mb-0">Elephant</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12">
-                <a
-                  class="animal-item"
-                  href="{% static 'assets/img/animal-lg-2.jpg' %}"
-                  data-lightbox="animal"
-                >
-                  <div class="position-relative">
-                    <img class="img-fluid" src="{% static 'assets/img/animal-lg-2.jpg' %}" alt="" />
-                    <div class="animal-text p-4">
-                      <p class="text-white small text-uppercase mb-0">Animal</p>
-                      <h5 class="text-white mb-0">Elephant</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              {% for administration in members_administration %}
+                <div class="col-12">
+                    {% if administration.image %}
+                    <a class="animal-item" href="{{ administration.image.url }}" data-lightbox="animal">
+                      <div class="position-relative">
+                        <img class="img-fluid" src="{{ administration.image.url }}" alt="" />
+                        <div class="animal-text p-4">
+                          <p class="text-white small text-uppercase mb-0">{{ administration.lastname }}</p>
+                          <h5 class="text-white mb-0">{{ administration.occupation }}</h5>
+                        </div>
+                      </div>
+                    </a>
+                    {% endif %}
+                </div>
+              {% endfor %}
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="row g-4">
-              <div class="col-12">
-                <a
-                  class="animal-item"
-                  href="{% static 'assets/img/animal-md-3.jpg' %}"
-                  data-lightbox="animal"
-                >
-                  <div class="position-relative">
-                    <img class="img-fluid" src="{% static 'assets/img/animal-md-3.jpg' %}" alt="" />
-                    <div class="animal-text p-4">
-                      <p class="text-white small text-uppercase mb-0">Animal</p>
-                      <h5 class="text-white mb-0">Elephant</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12">
-                <a
-                  class="animal-item"
-                  href="{% static 'assets/img/animal-lg-3.jpg' %}"
-                  data-lightbox="animal"
-                >
-                  <div class="position-relative">
-                    <img class="img-fluid" src="{% static 'assets/img/animal-lg-3.jpg' %}" alt="" />
-                    <div class="animal-text p-4">
-                      <p class="text-white small text-uppercase mb-0">Animal</p>
-                      <h5 class="text-white mb-0">Elephant</h5>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              {% for enseignant in members_enseignants %}
+                <div class="col-12">
+                  {% if enseignant.image %}
+                    <a class="animal-item" href="{{ enseignant.image.url }}" data-lightbox="animal">
+                      <div class="position-relative">
+                        <img class="img-fluid" src="{{ enseignant.image.url }}" alt="" />
+                        <div class="animal-text p-4">
+                          <p class="text-white small text-uppercase mb-0">{{ enseignant.lastname }}</p>
+                          <h5 class="text-white mb-0">{{ enseignant.occupation }}</h5>
+                        </div>
+                      </div>
+                    </a>
+                  {% endif %}
+                </div>
+              {% endfor %}
             </div>
           </div>
         </div>

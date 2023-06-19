@@ -112,8 +112,8 @@ class PriceModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Members)
 class MembersModelAdmin(admin.ModelAdmin):
-    list_display = ['lastname', 'firstname', 'occupation', 'email', 'created_at', 'updated_at']
-    fields = ['lastname', 'firstname', 'occupation', 'email', 'contacts', 'created_at', 'updated_at']
+    list_display = ['lastname', 'firstname', 'occupation', 'category', 'email', 'admin_photo', 'created_at', 'updated_at']
+    fields = ['lastname', 'firstname', 'image', ('occupation', 'category'), 'email', 'contacts', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 

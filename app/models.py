@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.utils.safestring import mark_safe
 from django.core.validators import MaxValueValidator, MinValueValidator
-from .constants import ACADEMICS, DAYS, CONTACTS, STATES, SOCIALS, upload_path
+from .constants import ACADEMICS, DAYS, CONTACTS, STATES, SOCIALS, upload_path, CATEGORY
 
 
 class BaseModel(models.Model):
@@ -176,7 +176,8 @@ class Hour(models.Model):
 class Members(BaseModel, ImageModel):
     lastname = models.CharField(max_length=100)
     firstname = models.CharField(max_length=150)
-    occupation = models.CharField(max_length=100)
+    category = models.CharField(max_length=2, choices=CATEGORY, null=True)
+    occupation = models.CharField(max_length=100, null=True)
     email = models.EmailField(max_length=250, unique=True)
     contacts = models.ManyToManyField(Contact)
 

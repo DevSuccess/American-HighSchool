@@ -266,6 +266,12 @@ STATES = sorted([
     ('Zimbabwe', 'Zimbabwe')
 ], key=lambda x: x[1])
 
+CATEGORY = (
+    ('A', 'Direction'),
+    ('B', 'Administrative'),
+    ('C', 'Enseignants ')
+)
+
 
 def filetype(filename):
     # Obtenir l'extension du fichier
