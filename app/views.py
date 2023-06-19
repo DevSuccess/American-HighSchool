@@ -17,4 +17,5 @@ class HomeView(View):
             abouts = models.About.objects.latest('created_at')
         except models.About.DoesNotExist:
             abouts = None
+        services = models.Service.objects.all()
         return render(request, 'home/index.html', locals())

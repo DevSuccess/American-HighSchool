@@ -61,10 +61,17 @@ class QueryModelAdmin(admin.ModelAdmin):
     fields = ['name', 'email', 'subject', 'message']
 
 
+@admin.register(models.ServiceType)
+class ServiceTypeModelAdmin(admin.ModelAdmin):
+    list_display = ['name', 'description', 'admin_photo']
+    fields = ['name', 'description', 'image', 'active']
+    readonly_fields = ['created_at', 'updated_at']
+
+
 @admin.register(models.Service)
 class ServiceModelAdmin(admin.ModelAdmin):
-    list_display = ['label', 'active', 'admin_photo']
-    fields = ['label', 'description', 'image', 'active']
+    list_display = ['title', 'key', 'label', 'info_line', 'active']
+    fields = ['title', 'label', 'key', 'info_line', 'all_service',  'active']
     readonly_fields = ['created_at', 'updated_at']
 
 

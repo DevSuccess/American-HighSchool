@@ -96,7 +96,7 @@ Home
             <p class="mb-4">
               {{ abouts.content }}
             </p>
-              {% for list in lists %}
+              {% for list in abouts.lists.all %}
             <h5 class="mb-3">
               <i class="far fa-check-circle text-primary me-3"></i>
                 {{ list.name }}
@@ -162,12 +162,13 @@ Home
     <!-- Service Start -->
     <div class="container-xxl py-5">
       <div class="container">
+          {% for service in services %}
         <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
           <div class="col-lg-6">
-            <p><span class="text-primary me-2">#</span>Our Services</p>
+            <p><span class="text-primary me-2">#</span>{{ service.title }}</p>
             <h1 class="display-5 mb-0">
-              Special Services For
-              <span class="text-primary">AHSM</span> Visitors
+              {{ service.label }}
+              <span class="text-primary">{{ service.key }}</span>
             </h1>
           </div>
           <div class="col-lg-6">
@@ -177,101 +178,28 @@ Home
               <i class="fa fa-3x fa-mobile-alt text-white"></i>
               <div class="ms-4">
                 <p class="text-white mb-0">Call for more info</p>
-                <h2 class="text-white mb-0">+012 345 6789</h2>
+                <h2 class="text-white mb-0">{{ service.info_line }}</h2>
               </div>
             </div>
           </div>
         </div>
         <div class="row gy-5 gx-4">
+        {% for type in service.all_service.all %}
           <div
             class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
             data-wow-delay="0.1s"
           >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-2.png' %}" alt="Icon" />
-            <h5 class="mb-3">Car Parking</h5>
+            <img class="img-fluid mb-3" src="{{ type.image.url }}" alt="Icon" />
+            <h5 class="mb-3">{{ type.name }}</h5>
             <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
+              >{{ type.description }}</span
             >
           </div>
-          <div
-            class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-3.png' %}" alt="Icon" />
-            <h5 class="mb-3">Animal Photos</h5>
-            <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
-            >
-          </div>
-          <div
-            class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-4.png' %}" alt="Icon" />
-            <h5 class="mb-3">Guide Services</h5>
-            <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
-            >
-          </div>
-          <div
-            class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-            data-wow-delay="0.7s"
-          >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-5.png' %}" alt="Icon" />
-            <h5 class="mb-3">Food & Beverages</h5>
-            <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
-            >
-          </div>
-          <div
-            class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-6.png' %}" alt="Icon" />
-            <h5 class="mb-3">Zoo Shopping</h5>
-            <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
-            >
-          </div>
-          <div
-            class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-7.png' %}" alt="Icon" />
-            <h5 class="mb-3">Free Hi Speed Wi-Fi</h5>
-            <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
-            >
-          </div>
-          <div
-            class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-8.png' %}" alt="Icon" />
-            <h5 class="mb-3">Play Ground</h5>
-            <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
-            >
-          </div>
-          <div
-            class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-            data-wow-delay="0.7s"
-          >
-            <img class="img-fluid mb-3" src="{% static 'assets/img/icon/icon-9.png' %}" alt="Icon" />
-            <h5 class="mb-3">Rest House</h5>
-            <span
-              >Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
-              sed diam stet diam sed stet.</span
-            >
-          </div>
+        {% endfor %}
         </div>
+
+          {% endfor %}
+
       </div>
     </div>
     <!-- Service End -->
