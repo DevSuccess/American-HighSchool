@@ -18,7 +18,7 @@
   </button>
   <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
     <div class="navbar-nav ms-auto">
-      <a href="#" class="nav-item nav-link active">Home</a>
+      <a href="{% url 'app:home' %}" class="nav-item nav-link active">Home</a>
       <a href="#" class="nav-item nav-link">About</a>
       <a href="#" class="nav-item nav-link">Services</a>
       <a href="#" class="nav-item nav-link">News</a>
@@ -38,7 +38,7 @@
 {#          <a href="#" class="dropdown-item">404 Page</a>#}
         </div>
       </div>
-      <a href="#" class="nav-item nav-link">Contact</a>
+      <a href="{% url 'contact:index' %}" class="nav-item nav-link">Contact</a>
     </div>
     <a href="#" class="btn btn-primary"
       >Subscribe<i class="fa fa-arrow-right ms-3"></i
