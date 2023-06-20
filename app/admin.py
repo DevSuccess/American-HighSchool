@@ -4,8 +4,8 @@ from . import models
 
 @admin.register(models.Level)
 class LevelModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'status', 'admin_photo', 'created_at', 'updated_at']
-    fields = ['name', 'status', 'image', 'prices', 'created_at', 'updated_at']
+    list_display = ['name', 'status', 'created_at', 'updated_at']
+    fields = ['name', 'status', 'prices', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
 
 
@@ -93,8 +93,8 @@ class VisionModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Price)
 class PriceModelAdmin(admin.ModelAdmin):
-    list_display = ['price', 'registration', 'promotion', 'price_promo', 'birth']
-    fields = ['price', 'registration', 'promotion', 'price_promo', 'birth', 'created_at', 'updated_at']
+    list_display = ['price', 'registration', 'promotion', 'price_promo', 'admin_photo', 'birth']
+    fields = ['price', 'registration', 'promotion', 'price_promo', ('birth', 'image'), 'created_at', 'updated_at']
     readonly_fields = ['price_promo', 'created_at', 'updated_at']
 
 

@@ -22,7 +22,7 @@ class ImageModel(models.Model):
         validators=[
             FileExtensionValidator(allowed_extensions=['png', 'jpg', 'gif', 'jpeg', 'webp', 'svg', 'bmp'])
         ],
-        default=''
+        default='', null=True
     )
 
     def admin_photo(self):
@@ -52,16 +52,16 @@ class VideoModel(models.Model):
         abstract = True
 
 
-class Price(BaseModel):
-    price = models.FloatField()
+class Price(BaseModel, ImageModel):
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     promotion = models.IntegerField(
         validators=[
             MaxValueValidator(100),
             MinValueValidator(0)
         ], blank=True
     )
-    price_promo = models.FloatField(blank=True)
-    registration = models.FloatField(blank=True)
+    price_promo = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
+    registration = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
     birth = models.IntegerField(
         validators=[
             MaxValueValidator(70),
@@ -69,6 +69,12 @@ class Price(BaseModel):
         ],
         choices=[(i, str(i)) for i in range(72)]
     )
+
+    def formatted_price(self):
+        return "{:,.0f} MGA".format(self.price)
+
+    def formatted_registration(self):
+        return "{:,.0f} MGA".format(self.registration)
 
     def calculate_price_promo(self):
         if self.promotion is not None:
@@ -87,7 +93,7 @@ class Price(BaseModel):
         verbose_name_plural = 'Les Prix'
 
 
-class Level(BaseModel, ImageModel):
+class Level(BaseModel):
     name = models.CharField(max_length=150)
     status = models.BooleanField(default=True)
     prices = models.ForeignKey(Price, on_delete=models.CASCADE)
