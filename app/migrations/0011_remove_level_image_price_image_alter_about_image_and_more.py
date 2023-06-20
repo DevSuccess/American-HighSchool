@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
             field=models.FileField(default='', null=True, upload_to=app.constants.upload_path, validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['png', 'jpg', 'gif', 'jpeg', 'webp', 'svg', 'bmp'])]),
         ),
         migrations.AlterField(
-            model_name='about',
+            model_name='contact',
             name='image',
             field=models.FileField(default='', null=True, upload_to=app.constants.upload_path, validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['png', 'jpg', 'gif', 'jpeg', 'webp', 'svg', 'bmp'])]),
         ),
