@@ -7,8 +7,8 @@ from . import models
 
 # Create your views here.
 class HomeView(View):
-    @staticmethod
-    def get(request):
+
+    def get(self, request):
         addresses = models.Address.objects.all()
         contacts = models.Contact.objects.all()
         hours = models.Hour.get_current_hours()

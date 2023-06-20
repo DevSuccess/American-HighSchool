@@ -2,13 +2,13 @@ from uuid import uuid4
 import os
 
 DAYS = (
-    ('Monday', 'Monday'),
-    ('Tuesday', 'Tuesday'),
-    ('Wednesday', 'Wednesday'),
-    ('Thursday', 'Thursday'),
-    ('Thursday', 'Thursday'),
-    ('Saturday', 'Saturday'),
-    ('Sunday', 'Sunday'),
+    ('Mon', 'Lundi'),
+    ('Tue', 'Mardi'),
+    ('Wed', 'Mercredi'),
+    ('Thu', 'Jeudi'),
+    ('Fri', 'Vendredi'),
+    ('Sat', 'Samedi'),
+    ('Sun', 'Dimanche'),
 )
 
 

@@ -6,56 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_presentationimage_presentationvideo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_alter_address_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_alter_about_options_alter_accreditation_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_alter_address_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0006_alter_aboutlist_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0007_alter_contact_type.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0008_alter_contact_type.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0009_alter_contact_type.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0010_servicetype_remove_service_description_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0011_service_key.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0012_alter_service_key.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0013_members_category_alter_members_occupation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0014_service_email_alter_members_category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0015_contactinfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0016_alter_contactinfo_options_remove_price_possibilities_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0017_info_level_delete_contactinfo_delete_value_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0018_alter_accreditation_options_alter_activity_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0019_alter_about_options_alter_address_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0020_alter_service_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/04d4132e74804d1a81f9457b4b334a80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/07f672c288d74b878ede88e8552146b4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/0cff1bf7736245deb2b7cda81a897e3c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/15b7dc9e0d7b478fb76e73ab4b653f64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/183aaf0fe808420a93e5e42975c8d861.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/1892830a4f9345388fae91754ccb6a1b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/2dddcb2cb284459bba7a4877c82ec729.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/2e01b94064e443b2b63f02ed8c0151c4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/3212da59522f451c9472b7d98655c113.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/4c7a8835a0804b5ca24d646ec1ea1b1c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/5e31e5c5020642a3944b8d3639b5e8e2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/6c58733ecaf14af0a78ed1a49e2e052f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/6d116b98cdfe4e91981165660463c937.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/712a35611fc74303866b2bee74e2805e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/8379d0c7bca74920aa623824de267885.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/879e59ba57164da6abca77b9831b1a44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/8d98790650364603aa35c3654499fe1d.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/95ad867fca6540e2a2131d3f4519c815.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/c53961e03f4c4475969fc8cf1221e3ce.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/cedd87ae59a7420f9be9edba8fe9d0bf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/e42ad3ccdb404db499a930644d5ccdc8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/e810056cef164bdf85cb6c50b5c0f3c9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/efe404081a504dce8908d22b5ab80895.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/f105efa6d3f349808e650907fe91bbc3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/f36b5640766743f2b8ceb9fc5056f103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/f6fceda4d65e4ccfa568c609a25e3be5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/image/fe869596692c41d49017393d51a62a0e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/video/aff2d3a954ab4f88a10ad06dd560c466.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +113,8 @@
       <workItem from="1687020892373" duration="6134000" />
       <workItem from="1687152446479" duration="10727000" />
       <workItem from="1687166424098" duration="13637000" />
-      <workItem from="1687191288017" duration="9310000" />
+      <workItem from="1687191288017" duration="9607000" />
+      <workItem from="1687238318825" duration="4940000" />
     </task>
     <servers />
   </component>

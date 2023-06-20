@@ -80,7 +80,7 @@ class Price(BaseModel):
         self.calculate_price_promo()
         super().save(*args, **kwargs)
 
-    def __str__(self):
+    def __float__(self):
         return self.price
 
     class Meta:
@@ -196,11 +196,11 @@ class Info(BaseModel):
         verbose_name_plural = 'Les Informations lier à AHSM'
 
 
-class Hour(BaseModel):
+class Hour(models.Model):
     day = models.CharField(max_length=15, choices=DAYS)
     open = models.TimeField()
     close = models.TimeField()
-    message = models.CharField(max_length=250, default='')
+    message = models.CharField(max_length=250, blank=True)
 
     def clean(self):
         if self.open == self.close:
@@ -212,18 +212,15 @@ class Hour(BaseModel):
     def __str__(self):
         return self.day
 
-    def save(self, *args, **kwargs):
-        self.full_clean()
-        super().save(*args, **kwargs)
-
     @classmethod
     def get_current_hours(cls):
         now = timezone.now()
         current_day = now.strftime('%a')
+        current_time = now.time()
 
         try:
-            hour = cls.objects.get(day=current_day, active=True)
-            return f"{hour.day}: {hour.open.strftime('%I.%M %p')} - {hour.close.strftime('%I.%M %p')}"
+            hour = cls.objects.get(day=current_day, open__lte=current_time, close__gt=current_time)
+            return f"{hour.day}: {hour.open.strftime('%I:%M %p')} - {hour.close.strftime('%I:%M %p')}"
         except cls.DoesNotExist:
             return 'Closed'
 

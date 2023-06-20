@@ -45,8 +45,8 @@ class ContactModelAdmin(admin.ModelAdmin):
 
 @admin.register(models.Hour)
 class HourModelAdmin(admin.ModelAdmin):
-    list_display = ['day', 'open', 'close', 'active', 'message']
-    fields = ['day', ('open', 'close'), 'active', 'message']
+    list_display = ['day', 'open', 'close', 'message']
+    fields = ['day', ('open', 'close'), 'message']
 
 
 @admin.register(models.Possibility)
