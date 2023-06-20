@@ -1,6 +1,5 @@
 from django.db import models
-from django.utils.safestring import mark_safe
-from Web.utils import STATES, BaseModel, ImageModel, VideoModel
+from Web.utils import BaseModel, ImageModel, VideoModel
 
 
 # Create your models here.

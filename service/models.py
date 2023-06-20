@@ -1,5 +1,4 @@
 from django.db import models
-
 from Web.utils import BaseModel, ImageModel
 
 
