@@ -3,14 +3,14 @@ from Web.utils import SOCIALS, BaseModel, ImageModel, VideoModel
 
 
 # Create your models here.
-class OurContact(BaseModel):
+class ContactHelp(BaseModel):
     number = models.CharField(max_length=200)
 
     def __str__(self):
         return self.number
 
     class Meta:
-        verbose_name_plural = 'Les Contacts'
+        verbose_name_plural = "Les Supports d'Aide client (Contact)"
 
 
 class Social(BaseModel):
@@ -22,7 +22,7 @@ class Social(BaseModel):
         return self.network_name
 
     class Meta:
-        verbose_name_plural = 'Les Réseau Sociaux'
+        verbose_name_plural = 'Les Réseaux Sociaux'
 
 
 class ContactUs(BaseModel):
@@ -35,4 +35,4 @@ class ContactUs(BaseModel):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Les Démandes Utilisateurs'
+        verbose_name_plural = 'Les Posts Clients'

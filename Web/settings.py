@@ -45,10 +45,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'about.apps.AboutConfig',
+    'activity.apps.ActivityConfig',
+    'address.apps.AddressConfig',
     'contact.apps.ContactConfig',
     'home.apps.HomeConfig',
+    'hour.apps.HourConfig',
     'member.apps.MemberConfig',
+    'price.apps.PriceConfig',
     'service.apps.ServiceConfig',
+    'testimonie.apps.TestimonieConfig',
+    'vision.apps.VisionConfig',
 ]
 
 MIDDLEWARE = [

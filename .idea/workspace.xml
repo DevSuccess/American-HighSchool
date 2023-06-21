@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/context_processors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/Freelance/ITTI/American Highschool Madagascar/Web/contact",
+    "last_opened_file_path": "E:/Freelance/ITTI/American Highschool Madagascar/Web/vision",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -123,7 +118,9 @@
       <workItem from="1687238318825" duration="5268000" />
       <workItem from="1687245124164" duration="35000" />
       <workItem from="1687262699953" duration="5977000" />
-      <workItem from="1687276259747" duration="8742000" />
+      <workItem from="1687276259747" duration="8946000" />
+      <workItem from="1687286444383" duration="317000" />
+      <workItem from="1687316176850" duration="1434000" />
     </task>
     <servers />
   </component>

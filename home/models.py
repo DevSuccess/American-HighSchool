@@ -1,15 +1,5 @@
 from django.db import models
-from Web.utils import DAYS, BaseModel, ImageModel, VideoModel
-
-
-class Activity(BaseModel, ImageModel):
-    title = models.CharField(max_length=150)
-
-    class Meta:
-        verbose_name_plural = 'Les Activités'
-
-    def __str__(self):
-        return self.title
+from Web.utils import BaseModel, ImageModel, VideoModel
 
 
 class Possibility(BaseModel):
