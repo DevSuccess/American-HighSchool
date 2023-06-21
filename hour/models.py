@@ -17,7 +17,7 @@ class Hour(models.Model):
             raise ValidationError('Values must be different')
 
     class Meta:
-        verbose_name_plural = 'Les Horaires'
+        verbose_name_plural = "Les Horaires de AHSM"
 
     def __str__(self):
         return self.day

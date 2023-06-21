@@ -6,7 +6,7 @@ from Web.utils import BaseModel, ImageModel
 # Create your models here.
 class Price(BaseModel, ImageModel):
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    promotion = models.IntegerField(
+    promotion = models.FloatField(
         validators=[
             MaxValueValidator(100),
             MinValueValidator(0)
@@ -42,7 +42,7 @@ class Price(BaseModel, ImageModel):
         return self.price
 
     class Meta:
-        verbose_name_plural = 'Les Prix'
+        verbose_name_plural = 'Les Prix de formation ASHM'
 
 
 class Level(BaseModel):
@@ -54,4 +54,4 @@ class Level(BaseModel):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Les Niveaux'
+        verbose_name_plural = "Les Niveaux d'Etude existant a l'AHSM"

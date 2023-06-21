@@ -20,7 +20,7 @@ class PresentationVideo(BaseModel, VideoModel):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'La Présentation Vidéo'
+        verbose_name_plural = 'Les Présentations Vidéo AHSM'
 
 
 class PresentationImage(BaseModel, ImageModel):
@@ -31,4 +31,4 @@ class PresentationImage(BaseModel, ImageModel):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'La Présentation Photo'
+        verbose_name_plural = 'Les Présentations Photo AHSM'

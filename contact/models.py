@@ -22,7 +22,7 @@ class Social(BaseModel):
         return self.network_name
 
     class Meta:
-        verbose_name_plural = 'Les Réseaux Sociaux'
+        verbose_name_plural = 'Les Réseaux Sociaux AHSM'
 
 
 class ContactUs(BaseModel):
@@ -35,4 +35,15 @@ class ContactUs(BaseModel):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Les Posts Clients'
+        verbose_name_plural = 'Les Posts Clients pour AHSM'
+
+
+class ContactClient(BaseModel):
+    email = models.EmailField(max_length=250, blank=True)
+    phone = models.CharField(max_length=15, blank=True)
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        verbose_name_plural = 'Les Contacts des temoignants Clients'

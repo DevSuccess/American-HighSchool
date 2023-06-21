@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from app.models import Address, Info
+from address.models import AddressAHSM
+from contact.models import ContactHelp
 from django.views import View
 import random
 
@@ -7,8 +8,8 @@ import random
 # Create your views here.
 class ContactView(View):
     def get(self, request):
-        addresses = Address.objects.all()
-        infos = Info.objects.all()
+        addresses = AddressAHSM.objects.all()
+        infos = ContactHelp.objects.all()
         # Liste pour stocker les numéros de téléphone
         phone_numbers = []
         email = ''

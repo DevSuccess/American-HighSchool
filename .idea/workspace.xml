@@ -7,10 +7,55 @@
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activity/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hour/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hour/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hour/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hour/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hour/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/price/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testimonie/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testimonie/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testimonie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testimonie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testimonie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vision/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/vision/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vision/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/vision/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vision/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vision/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vision/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/vision/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +106,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\contact" />
-      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\static\assets\video" />
+      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\vision" />
+      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\testimonie" />
+      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\service" />
+      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\price" />
+      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\hour" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\home" />
@@ -120,7 +168,7 @@
       <workItem from="1687262699953" duration="5977000" />
       <workItem from="1687276259747" duration="8946000" />
       <workItem from="1687286444383" duration="317000" />
-      <workItem from="1687316176850" duration="1434000" />
+      <workItem from="1687316176850" duration="4960000" />
     </task>
     <servers />
   </component>

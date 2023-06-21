@@ -23,9 +23,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('about/', include('about.urls')),
-    path('contact/', include('contact.urls')),
+    path('activity/', include('activity.urls')),
+    path('address/', include('address.urls')),
+    path('hour/', include('hour.urls')),
     path('member/', include('member.urls')),
     path('service/', include('service.urls')),
+    path('tesmonie/', include('testimonie.urls')),
+    path('vision/', include('vision.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # if not settings.DEBUG:
 #     urlpatterns += [

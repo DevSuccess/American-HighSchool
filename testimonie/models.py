@@ -2,6 +2,8 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from Web.utils import BaseModel, ImageModel
 
+from contact.models import ContactClient
+
 
 # Create your models here.
 class Testimonial(BaseModel, ImageModel):
@@ -15,9 +17,10 @@ class Testimonial(BaseModel, ImageModel):
         choices=[(i, str(i)) for i in range(6)]
     )
     occupation = models.CharField(max_length=150)
+    contacts = models.ManyToManyField(ContactClient)
 
     def __str__(self):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Les Témoignages'
+        verbose_name_plural = 'Les Témoignages clients ou etudiant'

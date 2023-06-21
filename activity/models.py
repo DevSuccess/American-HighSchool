@@ -8,7 +8,7 @@ class Activity(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
 
     class Meta:
-        verbose_name_plural = 'Les Activités'
+        verbose_name_plural = 'Les Activités extra-scolaires'
 
     def __str__(self):
         return self.title

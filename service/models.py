@@ -11,4 +11,4 @@ class Service(BaseModel, ImageModel):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'Les Services'
+        verbose_name_plural = 'Les Services proposés par AHSM'
