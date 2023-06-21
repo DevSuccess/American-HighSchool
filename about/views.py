@@ -3,13 +3,18 @@ from . import models
 
 
 # Create your views here.
-def index(request):
+def base_context(request):
     try:
-        abouts = models.About.objects.latest('created_at')
-    except models.About.DoesNotExist:
+        abouts = models.AboutAHSM.objects.latest('created_at')
+    except models.AboutAHSM.DoesNotExist:
         abouts = None
 
     context = {
-        'abouts': abouts
+        'about_home': abouts
     }
-    return render(request, 'about/index.html', context)
+
+    return context
+
+
+def index(request):
+    return render(request, 'about/index.html')

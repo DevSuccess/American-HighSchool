@@ -1,20 +1,28 @@
 from django.shortcuts import render
 from .models import Member
 
-
-# Create your views here.
-def index(request):
+def base_context(request):
     try:
-        members_direction = Member.objects.filter(category='A').order_by('?')
+        direction_home = Member.objects.filter(category='A').order_by('?')
     except Member.DoesNotExist:
         members_direction = None
 
     try:
-        members_administration = Member.objects.filter(category='B').order_by('?')
+        administration_home = Member.objects.filter(category='B').order_by('?')
     except Member.DoesNotExist:
         members_administration = None
 
     try:
-        members_enseignants = Member.objects.filter(category='C').order_by('?')
+        enseignants_home = Member.objects.filter(category='C').order_by('?')
     except Member.DoesNotExist:
         members_enseignants = None
+
+    context = {
+        'direction_home': direction_home,
+        'administration_home': administration_home,
+        'enseignants_home': enseignants_home
+    }
+    return context
+
+def index(request):
+    pass

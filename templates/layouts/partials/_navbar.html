@@ -18,10 +18,31 @@
   </button>
   <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
     <div class="navbar-nav ms-auto">
-      <a href="{% url 'app:home' %}" class="nav-item nav-link active">Home</a>
-      <a href="#" class="nav-item nav-link">About</a>
-      <a href="#" class="nav-item nav-link">Services</a>
-      <a href="#" class="nav-item nav-link">News</a>
+      <a href="{% url 'home:index' %}" class="nav-item nav-link">Home</a>
+      <div class="nav-item dropdown">
+        <a
+          href="#"
+          class="nav-link dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          >About Us</a>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Mission</a>
+            <a href="#" class="dropdown-item">Vision</a>
+            <a href="#" class="dropdown-item">Testimonial</a>
+            <a href="#" class="dropdown-item">Accreditation</a>
+            <a href="#" class="dropdown-item">Homologation</a>
+        </div>
+      </div>
+      <a href="#" class="nav-item nav-link">Academics</a>
+      <a href="#" class="nav-item nav-link position-relative">
+          News
+          <span
+              class="position-absolute top-15 start-100 translate-middle
+               badge border border-light rounded-circle bg-danger p-1">
+              <span class="visually-hidden">unread messages</span>
+          </span>
+      </a>
       <a href="#" class="nav-item nav-link">Blog</a>
       <div class="nav-item dropdown">
         <a
@@ -34,13 +55,12 @@
           <a href="#" class="dropdown-item">Our Student</a>
           <a href="#" class="dropdown-item">Membership</a>
           <a href="#" class="dropdown-item">Visiting Hours</a>
-          <a href="#" class="dropdown-item">Testimonial</a>
 {#          <a href="#" class="dropdown-item">404 Page</a>#}
         </div>
       </div>
-      <a href="{% url 'contact:index' %}" class="nav-item nav-link">Contact</a>
+      <a href="{% url 'contact_us:index' %}" class="nav-item nav-link">Contact</a>
     </div>
-    <a href="#" class="btn btn-primary"
+    <a href="{% url 'register:index' %}" class="btn btn-primary"
       >Subscribe<i class="fa fa-arrow-right ms-3"></i
     ></a>
   </div>

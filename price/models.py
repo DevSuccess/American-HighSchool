@@ -6,11 +6,11 @@ from Web.utils import BaseModel, ImageModel
 # Create your models here.
 class Price(BaseModel, ImageModel):
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    promotion = models.FloatField(
+    promotion = models.DecimalField(
         validators=[
             MaxValueValidator(100),
             MinValueValidator(0)
-        ], blank=True
+        ], blank=True, max_digits=10, decimal_places=2
     )
     price_promo = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
     registration = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
@@ -38,8 +38,8 @@ class Price(BaseModel, ImageModel):
         self.calculate_price_promo()
         super().save(*args, **kwargs)
 
-    def __float__(self):
-        return self.price
+    def __str__(self):
+        return f"{self.price}"
 
     class Meta:
         verbose_name_plural = 'Les Prix de formation ASHM'

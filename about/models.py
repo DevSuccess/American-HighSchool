@@ -31,3 +31,6 @@ class AboutHelp(BaseModel):
 
 class AboutITTI(BaseModel):
     pass
+
+    class Meta:
+        verbose_name_plural = 'Les Informations sur ITTI'

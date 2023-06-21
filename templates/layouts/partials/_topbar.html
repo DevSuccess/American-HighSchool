@@ -2,7 +2,7 @@
 <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
   <div class="row gx-0 d-none d-lg-flex">
     <div class="col-lg-6 px-5 text-start">
-          {% for address in addresses %}
+          {% for address in addresses_ahsm %}
       <div class="h-100 d-inline-flex align-items-center py-3 me-4">
             <small class="fa fa-map-marker-alt text-primary me-2"></small>
             <small>{{ address.lot }} {{ address.street }} {{ address.city }}</small>
@@ -10,30 +10,28 @@
           {% endfor %}
       <div class="h-100 d-inline-flex align-items-center py-3">
         <small class="far fa-clock text-primary me-2"></small>
-        <small>{{ hours }}</small>
+        <small>{{ hours_now }}</small>
       </div>
     </div>
     <div class="col-lg-6 px-5 text-end">
-        {% for info in infos %}
-            {% for phone in info.phones.all %}
-              <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                <i class="fa fa-phone text-primary me-2"></i>
-                <small>{{ phone.number }}</small>
-              </div>
-            {% endfor %}
-
-            <div class="h-100 d-inline-flex align-items-center">
-            {% if socials %}
-            {% for social in info.socials.all %}
-            <a class="btn btn-sm-square bg-white text-primary me-1" href="{{ social.url }}"
-              ><i class="{{ social.social_type }}"></i
-            ></a>
-              {% endfor %}
-            {% else %}
-                <a class="btn btn-sm-square bg-white text-primary me-1" href=""
-              ></a>
-            {% endif %}
+        {% for phone in contacts_helps %}
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <i class="fa fa-phone text-primary me-2"></i>
+            <small>{{ phone.number }}</small>
+          </div>
         {% endfor %}
+
+        <div class="h-100 d-inline-flex align-items-center">
+        {% if socials %}
+        {% for social in socials %}
+        <a class="btn btn-sm-square bg-white text-primary me-1" href="{{ social.url }}"
+          ><i class="{{ social.social_type }}"></i
+        ></a>
+          {% endfor %}
+        {% else %}
+            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+          ></a>
+        {% endif %}
       </div>
     </div>
   </div>

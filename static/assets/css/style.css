@@ -582,3 +582,26 @@ h1{
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+/*.accordion{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+
+/*.accordion-item{*/
+/*    flex: 1;*/
+/*}*/
+
+/*.accordion-button{*/
+/*    width: 100%;*/
+/*    text-align: left;*/
+/*}*/
+
+/*.accordion-collapse{*/
+/*    display: none;*/
+/*}*/
+
+/*.show .accordion-collapse{*/
+/*    display: block;*/
+/*}*/
+

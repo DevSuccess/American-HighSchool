@@ -52,9 +52,11 @@ INSTALLED_APPS = [
     'hour.apps.HourConfig',
     'member.apps.MemberConfig',
     'price.apps.PriceConfig',
+    'register.apps.RegisterConfig',
     'service.apps.ServiceConfig',
     'testimonie.apps.TestimonieConfig',
     'vision.apps.VisionConfig',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +82,15 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'Web.context_processors.information',
+                # 'Web.context_processors.information',
+                'about.views.base_context',
+                'activity.views.base_context',
+                'address.views.base_context',
+                'contact.views.base_context',
+                'hour.views.base_context',
+                'member.views.base_context',
+                'price.views.base_context',
+                'testimonie.views.base_context',
             ],
         },
     },
