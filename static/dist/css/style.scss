@@ -91,7 +91,7 @@ img {
 	    	content: "";
 	    	width: 0;
 	    	height: 2px;
-	    	background: #6d7f52;
+	    	background: #13629e;
 	    	position: absolute;
 	    	left: -68px;
 	    	top: 5px;
@@ -100,12 +100,12 @@ img {
 	}
 	&.first {
 		a {
-			background: #6d7f52;
+			background: #13629e;
 		}
 	}
 	&.checked {
 		a {
-			background: #6d7f52;
+			background: #13629e;
 		    &:after {
 		    	width: 58px;
 		    }
@@ -167,7 +167,7 @@ h3 {
 p {
 	font-family: "Muli-SemiBold";
 	font-size: 20px;
-	color: #6d7f52;
+	color: #13629e;
 	text-align: center;
 	margin-bottom: 26px;
 }
@@ -275,7 +275,6 @@ textarea.form-control {
 	}
 	li {
 		a {
-			padding: 0;
 			border: none;
 			display: inline-flex;
 			height: 41px;
@@ -286,7 +285,8 @@ textarea.form-control {
 			color: #666;
 			cursor: pointer;
 			position: relative;
-			padding-left: 28px;
+			padding: 0 0 0 28px;
+
 			&:before {
 				content: '\f301';
 				position: absolute;
@@ -319,10 +319,10 @@ textarea.form-control {
 		&:last-child {
 			a {
 				width: 124px;
-				background: #6d7f52;
+				background: #13629e;
 				color: #fff;
 				&:hover {
-					background: #849963;
+					background: #13629e;
 				}
 				&:before {
 					content: '\f26b';
@@ -342,10 +342,10 @@ textarea.form-control {
 		&[aria-disabled="false"] {
 			& ~ li {
 				a {
-					background: #6d7f52;
+					background: #13629e;
 					color: #fff;
 					&:hover {
-						background: #849963;
+						background: #13629e;
 					}
 				}
 			}
@@ -411,9 +411,9 @@ textarea.form-control {
 		line-height: 1.9;
 		transform: translateY(-5px);
 		a {
-			color: #6d7f52;
+			color: #13629e;
 			&:hover {
-				color: #89b843;
+				color: #13629e;
 			}
 		}
 	}

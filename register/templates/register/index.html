@@ -11,19 +11,19 @@ Home
 {% endblock %}
 {% block content %}
 <div class="wrapper">
-    <form action="" id="wizard">
+    <form method="post" action="{% url 'home:index' %}" id="wizard">
         <!-- SECTION 1 -->
         <h2></h2>
         <section>
             <div class="inner">
                 <div class="image-holder">
-                    <img src="images/form-wizard-1.jpg" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="form-content" >
                     <div class="form-header">
                         <h3>Registration</h3>
                     </div>
-                    <p>Please fill with your details</p>
+                    <p>Merci de remplir vos coordonnées</p>
                     <div class="form-row">
                         <div class="form-holder">
                             {{ form.first_name }}
@@ -57,12 +57,13 @@ Home
                             </div>
                         </div>
                     </div>
-{#                    <div class="checkbox-circle">#}
-{#                        <label>#}
-{#                            <input type="checkbox ml-3" checked> Nor again is there anyone who loves or pursues or desires to obtaini.#}
-{#                            <span class="checkmark"></span>#}
-{#                        </label>#}
-{#                    </div>#}
+                    <div class="checkbox-circle">
+                        <label>
+                            <input type="checkbox" class="hidden me-4" checked>
+                            <span class="checkmark ml-3 mr-3"></span>
+                            Ces valleurs doit être obligatoire
+                        </label>
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,38 +73,33 @@ Home
         <section>
             <div class="inner">
                 <div class="image-holder">
-                    <img src="images/form-wizard-2.jpg" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="form-content">
                     <div class="form-header">
                         <h3>Registration</h3>
                     </div>
-                    <p>Please fill with additional info</p>
+                    <p>Veuillez remplir avec des informations supplémentaires</p>
                     <div class="form-row">
                         <div class="form-holder w-100">
-                            <input type="text" placeholder="Address" class="form-control">
+                            {{ form.address }}
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-holder">
-                            <input type="text" placeholder="City" class="form-control">
+                            {{ form.city }}
                         </div>
                         <div class="form-holder">
-                            <input type="text" placeholder="Zip Code" class="form-control">
+                            {{ form.zip_code }}
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="select">
                             <div class="form-holder">
-                                <div class="select-control">Your country</div>
+                                <div class="select-control">{{ form.country }}</div>
                                 <i class="zmdi zmdi-caret-down"></i>
                             </div>
-                            <ul class="dropdown">
-                                <li rel="United States">United States</li>
-                                <li rel="United Kingdom">United Kingdom</li>
-                                <li rel="Viet Nam">Viet Nam</li>
-                            </ul>
                         </div>
                         <div class="form-holder"></div>
                     </div>
@@ -116,24 +112,24 @@ Home
         <section>
             <div class="inner">
                 <div class="image-holder">
-                    <img src="images/form-wizard-3.jpg" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="form-content">
                     <div class="form-header">
                         <h3>Registration</h3>
                     </div>
-                    <p>Send an optional message</p>
+                    <p>Envoyer un message facultatif</p>
                     <div class="form-row">
                         <div class="form-holder w-100">
-                            <textarea name="" id="" placeholder="Your messagere here!" class="form-control" style="height: 99px;"></textarea>
+                            {{ form.message }}
                         </div>
                     </div>
-{#                    <div class="checkbox-circle mt-24">#}
-{#                        <label>#}
-{#                            <input type="checkbox" checked>  Please accept <a href="#">terms and conditions ?</a>#}
-{#                            <span class="checkmark"></span>#}
-{#                        </label>#}
-{#                    </div>#}
+                    <div class="checkbox-circle mt-24">
+                        <label>
+                            <input type="checkbox" checked>  Please accept <a href="#">terms and conditions ?</a>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </section>

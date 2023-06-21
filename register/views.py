@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
-from .forms import FirstStepForm
+from .forms import RegisterForm
 from .models import Registration
 
 
 def index(request):
     if request.method == 'POST':
-        form = FirstStepForm(request.POST)
+        form = RegisterForm(request.POST)
         if form.is_valid():
             # Traitez les données du formulaire si elles sont valides
             first_name = form.cleaned_data['first_name']
@@ -14,6 +14,7 @@ def index(request):
             phone = form.cleaned_data['phone']
             age = form.cleaned_data['age']
             gender = form.cleaned_data['gender']
+            message = form.cleaned_data['message']
 
             # Créez une instance du modèle Registration avec les données du formulaire
             registration = Registration(
@@ -22,7 +23,8 @@ def index(request):
                 email=email,
                 phone=phone,
                 age=age,
-                gender=gender
+                gender=gender,
+                message=message
             )
 
             # Enregistrez l'objet dans la base de données
@@ -31,6 +33,6 @@ def index(request):
             # Redirigez vers une autre page ou effectuez d'autres actions
             return redirect('home:index')
     else:
-        form = FirstStepForm()
+        form = RegisterForm()
 
     return render(request, 'register/index.html', {'form': form})

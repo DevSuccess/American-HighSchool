@@ -1,6 +1,9 @@
 from django import forms
 
-class FirstStepForm(forms.Form):
+from Web.utils import STATES
+
+
+class RegisterForm(forms.Form):
     first_name = forms.CharField(
         widget=forms.TextInput(attrs={'placeholder': 'First Name', 'class': 'form-control'})
     )
@@ -19,4 +22,22 @@ class FirstStepForm(forms.Form):
     gender = forms.ChoiceField(
         choices=(('male', 'Male'), ('female', 'Female')),
         widget=forms.RadioSelect()
+    )
+    address = forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': 'Address', 'class': 'form-control'})
+    )
+
+    city = forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': 'City', 'class': 'form-control'})
+    )
+    zip_code = forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': 'Zip Code', 'class': 'form-control'})
+    )
+    country = forms.ChoiceField(
+        choices = STATES,
+        widget=forms.Select(attrs={'class': 'form-control'})
+    )
+    message = forms.CharField(
+        widget=forms.Textarea(
+            attrs={'placeholder': 'Your message here!', 'class': 'form-control', 'style': 'height: 99px;'})
     )

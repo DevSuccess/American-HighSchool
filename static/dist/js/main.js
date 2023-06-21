@@ -2,6 +2,7 @@ $(function(){
 	$("#wizard").steps({
         headerTag: "h2",
         bodyTag: "section",
+        method: "post",
         transitionEffect: "fade",
         enableAllSteps: true,
         transitionEffectSpeed: 500,
@@ -35,7 +36,7 @@ $(function(){
     })    
     $('.select .dropdown li').click(function(){
         $(this).parent().toggle();
-        var text = $(this).attr('rel');
+        let text = $(this).attr('rel');
         $(this).parent().prev().find('div').text(text);
     })
 })
