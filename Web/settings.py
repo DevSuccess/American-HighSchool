@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'about.apps.AboutConfig',
+    'accademics.apps.AccademicsConfig',
     'activity.apps.ActivityConfig',
     'address.apps.AddressConfig',
     'blog.apps.BlogConfig',
