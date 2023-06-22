@@ -1,0 +1,58 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for post in queryset %}
+    <div class="col">
+      <div class="card h-100">
+        {% if post.image %}
+        <div class="ratio ratio-16x9">
+          <img src="{{ post.image.url }}" class="card-img-top img-fluid rounded-start" alt="{{ post.title }}">
+        </div>
+        {% else %}
+        <div class="ratio ratio-16x9">
+          <img src="{% static 'assets/img/animal-lg-1.jpg' %}" class="card-img-top img-fluid" alt="Image Null">
+        </div>
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.content|truncatechars:150 }}</p>
+        </div>
+        <div class="card-footer bg-transparent border-succes">
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postModal{{ post.id }}">Read More</a>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Posted on {{ post.created_on }} by {{ post.author }}</small>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% for post in queryset %}
+<!-- Modal for Post {{ post.id }} -->
+<div class="modal fade" id="postModal{{ post.id }}" tabindex="-1" aria-labelledby="postModal{{ post.id }}Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-5" id="postModal{{ post.id }}Label">{{ post.title }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ post.content }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
