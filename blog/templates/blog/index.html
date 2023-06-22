@@ -7,36 +7,36 @@ Blog
 
 {% block content %}
 <div class="container">
+  <hr>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for post in queryset %}
     <div class="col">
       <div class="card h-100">
-        {% if post.image %}
-        <div class="ratio ratio-16x9">
-          <img src="{{ post.image.url }}" class="card-img-top img-fluid rounded-start" alt="{{ post.title }}">
+        <div class="card-img-wrapper">
+          {% if post.image %}
+          <img src="{{ post.image.url }}" class="card-img-top img-fluid rounded-start zoomable-image" alt="{{ post.title }}">
+          {% else %}
+          <img src="{% static 'assets/img/animal-lg-1.jpg' %}" class="card-img-top img-fluid zoomable-image" alt="Image Null">
+          {% endif %}
         </div>
-        {% else %}
-        <div class="ratio ratio-16x9">
-          <img src="{% static 'assets/img/animal-lg-1.jpg' %}" class="card-img-top img-fluid" alt="Image Null">
-        </div>
-        {% endif %}
         <div class="card-body">
-            <h5 class="card-title">{{ post.title }}</h5>
-            <p class="card-text">{{ post.content|truncatechars:150 }}</p>
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.content|truncatechars:150 }}</p>
         </div>
-        <div class="card-footer bg-transparent border-succes">
-            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postModal{{ post.id }}">Read More</a>
+        <div class="card-footer bg-transparent border-success">
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postModal{{ post.id }}">Read More</a>
         </div>
         <div class="card-footer">
-            <small class="text-muted">Posted on {{ post.created_on }} by {{ post.author }}</small>
+          <small class="text-muted">Posted on {{ post.created_on }} by {{ post.author }}</small>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
+
 {% for post in queryset %}
-<!-- Modal for Post {{ post.id }} -->
+{#<!-- Modal for Post {{ post.id }} -->#}
 <div class="modal fade" id="postModal{{ post.id }}" tabindex="-1" aria-labelledby="postModal{{ post.id }}Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
@@ -54,5 +54,35 @@ Blog
   </div>
 </div>
 {% endfor %}
+
+<style>
+.zoomable-image {
+  transition: transform 0.3s;
+  cursor: pointer;
+  transform-origin: center center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img-wrapper {
+  position: relative;
+  padding-bottom: 100%; /* Rapport d'aspect 1:1 */
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img-wrapper:hover .zoomable-image {
+  transform: scale(1.2);
+}
+</style>
 
 {% endblock %}
