@@ -31,19 +31,23 @@
       </a>
       <a href="{% url 'blog:index' %}" class="nav-item nav-link {% if current_page == '/blog/' %}active{% endif %}">Blog</a>
       <div class="nav-item dropdown">
-        <a
-          href="#"
-          class="nav-link dropdown-toggle"
+        <a href=""
+          class="
+          nav-link dropdown-toggle
+            {% if current_page == '/accreditation/' %}
+                active
+            {% endif %}
+            "
           data-bs-toggle="dropdown"
           >Pages</a>
         <div class="dropdown-menu rounded-0 rounded-bottom m-0">
 {#          <a href="animal.html" class="dropdown-item">Our Student</a>#}
-            <a href="#" class="dropdown-item">Our Student</a>
+{#            <a href="#" class="dropdown-item ">Our Student</a>#}
+            <a href="{% url 'accreditation:index' %}" class="dropdown-item {% if current_page == '/accreditation/' %}active{% endif %}">Accreditation</a>
+{#            <a href="#" class="dropdown-item">Homologation</a>#}
             <a href="#" class="dropdown-item">Membership</a>
-            <a href="#" class="dropdown-item">Visiting Hours</a>
             <a href="#" class="dropdown-item">Testimonial</a>
-            <a href="#" class="dropdown-item">Accreditation</a>
-            <a href="#" class="dropdown-item">Homologation</a>
+            <a href="#" class="dropdown-item">Visiting Hours</a>
 {#          <a href="#" class="dropdown-item">404 Page</a>#}
         </div>
       </div>

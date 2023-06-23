@@ -6,43 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/context_processors.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/templates/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/templates/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/templates/accademics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/templates/accademics/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/templates/register/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/register/templates/register/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vision/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +67,11 @@
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\hour" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\accreditation" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\static\assets\img\icon" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\static\dist" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\home" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\app" />
-      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\static\assets\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -164,7 +131,7 @@
       <workItem from="1687427231304" duration="1569000" />
       <workItem from="1687454153762" duration="6066000" />
       <workItem from="1687488252648" duration="3813000" />
-      <workItem from="1687496583836" duration="10836000" />
+      <workItem from="1687496583836" duration="12311000" />
     </task>
     <servers />
   </component>

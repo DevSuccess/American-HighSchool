@@ -17,6 +17,6 @@ class HomeView(View):
         context = {
             'current_page': request.path,
             'movies': movies,
-            'pictures': pictures
+            'pictures': pictures,
         }
         return render(request, 'home/index.html', context)

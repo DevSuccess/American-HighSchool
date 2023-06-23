@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'about.apps.AboutConfig',
     'accademics.apps.AccademicsConfig',
+    'accreditation.apps.AccreditationConfig',
     'activity.apps.ActivityConfig',
     'address.apps.AddressConfig',
     'blog.apps.BlogConfig',
