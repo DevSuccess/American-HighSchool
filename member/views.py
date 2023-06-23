@@ -1,21 +1,22 @@
 from django.shortcuts import render
 from .models import Member
 
+
 def base_context(request):
     try:
         direction_home = Member.objects.filter(category='A').order_by('?')
     except Member.DoesNotExist:
-        members_direction = None
+        direction_home = None
 
     try:
         administration_home = Member.objects.filter(category='B').order_by('?')
     except Member.DoesNotExist:
-        members_administration = None
+        administration_home = None
 
     try:
         enseignants_home = Member.objects.filter(category='C').order_by('?')
     except Member.DoesNotExist:
-        members_enseignants = None
+        enseignants_home = None
 
     context = {
         'direction_home': direction_home,
@@ -23,6 +24,7 @@ def base_context(request):
         'enseignants_home': enseignants_home
     }
     return context
+
 
 def index(request):
     pass
