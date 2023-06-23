@@ -5,9 +5,11 @@ from .models import Hour
 # Create your views here.
 def base_context(request):
     hours = Hour.get_current_hours()
+    hour_lists = Hour.objects.all()
 
     context = {
-        'hours_now': hours
+        'hours_now': hours,
+        'hour_lists': hour_lists
     }
     return context
 

@@ -8,9 +8,10 @@ def base_context(request):
         abouts = models.AboutAHSM.objects.latest('created_at')
     except models.AboutAHSM.DoesNotExist:
         abouts = None
-
+    contacts = models.AboutHelp.objects.all()
     context = {
-        'about_home': abouts
+        'about_home': abouts,
+        'contact_home': contacts
     }
 
     return context
