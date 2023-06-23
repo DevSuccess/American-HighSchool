@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'service.apps.ServiceConfig',
     'testimonie.apps.TestimonieConfig',
-    'vision.apps.VisionConfig',
     'crispy_forms'
 ]
 

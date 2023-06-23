@@ -32,3 +32,5 @@ class PresentationImage(BaseModel, ImageModel):
 
     class Meta:
         verbose_name_plural = 'Les Présentations Photo AHSM'
+
+

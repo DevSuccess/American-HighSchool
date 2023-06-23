@@ -34,3 +34,20 @@ class AboutITTI(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Les Informations sur ITTI'
+
+
+class About(models.Model):
+    TYPES = (
+        ('A', 'Mission'),
+        ('B', 'Vision')
+    )
+    title = models.CharField(max_length=150)
+    libel = models.TextField(blank=True, null=True, default=' ')
+    description = models.TextField()
+    type = models.CharField(max_length=1, choices=TYPES)
+
+    class Meta:
+        verbose_name_plural = 'Les Missions et Visions'
+
+    def __str__(self):
+        return f"{self.type} : {self.title}"

@@ -21,3 +21,5 @@ class PresentationImageModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'active', 'admin_photo', 'created_at', 'updated_at']
     fields = ['title', 'description', 'active', 'image', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
+
+

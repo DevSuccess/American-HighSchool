@@ -20,3 +20,9 @@ class AboutHelpModelAdmin(admin.ModelAdmin):
 @admin.register(models.AboutITTI)
 class AboutITTIModelAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(models.About)
+class AboutModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'libel', 'description']
+    fields = ['title', 'libel','description', 'type']

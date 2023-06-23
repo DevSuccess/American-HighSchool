@@ -18,24 +18,10 @@
   </button>
   <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
     <div class="navbar-nav ms-auto">
-      <a href="{% url 'home:index' %}" class="nav-item nav-link">Home</a>
-      <div class="nav-item dropdown">
-        <a
-          href="#"
-          class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-          >About Us</a>
-        <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Mission</a>
-            <a href="#" class="dropdown-item">Vision</a>
-            <a href="#" class="dropdown-item">Testimonial</a>
-            <a href="#" class="dropdown-item">Accreditation</a>
-            <a href="#" class="dropdown-item">Homologation</a>
-        </div>
-      </div>
-      <a href="{% url 'accademics:index' %}" class="nav-item nav-link">Academics</a>
-      <a href="#" class="nav-item nav-link position-relative">
+      <a href="{% url 'home:index' %}" class="nav-item nav-link {% if current_page == '/' %}active{% endif %}" >Home</a>
+      <a href="{% url 'about:index' %}" class="nav-item nav-link {% if current_page == '/about/' %}active{% endif %}">About Us</a>
+      <a href="{% url 'accademics:index' %}" class="nav-item nav-link {% if current_page == '/accademics/' %}active{% endif %}">Accademics</a>
+      <a href="#" class="nav-item nav-link position-relative ">
           News
           <span
               class="position-absolute top-15 start-100 translate-middle
@@ -43,7 +29,7 @@
               <span class="visually-hidden">unread messages</span>
           </span>
       </a>
-      <a href="{% url 'blog:index' %}" class="nav-item nav-link">Blog</a>
+      <a href="{% url 'blog:index' %}" class="nav-item nav-link {% if current_page == '/blog/' %}active{% endif %}">Blog</a>
       <div class="nav-item dropdown">
         <a
           href="#"
@@ -52,13 +38,16 @@
           >Pages</a>
         <div class="dropdown-menu rounded-0 rounded-bottom m-0">
 {#          <a href="animal.html" class="dropdown-item">Our Student</a>#}
-          <a href="#" class="dropdown-item">Our Student</a>
-          <a href="#" class="dropdown-item">Membership</a>
-          <a href="#" class="dropdown-item">Visiting Hours</a>
+            <a href="#" class="dropdown-item">Our Student</a>
+            <a href="#" class="dropdown-item">Membership</a>
+            <a href="#" class="dropdown-item">Visiting Hours</a>
+            <a href="#" class="dropdown-item">Testimonial</a>
+            <a href="#" class="dropdown-item">Accreditation</a>
+            <a href="#" class="dropdown-item">Homologation</a>
 {#          <a href="#" class="dropdown-item">404 Page</a>#}
         </div>
       </div>
-      <a href="{% url 'contact_us:index' %}" class="nav-item nav-link">Contact</a>
+      <a href="{% url 'contact_us:index' %}" class="nav-item nav-link {% if current_page == '/contact/' %}active{% endif %}">Contact</a>
     </div>
     <a href="{% url 'register:index' %}" class="btn btn-primary"
       >Register<i class="fa fa-arrow-right ms-3"></i

@@ -19,6 +19,7 @@ def base_context(request):
         enseignants_home = None
 
     context = {
+        'current_page': request.path,
         'direction_home': direction_home,
         'administration_home': administration_home,
         'enseignants_home': enseignants_home

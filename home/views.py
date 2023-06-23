@@ -14,5 +14,9 @@ class HomeView(View):
             movies = None
 
         pictures = models.PresentationImage.objects.all()
-
-        return render(request, 'home/index.html', locals())
+        context = {
+            'current_page': request.path,
+            'movies': movies,
+            'pictures': pictures
+        }
+        return render(request, 'home/index.html', context)

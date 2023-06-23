@@ -17,4 +17,11 @@ def base_context(request):
 
 
 def index(request):
-    return render(request, 'about/index.html')
+    mission = models.About.objects.filter(type='A')
+    vision = models.About.objects.filter(type='B')
+    context = {
+        'current_page': request.path,
+        'mission': mission,
+        'vision': vision
+    }
+    return render(request, 'about/index.html', context)

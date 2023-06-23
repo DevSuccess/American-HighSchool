@@ -20,6 +20,7 @@ def index(request):
         section3 = None
         
     context = {
+        'current_page': request.path,
         'section1': section1,
         'section2': section2,
         'section3': section3
