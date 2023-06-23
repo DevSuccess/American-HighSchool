@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accreditation/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accreditation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accreditation/templates/accreditation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/templates/accreditation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accreditation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +131,7 @@
       <workItem from="1687427231304" duration="1569000" />
       <workItem from="1687454153762" duration="6066000" />
       <workItem from="1687488252648" duration="3813000" />
-      <workItem from="1687496583836" duration="12311000" />
+      <workItem from="1687496583836" duration="18943000" />
     </task>
     <servers />
   </component>
