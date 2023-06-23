@@ -34,7 +34,7 @@
         <a href=""
           class="
           nav-link dropdown-toggle
-            {% if current_page == '/accreditation/' %}
+            {% if current_page == '/accreditation/' or current_page == '/member/' or current_page == '/hour/' %}
                 active
             {% endif %}
             "
@@ -45,9 +45,9 @@
 {#            <a href="#" class="dropdown-item ">Our Student</a>#}
             <a href="{% url 'accreditation:index' %}" class="dropdown-item {% if current_page == '/accreditation/' %}active{% endif %}">Accreditation</a>
 {#            <a href="#" class="dropdown-item">Homologation</a>#}
-            <a href="#" class="dropdown-item">Membership</a>
+            <a href="{% url 'member:index' %}" class="dropdown-item {% if current_page == '/member/' %}active{% endif %}">Membership</a>
             <a href="#" class="dropdown-item">Testimonial</a>
-            <a href="#" class="dropdown-item">Visiting Hours</a>
+            <a href="{% url 'hour:index' %}" class="dropdown-item {% if current_page == '/hour/' %}active{% endif %}">Visiting Hours</a>
 {#          <a href="#" class="dropdown-item">404 Page</a>#}
         </div>
       </div>

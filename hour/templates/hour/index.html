@@ -1,0 +1,98 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}Hours{% endblock %}
+
+{% block content %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    .current-hours {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .current-hours h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .current-hours p {
+      font-size: 18px;
+    }
+
+    .all-hours {
+      margin-bottom: 50px;
+    }
+
+    .all-hours h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .hour {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hour .day {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .hour .time {
+      font-size: 18px;
+      color: #6c757d;
+      margin-bottom: 10px;
+    }
+
+    .hour .message {
+      font-style: italic;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+    @media (max-width: 576px) {
+      .current-hours h2,
+      .current-hours p,
+      .all-hours h2,
+      .hour .day,
+      .hour .time {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <h1 class="text-center">Hours</h1>
+    <hr>
+    <div class="current-hours">
+      <h2><i class="fas fa-clock icon"></i>Current Hours</h2>
+      <p>{{ current_hours }}</p>
+    </div>
+    <div class="all-hours">
+      <h2><i class="fas fa-calendar-alt icon"></i>All Hours</h2>
+      {% for hour in hours %}
+        <div class="hour">
+          <p class="day">{{ hour.day }}</p>
+          <p class="time"><i class="far fa-clock icon"></i>{{ hour.open|time:"g:i A" }} - {{ hour.close|time:"g:i A" }}</p>
+          {% if hour.message %}
+            <p class="message">{{ hour.message }}</p>
+          {% endif %}
+        </div>
+      {% empty %}
+        <p>No hours available.</p>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

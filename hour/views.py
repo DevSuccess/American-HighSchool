@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from . import models
+from .models import Hour
 
 
 # Create your views here.
 def base_context(request):
-    hours = models.Hour.get_current_hours()
+    hours = Hour.get_current_hours()
 
     context = {
         'hours_now': hours
@@ -13,4 +13,13 @@ def base_context(request):
 
 
 def index(request):
-    pass
+    current_hours = Hour.get_current_hours()
+    hours = Hour.objects.all()
+
+    context = {
+        'current_page': request.path,
+        'current_hours': current_hours,
+        'hours': hours
+    }
+
+    return render(request, 'hour/index.html', context)

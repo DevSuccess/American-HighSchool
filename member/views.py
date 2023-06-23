@@ -28,4 +28,9 @@ def base_context(request):
 
 
 def index(request):
-    pass
+    members = Member.objects.all()
+    context = {
+        'current_page': request.path,
+        'members': members
+    }
+    return render(request, 'member/index.html', context)
