@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .forms import RegisterForm
 from .models import Registration
 
@@ -14,6 +15,9 @@ def index(request):
             phone = form.cleaned_data['phone']
             age = form.cleaned_data['age']
             gender = form.cleaned_data['gender']
+            city = form.cleaned_data['city']
+            zip_code = form.cleaned_data['zip_code']
+            country = form.cleaned_data['country']
             message = form.cleaned_data['message']
 
             # Créez une instance du modèle Registration avec les données du formulaire
@@ -24,14 +28,20 @@ def index(request):
                 phone=phone,
                 age=age,
                 gender=gender,
-                message=message
+                message=message,
+                city=city,
+                zip_code=zip_code,
+                country=country,
+
             )
 
             # Enregistrez l'objet dans la base de données
             registration.save()
-
+            messages.success(request, "Congratulations ! Register Successfully")
             # Redirigez vers une autre page ou effectuez d'autres actions
             return redirect('home:index')
+        else:
+            messages.warning(request, "Invalid Input Data")
     else:
         form = RegisterForm()
 

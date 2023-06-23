@@ -10,3 +10,10 @@ class PostModelAdmin(admin.ModelAdmin):
     readonly_fields = ['created_on', 'updated_on']
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(models.Slogan)
+class SloganModelAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'admin_photo', 'created_at', 'updated_at')
+    fields = ['title', 'description', 'note', 'image', 'created_at', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']

@@ -4,16 +4,18 @@
 {% block content %}
 <div class="container">
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
-    <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'assets/img/icon/logo.jpeg' %}" alt="..." /></div>
+    <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{{ slogan.image.url }}" alt="{{ slogan.title }}" /></div>
     <div class="col-lg-5">
-        <h1 class="font-weight-light">Business Name or Tagline</h1>
-        <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-        <a class="btn btn-primary" href="#!">Call to Action!</a>
+        <h1 class="font-weight-light">{{ slogan.title }}</h1>
+        <p>{{ slogan.description }}</p>
+        <a class="btn btn-primary" href="#!">Get Started</a>
     </div>
     </div>
     <!-- Call to Action-->
     <div class="card text-white bg-secondary my-5 py-4 text-center">
-        <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+        <div class="card-body"><p class="text-white m-0">
+          <p>{{ slogan.note }}</p>
+        </div>
     </div>
   <hr>
   <div class="row row-cols-1 row-cols-md-3 g-4">

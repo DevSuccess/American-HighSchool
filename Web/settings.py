@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-if not DEBUG:
+if DEBUG:
     # Configuration in PROD [insérer les ip and domain authorisés]
     SECRET_KEY = os.environ['SECRET_KEY']
     ALLOWED_HOSTS = ['*', '0.0.0.0', 'localhost', '127.0.0.1']
@@ -57,7 +58,7 @@ INSTALLED_APPS = [
     'price.apps.PriceConfig',
     'register.apps.RegisterConfig',
     'testimonie.apps.TestimonieConfig',
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,8 @@
-from django.shortcuts import render
-from address.models import AddressAHSM
-from contact.models import ContactHelp
+from django.shortcuts import render, redirect
 from django.views import View
+from django.contrib import messages
 import random
+from . import forms
 from . import models
 
 
@@ -33,19 +33,27 @@ def base_context(request):
 
 class ContactView(View):
     def get(self, request):
-        # addresses = AddressAHSM.objects.all()
-        # infos = ContactHelp.objects.all()
-        # # Liste pour stocker les numéros de téléphone
-        # phone_numbers = []
-        # email = ''
-        #
-        # # Parcourir les objets Info et obtenir les numéros de téléphone associés
-        # for info in infos:
-        #     phone_numbers.extend([phone.number for phone in info.phones.all()])
-        #     email = info.email
-        #
-        # # Sélectionner un numéro aléatoire parmi les numéros disponibles
-        # number_info = random.choice(phone_numbers) if phone_numbers else ""
+        form = forms.ContactForm()
+        context = {
+            'form': form
+        }
+        return render(request, 'contact/index.html', context)
 
-        # return render(request, 'contact/index.html', locals())
-        return render(request, 'contact/index.html')
+    def post(self, request):
+        form = forms.ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            contacts = models.ContactUs(
+                name=name,
+                email=email,
+                subject=subject,
+                message=message
+            )
+            contacts.save()
+            messages.success(request, "Congratulations ! Contact Send Successfully")
+        else:
+            messages.warning(request, "Invalid Input Data")
+        return redirect('home:index')
