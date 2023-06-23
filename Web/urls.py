@@ -30,7 +30,6 @@ urlpatterns = [
     path('hour/', include('hour.urls')),
     path('member/', include('member.urls')),
     path('register/', include('register.urls')),
-    path('service/', include('service.urls')),
     path('tesmonie/', include('testimonie.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # if not settings.DEBUG:

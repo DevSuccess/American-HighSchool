@@ -357,20 +357,20 @@ Home
           </div>
         </div>
         <div class="row g-4">
-            {% for price in prices %}
-              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        {% for price in price_lists %}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="membership-item position-relative">
-                  <img class="img-fluid" src="{{ price.image.url }}" alt="" />
-                  <h1 class="display-1">{{ forloop.counter }}</h1>
-                  <h4 class="text-white mb-3">{{ price.academic }}</h4>
-                  <h3 class="text-primary mb-4">{{ price.formatted_price }}</h3>  <!-- Utilisez formatted_price() ici -->
-                  <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }} % discount</p>
-                  <p><i class="fa fa-check text-primary me-3"></i>{{ price.birth }} years</p>
-                  <p><i class="fa fa-check text-primary me-3"></i>Registration fee: {{ price.formatted_registration }}</p>
-                  <a class="btn btn-outline-light px-4 mt-3" href="#">Get Started</a>
+                    <img class="img-fluid" src="{{ price.image.url }}" alt="" />
+                    <h1 class="display-1">0{{ forloop.counter }}</h1>
+                    <h4 class="text-white mb-3"><b>{{ price.formatted_price }}</b></h4>
+                    <h3 class="text-danger mb-4">{{ price.levels.name }}</h3>
+                    <h3 class="text-primary mb-4">{{ price.formatted_registration }} (Registration Fee)</h3>
+                    <p><i class="fa fa-check text-primary me-3"></i>{{ price.birth }} ans</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }}% Promo</p>
+                    <a class="btn btn-outline-light px-4 mt-3" href="#">Get Started</a>
                 </div>
-              </div>
-            {% endfor %}
+            </div>
+        {% endfor %}
         </div>
       </div>
     </div>

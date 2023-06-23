@@ -4,10 +4,10 @@ from . import models
 
 # Create your views here.
 def base_context(request):
-    levels = models.Level.objects.all()
+    prices = models.Price.objects.all()
 
     context = {
-        'level_lists': levels
+        'price_lists': prices
     }
 
     return context

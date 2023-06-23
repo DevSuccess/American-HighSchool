@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'member.apps.MemberConfig',
     'price.apps.PriceConfig',
     'register.apps.RegisterConfig',
-    'service.apps.ServiceConfig',
     'testimonie.apps.TestimonieConfig',
     'crispy_forms'
 ]

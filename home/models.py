@@ -2,16 +2,6 @@ from django.db import models
 from Web.utils import BaseModel, ImageModel, VideoModel
 
 
-class Possibility(BaseModel):
-    value = models.CharField(max_length=150)
-
-    def __str__(self):
-        return self.value
-
-    class Meta:
-        verbose_name_plural = 'Les Possibilités'
-
-
 class PresentationVideo(BaseModel, VideoModel):
     title = models.CharField(max_length=150)
     description = models.TextField(blank=True)
@@ -32,5 +22,3 @@ class PresentationImage(BaseModel, ImageModel):
 
     class Meta:
         verbose_name_plural = 'Les Présentations Photo AHSM'
-
-
