@@ -20,7 +20,7 @@
         </div>
         <div class="mb-2">
           <i class="fa fa-envelope me-3"></i>
-            {{ info.email }}
+            {{ info.email|truncatechars:25 }}
         </div>
         {% endfor %}
         <div class="d-flex pt-2">

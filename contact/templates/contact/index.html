@@ -5,12 +5,14 @@ Contact
 {% endblock %}
 {% block content %}
 <!-- Contact Start -->
-    <script>
-    let toastElList = [].slice.call(document.querySelectorAll('.toast'))
-    let toastList = toastElList.map(function (toastEl) {
-      return new bootstrap.Toast(toastEl, option)
-    })
-    </script>
+    <style>
+    .truncate-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: break-word; /* Ajout de cette propriété */
+    }
+    </style>
 <div class="container-xxl py-5">
   <div class="container">
     <div class="row g-4 mb-5">
@@ -45,27 +47,30 @@ Contact
           </div>
         </div>
       </div>
-      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-        <div class="h-100 bg-light d-flex align-items-center p-5">
-          <div class="btn-lg-square bg-white flex-shrink-0">
-            <i class="fa fa-envelope-open text-primary"></i>
-          </div>
-          <div class="ms-4">
-            <p class="mb-2">
-              <span class="text-primary me-2">#</span>Mail Now
-            </p>
-            <h5 class="mb-0">ahsm@gmail.com</h5>
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="h-100 bg-light d-flex align-items-center p-5">
+            <div class="btn-lg-square bg-white flex-shrink-0">
+              <i class="fa fa-envelope-open text-primary"></i>
+            </div>
+            <div class="ms-4">
+              <p class="mb-2">
+                <span class="text-primary me-2">#</span>Mail Now
+              </p>
+            {% for info in contact_home %}
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                  <h5 class="mb-0" title="{{ info.email }}">{{ info.email }}</h5>
+                </marquee>
+            {% endfor %}
+            </div>
           </div>
         </div>
-      </div>
-    </div>
     <div class="row g-5">
       <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
         <p><span class="text-primary me-2">#</span>Contact Us</p>
-        <h1 class="display-5 mb-4">Vous avez une question ? Please Contact Us!</h1>
+        <h1 class="display-5 mb-4">Vous avez une question ? Please Contact Us!</h1>
         <p class="mb-4">
-         Veuillez à completer le formulaire de contact est actuel envoyer une quelconque remarque.
-        Obtenez le version PDF de notre contact en cliquant sur ce lien suivant :
+         Veuillez compléter le formulaire de contact et envoyer une quelconque remarque.
+        Obtenez la version PDF de notre contact en cliquant sur ce lien suivant :
           <a href="#">Download Now</a>.
         </p>
 
@@ -150,5 +155,4 @@ Contact
     {% endfor %}
 </div>
 {% endif %}
-</div>
 {% endblock %}

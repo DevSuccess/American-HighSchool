@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact/templates/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact/templates/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/templates/register/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/register/templates/register/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +130,7 @@
       <workItem from="1687488252648" duration="3813000" />
       <workItem from="1687496583836" duration="26806000" />
       <workItem from="1687535753295" duration="8306000" />
-      <workItem from="1687574566481" duration="8929000" />
+      <workItem from="1687574566481" duration="10565000" />
     </task>
     <servers />
   </component>
