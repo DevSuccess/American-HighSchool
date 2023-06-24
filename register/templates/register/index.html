@@ -13,6 +13,24 @@ Register
 <div class="wrapper">
     <form method="post" action="{% url 'home:index' %}" id="wizard">
         <!-- SECTION 1 -->
+        {% csrf_token %}
+{#        {% if messages %}#}
+{#            {% for message in messages %}#}
+{#                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>#}
+{#            {% endfor %}#}
+{#        {% endif %}#}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
         <h2></h2>
         <section>
             <div class="inner">
@@ -57,13 +75,13 @@ Register
                             </div>
                         </div>
                     </div>
-                    <div class="checkbox-circle">
-                        <label>
-                            <input type="checkbox" class="hidden me-4" checked>
-                            <span class="checkmark ml-3 mr-3"></span>
-                            Ces valleurs doit être obligatoire
-                        </label>
-                    </div>
+{#                    <div class="checkbox-circle">#}
+{#                        <label>#}
+{#                            <input type="checkbox" class="hidden me-4" checked>#}
+{#                            <span class="checkmark ml-3 mr-3"></span>#}
+{#                            Ces valleurs doit être obligatoire#}
+{#                        </label>#}
+{#                    </div>#}
                 </div>
             </div>
         </section>
@@ -124,17 +142,40 @@ Register
                             {{ form.message }}
                         </div>
                     </div>
-                    <div class="checkbox-circle mt-24">
-                        <label>
-                            <input type="checkbox" checked>  Please accept <a href="#">terms and conditions ?</a>
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
+{#                    <div class="checkbox-circle mt-24">#}
+{#                        <label>#}
+{#                            <input type="checkbox" checked>  Please accept <a href="#">terms and conditions ?</a>#}
+{#                            <span class="checkmark"></span>#}
+{#                        </label>#}
+{#                    </div>#}
                 </div>
             </div>
         </section>
     </form>
 </div>
+    <!-- Contact End -->
+{% if messages %}
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    {% for message in messages %}
+      <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        {% if message.tags == 'warning' %}
+        <div class="toast-header text-white bg-danger">
+          <i class="fas fa-exclamation-triangle me-2"></i> <!-- Icône pour un avertissement -->
+        {% else %}
+        <div class="toast-header text-white bg-success">
+          <i class="fas fa-check-circle me-2"></i> <!-- Icône pour une réussite -->
+        {% endif %}
+          <strong class="me-auto">{{ message.tags|upper }}</strong>
+          <small>{{ message.timestamp }}</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ message }}
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endif %}
 
 <!-- JQUERY -->
 <script src="js/jquery-3.3.1.min.js"></script>

@@ -35,7 +35,7 @@ class ContactView(View):
     def get(self, request):
         form = forms.ContactForm()
         context = {
-            'form': form
+            'form': form,
         }
         return render(request, 'contact/index.html', context)
 
@@ -46,6 +46,7 @@ class ContactView(View):
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
+
             contacts = models.ContactUs(
                 name=name,
                 email=email,
@@ -53,7 +54,16 @@ class ContactView(View):
                 message=message
             )
             contacts.save()
-            messages.success(request, "Congratulations ! Contact Send Successfully")
+            messages.success(request, "Congratulations! Contact Sent Successfully")
+            return redirect('contact_us:index')  # Rediriger vers la page de réussite du formulaire
         else:
             messages.warning(request, "Invalid Input Data")
-        return redirect('home:index')
+
+        messages_list = messages.get_messages(request)
+
+        context = {
+            'form': form,
+            'messages': messages_list
+        }
+
+        return render(request, 'contact/index.html', context)

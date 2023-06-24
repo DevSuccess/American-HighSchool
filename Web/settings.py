@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-if DEBUG:
+if not DEBUG:
     # Configuration in PROD [insérer les ip and domain authorisés]
     SECRET_KEY = os.environ['SECRET_KEY']
     ALLOWED_HOSTS = ['*', '0.0.0.0', 'localhost', '127.0.0.1']

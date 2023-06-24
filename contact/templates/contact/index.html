@@ -5,6 +5,12 @@ Contact
 {% endblock %}
 {% block content %}
 <!-- Contact Start -->
+    <script>
+    let toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    let toastList = toastElList.map(function (toastEl) {
+      return new bootstrap.Toast(toastEl, option)
+    })
+    </script>
 <div class="container-xxl py-5">
   <div class="container">
     <div class="row g-4 mb-5">
@@ -62,59 +68,47 @@ Contact
         Obtenez le version PDF de notre contact en cliquant sur ce lien suivant :
           <a href="#">Download Now</a>.
         </p>
-        <form>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <div class="form-floating">
-                <input
-                  type="text"
-                  class="form-control bg-light border-0"
-                  id="name"
-                  placeholder="Your Name"
-                />
-                <label for="name">Your Name</label>
-              </div>
+
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        {{ form.name }}
+                        <label for="name">Your Name</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        {{ form.email }}
+                        <label for="email">Your Email</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        {{ form.subject }}
+                        <label for="subject">Subject</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        {{ form.message }}
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <p class="alert alert-danger my-3">{{ error }}</p>
+                    {% endfor %}
+                {% endif %}
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">
+                        Send Message
+                    </button>
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-floating">
-                <input
-                  type="email"
-                  class="form-control bg-light border-0"
-                  id="email"
-                  placeholder="Your Email"
-                />
-                <label for="email">Your Email</label>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-floating">
-                <input
-                  type="text"
-                  class="form-control bg-light border-0"
-                  id="subject"
-                  placeholder="Subject"
-                />
-                <label for="subject">Subject</label>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-floating">
-                <textarea
-                  class="form-control bg-light border-0"
-                  placeholder="Leave a message here"
-                  id="message"
-                  style="height: 100px"
-                ></textarea>
-                <label for="message">Message</label>
-              </div>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-primary w-100 py-3" type="submit">
-                Send Message
-              </button>
-            </div>
-          </div>
         </form>
+
       </div>
       <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
         <div class="h-100" style="min-height: 400px">
@@ -134,4 +128,27 @@ Contact
   </div>
 </div>
 <!-- Contact End -->
+{% if messages %}
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    {% for message in messages %}
+      <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        {% if message.tags == 'warning' %}
+        <div class="toast-header text-white bg-danger">
+          <i class="fas fa-exclamation-triangle me-2"></i> <!-- Icône pour un avertissement -->
+        {% else %}
+        <div class="toast-header text-white bg-success">
+          <i class="fas fa-check-circle me-2"></i> <!-- Icône pour une réussite -->
+        {% endif %}
+          <strong class="me-auto">{{ message.tags|upper }}</strong>
+          <small>{{ message.timestamp }}</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ message }}
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endif %}
+</div>
 {% endblock %}
