@@ -8,154 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0002_alter_aboutitti_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0002_alter_aboutitti_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0003_about.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0003_about.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0004_alter_about_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0004_alter_about_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0005_about_libel.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0005_about_libel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0006_alter_about_libel.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0006_alter_about_libel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0007_alter_about_libel.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0007_alter_about_libel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/migrations/0008_alter_about_libel.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/migrations/0008_alter_about_libel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/templates/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/templates/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/migrations/0002_alter_accademics_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/migrations/0002_alter_accademics_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/migrations/0003_accademics_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/migrations/0003_accademics_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/templates/accademics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/templates/accademics/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accademics/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accademics/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0002_list_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0002_list_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0003_alter_list_options_alter_list_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0003_alter_list_options_alter_list_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0004_list_date_list_description.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0004_list_date_list_description.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0005_alter_list_date.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0005_alter_list_date.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0006_alter_list_date.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0006_alter_list_date.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0007_alter_list_date.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0007_alter_list_date.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/migrations/0008_alter_list_date.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/migrations/0008_alter_list_date.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/templates/accreditation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/templates/accreditation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accreditation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accreditation/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/migrations/0002_activity_description.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/migrations/0002_activity_description.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/activity/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/address/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/address/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0002_post_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0002_post_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0003_slogan_alter_post_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0003_slogan_alter_post_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0004_slogan_note.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0004_slogan_note.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/templates/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact/templates/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0002_delete_possibility.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0002_delete_possibility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/templates/hour/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hour/templates/hour/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hour/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hour/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/templates/member/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/member/templates/member/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/migrations/0002_alter_price_promotion.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/migrations/0002_alter_price_promotion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/migrations/0003_rename_price_price_value.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/migrations/0003_rename_price_price_value.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/migrations/0004_remove_level_prices_price_levels.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/migrations/0004_remove_level_prices_price_levels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/migrations/0005_alter_price_levels.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/migrations/0005_alter_price_levels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/price/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/price/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/migrations/0002_alter_registration_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/migrations/0002_alter_registration_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/templates/register/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/register/templates/register/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/admin_custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/admin_custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/fonts/material-design-iconic-font/css/material-design-iconic-font.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/fonts/material-design-iconic-font/css/material-design-iconic-font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/fonts/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/fonts/muli/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/fonts/muli/OFL.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_topbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/testimonie/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,12 +48,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Freelance/ITTI/American Highschool Madagascar/Web/vision&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/run/media/muriel/Storage/Freelance/ITTI/American Highschool Madagascar/Web&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -282,6 +135,10 @@
       <workItem from="1687574566481" duration="10730000" />
       <workItem from="1687615693488" duration="346000" />
       <workItem from="1687633867115" duration="795000" />
+      <workItem from="1687789604547" duration="209000" />
+      <workItem from="1687789904364" duration="1751000" />
+      <workItem from="1687791737852" duration="63000" />
+      <workItem from="1687797581910" duration="77000" />
     </task>
     <servers />
   </component>
