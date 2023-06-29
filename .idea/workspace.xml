@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +23,73 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingMarkupGrave">
+    <markupCoffin contentHash="-1490832959" url="file://$PROJECT_DIR$/.cpanel.yml">
+      <highlighter start="38" end="48" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="55" end="63" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="79" end="85" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="89" end="100" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="150" end="160" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="181" end="192" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="220" end="233" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="236" end="243" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="252" end="260" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="265" end="273" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="274" end="283" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="321" end="328" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="420" end="428" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="429" end="438" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="440" end="450" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="472" end="482" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="486" end="491" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="496" end="504" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="508" end="521" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="530" end="536" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="540" end="551" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+    </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.min.css" root0="SKIP_INSPECTION" />
@@ -142,6 +207,7 @@
       <workItem from="1687797581910" duration="77000" />
       <workItem from="1687861310723" duration="1827000" />
       <workItem from="1687864906997" duration="89000" />
+      <workItem from="1688026902111" duration="8329000" />
     </task>
     <servers />
   </component>

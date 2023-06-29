@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ittiamer/public_html  # Chemin de déploiement
+    - pip3 install -r requirements.txt --target=$DEPLOYPATH  # Installation des dépendances
+    - python3.10 manage.py collectstatic --noinput -v 0  # Collecte des fichiers statiques
+    - python3.10 manage.py migrate --noinput  # Exécution des migrations
+    - python3.10 manage.py compress --force  # Compression des fichiers statiques (facultatif)
+    - /bin/cp -R * $DEPLOYPATH  # Copie des fichiers de l'application vers le chemin de déploiement
