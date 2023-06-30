@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-
 import django
 from dotenv import load_dotenv
 load_dotenv()
@@ -27,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-if DEBUG:
+if not DEBUG:
     # Configuration in PROD [insérer les ip and domain authorisés]
     SECRET_KEY = os.environ['SECRET_KEY']
-    ALLOWED_HOSTS = ['*', '0.0.0.0', 'localhost', '127.0.0.1', 'www.itti-americanhighschoolmada.com']
+    ALLOWED_HOSTS = ['*', '0.0.0.0', 'localhost', '127.0.0.1', 'itti-americanhighschoolmada.com']
 else:
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'django-insecure-35a5!fx(c(7i#x*hkv11@g42x&u-eg8vzv5+xg@*k!(vh((@*7'
@@ -118,6 +117,9 @@ DATABASES = {
         'PASSWORD': os.environ['DB_PASSWORD'],
         'HOST': os.environ['DB_HOST'],
         'PORT': os.environ['DB_PORT'],
+        'OPTIONS': {
+          'autocommit': True,
+        },
     }
 }
 
