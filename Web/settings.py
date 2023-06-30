@@ -74,7 +74,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Web.urls'
 
-TEMPLATES_DIRS = os.path.join(BASE_DIR,'templates')
+TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 
 
 TEMPLATES = [
@@ -161,13 +161,11 @@ STATIC_URL = '/static/'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 # if DEBUG == False:
-if django.VERSION >= (4,2):
+if django.VERSION >= (4, 2):
     STORAGES = {
         "default": {
             "BACKEND": "django.core.files.storage.FileSystemStorage"
@@ -175,7 +173,7 @@ if django.VERSION >= (4,2):
         "staticfiles": {
             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
         }
-    },
+    }
 else:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 

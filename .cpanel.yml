@@ -1,10 +1,9 @@
----
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ittiamer/public_html  # Chemin de déploiement
-    - source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.8/bin/activate
-    - pip3 install -r requirements.txt --target=$DEPLOYPATH  # Installation des dépendances
-    - python manage.py collectstatic --noinput # Collecte des fichiers statiques
+    - source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.8/bin/activate  # Activation de l'environnement virtuel
+    - pip3 install -r requirements.txt --target=$DEPLOYPATH  # Installation des dépendances dans le chemin de déploiement
+    - python manage.py collectstatic --noinput  # Collecte des fichiers statiques
     - python manage.py migrate --noinput  # Exécution des migrations
     - python manage.py compress --force  # Compression des fichiers statiques (facultatif)
     - cp -R * $DEPLOYPATH  # Copie des fichiers de l'application vers le chemin de déploiement
