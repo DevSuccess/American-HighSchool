@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
+import django
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -24,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-if not DEBUG:
+if DEBUG:
     # Configuration in PROD [insérer les ip and domain authorisés]
     SECRET_KEY = os.environ['SECRET_KEY']
     ALLOWED_HOSTS = ['*', '0.0.0.0', 'localhost', '127.0.0.1', 'www.itti-americanhighschoolmada.com']
@@ -110,7 +111,8 @@ WSGI_APPLICATION = 'Web.wsgi.application'
 # MySQL
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        # 'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': os.environ['DB_NAME'],
         'USER': os.environ['DB_USER'],
         'PASSWORD': os.environ['DB_PASSWORD'],
@@ -165,7 +167,17 @@ STATICFILES_DIRS = (
 
 
 # if DEBUG == False:
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+if django.VERSION >= (4,2):
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage"
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
+        }
+    },
+else:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
