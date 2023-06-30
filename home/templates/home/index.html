@@ -41,47 +41,47 @@ Home
          </div>
       </div>
    </div>
+    <!-- Video Modal Start -->
+    <div
+            class="modal modal-video fade"
+            id="videoModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">{{ movies.title | upper }}</h3>
+                    <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        {#              <iframe#}
+                        {#                class="embed-responsive-item"#}
+                        {#                    src=""#}
+                        {#                id="video"#}
+                        {#                allowfullscreen#}
+                        {#                allowscriptaccess="always"#}
+                        {#                allow="autoplay"#}
+                        {#              ></iframe>#}
+                        <video width='150' controls >
+                            <source  type='video/mp4' src='{{ movies.video.url }}'>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
 </div>
 <!-- Header End -->
-<!-- Video Modal Start -->
-<div
-   class="modal modal-video fade"
-   id="videoModal"
-   tabindex="-1"
-   aria-labelledby="exampleModalLabel"
-   aria-hidden="true"
-   >
-   <div class="modal-dialog">
-      <div class="modal-content rounded-0">
-         <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">{{ movies.title | upper }}</h3>
-            <button
-               type="button"
-               class="btn-close"
-               data-bs-dismiss="modal"
-               aria-label="Close"
-               ></button>
-         </div>
-         <div class="modal-body">
-            <!-- 16:9 aspect ratio -->
-            <div class="ratio ratio-16x9">
-               {#              <iframe#}
-               {#                class="embed-responsive-item"#}
-               {#                    src=""#}
-               {#                id="video"#}
-               {#                allowfullscreen#}
-               {#                allowscriptaccess="always"#}
-               {#                allow="autoplay"#}
-               {#              ></iframe>#}
-               <video width='150' controls >
-                  <source  type='video/mp4' src='{{ movies.video.url }}'>
-               </video>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<!-- Video Modal End -->
 <!-- About Start -->
 <div class="container-xxl py-5">
    <div class="container">
