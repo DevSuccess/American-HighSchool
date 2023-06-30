@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,20 +31,6 @@
   <component name="HighlightingMarkupGrave">
     <markupCoffin contentHash="-404238729" url="file://$PROJECT_DIR$/.example.env">
       <highlighter start="144" end="148" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-    </markupCoffin>
-    <markupCoffin contentHash="-374983172" url="file://$PROJECT_DIR$/.github/workflows/main.yml">
-      <highlighter start="4" end="1003" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="337" end="341" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="342" end="364" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="723" end="729" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
     </markupCoffin>
@@ -169,7 +157,7 @@
       <workItem from="1687864906997" duration="89000" />
       <workItem from="1688026902111" duration="9563000" />
       <workItem from="1688122956571" duration="11231000" />
-      <workItem from="1688141004572" duration="3871000" />
+      <workItem from="1688141004572" duration="5089000" />
     </task>
     <servers />
   </component>
