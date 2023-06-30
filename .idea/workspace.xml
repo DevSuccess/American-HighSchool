@@ -28,17 +28,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="357885521" url="file://$PROJECT_DIR$/.github/workflows/main.yml">
-      <highlighter start="320" end="324" layer="3000" target="0">
+    <markupCoffin contentHash="-374983172" url="file://$PROJECT_DIR$/.github/workflows/main.yml">
+      <highlighter start="4" end="1003" layer="4000" target="0">
+        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="337" end="341" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="325" end="347" layer="3000" target="0">
+      <highlighter start="342" end="364" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="723" end="729" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="file://$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.min.css" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2RFhbhqjZgz4Fy4yIKKknDCxGkF" />
   <component name="ProjectLevelVcsManager">
@@ -155,7 +165,7 @@
       <workItem from="1687864906997" duration="89000" />
       <workItem from="1688026902111" duration="9563000" />
       <workItem from="1688122956571" duration="11231000" />
-      <workItem from="1688141004572" duration="2571000" />
+      <workItem from="1688141004572" duration="3147000" />
     </task>
     <servers />
   </component>
