@@ -17,4 +17,4 @@ jobs:
         server: www.itti-americanhighschoolmada.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /repositories/American-HighSchool
+        server-dir: /American-HighSchool
