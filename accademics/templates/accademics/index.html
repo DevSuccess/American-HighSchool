@@ -3,66 +3,64 @@
 {% block title %}Accademics{% endblock %}
 {% block content %}
 <section id="scroll">
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            {% for accademic in section1 %}
-            <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="{{ accademic.image.url }}" alt="{{ accademic.name }}" style="width: 300px; height: 300px;" /></div>
+   <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+         {% for accademic in section1 %}
+         <div class="col-lg-6 order-lg-2">
+            <div class="p-5"><img class="img-fluid rounded-circle" src="{{ accademic.image.url }}" alt="{{ accademic.name }}" style="width: 300px; height: 300px;" /></div>
+         </div>
+         <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+               <h2 class="display-4">{{ accademic.name }}</h2>
+               <p>
+                  {{ accademic.description }}
+               </p>
             </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="p-5">
-                    <h2 class="display-4">{{ accademic.name }}</h2>
-                    <p>
-                        {{ accademic.description }}
-                    </p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </section>
 <!-- Content section 2-->
 <section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            {% for accademic in section2 %}
-            <div class="col-lg-6">
-                <div class="p-5">
-                    <img class="img-fluid rounded-circle" src="{{ accademic.image.url }}" alt="{{ accademic.name }}" style="width: 300px; height: 300px;" />
-                </div>
+   <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+         {% for accademic in section2 %}
+         <div class="col-lg-6">
+            <div class="p-5">
+               <img class="img-fluid rounded-circle" src="{{ accademic.image.url }}" alt="{{ accademic.name }}" style="width: 300px; height: 300px;" />
             </div>
-            <div class="col-lg-6">
-                <div class="p-5">
-                    <h2 class="display-4">{{ accademic.name }}</h2>
-                    <p>
-                        {{ accademic.description }}
-                    </p>
-                </div>
+         </div>
+         <div class="col-lg-6">
+            <div class="p-5">
+               <h2 class="display-4">{{ accademic.name }}</h2>
+               <p>
+                  {{ accademic.description }}
+               </p>
             </div>
-            {% endfor %}
-        </div>
-    </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </section>
-
 <!-- Content section 3-->
 <section>
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            {% for accademic in section3 %}
-            <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="{{ accademic.image.url }}" alt="{{ accademic.name }}" style="width: 300px; height: 300px;" /></div>
+   <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+         {% for accademic in section3 %}
+         <div class="col-lg-6 order-lg-2">
+            <div class="p-5"><img class="img-fluid rounded-circle" src="{{ accademic.image.url }}" alt="{{ accademic.name }}" style="width: 300px; height: 300px;" /></div>
+         </div>
+         <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+               <h2 class="display-4">{{ accademic.name }}</h2>
+               <p>
+                  {{ accademic.description }}
+               </p>
             </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="p-5">
-                    <h2 class="display-4">{{ accademic.name }}</h2>
-                    <p>
-                        {{ accademic.description }}
-                    </p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </section>
-
 {% endblock %}

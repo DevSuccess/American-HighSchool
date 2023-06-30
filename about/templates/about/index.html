@@ -4,47 +4,47 @@
 {% block content %}
 <!-- Header - set the background image for the header in the line below-->
 <header class="py-5 bg-image-full" style="">
-    <div class="text-center my-5">
-        <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/img/icon/bg.png' %}" alt="..." />
-        <h1 class="text-black fs-3 fw-bolder">About AHSM</h1>
-        <p class="text-black-50 mb-0">American High School Madagascar</p>
-    </div>
+   <div class="text-center my-5">
+      <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/img/icon/bg.png' %}" alt="..." />
+      <h1 class="text-black fs-3 fw-bolder">About AHSM</h1>
+      <p class="text-black-50 mb-0">American High School Madagascar</p>
+   </div>
 </header>
 <!-- Content section-->
 <section class="py-5">
-    <div class="container my-5">
-        <div class="row justify-content-center">
-        {% for foo in mission %}
-            <div class="mt-2 col-lg-6">
-                <h2>{{ foo.title }}</h2>
-                <p class="lead"></p>
-                <p class="mb-0">
-                    {{ foo.description }}
-                </p>
-            </div>
-        {% endfor %}
-        </div>
-    </div>
+   <div class="container my-5">
+      <div class="row justify-content-center">
+         {% for foo in mission %}
+         <div class="mt-2 col-lg-6">
+            <h2>{{ foo.title }}</h2>
+            <p class="lead"></p>
+            <p class="mb-0">
+               {{ foo.description }}
+            </p>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
 </section>
 <!-- Image element - set the background image for the header in the line below-->
 <div class="py-5 bg-image-full" style="background-image: url('{% static 'assets/img/icon/logo.jpeg' %}')">
-    <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
-    <div style="height: 20rem"></div>
+   <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+   <div style="height: 20rem"></div>
 </div>
 <!-- Content section-->
 <section class="py-5">
-    <div class="container my-5">
-        {% for foo in vision %}
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <h2>{{ foo.title }}</h2>
-                <p class="lead">
-                    {{ foo.description }}
-                </p>
-                <p class="mb-0">{{ foo.libel }}</p>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+   <div class="container my-5">
+      {% for foo in vision %}
+      <div class="row justify-content-center">
+         <div class="col-lg-6">
+            <h2>{{ foo.title }}</h2>
+            <p class="lead">
+               {{ foo.description }}
+            </p>
+            <p class="mb-0">{{ foo.libel }}</p>
+         </div>
+      </div>
+      {% endfor %}
+   </div>
 </section>
 {% endblock %}
