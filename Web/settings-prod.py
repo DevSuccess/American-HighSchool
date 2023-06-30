@@ -1,4 +1,5 @@
 from settings import *
+import os
 
 # Configuration in PROD [insert les ip and domain authorisés]
 DEBUG = os.environ['DEBUG']
