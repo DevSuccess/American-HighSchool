@@ -117,9 +117,9 @@ DATABASES = {
         'PASSWORD': os.environ['DB_PASSWORD'],
         'HOST': os.environ['DB_HOST'],
         'PORT': os.environ['DB_PORT'],
-        'OPTIONS': {
-          'autocommit': True,
-        },
+        # 'OPTIONS': {
+        #   'autocommit': True,
+        # },
     }
 }
 
