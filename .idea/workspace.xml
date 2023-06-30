@@ -24,6 +24,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingMarkupGrave">
+    <markupCoffin contentHash="1203963296" url="file://$PROJECT_DIR$/requirements.txt">
+      <highlighter start="75" end="105" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="75" end="105" layer="4000" target="0">
+        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
+      </highlighter>
+    </markupCoffin>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="file://$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.min.css" root0="SKIP_INSPECTION" />
@@ -146,7 +156,7 @@
       <workItem from="1687864906997" duration="89000" />
       <workItem from="1688026902111" duration="9563000" />
       <workItem from="1688122956571" duration="11231000" />
-      <workItem from="1688141004572" duration="5756000" />
+      <workItem from="1688141004572" duration="6096000" />
     </task>
     <servers />
   </component>
