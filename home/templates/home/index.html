@@ -4,421 +4,414 @@
 Home
 {% endblock %}
 {% block content %}
-    <!-- Header Start -->
-    <div class="container-fluid bg-dark p-0 mb-5">
-      <div class="row g-0 flex-column-reverse flex-lg-row">
-        <div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
-          <div
+<!-- Header Start -->
+<div class="container-fluid bg-dark p-0 mb-5">
+   <div class="row g-0 flex-column-reverse flex-lg-row">
+      <div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
+         <div
             class="header-bg h-100 d-flex flex-column justify-content-center p-5"
-          >
+            >
             <h1 class="display-4 text-light mb-5">
-              {{ movies.description}}
+               {{ movies.description}}
             </h1>
             <div class="d-flex align-items-center pt-4 animated slideInDown">
-              <a href="{% url 'about:index' %}" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5"
-                >Read More</a
-              >
-              <button
-                type="button"
-                class="btn-play"
-                data-bs-toggle="modal"
-                data-src="{{ video_url }}"
-                data-bs-target="#videoModal"
-              >
-                <span></span>
-              </button>
-              <h6 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h6>
+               <a href="{% url 'about:index' %}" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5"
+                  >Read More</a
+                  >
+               <button
+                  type="button"
+                  class="btn-play"
+                  data-bs-toggle="modal"
+                  data-src="{{ video_url }}"
+                  data-bs-target="#videoModal"
+                  >
+               <span></span>
+               </button>
+               <h6 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h6>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-          <div class="owl-carousel header-carousel">
-              {% for picture in pictures %}
-                <div class="owl-carousel-item">
-                  <img class="img-fluid" src="{{ picture.image.url }}" alt="{{ picture.title }}" />
-                </div>
-              {% endfor %}
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-    <!-- Header End -->
-
-    <!-- Video Modal Start -->
-    <div
-      class="modal modal-video fade"
-      id="videoModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content rounded-0">
-          <div class="modal-header">
+      <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+         <div class="owl-carousel header-carousel">
+            {% for picture in pictures %}
+            <div class="owl-carousel-item">
+               <img class="img-fluid" src="{{ picture.image.url }}" alt="{{ picture.title }}" />
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Header End -->
+<!-- Video Modal Start -->
+<div
+   class="modal modal-video fade"
+   id="videoModal"
+   tabindex="-1"
+   aria-labelledby="exampleModalLabel"
+   aria-hidden="true"
+   >
+   <div class="modal-dialog">
+      <div class="modal-content rounded-0">
+         <div class="modal-header">
             <h3 class="modal-title" id="exampleModalLabel">{{ movies.title | upper }}</h3>
             <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+               ></button>
+         </div>
+         <div class="modal-body">
             <!-- 16:9 aspect ratio -->
             <div class="ratio ratio-16x9">
-{#              <iframe#}
-{#                class="embed-responsive-item"#}
-{#                    src=""#}
-{#                id="video"#}
-{#                allowfullscreen#}
-{#                allowscriptaccess="always"#}
-{#                allow="autoplay"#}
-{#              ></iframe>#}
-                <video width='150' controls ><source  type='video/mp4' src='{{ movies.video.url }}'></video>
+               {#              <iframe#}
+               {#                class="embed-responsive-item"#}
+               {#                    src=""#}
+               {#                id="video"#}
+               {#                allowfullscreen#}
+               {#                allowscriptaccess="always"#}
+               {#                allow="autoplay"#}
+               {#              ></iframe>#}
+               <video width='150' controls >
+                  <source  type='video/mp4' src='{{ movies.video.url }}'>
+               </video>
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-    <!-- Video Modal End -->
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-          {% if about_home %}
+   </div>
+</div>
+<!-- Video Modal End -->
+<!-- About Start -->
+<div class="container-fluid py-5">
+   <div class="container">
+      <div class="row g-5">
+         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            {% if about_home %}
             <p><span class="text-primary me-2">#</span>Welcome To AHSM</p>
             <h1 class="display-5 mb-4">
-                {{ about_home.title }}
-              <span class="text-primary">{{ about_home.key }}</span>!
+               {{ about_home.title }}
+               <span class="text-primary">{{ about_home.key }}</span>!
             </h1>
             <p class="mb-4">
-              {{ about_home.content }}
+               {{ about_home.content }}
             </p>
-              {% for level in level_lists %}
+            {% for level in level_lists %}
             <h5 class="mb-3">
-              <i class="far fa-check-circle text-primary me-3"></i>
-                {{ level.name }}
+               <i class="far fa-check-circle text-primary me-3"></i>
+               {{ level.name }}
             </h5>
-              {% endfor %}
+            {% endfor %}
             <a class="btn btn-primary py-3 px-5 mt-3" href="{% url 'about:index' %}">Read More</a>
-          </div>
-          {% endif %}
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+         </div>
+         {% endif %}
+         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="img-border">
-              <img class="img-fluid" src="{{ about_home.image.url }}" alt="" />
+               <img class="img-fluid" src="{{ about_home.image.url }}" alt="" />
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-    <!-- About End -->
-
-    <!-- Facts Start -->
-    <div
-      class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-4">
-          <div
+   </div>
+</div>
+<!-- About End -->
+<!-- Facts Start -->
+<div
+   class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp"
+   data-wow-delay="0.1s"
+   >
+   <div class="container py-5">
+      <div class="row g-4">
+         <div
             class="col-md-6 col-lg-3 text-center wow fadeIn"
             data-wow-delay="0.1s"
-          >
+            >
             <i class="fa fa-users fa-3x text-primary mb-3"></i>
             <h1 class="text-white mb-2" data-toggle="counter-up">150</h1>
             <p class="text-white mb-0">Free place</p>
-          </div>
-          <div
+         </div>
+         <div
             class="col-md-6 col-lg-3 text-center wow fadeIn"
             data-wow-delay="0.3s"
-          >
+            >
             <i class="fa fa-binoculars fa-3x text-primary mb-3"></i> <!-- Icône jumelles pour représenter un visiteur -->
             <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
             <p class="text-white mb-0">Daily Vigitors</p>
-          </div>
-          <div
+         </div>
+         <div
             class="col-md-6 col-lg-3 text-center wow fadeIn"
             data-wow-delay="0.5s"
-          >
+            >
             <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
             <h1 class="text-white mb-2" data-toggle="counter-up">19</h1>
             <p class="text-white mb-0">Total Membership</p>
-          </div>
-          <div
+         </div>
+         <div
             class="col-md-6 col-lg-3 text-center wow fadeIn"
             data-wow-delay="0.7s"
-          >
+            >
             <i class="fa fa-globe fa-3x text-primary mb-3"></i> <!-- Icône globe pour représenter un visiteur -->
             <h1 class="text-white mb-2" data-toggle="counter-up">345</h1>
             <p class="text-white mb-0">Number of Student</p>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-    <!-- Facts End -->
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-
-        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="col-lg-6">
+   </div>
+</div>
+<!-- Facts End -->
+<!-- Service Start -->
+<div class="container-xxl py-5">
+   <div class="container">
+      <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+         <div class="col-lg-6">
             <p><span class="text-primary me-2">#</span>Our Services</p>
             <h1 class="display-5 mb-0">
-              Extracurricular Activities For
-              <span class="text-primary">AHSM</span> Student
+               Extracurricular Activities For
+               <span class="text-primary">AHSM</span> Student
             </h1>
-          </div>
-          <div class="col-lg-6">
+         </div>
+         <div class="col-lg-6">
             <div
-              class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5"
-            >
-              <i class="fa fa-3x fa-mobile-alt text-white"></i>
-              <div class="ms-4">
-                <p class="text-white mb-0">Call for more info</p>
-                <h2 class="text-white mb-0">{{ number_info }}</h2>
-              </div>
+               class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5"
+               >
+               <i class="fa fa-3x fa-mobile-alt text-white"></i>
+               <div class="ms-4">
+                  <p class="text-white mb-0">Call for more info</p>
+                  <h2 class="text-white mb-0">{{ number_info }}</h2>
+               </div>
             </div>
-          </div>
-        </div>
-        <div class="row gy-5 gx-4">
-        {% for activity in activitie_home %}
-          <div
+         </div>
+      </div>
+      <div class="row gy-5 gx-4">
+         {% for activity in activitie_home %}
+         <div
             class=" col-lg-3 col-md-4 col-sm-6 wow fadeInUp "
             data-wow-delay="0.1s">
             <img class="img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" />
-              <p>
-                <a href="#collapseExample{{ activity.id }}" role="button"
-                   data-bs-toggle="collapse"
-                   aria-expanded="false" aria-controls="collapseExample"
-                   class="mb-3 btn">{{ activity.title }}</a>
-              </p>
+            <p>
+               <a href="#collapseExample{{ activity.id }}" role="button"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false" aria-controls="collapseExample"
+                  class="mb-3 btn">{{ activity.title }}</a>
+            </p>
             <div class="collapse multi-collapse" id="collapseExample{{ activity.id }}">
-                <div class="card card-body" >
-                    {{ activity.description }}
-                </div>
+               <div class="card card-body" >
+                  {{ activity.description }}
+               </div>
             </div>
-          </div>
-        {% endfor %}
-        </div>
+         </div>
+         {% endfor %}
       </div>
-    </div>
-    <!-- Service End -->
-
-    <!-- Members Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div
-          class="row g-5 mb-5 align-items-end wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-          <div class="col-lg-6">
+   </div>
+</div>
+<!-- Service End -->
+<!-- Members Start -->
+<div class="container-xxl py-5">
+   <div class="container">
+      <div
+         class="row g-5 mb-5 align-items-end wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         <div class="col-lg-6">
             <p><span class="text-primary me-2">#</span>Our Members</p>
             <h1 class="display-5 mb-0">
-              Let`s See Our <span class="text-primary">AHSM</span> Awsome
-              Members
+               Let`s See Our <span class="text-primary">AHSM</span> Awsome
+               Members
             </h1>
-          </div>
-          <div class="col-lg-6 text-lg-end">
+         </div>
+         <div class="col-lg-6 text-lg-end">
             <a class="btn btn-primary py-3 px-5" href="{% url 'member:index' %}"
-              >Explore More Members</a
-            >
-          </div>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+               >Explore More Members</a
+               >
+         </div>
+      </div>
+      <div class="row g-4">
+         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="row g-4">
-              {% for direction in direction_home %}
-                <div class="col-12">
+               {% for direction in direction_home %}
+               <div class="col-12">
                   {% if direction.image %}
-                    <a class="animal-item" href="{{ direction.image.url }}" data-lightbox="animal">
-                      <div class="position-relative">
+                  <a class="animal-item" href="{{ direction.image.url }}" data-lightbox="animal">
+                     <div class="position-relative">
                         <img class="img-fluid" src="{{ direction.image.url }}" alt="" />
                         <div class="animal-text p-4">
-                          <p class="text-white small text-uppercase mb-0">{{ direction.lastname }}</p>
-                          <h5 class="text-white mb-0">{{ direction.occupation }}</h5>
+                           <p class="text-white small text-uppercase mb-0">{{ direction.lastname }}</p>
+                           <h5 class="text-white mb-0">{{ direction.occupation }}</h5>
                         </div>
-                      </div>
-                    </a>
+                     </div>
+                  </a>
                   {% endif %}
-                </div>
-              {% endfor %}
+               </div>
+               {% endfor %}
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+         </div>
+         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="row g-4">
-              {% for administration in administration_home %}
-                <div class="col-12">
-                    {% if administration.image %}
-                    <a class="animal-item" href="{{ administration.image.url }}" data-lightbox="animal">
-                      <div class="position-relative">
+               {% for administration in administration_home %}
+               <div class="col-12">
+                  {% if administration.image %}
+                  <a class="animal-item" href="{{ administration.image.url }}" data-lightbox="animal">
+                     <div class="position-relative">
                         <img class="img-fluid" src="{{ administration.image.url }}" alt="" />
                         <div class="animal-text p-4">
-                          <p class="text-white small text-uppercase mb-0">{{ administration.lastname }}</p>
-                          <h5 class="text-white mb-0">{{ administration.occupation }}</h5>
+                           <p class="text-white small text-uppercase mb-0">{{ administration.lastname }}</p>
+                           <h5 class="text-white mb-0">{{ administration.occupation }}</h5>
                         </div>
-                      </div>
-                    </a>
-                    {% endif %}
-                </div>
-              {% endfor %}
+                     </div>
+                  </a>
+                  {% endif %}
+               </div>
+               {% endfor %}
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+         </div>
+         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="row g-4">
-              {% for enseignant in enseignants_home %}
-                <div class="col-12">
+               {% for enseignant in enseignants_home %}
+               <div class="col-12">
                   {% if enseignant.image %}
-                    <a class="animal-item" href="{{ enseignant.image.url }}" data-lightbox="animal">
-                      <div class="position-relative">
+                  <a class="animal-item" href="{{ enseignant.image.url }}" data-lightbox="animal">
+                     <div class="position-relative">
                         <img class="img-fluid" src="{{ enseignant.image.url }}" alt="" />
                         <div class="animal-text p-4">
-                          <p class="text-white small text-uppercase mb-0">{{ enseignant.lastname }}</p>
-                          <h5 class="text-white mb-0">{{ enseignant.occupation }}</h5>
+                           <p class="text-white small text-uppercase mb-0">{{ enseignant.lastname }}</p>
+                           <h5 class="text-white mb-0">{{ enseignant.occupation }}</h5>
                         </div>
-                      </div>
-                    </a>
+                     </div>
+                  </a>
                   {% endif %}
-                </div>
-              {% endfor %}
+               </div>
+               {% endfor %}
             </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-    <!-- Member End -->
-
-    <!-- Visiting Hours Start -->
-    <div
-      class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+   </div>
+</div>
+<!-- Member End -->
+<!-- Visiting Hours Start -->
+<div
+   class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp"
+   data-wow-delay="0.1s"
+   >
+   <div class="container py-5">
+      <div class="row g-5">
+         <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
             <h1 class="display-6 text-white mb-5">Visiting Hours</h1>
             <ul class="list-group list-group-flush">
-                {% for hour_list in hour_lists %}
-              <li class="list-group-item">
-                <span>{{ hour_list.day }}</span>
-                <span>{{ hour_list.message }}</span>
-                <span>{{ hour_list.open }} - {{ hour_list.close }}</span>
-              </li>
-                {% endfor %}
-
+               {% for hour_list in hour_lists %}
+               <li class="list-group-item">
+                  <span>{{ hour_list.day }}</span>
+                  <span>{{ hour_list.message }}</span>
+                  <span>{{ hour_list.open }} - {{ hour_list.close }}</span>
+               </li>
+               {% endfor %}
             </ul>
-          </div>
-          <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
+         </div>
+         <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
             <h1 class="display-6 text-white mb-5">Contact Info</h1>
             <table class="table">
-                <tbody>
+               <tbody>
                   <tr>
-                    <td>Office</td>
-                    {% for address in addresses_ahsm %}
-                      <td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
-                    {% endfor %}
+                     <td>Office</td>
+                     {% for address in addresses_ahsm %}
+                     <td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
+                     {% endfor %}
                   </tr>
                   {% for info in contact_home %}
-                    <tr>
-                      <td>{{ info.title }}</td>
-                      <td>
+                  <tr>
+                     <td>{{ info.title }}</td>
+                     <td>
                         {% for phone in info.contacts.all %}
-                          <p class="mb-2"><i class="fas fa-phone"></i> {{ phone.number | phone2numeric }}</p>
+                        <p class="mb-2"><i class="fas fa-phone"></i> {{ phone.number | phone2numeric }}</p>
                         {% endfor %}
                         <p class="mb-0"><i class="fas fa-envelope"></i> {{ info.email }}</p>
-                      </td>
-                    </tr>
+                     </td>
+                  </tr>
                   {% endfor %}
-                </tbody>
+               </tbody>
             </table>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-    <!-- Visiting Hours End -->
-
-    <!-- Membership Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div
-          class="row g-5 mb-5 align-items-end wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-          <div class="col-lg-6">
+   </div>
+</div>
+<!-- Visiting Hours End -->
+<!-- Membership Start -->
+<div class="container-xxl py-5">
+   <div class="container">
+      <div
+         class="row g-5 mb-5 align-items-end wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         <div class="col-lg-6">
             <p><span class="text-primary me-2">#</span>Price</p>
             <h1 class="display-5 mb-0">
-              Your Children Can Be A Proud Member Of
-              <span class="text-primary">ITTI AHSM</span>
+               Your Children Can Be A Proud Member Of
+               <span class="text-primary">ITTI AHSM</span>
             </h1>
-          </div>
-          <div class="col-lg-6 text-lg-end">
+         </div>
+         <div class="col-lg-6 text-lg-end">
             <a class="btn btn-primary py-3 px-5" href="{% url 'contact_us:index' %}">Contact Us</a>
-          </div>
-        </div>
-        <div class="row g-4">
-        {% for price in price_lists %}
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="membership-item position-relative">
-                    <img class="img-fluid" src="{{ price.image.url }}" alt="" />
-                    <h1 class="display-1">0{{ forloop.counter }}</h1>
-                    <h4 class="text-white mb-3"><b>{{ price.formatted_price }}</b></h4>
-                    <h3 class="text-danger mb-4">{{ price.levels.name }}</h3>
-                    <h3 class="text-primary mb-4">{{ price.formatted_registration }} <i>(Registration Fee)</i></h3>
-                    <p><i class="fa fa-check text-primary me-3"></i>{{ price.birth }} ans</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }}% Promo</p>
-                    <a class="btn btn-outline-light px-4 mt-3" href="{% url 'register:index' %}">Get Started</a>
-                </div>
-            </div>
-        {% endfor %}
-        </div>
+         </div>
       </div>
-    </div>
-    <!-- Membership End -->
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <h1
-          class="display-5 text-center mb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-          Our Clients Say!
-        </h1>
-        <div
-          class="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-            {% for testimonial in testimonials_home %}
-          <div class="testimonial-item text-center">
+      <div class="row g-4">
+         {% for price in price_lists %}
+         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="membership-item position-relative">
+               <img class="img-fluid" src="{{ price.image.url }}" alt="" />
+               <h1 class="display-1">0{{ forloop.counter }}</h1>
+               <h4 class="text-white mb-3"><b>{{ price.formatted_price }}</b></h4>
+               <h3 class="text-danger mb-4">{{ price.levels.name }}</h3>
+               <h3 class="text-primary mb-4">{{ price.formatted_registration }} <i>(Registration Fee)</i></h3>
+               <p><i class="fa fa-check text-primary me-3"></i>{{ price.birth }} ans</p>
+               <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }}% Promo</p>
+               <a class="btn btn-outline-light px-4 mt-3" href="{% url 'register:index' %}">Get Started</a>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+<!-- Membership End -->
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+   <div class="container">
+      <h1
+         class="display-5 text-center mb-5 wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         Our Clients Say!
+      </h1>
+      <div
+         class="owl-carousel testimonial-carousel wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         {% for testimonial in testimonials_home %}
+         <div class="testimonial-item text-center">
             <img
-              class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
-              src="{{ testimonial.image.url }}"
-              style="width: 100px; height: 100px"
-            />
+               class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
+               src="{{ testimonial.image.url }}"
+               style="width: 100px; height: 100px"
+               />
             <div class="testimonial-text rounded text-center p-4">
-              <p>
-                {{ testimonial.content }}
-              </p>
-              <h5 class="mb-1">{{ testimonial.name }}</h5>
-              <span class="fst-italic">{{ testimonial.occupation }}</span>
+               <p>
+                  {{ testimonial.content }}
+               </p>
+               <h5 class="mb-1">{{ testimonial.name }}</h5>
+               <span class="fst-italic">{{ testimonial.occupation }}</span>
             </div>
-          </div>
-            {% endfor %}
-        </div>
+         </div>
+         {% endfor %}
       </div>
-    </div>
-    <!-- Testimonial End -->
-        {% if messages %}
-            {% for message in messages %}
-            <div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="d-flex">
-                    <div class="toast-body">
-                        {{ message }}
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            </div>
-            {% endfor %}
-        {% endif %}
+   </div>
+</div>
+<!-- Testimonial End -->
+{% if messages %}
+{% for message in messages %}
+<div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+   <div class="d-flex">
+      <div class="toast-body">
+         {{ message }}
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+   </div>
+</div>
+{% endfor %}
+{% endif %}
 {% endblock %}
