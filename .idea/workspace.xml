@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/settings_prod.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/wsgi.py" afterDir="false" />
-    </list>
+    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +23,107 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingMarkupGrave">
+    <markupCoffin contentHash="60016644" url="file://$PROJECT_DIR$/.cpanel.yml">
+      <highlighter start="34" end="44" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="51" end="59" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="75" end="81" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="85" end="96" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="116" end="124" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="203" end="218" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="219" end="226" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="276" end="286" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="307" end="318" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="327" end="333" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="337" end="348" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="372" end="385" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="388" end="395" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="399" end="407" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="412" end="420" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="421" end="430" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="464" end="471" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="559" end="567" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="568" end="577" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="579" end="589" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="606" end="616" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="620" end="625" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="630" end="638" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="642" end="655" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="664" end="670" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="674" end="685" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+    </markupCoffin>
+    <markupCoffin contentHash="-404238729" url="file://$PROJECT_DIR$/.example.env">
+      <highlighter start="144" end="148" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+    </markupCoffin>
+    <markupCoffin contentHash="1309476702" url="file://$PROJECT_DIR$/Web/urls.py">
+      <highlighter start="300" end="304" layer="3000" target="0">
+        <option name="myExternalName" value="GRAMMAR_ERROR" />
+      </highlighter>
+      <highlighter start="635" end="636" layer="3000" target="0">
+        <option name="myExternalName" value="GRAMMAR_ERROR" />
+      </highlighter>
+      <highlighter start="954" end="964" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="1287" end="1297" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+    </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -150,7 +247,7 @@
       <workItem from="1687864906997" duration="89000" />
       <workItem from="1688026902111" duration="9563000" />
       <workItem from="1688122956571" duration="11231000" />
-      <workItem from="1688141004572" duration="9816000" />
+      <workItem from="1688141004572" duration="10120000" />
     </task>
     <servers />
   </component>
