@@ -6,7 +6,6 @@ DEBUG = os.environ['DEBUG']
 SECRET_KEY = os.environ['SECRET_KEY']
 ALLOWED_HOSTS = ['*', '0.0.0.0', 'localhost', '127.0.0.1', 'itti-americanhighschoolmada.com']
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # if DEBUG == False:
 if django.VERSION >= (4, 2):
