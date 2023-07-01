@@ -1,8 +1,9 @@
-.idea
-/.idea
+# PyCharm files
+.idea/
+
+# Environment variables
 .env
-/.env
 local_env
-/local_env
-venv
-.idea/*
+
+# Virtual environment
+venv/
