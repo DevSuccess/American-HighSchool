@@ -11,33 +11,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-import django
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True if os.getenv("DEBUG") == 'True' else False
-# DEBUG = bool(os.getenv('DEBUG', ''))
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-
-if DEBUG:
-    # Configuration in PROD [insert les ip and domain authorisés]
-    SECRET_KEY = os.getenv('SECRET_KEY')
-    ALLOWED_HOSTS = []
-else:
-    # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = os.getenv('SECRET_KEY')
-    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-
-# Application definition
+SECRET_KEY = os.getenv('SECRET_KEY')
+ALLOWED_HOSTS = [] if DEBUG else os.getenv('ALLOWED_HOSTS', '').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -46,19 +28,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'about.apps.AboutConfig',
-    'accademics.apps.AccademicsConfig',
-    'accreditation.apps.AccreditationConfig',
-    'activity.apps.ActivityConfig',
-    'address.apps.AddressConfig',
-    'blog.apps.BlogConfig',
-    'contact.apps.ContactConfig',
-    'home.apps.HomeConfig',
-    'hour.apps.HourConfig',
-    'member.apps.MemberConfig',
-    'price.apps.PriceConfig',
-    'register.apps.RegisterConfig',
-    'testimonie.apps.TestimonieConfig',
+    # additional apps
+    *[
+        f"{app}.apps.{app.capitalize()}Config"
+        for app in (
+            "about", "accademics", "accreditation", "activity", "address",
+            "blog", "contact", "home", "hour", "member", "price", "register",
+            "testimonie"
+        )
+    ],
     'crispy_forms',
 ]
 
@@ -75,7 +53,19 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Web.urls'
 
-TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
+TEMPLATES_DIRS = BASE_DIR / 'templates'
+
+# context processors
+contexts = [
+   'django.template.context_processors.debug',
+   'django.template.context_processors.request',
+   'django.contrib.auth.context_processors.auth',
+   'django.contrib.messages.context_processors.messages',
+   *[
+       f"{app}.views.base_context"
+       for app in ("about", "activity", "address", "contact", "hour", "member", "price", "testimonie")
+   ]
+]
 
 TEMPLATES = [
     {
@@ -83,35 +73,15 @@ TEMPLATES = [
         'DIRS': [TEMPLATES_DIRS],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                # 'Web.context_processors.information',
-                'about.views.base_context',
-                'activity.views.base_context',
-                'address.views.base_context',
-                'contact.views.base_context',
-                'hour.views.base_context',
-                'member.views.base_context',
-                'price.views.base_context',
-                'testimonie.views.base_context',
-            ],
+            'context_processors': contexts,
         },
     },
 ]
 
 WSGI_APPLICATION = 'Web.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-
-# MySQL
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
         'ENGINE': 'mysql.connector.django',
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
@@ -124,9 +94,6 @@ DATABASES = {
         },
     }
 }
-
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -143,19 +110,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
 LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'Indian/Antananarivo'
 
 USE_I18N = True
-
 USE_TZ = True
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_ROOT = BASE_DIR / "static"
 STATIC_URL = '/static/'
@@ -163,26 +123,19 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
-if not DEBUG:
-    STATICFILES_DIRS = (
-        os.path.join(os.getenv('DIR_PROD'), 'staticfiles'),
-    )
+STATICFILES_DIRS = (
+    Path(os.getenv('DIR_PROD')) / 'staticfiles',
+) if not DEBUG else []
 
-# if DEBUG == False:
-if django.VERSION >= (4, 2):
-    STORAGES = {
-        "default": {
-            "BACKEND": "django.core.files.storage.FileSystemStorage"
-        },
-        "staticfiles": {
-            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
-        }
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage"
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
     }
-
-else:
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+} if DEBUG else {
+    "staticfiles":  "whitenoise.storage.CompressedManifestStaticFilesStorage"
+}
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
