@@ -32,7 +32,7 @@ if not DEBUG:
 else:
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'django-insecure-35a5!fx(c(7i#x*hkv11@g42x&u-eg8vzv5+xg@*k!(vh((@*7'
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 
 # Application definition
 
