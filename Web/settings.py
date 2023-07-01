@@ -24,17 +24,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.getenv("DEBUG") == 'True' else False
-ENGINE_TYPE = ''
+# DEBUG = True if os.getenv("DEBUG") == 'True' else False
+# DEBUG = bool(os.getenv('DEBUG', ''))
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 if DEBUG:
     # Configuration in PROD [insert les ip and domain authorisés]
     SECRET_KEY = os.getenv('SECRET_KEY')
-    ALLOWED_HOSTS = ['*', '0.0.0.0', 'localhost', '127.0.0.1', 'itti-americanhighschoolmada.com']
+    ALLOWED_HOSTS = []
 else:
     # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = 'django-insecure-35a5!fx(c(7i#x*hkv11@g42x&u-eg8vzv5+xg@*k!(vh((@*7'
-    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
+    SECRET_KEY = os.getenv('SECRET_KEY')
+    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 # Application definition
 
@@ -157,10 +158,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_ROOT = BASE_DIR / "static"
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_URL = "media/"
+MEDIA_URL = "/media/"
 
 if not DEBUG:
     STATICFILES_DIRS = (

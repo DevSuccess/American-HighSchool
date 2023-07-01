@@ -28,34 +28,38 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-1390670380" url="file://$PROJECT_DIR$/Web/settings.py">
-      <highlighter start="975" end="979" layer="3000" target="0">
+    <markupCoffin contentHash="-1602088886" url="file://$PROJECT_DIR$/Web/settings.py">
+      <highlighter start="1451" end="1461" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="980" end="1002" layer="3000" target="0">
+      <highlighter start="1467" end="1477" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="1486" end="1496" layer="3000" target="0">
+      <highlighter start="1823" end="1833" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="1502" end="1512" layer="3000" target="0">
+      <highlighter start="1839" end="1849" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="1858" end="1868" layer="3000" target="0">
+      <highlighter start="3277" end="3287" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="1874" end="1884" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3312" end="3322" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="4930" end="4941" layer="4000" target="0">
+      <highlighter start="4897" end="4908" layer="4000" target="0">
         <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -186,7 +190,7 @@
       <workItem from="1688026902111" duration="9563000" />
       <workItem from="1688122956571" duration="11231000" />
       <workItem from="1688141004572" duration="17296000" />
-      <workItem from="1688179959377" duration="16021000" />
+      <workItem from="1688179959377" duration="16809000" />
     </task>
     <servers />
   </component>
