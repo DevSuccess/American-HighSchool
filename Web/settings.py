@@ -143,7 +143,7 @@ MEDIA_URL = "/media/"
 
 if not DEBUG:
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'staticfiles'),
+        os.path.join(BASE_DIR, 'static'),
     ]
 if DEBUG:
     STORAGES = {
