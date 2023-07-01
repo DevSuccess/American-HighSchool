@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cpanel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.cpanel.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,32 +27,53 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-2038832286" url="file://$PROJECT_DIR$/Web/settings.py">
-      <highlighter start="511" end="521" layer="3000" target="0">
+    <markupCoffin contentHash="-1389412320" url="file://$PROJECT_DIR$/.cpanel.yml">
+      <highlighter start="14" end="23" layer="4000" target="0">
+        <option name="myExternalName" value="NOT_USED_ELEMENT_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="45" end="53" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="639" end="649" layer="3000" target="0">
+      <highlighter start="87" end="95" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="912" end="922" layer="3000" target="0">
+      <highlighter start="177" end="185" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="928" end="938" layer="3000" target="0">
+      <highlighter start="283" end="293" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="1284" end="1294" layer="3000" target="0">
+      <highlighter start="331" end="341" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="1300" end="1310" layer="3000" target="0">
+      <highlighter start="421" end="431" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="1960" end="1970" layer="3000" target="0">
+      <highlighter start="496" end="506" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="2248" end="2258" layer="3000" target="0">
+      <highlighter start="517" end="530" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="2566" end="2576" layer="3000" target="0">
+      <highlighter start="533" end="540" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="588" end="598" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="619" end="626" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="645" end="655" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="664" end="674" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="693" end="703" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="717" end="727" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
     </markupCoffin>
@@ -230,7 +250,7 @@
       <workItem from="1688026902111" duration="9563000" />
       <workItem from="1688122956571" duration="11231000" />
       <workItem from="1688141004572" duration="17296000" />
-      <workItem from="1688179959377" duration="22542000" />
+      <workItem from="1688179959377" duration="22726000" />
     </task>
     <servers />
   </component>
