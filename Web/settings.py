@@ -32,7 +32,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    *[f"{app}.apps.{app.capitalize()}Config" for app in APPS],
+    'about.apps.AboutConfig',
+    'accademics.apps.AccademicsConfig',
+    'accreditation.apps.AccreditationConfig',
+    'activity.apps.ActivityConfig',
+    'address.apps.AddressConfig',
+    'blog.apps.BlogConfig',
+    'contact.apps.ContactConfig',
+    'home.apps.HomeConfig',
+    'hour.apps.HourConfig',
+    'member.apps.MemberConfig',
+    'price.apps.PriceConfig',
+    'register.apps.RegisterConfig',
+    'testimonie.apps.TestimonieConfig',
     'crispy_forms',
 ]
 
@@ -58,7 +70,19 @@ contexts = [
     'django.template.context_processors.request',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
-    *[f"{app}.views.base_context" for app in CONTEXT_APPS]
+    "about.views_context",
+    "accademics.views_context",
+    "accreditation.views_context",
+    "activity.views_context",
+    "address.views_context",
+    "blog.views_context",
+    "contact.views_context",
+    "home.views_context",
+    "hour.views_context",
+    "member.views_context",
+    "price.views_context",
+    "register.views_context",
+    "testimonie.views_context",
 ]
 
 TEMPLATES = [
@@ -117,19 +141,22 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'),
-] if not DEBUG else []
-
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage"
-    },
-    "staticfiles": {
-        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
+if not DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static'),
+    ]
+if DEBUG:
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage"
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
+        }
     }
-} if DEBUG else {
-    "staticfiles": "whitenoise.storage.CompressedManifestStaticFilesStorage"
-}
+else:
+    STORAGES = {
+        "staticfiles": "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
