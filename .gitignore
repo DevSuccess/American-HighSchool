@@ -9,4 +9,6 @@ local_env
 venv/__pycache__/
 *.pyc
 
+# .gitignore
+
 __pycache__/
