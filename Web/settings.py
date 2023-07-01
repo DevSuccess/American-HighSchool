@@ -57,14 +57,14 @@ TEMPLATES_DIRS = BASE_DIR / 'templates'
 
 # context processors
 contexts = [
-   'django.template.context_processors.debug',
-   'django.template.context_processors.request',
-   'django.contrib.auth.context_processors.auth',
-   'django.contrib.messages.context_processors.messages',
-   *[
-       f"{app}.views.base_context"
-       for app in ("about", "activity", "address", "contact", "hour", "member", "price", "testimonie")
-   ]
+    'django.template.context_processors.debug',
+    'django.template.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+    *[
+        f"{app}.views.base_context"
+        for app in ("about", "activity", "address", "contact", "hour", "member", "price", "testimonie")
+    ]
 ]
 
 TEMPLATES = [
@@ -124,7 +124,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
 STATICFILES_DIRS = (
-    Path(os.getenv('DIR_PROD')) / 'staticfiles',
+    os.path.join(BASE_DIR, 'staticfiles'),
 ) if not DEBUG else []
 
 STORAGES = {
@@ -135,7 +135,7 @@ STORAGES = {
         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
     }
 } if DEBUG else {
-    "staticfiles":  "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    "staticfiles": "whitenoise.storage.CompressedManifestStaticFilesStorage"
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
