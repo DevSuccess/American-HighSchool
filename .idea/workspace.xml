@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +25,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
+    <markupCoffin contentHash="1327862965" url="file://$PROJECT_DIR$/.env">
+      <highlighter start="135" end="139" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+    </markupCoffin>
     <markupCoffin contentHash="-1602088886" url="file://$PROJECT_DIR$/Web/settings.py">
       <highlighter start="1451" end="1461" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
@@ -190,7 +192,7 @@
       <workItem from="1688026902111" duration="9563000" />
       <workItem from="1688122956571" duration="11231000" />
       <workItem from="1688141004572" duration="17296000" />
-      <workItem from="1688179959377" duration="16809000" />
+      <workItem from="1688179959377" duration="17166000" />
     </task>
     <servers />
   </component>

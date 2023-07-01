@@ -1,10 +1,15 @@
 ---
+defaults: &defaults
+  deploy_path: /home/ittiamer/public_html
+  github_path: /home/ittiamer/repositories/American-HighSchool
+  activate_command: /bin/bash -c "source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.11/bin/activate
+
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ittiamer/public_html # Chemin de déploiement
-    - export GITHUBPATH=/home/ittiamer/repositories/American-HighSchool
-    - /bin/bash -c "source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.11/bin/activate && pip install -r $GITHUBPATH/requirements.txt"  # Installation des dépendances depuis requirements.txt
-    - /bin/bash -c "source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.11/bin/activate && python $GITHUBPATH/manage.py collectstatic --noinput"  # Collecte des fichiers statiques
-    - /bin/bash -c "source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.11/bin/activate && python $GITHUBPATH/manage.py migrate --noinput"  # Exécution des migrations
-    - /bin/cp -R $GITHUBPATH/static $DEPLOYPATH  # Copie des fichiers statiques
-    - /bin/cp -R $GITHUBPATH/staticfiles $DEPLOYPATH  # Copie des fichiers staticfiles
+    - export DEPLOYPATH=${defaults.deploy_path}
+    - export GITHUBPATH=${defaults.github_path}
+    - ${defaults.activate_command} && pip install -r $GITHUBPATH/requirements.txt
+    - ${defaults.activate_command} && python $GITHUBPATH/manage.py collectstatic --noinput
+    - ${defaults.activate_command} && python $GITHUBPATH/manage.py migrate --noinput
+    - /bin/cp -R $GITHUBPATH/static $DEPLOYPATH
+    - /bin/cp -R $GITHUBPATH/staticfiles $DEPLOYPATH
