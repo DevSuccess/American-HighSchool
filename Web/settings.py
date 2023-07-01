@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import django
 
 load_dotenv()
 
@@ -146,18 +147,16 @@ if not DEBUG:
         os.path.join(BASE_DIR, 'static'),
     ]
 
-if DEBUG:
+if django.VERSION >= (4, 2):
     STORAGES = {
         "default": {
-            "BACKEND": "django.core.files.storage.FileSystemStorage"
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
         },
         "staticfiles": {
-            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
-        }
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
     }
 else:
-    STORAGES = {
-        "staticfiles": "whitenoise.storage.CompressedManifestStaticFilesStorage"
-    }
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
