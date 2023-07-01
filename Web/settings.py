@@ -120,7 +120,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -159,10 +158,10 @@ STATIC_URL = 'static/'
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "media/"
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
+if not DEBUG:
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'staticfiles'),
+    )
 
 # if DEBUG == False:
 if django.VERSION >= (4, 2):
@@ -174,6 +173,7 @@ if django.VERSION >= (4, 2):
             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
         }
     }
+
 else:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
