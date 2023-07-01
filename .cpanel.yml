@@ -1,3 +1,4 @@
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ittiamer/public_html  # Chemin de déploiement
@@ -6,4 +7,4 @@ deployment:
     - python manage.py collectstatic --noinput  # Collecte des fichiers statiques
     - python manage.py migrate --noinput  # Exécution des migrations
     - python manage.py compress --force  # Compression des fichiers statiques (facultatif)
-    - cp -R * $DEPLOYPATH  # Copie des fichiers de l'application vers le chemin de déploiement
+    - /bin/cp -a * $DEPLOYPATH # Copie des fichiers de l'application vers le chemin de déploiement
