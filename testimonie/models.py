@@ -23,4 +23,5 @@ class Testimonial(BaseModel, ImageModel):
         return self.name
 
     class Meta:
+        db_table = "testimonial"
         verbose_name_plural = 'Les Témoignages clients ou etudiant'

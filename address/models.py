@@ -19,6 +19,7 @@ class AddressAHSM(BaseModel, BaseAddress):
     map = models.TextField(blank=True)
 
     class Meta:
+        db_table = "address_ahsm"
         verbose_name_plural = 'Les Adrèsses de AHSM'
 
     def __str__(self):
@@ -33,4 +34,5 @@ class AddressITTI(BaseModel, BaseAddress):
         verbose_name_plural = 'Les Adrèsses de ITTI'
 
     def __str__(self):
+        db_table = "address_itti"
         return self.street + ' de ITTI'

@@ -10,6 +10,7 @@ class ContactHelp(BaseModel):
         return self.number
 
     class Meta:
+        db_table = "contact_help"
         verbose_name_plural = "Les Supports d'Aide client (Contact)"
 
 
@@ -22,6 +23,7 @@ class Social(BaseModel):
         return self.network_name
 
     class Meta:
+        db_table = "social"
         verbose_name_plural = 'Les Réseaux Sociaux AHSM'
 
 
@@ -35,6 +37,7 @@ class ContactUs(BaseModel):
         return self.name
 
     class Meta:
+        db_table = "contact_us"
         verbose_name_plural = 'Les Posts Clients pour AHSM'
 
 
@@ -46,4 +49,5 @@ class ContactClient(BaseModel):
         return self.email
 
     class Meta:
+        db_table = "contact_client"
         verbose_name_plural = 'Les Contacts des temoignants Clients'

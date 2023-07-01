@@ -16,6 +16,7 @@ class Accademics(BaseModel, ImageModel):
     description = models.TextField()
 
     class Meta:
+        db_table = "accademic"
         verbose_name_plural = "Les accademies dans AHSM"
 
     def __str__(self):

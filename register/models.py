@@ -25,4 +25,5 @@ class Registration(BaseModel):
         return f"{self.first_name} {self.last_name}"
 
     class Meta:
+        db_table = "registration"
         verbose_name_plural = 'Les Enregistrements de nouveau étudiant'

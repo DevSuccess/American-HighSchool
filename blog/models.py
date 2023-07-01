@@ -20,6 +20,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='blog/images/', blank=True, null=True)
 
     class Meta:
+        db_table = "blog"
         verbose_name_plural = "Les Blogs"
         ordering = ['-created_on']
 
@@ -33,6 +34,7 @@ class Slogan(BaseModel, ImageModel):
     description = models.TextField()
 
     class Meta:
+        db_table = "slogan"
         verbose_name_plural = "Les Slogans"
 
     def __str__(self):

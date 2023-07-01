@@ -16,7 +16,8 @@ class List(BaseModel, ImageModel):
     description = models.TextField(null=True)
 
     class Meta:
-        verbose_name_plural = "List des Abilitation, Accreditation, Homologation"
+        db_table = "accreditation_list"
+        verbose_name_plural = "List des Merites"
 
     def __str__(self):
         return self.name
@@ -25,9 +26,10 @@ class List(BaseModel, ImageModel):
 class Accreditation(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()
-    lists = models.ManyToManyField(List)
+    lists = models.ManyToManyField(List, related_name="accreditation_to_list")
 
     class Meta:
+        db_table = "accreditation_value"
         verbose_name_plural = "Les Accreditations"
 
     def __str__(self):

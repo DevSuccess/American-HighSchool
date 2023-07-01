@@ -13,26 +13,5 @@ class Member(BaseModel, ImageModel):
         return self.lastname
 
     class Meta:
+        db_table = "member"
         verbose_name_plural = "Les Membres constituant AHSM"
-
-
-class Collaborator(BaseModel, ImageModel):
-    name = models.CharField(max_length=150)
-    date = models.DateField(blank=True)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name_plural = 'Les Collaborateurs de AHSM'
-
-
-class Accreditation(BaseModel, ImageModel):
-    content = models.CharField(max_length=150)
-
-    def __str__(self):
-        return self.content
-
-    class Meta:
-        verbose_name_plural = 'Les Accreditations de AHSM'
-

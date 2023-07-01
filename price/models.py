@@ -12,6 +12,7 @@ class Level(BaseModel):
         return self.name
 
     class Meta:
+        db_table = "level"
         verbose_name_plural = "Les Niveaux d'Etude existant a l'AHSM"
 
 
@@ -54,4 +55,5 @@ class Price(BaseModel, ImageModel):
         return f"{self.value}"
 
     class Meta:
+        db_table = "price"
         verbose_name_plural = 'Les Prix de formation ASHM'

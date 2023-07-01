@@ -10,6 +10,7 @@ class PresentationVideo(BaseModel, VideoModel):
         return self.title
 
     class Meta:
+        db_table = "p_video"
         verbose_name_plural = 'Les Présentations Vidéo AHSM'
 
 
@@ -21,4 +22,5 @@ class PresentationImage(BaseModel, ImageModel):
         return self.title
 
     class Meta:
+        db_table = "p_image"
         verbose_name_plural = 'Les Présentations Photo AHSM'

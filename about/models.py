@@ -11,6 +11,7 @@ class AboutAHSM(BaseModel, ImageModel):
     content = models.TextField()
 
     class Meta:
+        db_table = "about_ahsm"
         verbose_name_plural = "Les Informations sur AHSH"
 
     def __str__(self):
@@ -20,12 +21,13 @@ class AboutAHSM(BaseModel, ImageModel):
 class AboutHelp(BaseModel):
     title = models.CharField(max_length=100)
     email = models.EmailField(max_length=150)
-    contacts = models.ManyToManyField(ContactHelp)
+    contacts = models.ManyToManyField(ContactHelp, related_name="about_to_contact")
 
     def __str__(self):
         return self.title
 
     class Meta:
+        db_table = "about_help"
         verbose_name_plural = "Les Supports d'Aide Client (About) "
 
 
@@ -33,6 +35,7 @@ class AboutITTI(BaseModel):
     pass
 
     class Meta:
+        db_table = "about_itti"
         verbose_name_plural = 'Les Informations sur ITTI'
 
 
@@ -47,6 +50,7 @@ class About(models.Model):
     type = models.CharField(max_length=1, choices=TYPES)
 
     class Meta:
+        db_table = "about_us"
         verbose_name_plural = 'Les Missions et Visions'
 
     def __str__(self):

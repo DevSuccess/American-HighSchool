@@ -9,6 +9,7 @@ class Activity(BaseModel, ImageModel):
     description = models.TextField(max_length=500, null=True)
 
     class Meta:
+        db_table = "activity"
         verbose_name_plural = 'Les Activités extra-scolaires'
 
     def __str__(self):
