@@ -6,4 +6,5 @@
 local_env
 
 # Virtual environment
-venv/
+venv/__pycache__/
+*.pyc
