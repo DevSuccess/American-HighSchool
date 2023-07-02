@@ -102,7 +102,6 @@ DATABASES = {
         'OPTIONS': {
             'autocommit': True,
             'sql_mode': 'STRICT_TRANS_TABLES',
-            'use_pure': True,
         },
     }
 }
