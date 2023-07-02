@@ -7,13 +7,17 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.getenv('DJANGO_DEBUG', False)
-ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost'] if DEBUG else os.getenv('ALLOWED_HOSTS', '').split(',')
+DEBUG = os.environ.get('DJANGO_DEBUG')
 
-if not DEBUG:
+if DEBUG:
+    ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
+
+else:
+    os.environ.get('ALLOWED_HOSTS')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 if not SECRET_KEY:
