@@ -1,8 +1,8 @@
 ---
 defaults: &defaults
-  deploy_path: /home/ittiamer/public_html
-  github_path: /home/ittiamer/repositories/American-HighSchool
-  activate_command: /bin/bash -c "source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.11/bin/activate
+  deploy_path: /home/ittiamer/public_html/
+  github_path: /home/ittiamer/repositories/American-HighSchool/
+  activate_command: /bin/bash -c "source /home/ittiamer/virtualenv/repositories/American-HighSchool/3.11/bin/activate"
 
 deployment:
   tasks:
