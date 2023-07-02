@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.cpanel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.cpanel.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,52 +28,34 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-1091181411" url="file://$PROJECT_DIR$/.cpanel.yml">
-      <highlighter start="14" end="23" layer="4000" target="0">
-        <option name="myExternalName" value="NOT_USED_ELEMENT_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="45" end="53" layer="3000" target="0">
+    <markupCoffin contentHash="-152418364" url="file://$PROJECT_DIR$/Web/settings.py">
+      <highlighter start="773" end="783" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="88" end="96" layer="3000" target="0">
+      <highlighter start="789" end="799" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="178" end="186" layer="3000" target="0">
+      <highlighter start="1145" end="1155" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="284" end="294" layer="3000" target="0">
+      <highlighter start="1161" end="1171" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="332" end="342" layer="3000" target="0">
+      <highlighter start="2226" end="2236" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
-      <highlighter start="421" end="431" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
+      <highlighter start="3509" end="3510" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="495" end="505" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="516" end="529" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="532" end="539" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="586" end="596" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="617" end="624" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="643" end="653" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="655" end="665" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
+      <highlighter start="4174" end="4178" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="file://$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.min.css" root0="SKIP_INSPECTION" />
   </component>
@@ -199,7 +181,7 @@
       <workItem from="1688122956571" duration="11231000" />
       <workItem from="1688141004572" duration="17296000" />
       <workItem from="1688179959377" duration="23055000" />
-      <workItem from="1688313370553" duration="1993000" />
+      <workItem from="1688313370553" duration="2780000" />
     </task>
     <servers />
   </component>
