@@ -13,7 +13,7 @@ if DEBUG.lower() == "true":
     ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
 else:
     DEBUG = False
-    ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost', '*').split(',')
+    ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 if not SECRET_KEY:
