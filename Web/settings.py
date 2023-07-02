@@ -7,7 +7,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.getenv('DEBUG', False)
+DEBUG = os.getenv('DEBUG', True)
 if DEBUG.lower() == "true":
     DEBUG = True
 else:
@@ -17,13 +17,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 if not SECRET_KEY:
     raise ValueError("SECRET key is not set in environment variables")
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1'] if DEBUG else os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
+ALLOWED_HOSTS = []
+if not DEBUG:
+    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',') 
 
-APPS = [
-    "about", "accademics", "accreditation", "activity", "address",
-    "blog", "contact", "home", "hour", "member", "price", "register",
-    "testimonie"
-]
 
 # additional apps
 INSTALLED_APPS = [
@@ -63,7 +60,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'Web.urls'
 
 TEMPLATES_DIRS = BASE_DIR / 'templates'
-CONTEXT_APPS = ["about", "activity", "address", "contact", "hour", "member", "price", "testimonie"]
 
 # context processors
 contexts = [
