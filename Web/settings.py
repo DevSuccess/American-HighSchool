@@ -10,10 +10,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.getenv('DJANGO_DEBUG', False)
 ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost'] if DEBUG else os.getenv('ALLOWED_HOSTS', '').split(',')
 
-# if not DEBUG:
-#     SECURE_SSL_REDIRECT = True
-#     SESSION_COOKIE_SECURE = True
-#     CSRF_COOKIE_SECURE = True
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 if not SECRET_KEY:
