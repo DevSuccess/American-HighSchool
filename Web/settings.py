@@ -7,15 +7,15 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.environ.get('DEBUG')
-if DEBUG.lower() == "true":
-    DEBUG = True
-    ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
-else:
-    DEBUG = False
-    ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
+DEBUG = (os.getenv('DJANGO_DEBUG', 'false').lower().strip() == 'true')
+ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost'] if DEBUG else os.getenv('ALLOWED_HOSTS', '').split(',')
 
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 SECRET_KEY = os.environ.get('SECRET_KEY')
+
 if not SECRET_KEY:
     raise ValueError("SECRET key is not set in environment variables")
 
@@ -90,11 +90,11 @@ WSGI_APPLICATION = 'Web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
-        'NAME': os.environ['DB_NAME'],
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASSWORD'],
-        'HOST': os.environ['DB_HOST'],
-        'PORT': os.environ['DB_PORT'],
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
         'OPTIONS': {
             'autocommit': True,
             'sql_mode': 'STRICT_TRANS_TABLES',
@@ -150,8 +150,3 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SECURE_SSL_REDIRECT = True
-
-SESSION_COOKIE_SECURE = True
-
-CSRF_COOKIE_SECURE = True
