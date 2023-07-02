@@ -7,20 +7,17 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = os.getenv('DEBUG', True)
+DEBUG = os.environ.get('DEBUG')
 if DEBUG.lower() == "true":
     DEBUG = True
+    ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
 else:
     DEBUG = False
+    ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost', '*').split(',')
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 if not SECRET_KEY:
     raise ValueError("SECRET key is not set in environment variables")
-
-ALLOWED_HOSTS = []
-if not DEBUG:
-    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',') 
-
 
 # additional apps
 INSTALLED_APPS = [
@@ -59,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Web.urls'
 
-TEMPLATES_DIRS = BASE_DIR / 'templates'
+TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 
 # context processors
 contexts = [
@@ -67,19 +64,14 @@ contexts = [
     'django.template.context_processors.request',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
-    "about.views_context",
-    "accademics.views_context",
-    "accreditation.views_context",
-    "activity.views_context",
-    "address.views_context",
-    "blog.views_context",
-    "contact.views_context",
-    "home.views_context",
-    "hour.views_context",
-    "member.views_context",
-    "price.views_context",
-    "register.views_context",
-    "testimonie.views_context",
+    "about.views.base_context",
+    "activity.views.base_context",
+    "address.views.base_context",
+    "contact.views.base_context",
+    "hour.views.base_context",
+    "member.views.base_context",
+    "price.views.base_context",
+    "testimonie.views.base_context",
 ]
 
 TEMPLATES = [
@@ -98,11 +90,11 @@ WSGI_APPLICATION = 'Web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
         'OPTIONS': {
             'autocommit': True,
             'sql_mode': 'STRICT_TRANS_TABLES',
@@ -132,16 +124,15 @@ TIME_ZONE = 'Indian/Antananarivo'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
-if not DEBUG:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'staticfiles'),
-    ]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 if django.VERSION >= (4, 2):
     STORAGES = {
