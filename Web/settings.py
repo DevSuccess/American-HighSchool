@@ -7,7 +7,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = (os.getenv('DJANGO_DEBUG', 'false').lower().strip() == 'true')
+DEBUG = os.getenv('DJANGO_DEBUG', False)
 ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost'] if DEBUG else os.getenv('ALLOWED_HOSTS', '').split(',')
 
 # if not DEBUG:
@@ -103,7 +103,6 @@ DATABASES = {
     }
 }
 
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -149,4 +148,3 @@ else:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
