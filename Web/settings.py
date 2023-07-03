@@ -128,16 +128,15 @@ TIME_ZONE = 'Indian/Antananarivo'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_ROOT = os.environ.get('STATIC_ROOT')
+STATIC_ROOT = os.path.join(BASE_DIR, os.environ.get('STATIC_ROOT'))
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.environ.get('MEDIA_ROOT')
+MEDIA_ROOT = os.path.join(BASE_DIR, os.environ.get('MEDIA_ROOT'))
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
 
 if django.VERSION >= (4, 2):
     STORAGES = {

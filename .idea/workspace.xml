@@ -7,7 +7,6 @@
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingMarkupGrave">
+    <markupCoffin contentHash="1520990260" url="file://$PROJECT_DIR$/Web/settings.py">
+      <highlighter start="812" end="822" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="828" end="838" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="1184" end="1194" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="1200" end="1210" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="2265" end="2275" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="3548" end="3549" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3639" end="3640" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+    </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -160,7 +184,7 @@
       <workItem from="1688141004572" duration="17296000" />
       <workItem from="1688179959377" duration="23055000" />
       <workItem from="1688313370553" duration="10467000" />
-      <workItem from="1688360721614" duration="6761000" />
+      <workItem from="1688360721614" duration="7206000" />
     </task>
     <servers />
   </component>
