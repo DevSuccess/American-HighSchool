@@ -20,19 +20,19 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('about/', include('about.urls')),
-    path('accademics/', include('accademics.urls')),
-    path('accreditation/', include('accreditation.urls')),
-    path('blog/', include('blog.urls')),
-    path('contact/', include('contact.urls')),
-    path('hour/', include('hour.urls')),
-    path('member/', include('member.urls')),
-    path('register/', include('register.urls')),
-    path('tesmonie/', include('testimonie.urls')),
-]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-else:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', include('home.urls')),
+                  path('about/', include('about.urls')),
+                  path('accademics/', include('accademics.urls')),
+                  path('accreditation/', include('accreditation.urls')),
+                  path('blog/', include('blog.urls')),
+                  path('contact/', include('contact.urls')),
+                  path('hour/', include('hour.urls')),
+                  path('member/', include('member.urls')),
+                  path('register/', include('register.urls')),
+                  path('tesmonie/', include('testimonie.urls')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# else:
+#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
