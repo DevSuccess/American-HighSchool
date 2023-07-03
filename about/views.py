@@ -5,7 +5,7 @@ from . import models
 # Create your views here.
 def base_context(request):
     try:
-        abouts = models.AboutAHSM.objects.latest('created_at')
+        abouts = models.AboutAHSM.objects.all().first()
     except models.AboutAHSM.DoesNotExist:
         abouts = None
     contacts = models.AboutHelp.objects.all()

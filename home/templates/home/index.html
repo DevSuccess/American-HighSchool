@@ -89,9 +89,9 @@ Home
       <div class="row g-5">
          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             {% if about_home %}
-            <p><span class="text-primary me-2">#</span>Welcome To AHSM</p>
+            <p><span class="text-primary me-2">#</span>{{ about_home.title }}</p>
             <h1 class="display-5 mb-4">
-               {{ about_home.title }}
+               {{ about_home.libel }}
                <span class="text-primary">{{ about_home.key }}</span>!
             </h1>
             <p class="mb-4">
