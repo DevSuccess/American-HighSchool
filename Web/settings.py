@@ -68,14 +68,14 @@ contexts = [
     'django.template.context_processors.request',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
-    "about.views.base_context",
-    "activity.views.base_context",
-    "address.views.base_context",
-    "contact.views.base_context",
-    "hour.views.base_context",
-    "member.views.base_context",
-    "price.views.base_context",
-    "testimonie.views.base_context",
+    'about.views.base_context',
+    'activity.views.base_context',
+    'address.views.base_context',
+    'contact.views.base_context',
+    'hour.views.base_context',
+    'member.views.base_context',
+    'price.views.base_context',
+    'testimonie.views.base_context',
 ]
 
 TEMPLATES = [
@@ -128,15 +128,16 @@ TIME_ZONE = 'Indian/Antananarivo'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = 'static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "media/"
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
 
 if django.VERSION >= (4, 2):
     STORAGES = {
