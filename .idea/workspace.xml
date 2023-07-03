@@ -27,12 +27,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-234976461" url="file://$PROJECT_DIR$/.gitignore">
+    <markupCoffin contentHash="-1741903841" url="file://$PROJECT_DIR$/.gitignore">
       <highlighter start="16" end="22" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
       <highlighter start="23" end="30" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
       <highlighter start="94" end="111" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
-      <highlighter start="133" end="145" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
-      <highlighter start="147" end="159" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
+      <highlighter start="112" end="118" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
+      <highlighter start="140" end="152" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
+      <highlighter start="154" end="166" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -167,7 +168,7 @@
       <workItem from="1688141004572" duration="17296000" />
       <workItem from="1688179959377" duration="23055000" />
       <workItem from="1688313370553" duration="10467000" />
-      <workItem from="1688360721614" duration="1960000" />
+      <workItem from="1688360721614" duration="2003000" />
     </task>
     <servers />
   </component>
