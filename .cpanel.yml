@@ -11,5 +11,5 @@ deployment:
     - ${defaults.activate_command} && pip install -r requirements.txt
     - ${defaults.activate_command} && python manage.py collectstatic --noinput
     - ${defaults.activate_command} && python manage.py migrate --noinput
-    - /bin/cp -R static $DEPLOYPATH
-    - /bin/cp -R staticfiles $DEPLOYPATH
+#    - /bin/cp -R static $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH

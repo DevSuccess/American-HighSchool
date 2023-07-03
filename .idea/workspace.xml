@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cpanel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.cpanel.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +27,40 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-1741903841" url="file://$PROJECT_DIR$/.gitignore">
-      <highlighter start="16" end="22" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
-      <highlighter start="23" end="30" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
-      <highlighter start="94" end="111" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
-      <highlighter start="112" end="118" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
-      <highlighter start="140" end="152" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
-      <highlighter start="154" end="166" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/icons/nodes/folder.svg" />
+    <markupCoffin contentHash="-1204855829" url="file://$PROJECT_DIR$/.cpanel.yml">
+      <highlighter start="14" end="23" layer="4000" target="0">
+        <option name="myExternalName" value="NOT_USED_ELEMENT_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="45" end="53" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="89" end="97" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="179" end="187" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="286" end="296" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="335" end="345" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="495" end="508" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="511" end="518" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="584" end="591" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="618" end="628" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
+      <highlighter start="649" end="659" layer="3000" target="0">
+        <option name="myExternalName" value="TYPO" />
+      </highlighter>
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -168,7 +195,7 @@
       <workItem from="1688141004572" duration="17296000" />
       <workItem from="1688179959377" duration="23055000" />
       <workItem from="1688313370553" duration="10467000" />
-      <workItem from="1688360721614" duration="2003000" />
+      <workItem from="1688360721614" duration="2111000" />
     </task>
     <servers />
   </component>
