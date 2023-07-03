@@ -28,19 +28,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="1107608908" url="file://$PROJECT_DIR$/Web/urls.py">
-      <highlighter start="635" end="636" layer="3000" target="0">
-        <option name="myExternalName" value="GRAMMAR_ERROR" />
-      </highlighter>
-      <highlighter start="1010" end="1020" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1441" end="1451" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-    </markupCoffin>
-  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -173,7 +160,7 @@
       <workItem from="1688141004572" duration="17296000" />
       <workItem from="1688179959377" duration="23055000" />
       <workItem from="1688313370553" duration="10467000" />
-      <workItem from="1688360721614" duration="5789000" />
+      <workItem from="1688360721614" duration="6761000" />
     </task>
     <servers />
   </component>
