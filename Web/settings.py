@@ -13,7 +13,7 @@ if DEBUG:
     ALLOWED_HOSTS = ['*', '127.0.0.1', 'localhost']
 
 else:
-    ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
+    ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True

@@ -177,7 +177,7 @@
         <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
     </markupCoffin>
-    <markupCoffin contentHash="1600501361" url="file://$PROJECT_DIR$/Web/settings.py">
+    <markupCoffin contentHash="-2106170031" url="file://$PROJECT_DIR$/Web/settings.py">
       <highlighter start="805" end="815" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
       </highlighter>
@@ -192,6 +192,14 @@
       </highlighter>
       <highlighter start="2258" end="2268" layer="3000" target="0">
         <option name="myExternalName" value="TYPO" />
+      </highlighter>
+    </markupCoffin>
+    <markupCoffin contentHash="1203963296" url="file://$PROJECT_DIR$/requirements.txt">
+      <highlighter start="75" end="105" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="106" end="119" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
     </markupCoffin>
   </component>
@@ -327,7 +335,7 @@
       <workItem from="1688141004572" duration="17296000" />
       <workItem from="1688179959377" duration="23055000" />
       <workItem from="1688313370553" duration="10467000" />
-      <workItem from="1688360721614" duration="899000" />
+      <workItem from="1688360721614" duration="1271000" />
     </task>
     <servers />
   </component>
