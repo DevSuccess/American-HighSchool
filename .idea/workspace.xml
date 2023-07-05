@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,123 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="1321211873" url="file://$PROJECT_DIR$/Web/settings.py">
-      <highlighter start="797" end="807" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="813" end="823" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1169" end="1179" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1185" end="1195" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="2250" end="2260" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-    </markupCoffin>
-    <markupCoffin contentHash="1477457298" url="file://$PROJECT_DIR$/about/models.py">
-      <highlighter start="402" end="406" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="443" end="455" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="460" end="464" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="475" end="482" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/overridingMethod.svg" />
-      <highlighter start="730" end="737" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/overridingMethod.svg" />
-      <highlighter start="970" end="974" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1011" end="1023" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1028" end="1032" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1449" end="1456" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/overridingMethod.svg" />
-    </markupCoffin>
-    <markupCoffin contentHash="1244532486" url="file://$PROJECT_DIR$/home/templates/home/index.html">
-      <highlighter start="0" end="16721" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/files/plugins/python/python/pythonFile.svg" />
-      <highlighter start="2689" end="2704" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="2749" end="2766" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="5155" end="5160" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="5161" end="5169" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="5175" end="5186" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="5190" end="5198" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="5377" end="5385" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="5993" end="5998" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="6010" end="6021" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="6025" end="6033" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="6674" end="6678" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="7246" end="7255" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="8459" end="8463" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="10789" end="10799" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="10789" end="10799" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="10803" end="10814" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="10883" end="10893" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="10953" end="10963" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="11110" end="11120" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="11277" end="11287" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="11362" end="11372" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="12694" end="12698" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="13925" end="13929" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="13930" end="13934" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-    </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -276,7 +160,9 @@
       <workItem from="1688141004572" duration="17296000" />
       <workItem from="1688179959377" duration="23055000" />
       <workItem from="1688313370553" duration="10467000" />
-      <workItem from="1688360721614" duration="11298000" />
+      <workItem from="1688360721614" duration="12718000" />
+      <workItem from="1688407624021" duration="308000" />
+      <workItem from="1688584391753" duration="437000" />
     </task>
     <servers />
   </component>
