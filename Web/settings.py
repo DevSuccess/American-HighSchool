@@ -127,10 +127,10 @@ TIME_ZONE = 'Indian/Antananarivo'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(BASE_DIR, os.getenv('STATIC_ROOT', 'staticfiles'))
+STATIC_ROOT = os.path.join(BASE_DIR, os.getenv('STATIC_ROOT'))
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, os.getenv('MEDIA_ROOT', 'media'))
+MEDIA_ROOT = os.path.join(BASE_DIR, os.getenv('MEDIA_ROOT'))
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
