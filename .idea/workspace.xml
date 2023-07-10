@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingMarkupGrave">
+    <markupCoffin contentHash="-2093639755" url="file://$PROJECT_DIR$/Web/urls.py">
+      <highlighter start="635" end="636" layer="3000" target="0">
+        <option name="myExternalName" value="GRAMMAR_ERROR" />
+      </highlighter>
+      <highlighter start="1311" end="1318" layer="5000" target="0">
+        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1344" end="1349" layer="5000" target="0">
+        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1349" end="1350" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1395" end="1402" layer="5000" target="0">
+        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1429" end="1434" layer="5000" target="0">
+        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1434" end="1435" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+    </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -163,7 +189,7 @@
       <workItem from="1688584391753" duration="1004000" />
       <workItem from="1688657697022" duration="73000" />
       <workItem from="1688713049628" duration="273000" />
-      <workItem from="1688982799479" duration="2327000" />
+      <workItem from="1688982799479" duration="3682000" />
     </task>
     <servers />
   </component>

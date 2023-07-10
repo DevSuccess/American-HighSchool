@@ -17,21 +17,24 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path, include
+from django.views.static import serve
+from django.urls import path, include, re_path
 
 urlpatterns = [
-                  path('admin/', admin.site.urls),
-                  path('', include('home.urls')),
-                  path('about/', include('about.urls')),
-                  path('accademics/', include('accademics.urls')),
-                  path('accreditation/', include('accreditation.urls')),
-                  path('blog/', include('blog.urls')),
-                  path('contact/', include('contact.urls')),
-                  path('hour/', include('hour.urls')),
-                  path('member/', include('member.urls')),
-                  path('register/', include('register.urls')),
-                  path('tesmonie/', include('testimonie.urls')),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('admin/', admin.site.urls),
+    path('', include('home.urls')),
+    path('about/', include('about.urls')),
+    path('accademics/', include('accademics.urls')),
+    path('accreditation/', include('accreditation.urls')),
+    path('blog/', include('blog.urls')),
+    path('contact/', include('contact.urls')),
+    path('hour/', include('hour.urls')),
+    path('member/', include('member.urls')),
+    path('register/', include('register.urls')),
+    path('tesmonie/', include('testimonie.urls')),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^staticfiles/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+]  # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # if settings.DEBUG:
 #     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # else:
