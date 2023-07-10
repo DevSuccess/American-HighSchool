@@ -6,42 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/admin_custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/admin_custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-lg-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-lg-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-md-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-md-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-md-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/bg-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/bg-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/carousel-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/carousel-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/carousel-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/Photo Gallery_100px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/art_prices_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/cooking_book_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/crafting_table_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/dancing_party_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/development_skill_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/happy_woman_50px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/logo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/meditation_guru_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/music_50px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/potters_wheel_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/theatre_mask_48px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/testimonial-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/testimonial-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/testimonial-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/dist/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/images/form-wizard-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/images/form-wizard-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/images/form-wizard-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,29 +29,254 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-245770241" url="file://$PROJECT_DIR$/templates/layouts/base.html">
-      <highlighter start="116" end="121" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
-      <highlighter start="785" end="859" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
+    <markupCoffin contentHash="-195291545" url="file://$PROJECT_DIR$/static/assets/scss/bootstrap/scss/forms/_form-check.scss">
+      <highlighter start="68" end="90" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="897" end="972" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
+      <highlighter start="108" end="133" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="1034" end="1105" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
+      <highlighter start="152" end="177" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="1672" end="1677" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
-      <highlighter start="2208" end="2215" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
-      <highlighter start="2335" end="2378" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
+      <highlighter start="236" end="261" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="2407" end="2483" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
+      <highlighter start="304" end="327" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="3185" end="3191" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
+      <highlighter start="339" end="362" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="379" end="396" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="399" end="422" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="506" end="526" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="629" end="653" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="745" end="755" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="756" end="778" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="818" end="831" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="832" end="863" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="970" end="1001" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1033" end="1064" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1101" end="1131" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1165" end="1199" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1242" end="1276" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1296" end="1334" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1372" end="1389" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1418" end="1428" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1429" end="1463" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1474" end="1490" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1544" end="1554" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1555" end="1589" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1639" end="1656" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1685" end="1695" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1696" end="1730" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1741" end="1757" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1811" end="1821" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1822" end="1856" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1937" end="1977" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1997" end="2041" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2052" end="2069" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2096" end="2106" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2107" end="2147" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2158" end="2174" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2224" end="2234" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2235" end="2275" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2361" end="2395" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2596" end="2630" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2674" end="2697" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2709" end="2733" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2786" end="2812" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2848" end="2866" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2885" end="2911" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2940" end="2950" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="2951" end="2972" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3026" end="3039" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3040" end="3066" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3082" end="3092" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3093" end="3116" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3158" end="3168" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3169" end="3196" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3249" end="3281" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3294" end="3311" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3340" end="3350" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3351" end="3380" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3391" end="3407" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3461" end="3471" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3472" end="3501" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3587" end="3616" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="3813" end="3851" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+    </markupCoffin>
+    <markupCoffin contentHash="-355220283" url="file://$PROJECT_DIR$/static/assets/scss/bootstrap/scss/utilities/_api.scss">
+      <highlighter start="59" end="76" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="128" end="147" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="175" end="191" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="205" end="222" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="293" end="303" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="602" end="618" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="695" end="708" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="744" end="761" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="777" end="793" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="807" end="824" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="845" end="862" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="879" end="894" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="969" end="979" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1313" end="1329" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1447" end="1457" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
+      <highlighter start="1691" end="1707" layer="3750" target="0">
+        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      </highlighter>
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
@@ -221,7 +412,7 @@
       <workItem from="1688584391753" duration="1004000" />
       <workItem from="1688657697022" duration="73000" />
       <workItem from="1688713049628" duration="273000" />
-      <workItem from="1688982799479" duration="6950000" />
+      <workItem from="1688982799479" duration="7808000" />
     </task>
     <servers />
   </component>
