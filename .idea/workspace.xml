@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="" />
+    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,68 +27,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-170708855" url="file://$PROJECT_DIR$/templates/layouts/base.html">
-      <highlighter start="443" end="449" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="514" end="521" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
-      <highlighter start="632" end="675" layer="4000" target="0">
+    <markupCoffin contentHash="2010873308" url="file://$PROJECT_DIR$/templates/layouts/partials/_footer.html">
+      <highlighter start="2536" end="2541" layer="4000" target="0">
         <option name="myExternalName" value="WARNING_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="700" end="776" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="712" end="720" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1362" end="1371" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1372" end="1381" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1439" end="1450" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="1660" end="1666" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
-      <highlighter start="1757" end="1762" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
-      <highlighter start="2473" end="2547" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="2595" end="2666" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="2607" end="2615" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="2816" end="2891" layer="4000" target="0">
-        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="2828" end="2836" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3177" end="3188" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3403" end="3411" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3499" end="3505" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3507" end="3511" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3539" end="3543" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3548" end="3555" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3565" end="3576" layer="3000" target="0">
-        <option name="myExternalName" value="TYPO" />
-      </highlighter>
-      <highlighter start="3712" end="3717" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -115,23 +59,23 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/run/media/muriel/Storage/Freelance/ITTI/American Highschool Madagascar/Web&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/run/media/muriel/Storage/Freelance/ITTI/American Highschool Madagascar/Web",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\vision" />
@@ -224,6 +168,8 @@
       <workItem from="1688360721614" duration="12718000" />
       <workItem from="1688407624021" duration="308000" />
       <workItem from="1688584391753" duration="1004000" />
+      <workItem from="1688657697022" duration="73000" />
+      <workItem from="1688713049628" duration="273000" />
     </task>
     <servers />
   </component>
