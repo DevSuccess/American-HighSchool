@@ -7,6 +7,41 @@
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/admin_custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/admin_custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-lg-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-lg-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-md-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-md-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/animal-md-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/bg-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/bg-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/carousel-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/carousel-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/carousel-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/Photo Gallery_100px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/art_prices_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/cooking_book_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/crafting_table_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/dancing_party_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/development_skill_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/happy_woman_50px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/logo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/meditation_guru_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/music_50px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/potters_wheel_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/icon/theatre_mask_48px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/testimonial-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/testimonial-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/testimonial-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/images/form-wizard-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/images/form-wizard-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/images/form-wizard-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,28 +63,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingMarkupGrave">
-    <markupCoffin contentHash="-2093639755" url="file://$PROJECT_DIR$/Web/urls.py">
-      <highlighter start="635" end="636" layer="3000" target="0">
-        <option name="myExternalName" value="GRAMMAR_ERROR" />
+    <markupCoffin contentHash="-245770241" url="file://$PROJECT_DIR$/templates/layouts/base.html">
+      <highlighter start="116" end="121" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
+      <highlighter start="785" end="859" layer="4000" target="0">
+        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="1311" end="1318" layer="5000" target="0">
-        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
+      <highlighter start="897" end="972" layer="4000" target="0">
+        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="1344" end="1349" layer="5000" target="0">
-        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
+      <highlighter start="1034" end="1105" layer="4000" target="0">
+        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="1349" end="1350" layer="3750" target="0">
-        <option name="myExternalName" value="INFO_ATTRIBUTES" />
+      <highlighter start="1672" end="1677" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
+      <highlighter start="2208" end="2215" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
+      <highlighter start="2335" end="2378" layer="4000" target="0">
+        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="1395" end="1402" layer="5000" target="0">
-        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
+      <highlighter start="2407" end="2483" layer="4000" target="0">
+        <option name="myExternalName" value="WARNING_ATTRIBUTES" />
       </highlighter>
-      <highlighter start="1429" end="1434" layer="5000" target="0">
-        <option name="myExternalName" value="ERRORS_ATTRIBUTES" />
-      </highlighter>
-      <highlighter start="1434" end="1435" layer="3750" target="0">
-        <option name="myExternalName" value="INFO_ATTRIBUTES" />
-      </highlighter>
+      <highlighter start="3185" end="3191" layer="3000" target="1" gutterIconUrl="jar:file:/home/muriel/.local/share/JetBrains/PyCharm2023.2/Atom%20Material%20Icons/lib/common.jar!/glyphs/gutter/implementedMethod.svg" />
     </markupCoffin>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -57,8 +90,7 @@
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
     <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
+    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.min.css" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -78,30 +110,30 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/run/media/muriel/Storage/Freelance/ITTI/American Highschool Madagascar/Web&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/run/media/muriel/Storage/Freelance/ITTI/American Highschool Madagascar/Web/static/assets/img/icon",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/img/icon" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\vision" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\testimonie" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\service" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\price" />
-      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\hour" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\hour\templates\hour" />
@@ -189,7 +221,7 @@
       <workItem from="1688584391753" duration="1004000" />
       <workItem from="1688657697022" duration="73000" />
       <workItem from="1688713049628" duration="273000" />
-      <workItem from="1688982799479" duration="3682000" />
+      <workItem from="1688982799479" duration="6950000" />
     </task>
     <servers />
   </component>
