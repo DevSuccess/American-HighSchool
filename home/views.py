@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.views import View
-import random
 from django.core.exceptions import ObjectDoesNotExist
 from . import models
 
