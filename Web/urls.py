@@ -30,7 +30,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('contact/', include('contact.urls')),
     path('hour/', include('hour.urls')),
-    # path('member/', include('member.urls')),
+    path('member/', include('member.urls')),
     path('register/', include('register.urls')),
     path('tesmonie/', include('testimonie.urls')),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
