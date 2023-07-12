@@ -214,6 +214,7 @@ Home
    </div>
 </div>
 <!-- Service End -->
+
 <!-- Members Start -->
 <div class="container-xxl py-5">
    <div class="container">
@@ -442,11 +443,21 @@ Home
 {% endblock %}
 {% block style %}
     <style>
-.card-details {
+.image-hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.details-hidden {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.custom-card .card-details {
   display: none;
 }
 
-.custom-card.show-details .card-details {
+.custom-card.image-hidden .card-details {
   display: block;
 }
     </style>
@@ -454,15 +465,12 @@ Home
 {% block script %}
     <script>
 function toggleCard(element) {
-  const cardDetails = element.parentNode.querySelector('.card-details');
+  const imageContainer = element.parentNode;
+  const cardDetails = imageContainer.querySelector('.card-details');
 
-  if (cardDetails.classList.contains('show-details')) {
-    cardDetails.classList.remove('show-details');
-    element.style.display = 'block';
-  } else {
-    cardDetails.classList.add('show-details');
-    element.style.display = 'none';
-  }
+  imageContainer.classList.toggle('image-hidden');
+  cardDetails.classList.toggle('details-hidden');
 }
+
     </script>
 {% endblock %}
