@@ -16,6 +16,6 @@ class MembersModelAdmin(admin.ModelAdmin):
 class MembersModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'admin_photo', 'created_at',
                     'updated_at']
-    fields = ['title', 'created_at',
+    fields = ['title', 'image', 'created_at',
               'updated_at']
     readonly_fields = ['created_at', 'updated_at']
