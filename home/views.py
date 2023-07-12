@@ -22,6 +22,6 @@ class HomeView(View):
         return render(request, 'home/index.html', context)
 
 
-# def custom_404(request, exception):
-#     return render(request, 'layouts/404.html', status=404)
+# def custom_404(request_path, exception):
+#     return render(request_path, 'layouts/../templates/404.html', status=404)
 #
