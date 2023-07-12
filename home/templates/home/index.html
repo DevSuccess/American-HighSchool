@@ -197,10 +197,10 @@ Home
       <div class="row gy-5 gx-4">
          {% for activity in activitie_home %}
          <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="card custom-card">
+            <div class="card custom-card" onclick="toggleCard(this)">
                <div class="card-body text-center">
                   <div class="image-container">
-                     <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
+                     <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon">
                      <div class="card-details">
                         <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
                         <p class="card-text custom-card-text">{{ activity.description }}</p>
@@ -214,7 +214,6 @@ Home
    </div>
 </div>
 <!-- Service End -->
-
 <!-- Members Start -->
 <div class="container-xxl py-5">
    <div class="container">
@@ -443,33 +442,58 @@ Home
 {% endblock %}
 {% block style %}
     <style>
-.image-hidden {
+.card .image-container {
+  position: relative;
+}
+
+.card .image-container .card-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.card .image-container .card-details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card .image-container .card-details .card-title,
+.card .image-container .card-details .card-text {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.details-hidden {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.custom-card .card-details {
-  display: none;
-}
-
-.custom-card.image-hidden .card-details {
+.card .image-container .card-details.show {
   display: block;
 }
+
+.card .image-container .card-details.show .card-title,
+.card .image-container .card-details.show .card-text {
+  opacity: 1;
+}
+
     </style>
 {% endblock %}
 {% block script %}
     <script>
-function toggleCard(element) {
-  const imageContainer = element.parentNode;
-  const cardDetails = imageContainer.querySelector('.card-details');
+function toggleCard(card) {
+  const imageContainer = card.querySelector('.image-container');
+  const cardDetails = card.querySelector('.card-details');
 
-  imageContainer.classList.toggle('image-hidden');
-  cardDetails.classList.toggle('details-hidden');
+  if (imageContainer.style.display === 'none') {
+    imageContainer.style.display = 'block';
+    cardDetails.style.display = 'none';
+  } else {
+    imageContainer.style.display = 'none';
+    cardDetails.style.display = 'block';
+  }
 }
 
     </script>
