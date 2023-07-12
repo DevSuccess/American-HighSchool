@@ -443,22 +443,18 @@ Home
 {% block style %}
     <style>
 .card-details {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  display: none;
 }
 
 .custom-card.show-details .card-details {
-  opacity: 1;
-  max-height: 1000px; /* Remplacez par une valeur appropriée pour s'adapter au contenu */
+  display: block;
 }
     </style>
 {% endblock %}
 {% block script %}
     <script>
 function toggleCard(element) {
-  const cardDetails = element.nextElementSibling;
+  const cardDetails = element.parentNode.querySelector('.card-details');
 
   if (cardDetails.classList.contains('show-details')) {
     cardDetails.classList.remove('show-details');
