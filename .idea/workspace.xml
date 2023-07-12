@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/404.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +79,11 @@
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/layouts" />
       <recent name="$PROJECT_DIR$/static/assets/img/background" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\hour\templates\hour" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\accreditation" />
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\static\assets\img\icon" />
-      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\static\dist" />
     </key>
   </component>
   <component name="RunManager">
@@ -168,7 +167,7 @@
       <workItem from="1688982799479" duration="10354000" />
       <workItem from="1689017940158" duration="625000" />
       <workItem from="1689152144709" duration="2684000" />
-      <workItem from="1689177508894" duration="6052000" />
+      <workItem from="1689177508894" duration="6637000" />
     </task>
     <servers />
   </component>
