@@ -4,6 +4,17 @@
 Home
 {% endblock %}
 {% block content %}
+<style>
+        .custom-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .custom-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+</style>
 <!-- Header Start -->
 <div class="container-fluid bg-dark p-0 mb-5">
    <div class="row g-0 flex-column-reverse flex-lg-row">
@@ -268,25 +279,44 @@ Home
                {% endfor %}
             </div>
          </div>
-         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row g-4">
-               {% for enseignant in enseignants_home %}
-               <div class="col-12">
-                  {% if enseignant.image %}
-                  <a class="animal-item" href="{{ enseignant.image.url }}" data-lightbox="animal">
-                     <div class="position-relative">
-                        <img class="img-fluid" src="{{ enseignant.image.url }}" alt="" />
-                        <div class="animal-text p-4">
-                           <p class="text-white small text-uppercase mb-0">{{ enseignant.lastname }}</p>
-                           <h5 class="text-white mb-0">{{ enseignant.occupation }}</h5>
+{#         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">#}
+{#            <div class="row g-4">#}
+{#               {% for enseignant in enseignants_home %}#}
+{#               <div class="col-12">#}
+{#                  {% if enseignant.image %}#}
+{#                  <a class="animal-item" href="{{ enseignant.image.url }}" data-lightbox="animal">#}
+{#                     <div class="position-relative">#}
+{#                        <img class="img-fluid" src="{{ enseignant.image.url }}" alt="" />#}
+{#                        <div class="animal-text p-4">#}
+{#                           <p class="text-white small text-uppercase mb-0">{{ enseignant.lastname }}</p>#}
+{#                           <h5 class="text-white mb-0">{{ enseignant.occupation }}</h5>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#                  {% endif %}#}
+{#               </div>#}
+{#               {% endfor %}#}
+{#            </div>#}
+{#         </div>#}
+      <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-4">
+                    {% for enseignant in enseignants_home %}
+                    <div class="col">
+                        <div class="card custom-shadow">
+                            <img src="{{ enseignant.image.url }}" alt="Your Image" class="card-img-top custom-image">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ enseignant.lastname }} {{ enseignant.firstname }}</h5>
+                                <p class="card-text">{{ enseignant.occupation }}</p>
+                            </div>
                         </div>
-                     </div>
-                  </a>
-                  {% endif %}
-               </div>
-               {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-         </div>
+        </div>
+    </div>
       </div>
    </div>
 </div>
