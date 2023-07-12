@@ -4,7 +4,8 @@ from .models import Member
 
 def base_context(request):
     try:
-        direction_home = Member.objects.filter(category='A').order_by('?')
+        # direction_home = Member.objects.filter(category='A').order_by('?')
+        direction_home = Member.objects.filter(category='A').first()
     except Member.DoesNotExist:
         direction_home = None
 
