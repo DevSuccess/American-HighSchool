@@ -199,9 +199,15 @@ Home
          <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="card custom-card">
                <div class="card-body text-center">
-                  <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
-                  <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
-                  <p class="card-text custom-card-text">{{ activity.description }}</p>
+                  <div class="image-container">
+                     <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
+                     <div class="card-title-container">
+                        <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
+                     </div>
+                     <div class="card-description-container">
+                        <p class="card-text custom-card-text">{{ activity.description }}</p>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -210,7 +216,6 @@ Home
    </div>
 </div>
 <!-- Service End -->
-
 
 <!-- Members Start -->
 <div class="container-xxl py-5">
@@ -440,23 +445,29 @@ Home
 {% endblock %}
 {% block style %}
     <style>
-    .card-img-hidden {
-      opacity: 0;
-      transform: scale(0);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
+.custom-card .card-title-container,
+.custom-card .card-description-container {
+   height: 0;
+   overflow: hidden;
+   transition: height 0.3s ease;
+}
+
+.custom-card.show-description .card-title-container,
+.custom-card.show-description .card-description-container {
+   height: auto;
+   transition: height 0.3s ease;
+}
     </style>
 {% endblock %}
 {% block script %}
     <script>
-    function toggleCard(element) {
-      const cardText = element.parentNode.querySelector('.custom-card-text');
+function toggleCard(element) {
+  const card = element.closest('.custom-card');
+  const titleContainer = card.querySelector('.card-title-container');
+  const descriptionContainer = card.querySelector('.card-description-container');
 
-      if (cardText.style.display === 'none') {
-        cardText.style.display = 'block';
-      } else {
-        cardText.style.display = 'none';
-      }
-    }
+  card.classList.toggle('show-description');
+}
+
     </script>
 {% endblock %}
