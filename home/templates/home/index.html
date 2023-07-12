@@ -198,15 +198,10 @@ Home
          {% for activity in activitie_home %}
          <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="card custom-card">
-               <div class="card-body text-center" onclick="toggleCard(this)">
-                  <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" data-bs-toggle="collapse" data-bs-target="#collapseExample{{ activity.id }}">
-                  <h5 class="card-title mb-0 custom-card-title" style="display: none;">{{ activity.title }}</h5>
-                  <p class="card-text custom-card-text" style="display: none;">{{ activity.description }}</p>
-               </div>
-               <div class="collapse multi-collapse" id="collapseExample{{ activity.id }}">
-                  <div class="card card-body">
-                     {{ activity.description }}
-                  </div>
+               <div class="card-body text-center">
+                  <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
+                  <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
+                  <p class="card-text custom-card-text">{{ activity.description }}</p>
                </div>
             </div>
          </div>
@@ -215,6 +210,7 @@ Home
    </div>
 </div>
 <!-- Service End -->
+
 
 <!-- Members Start -->
 <div class="container-xxl py-5">
@@ -236,9 +232,9 @@ Home
                >
          </div>
       </div>
-      <div class="row g-4">
-         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="row g-4">
+{#      <div class="row g-4">#}
+{#         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">#}
+{#            <div class="row g-4">#}
 {#               {% for direction in direction_home %}#}
 {#               <div class="col-12">#}
 {#                  {% if direction.image %}#}
@@ -308,8 +304,8 @@ Home
             </div>
         </div>
     </div>
-      </div>
-   </div>
+  </div>
+</div>
 </div>
 <!-- Member End -->
 <!-- Visiting Hours Start -->
@@ -441,7 +437,6 @@ Home
 </div>
 {% endfor %}
 {% endif %}
-</div>
 {% endblock %}
 {% block style %}
     <style>
@@ -455,20 +450,13 @@ Home
 {% block script %}
     <script>
     function toggleCard(element) {
-    const cardTitle = element.querySelector('.custom-card-title');
-    const cardText = element.querySelector('.custom-card-text');
-    const cardImage = element.querySelector('.card-img-top');
+      const cardText = element.parentNode.querySelector('.custom-card-text');
 
-    if (cardTitle.style.display === 'none') {
-        cardTitle.style.display = 'block';
+      if (cardText.style.display === 'none') {
         cardText.style.display = 'block';
-        cardImage.classList.add('card-img-hidden');
-    } else {
-        cardTitle.style.display = 'none';
+      } else {
         cardText.style.display = 'none';
-        cardImage.classList.remove('card-img-hidden');
+      }
     }
-}
-
     </script>
 {% endblock %}
