@@ -174,264 +174,6 @@ Home
 </div>
 <!-- Facts End -->
 <!-- Service Start -->
-    <div class="container-xxl py-5">
-    <div class="container">
-        <div
-                class="row g-5 mb-5 align-items-end wow fadeInUp"
-                data-wow-delay="0.1s"
-        >
-            <div class="col-lg-6">
-                <p><span class="text-primary me-2">#</span>Our Members</p>
-                <h1 class="display-5 mb-0">
-                    Let`s See Our <span class="text-primary">AHSM</span> Awsome
-                    Members
-                </h1>
-            </div>
-            <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href=""
-                >Explore More Members</a
-                >
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="row g-4">
-                    {#               {% for direction in direction_home %}#}
-                    {#               <div class="col-12">#}
-                    {#                  {% if direction.image %}#}
-                    {#                  <a class="animal-item" href="{{ direction.image.url }}" data-lightbox="animal">#}
-                    {#                     <div class="position-relative">#}
-                    {#                        <img class="img-fluid" src="{{ direction.image.url }}" alt="" />#}
-                    {#                        <div class="animal-text p-4">#}
-                    {#                           <p class="text-white small text-uppercase mb-0">{{ direction.lastname }}</p>#}
-                    {#                           <h5 class="text-white mb-0">{{ direction.occupation }}</h5>#}
-                    {#                        </div>#}
-                    {#                     </div>#}
-                    {#                  </a>#}
-                    {#                  {% endif %}#}
-                    {#               </div>#}
-                    {#               {% endfor %}#}
-                    {##}
-                    {#            </div>#}
-                    {#         </div>#}
-                    {#         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">#}
-                    {#            <div class="row g-4">#}
-                    {#               {% for administration in administration_home %}#}
-                    {#               <div class="col-12">#}
-                    {#                  {% if administration.image %}#}
-                    {#                  <a class="animal-item" href="{{ administration.image.url }}" data-lightbox="animal">#}
-                    {#                     <div class="position-relative">#}
-                    {#                        <img class="img-fluid" src="{{ administration.image.url }}" alt="" />#}
-                    {#                        <div class="animal-text p-4">#}
-                    {#                           <p class="text-white small text-uppercase mb-0">{{ administration.lastname }}</p>#}
-                    {#                           <h5 class="text-white mb-0">{{ administration.occupation }}</h5>#}
-                    {#                        </div>#}
-                    {#                     </div>#}
-                    {#                  </a>#}
-                    {#                  {% endif %}#}
-                    {#               </div>#}
-                    {#               {% endfor %}#}
-                    {#            </div>#}
-                    {#         </div>#}
-                    {#         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">#}
-                    {#            <div class="row g-4">#}
-                    {#               {% for enseignant in enseignants_home %}#}
-                    {#               <div class="col-12">#}
-                    {#                  {% if enseignant.image %}#}
-                    {#                  <a class="animal-item" href="{{ enseignant.image.url }}" data-lightbox="animal">#}
-                    {#                     <div class="position-relative">#}
-                    {#                        <img class="img-fluid" src="{{ enseignant.image.url }}" alt="" />#}
-                    {#                        <div class="animal-text p-4">#}
-                    {#                           <p class="text-white small text-uppercase mb-0">{{ enseignant.lastname }}</p>#}
-                    {#                           <h5 class="text-white mb-0">{{ enseignant.occupation }}</h5>#}
-                    {#                        </div>#}
-                    {#                     </div>#}
-                    {#                  </a>#}
-                    {#                  {% endif %}#}
-                    {#               </div>#}
-                    {#               {% endfor %}#}
-                    {#            </div>#}
-                    {#         </div>#}
-                    <div class="container">
-                        <div class="row g-4">
-                            <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4">
-                                    <div class="col">
-                                        <div class="card custom-shadow">
-                                            <img src="{{ members.image.url }}" alt="{{ members.title }}" class="card-img-top custom-image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Member End -->
-        <!-- Visiting Hours Start -->
-        <div
-                class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp"
-                data-wow-delay="0.1s"
-        >
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
-                        <h1 class="display-6 text-white mb-5">Visiting Hours</h1>
-                        <ul class="list-group list-group-flush">
-                            {% for hour_list in hour_lists %}
-                                <li class="list-group-item">
-                                    <span>{{ hour_list.day }}</span>
-                                    <span>{{ hour_list.message }}</span>
-                                    <span>{{ hour_list.open }} - {{ hour_list.close }}</span>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="display-6 text-white mb-5">Contact Info</h1>
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <td>Office</td>
-                                {% for address in addresses_ahsm %}
-                                    <td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
-                                {% endfor %}
-                            </tr>
-                            {% for info in contact_home %}
-                                <tr>
-                                    <td>{{ info.title }}</td>
-                                    <td>
-                                        {% for phone in info.contacts.all %}
-                                            <p class="mb-2"><i class="fas fa-phone"></i> {{ phone.number | phone2numeric }}</p>
-                                        {% endfor %}
-                                        <p class="mb-0"><i class="fas fa-envelope"></i> {{ info.email }}</p>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Visiting Hours End -->
-        <!-- Membership Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div
-                        class="row g-5 mb-5 align-items-end wow fadeInUp"
-                        data-wow-delay="0.1s"
-                >
-                    <div class="col-lg-6">
-                        <p><span class="text-primary me-2">#</span>Price</p>
-                        <h1 class="display-5 mb-0">
-                            Your Children Can Be A Proud Member Of
-                            <span class="text-primary">ITTI AHSM</span>
-                        </h1>
-                    </div>
-                    <div class="col-lg-6 text-lg-end">
-                        <a class="btn btn-primary py-3 px-5" href="{% url 'contact_us:index' %}">Contact Us</a>
-                    </div>
-                </div>
-                <div class="row g-4">
-                    {% for price in price_lists %}
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="membership-item position-relative">
-                                <img class="img-fluid" src="{{ price.image.url }}" alt="" />
-                                <h1 class="display-1">0{{ forloop.counter }}</h1>
-                                <h4 class="text-white mb-3"><b>{{ price.formatted_price }}</b></h4>
-                                <h3 class="text-danger mb-4">{{ price.levels.name }}</h3>
-                                <h3 class="text-primary mb-4">{{ price.formatted_registration }} <i>(Registration Fee)</i></h3>
-                                <p><i class="fa fa-check text-primary me-3"></i>{{ price.birth }} ans</p>
-                                <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }}% Promo</p>
-                                <a class="btn btn-outline-light px-4 mt-3" href="{% url 'register:index' %}">Get Started</a>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        <!-- Membership End -->
-        <!-- Testimonial Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <h1
-                        class="display-5 text-center mb-5 wow fadeInUp"
-                        data-wow-delay="0.1s"
-                >
-                    Our Clients Say!
-                </h1>
-                <div
-                        class="owl-carousel testimonial-carousel wow fadeInUp"
-                        data-wow-delay="0.1s"
-                >
-                    {% for testimonial in testimonials_home %}
-                        <div class="testimonial-item text-center">
-                            <img
-                                    class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
-                                    src="{{ testimonial.image.url }}"
-                                    style="width: 100px; height: 100px"
-                                    alt="image"/>
-                            <div class="testimonial-text rounded text-center p-4">
-                                <p>
-                                    {{ testimonial.content }}
-                                </p>
-                                <h5 class="mb-1">{{ testimonial.name }}</h5>
-                                <span class="fst-italic">{{ testimonial.occupation }}</span>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-        {% if messages %}
-            {% for message in messages %}
-                <div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                        <div class="toast-body">
-                            {{ message }}
-                        </div>
-                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
-    </div>
-{% endblock %}
-{% block style %}
-    <style>
-    .card-img-hidden {
-        opacity: 0;
-        transform: scale(0);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    </style>
-{% endblock %}
-{% block script %}
-    <script>
-        function toggleCard(element) {
-            const cardTitle = element.querySelector('.custom-card-title');
-            const cardText = element.querySelector('.custom-card-text');
-            const cardImage = element.querySelector('.card-img-top');
-
-            if (cardTitle.style.display === 'none') {
-                cardTitle.style.display = 'block';
-                cardText.style.display = 'block';
-                cardImage.classList.add('card-img-hidden');
-            } else {
-                cardTitle.style.display = 'none';
-                cardText.style.display = 'none';
-                cardImage.classList.remove('card-img-hidden');
-            }
-        }
-    </script>
-
-{% endblock %}
-<!-- Service End -->
-
-<!-- Members Start -->
 <div class="container-xxl py-5">
    <div class="container">
       <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -472,3 +214,261 @@ Home
       </div>
    </div>
 </div>
+<!-- Service End -->
+
+<!-- Members Start -->
+<div class="container-xxl py-5">
+   <div class="container">
+      <div
+         class="row g-5 mb-5 align-items-end wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         <div class="col-lg-6">
+            <p><span class="text-primary me-2">#</span>Our Members</p>
+            <h1 class="display-5 mb-0">
+               Let`s See Our <span class="text-primary">AHSM</span> Awsome
+               Members
+            </h1>
+         </div>
+         <div class="col-lg-6 text-lg-end">
+            <a class="btn btn-primary py-3 px-5" href=""
+               >Explore More Members</a
+               >
+         </div>
+      </div>
+      <div class="row g-4">
+         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-4">
+{#               {% for direction in direction_home %}#}
+{#               <div class="col-12">#}
+{#                  {% if direction.image %}#}
+{#                  <a class="animal-item" href="{{ direction.image.url }}" data-lightbox="animal">#}
+{#                     <div class="position-relative">#}
+{#                        <img class="img-fluid" src="{{ direction.image.url }}" alt="" />#}
+{#                        <div class="animal-text p-4">#}
+{#                           <p class="text-white small text-uppercase mb-0">{{ direction.lastname }}</p>#}
+{#                           <h5 class="text-white mb-0">{{ direction.occupation }}</h5>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#                  {% endif %}#}
+{#               </div>#}
+{#               {% endfor %}#}
+{##}
+{#            </div>#}
+{#         </div>#}
+{#         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">#}
+{#            <div class="row g-4">#}
+{#               {% for administration in administration_home %}#}
+{#               <div class="col-12">#}
+{#                  {% if administration.image %}#}
+{#                  <a class="animal-item" href="{{ administration.image.url }}" data-lightbox="animal">#}
+{#                     <div class="position-relative">#}
+{#                        <img class="img-fluid" src="{{ administration.image.url }}" alt="" />#}
+{#                        <div class="animal-text p-4">#}
+{#                           <p class="text-white small text-uppercase mb-0">{{ administration.lastname }}</p>#}
+{#                           <h5 class="text-white mb-0">{{ administration.occupation }}</h5>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#                  {% endif %}#}
+{#               </div>#}
+{#               {% endfor %}#}
+{#            </div>#}
+{#         </div>#}
+{#         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">#}
+{#            <div class="row g-4">#}
+{#               {% for enseignant in enseignants_home %}#}
+{#               <div class="col-12">#}
+{#                  {% if enseignant.image %}#}
+{#                  <a class="animal-item" href="{{ enseignant.image.url }}" data-lightbox="animal">#}
+{#                     <div class="position-relative">#}
+{#                        <img class="img-fluid" src="{{ enseignant.image.url }}" alt="" />#}
+{#                        <div class="animal-text p-4">#}
+{#                           <p class="text-white small text-uppercase mb-0">{{ enseignant.lastname }}</p>#}
+{#                           <h5 class="text-white mb-0">{{ enseignant.occupation }}</h5>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </a>#}
+{#                  {% endif %}#}
+{#               </div>#}
+{#               {% endfor %}#}
+{#            </div>#}
+{#         </div>#}
+      <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-4">
+                    <div class="col">
+                        <div class="card custom-shadow">
+                            <img src="{{ members.image.url }}" alt="{{ members.title }}" class="card-img-top custom-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+   </div>
+</div>
+<!-- Member End -->
+<!-- Visiting Hours Start -->
+<div
+   class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp"
+   data-wow-delay="0.1s"
+   >
+   <div class="container py-5">
+      <div class="row g-5">
+         <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+            <h1 class="display-6 text-white mb-5">Visiting Hours</h1>
+            <ul class="list-group list-group-flush">
+               {% for hour_list in hour_lists %}
+               <li class="list-group-item">
+                  <span>{{ hour_list.day }}</span>
+                  <span>{{ hour_list.message }}</span>
+                  <span>{{ hour_list.open }} - {{ hour_list.close }}</span>
+               </li>
+               {% endfor %}
+            </ul>
+         </div>
+         <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
+            <h1 class="display-6 text-white mb-5">Contact Info</h1>
+            <table class="table">
+               <tbody>
+                  <tr>
+                     <td>Office</td>
+                     {% for address in addresses_ahsm %}
+                     <td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
+                     {% endfor %}
+                  </tr>
+                  {% for info in contact_home %}
+                  <tr>
+                     <td>{{ info.title }}</td>
+                     <td>
+                        {% for phone in info.contacts.all %}
+                        <p class="mb-2"><i class="fas fa-phone"></i> {{ phone.number | phone2numeric }}</p>
+                        {% endfor %}
+                        <p class="mb-0"><i class="fas fa-envelope"></i> {{ info.email }}</p>
+                     </td>
+                  </tr>
+                  {% endfor %}
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- Visiting Hours End -->
+<!-- Membership Start -->
+<div class="container-xxl py-5">
+   <div class="container">
+      <div
+         class="row g-5 mb-5 align-items-end wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         <div class="col-lg-6">
+            <p><span class="text-primary me-2">#</span>Price</p>
+            <h1 class="display-5 mb-0">
+               Your Children Can Be A Proud Member Of
+               <span class="text-primary">ITTI AHSM</span>
+            </h1>
+         </div>
+         <div class="col-lg-6 text-lg-end">
+            <a class="btn btn-primary py-3 px-5" href="{% url 'contact_us:index' %}">Contact Us</a>
+         </div>
+      </div>
+      <div class="row g-4">
+         {% for price in price_lists %}
+         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="membership-item position-relative">
+               <img class="img-fluid" src="{{ price.image.url }}" alt="" />
+               <h1 class="display-1">0{{ forloop.counter }}</h1>
+               <h4 class="text-white mb-3"><b>{{ price.formatted_price }}</b></h4>
+               <h3 class="text-danger mb-4">{{ price.levels.name }}</h3>
+               <h3 class="text-primary mb-4">{{ price.formatted_registration }} <i>(Registration Fee)</i></h3>
+               <p><i class="fa fa-check text-primary me-3"></i>{{ price.birth }} ans</p>
+               <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }}% Promo</p>
+               <a class="btn btn-outline-light px-4 mt-3" href="{% url 'register:index' %}">Get Started</a>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+<!-- Membership End -->
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+   <div class="container">
+      <h1
+         class="display-5 text-center mb-5 wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         Our Clients Say!
+      </h1>
+      <div
+         class="owl-carousel testimonial-carousel wow fadeInUp"
+         data-wow-delay="0.1s"
+         >
+         {% for testimonial in testimonials_home %}
+         <div class="testimonial-item text-center">
+            <img
+               class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
+               src="{{ testimonial.image.url }}"
+               style="width: 100px; height: 100px"
+                alt="image"/>
+            <div class="testimonial-text rounded text-center p-4">
+               <p>
+                  {{ testimonial.content }}
+               </p>
+               <h5 class="mb-1">{{ testimonial.name }}</h5>
+               <span class="fst-italic">{{ testimonial.occupation }}</span>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+<!-- Testimonial End -->
+{% if messages %}
+{% for message in messages %}
+<div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+   <div class="d-flex">
+      <div class="toast-body">
+         {{ message }}
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+   </div>
+</div>
+{% endfor %}
+{% endif %}
+</div>
+{% endblock %}
+{% block style %}
+    <style>
+    .card-img-hidden {
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    </style>
+{% endblock %}
+{% block script %}
+    <script>
+    function toggleCard(element) {
+    const cardTitle = element.querySelector('.custom-card-title');
+    const cardText = element.querySelector('.custom-card-text');
+    const cardImage = element.querySelector('.card-img-top');
+
+    if (cardTitle.style.display === 'none') {
+        cardTitle.style.display = 'block';
+        cardText.style.display = 'block';
+        cardImage.classList.add('card-img-hidden');
+    } else {
+        cardTitle.style.display = 'none';
+        cardText.style.display = 'none';
+        cardImage.classList.remove('card-img-hidden');
+    }
+}
+
+    </script>
+{% endblock %}
