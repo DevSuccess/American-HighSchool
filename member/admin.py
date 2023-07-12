@@ -10,3 +10,12 @@ class MembersModelAdmin(admin.ModelAdmin):
     fields = ['lastname', 'firstname', 'image', ('occupation', 'category'), 'created_at',
               'updated_at']
     readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.AllMember)
+class MembersModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'admin_photo', 'created_at',
+                    'updated_at']
+    fields = ['title', 'created_at',
+              'updated_at']
+    readonly_fields = ['created_at', 'updated_at']

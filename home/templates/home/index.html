@@ -302,17 +302,14 @@ Home
         <div class="row g-4">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="row g-4">
-{#                    {% for enseignant in direction_home %}#}
                     <div class="col">
                         <div class="card custom-shadow">
-                            <img src="{{ enseignant.image.url }}" alt="Your Image" class="card-img-top custom-image">
+                            <img src="{{ members.image.url }}" alt="Your Image" class="card-img-top custom-image">
                             <div class="card-body">
-                                <h5 class="card-title">{{ enseignant.lastname }} {{ enseignant.firstname }}</h5>
-                                <p class="card-text">{{ enseignant.occupation }}</p>
+                                <h5 class="card-title">{{ members.title }}</h5>
                             </div>
                         </div>
                     </div>
-{#                    {% endfor %}#}
                 </div>
             </div>
         </div>
