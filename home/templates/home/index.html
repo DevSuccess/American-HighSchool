@@ -216,6 +216,7 @@ Home
    </div>
 </div>
 <!-- Service End -->
+
 <!-- Members Start -->
 <div class="container-xxl py-5">
    <div class="container">
@@ -461,20 +462,13 @@ Home
 {% block script %}
     <script>
 function toggleCard(element) {
-  const card = element.closest('.custom-card');
-  const imageContainer = card.querySelector('.image-container');
-  const titleContainer = card.querySelector('.card-title-container');
-  const descriptionContainer = card.querySelector('.card-description-container');
+  const imageContainer = element.parentNode;
+  const titleContainer = imageContainer.nextElementSibling;
+  const descriptionContainer = titleContainer.nextElementSibling;
 
-  if (imageContainer.style.display === 'none') {
-    imageContainer.style.display = 'block';
-    titleContainer.style.display = 'none';
-    descriptionContainer.style.display = 'none';
-  } else {
-    imageContainer.style.display = 'none';
-    titleContainer.style.display = 'block';
-    descriptionContainer.style.display = 'block';
-  }
+  imageContainer.style.display = 'none';
+  titleContainer.style.display = 'block';
+  descriptionContainer.style.display = 'block';
 }
     </script>
 {% endblock %}
