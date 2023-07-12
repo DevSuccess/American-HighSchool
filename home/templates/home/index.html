@@ -450,10 +450,12 @@ Home
 
 .card .image-container .card-img-top {
   transition: opacity 0.3s ease;
+
 }
 
 .card.image-hidden .card-img-top {
   opacity: 0;
+
 }
 
 .card .card-details {
@@ -480,6 +482,7 @@ function toggleCard(element) {
   const cardDetails = card.querySelector('.card-details');
 
   card.classList.toggle('image-hidden');
+  card.classList.add('hidden');
   cardDetails.classList.toggle('show-details');
 }
 
