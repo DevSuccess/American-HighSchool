@@ -147,7 +147,7 @@ h1{
 
 /*** Header ***/
 .header-bg {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../dist/images/bg1.jpeg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../assets/img/background/bg2.jpeg') center center no-repeat;
     background-size: cover;
 }
 
@@ -346,12 +346,12 @@ h1{
 
 /*** Facts & Visiting Hours ***/
 .facts {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../dist/images/bg1.jpeg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../assets/img/background/bg3.jpeg') center center no-repeat;
     background-size: cover;
 }
 
 .visiting-hours {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../dist/images/bg1.jpeg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../assets/img/background/bg4.jpeg') center center no-repeat;
     background-size: cover;
 }
 
@@ -523,7 +523,7 @@ h1{
 
 /*** Footer ***/
 .footer {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../dist/images/bg1.jpeg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../assets/img/background/bg5.jpeg') center center no-repeat;
     background-size: cover;
 }
 
