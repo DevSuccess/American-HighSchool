@@ -20,3 +20,7 @@ class HomeView(View):
             'pictures': pictures,
         }
         return render(request, 'home/index.html', context)
+
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
