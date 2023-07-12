@@ -195,16 +195,14 @@ Home
          </div>
       </div>
 {#   AAA#}
-      <div class="row gy-5 gx-4">
+  <div class="row gy-5 gx-4">
   {% for activity in activitie_home %}
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
       <div class="card custom-card">
         <div class="card-body text-center">
           <div class="image-container">
-            <div class="image-wrapper">
-              <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
-            </div>
-            <div class="card-details">
+            <img class="card-img-top img-fluid mb-3 cursor-pointer card-image" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
+            <div class="card-details card-hidden">
               <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
               <p class="card-text custom-card-text">{{ activity.description }}</p>
             </div>
@@ -214,7 +212,7 @@ Home
     </div>
   {% endfor %}
 </div>
-
+{#AAA#}
    </div>
 </div>
 <!-- Service End -->
@@ -446,25 +444,24 @@ Home
 {% endblock %}
 {% block style %}
     <style>
-.image-container {
+.card .image-container {
   position: relative;
 }
 
-.image-wrapper {
-  position: relative;
+.card .image-container .card-img-top {
   transition: opacity 0.3s ease;
 }
 
-.image-hidden .image-wrapper {
+.card .card-image.card-hidden {
   opacity: 0;
 }
 
-.card-details {
+.card .card-details {
   display: none;
   transition: opacity 0.3s ease;
 }
 
-.show-details {
+.card .card-details.card-hidden {
   display: block;
   opacity: 1;
 }
@@ -479,11 +476,12 @@ Home
 {% block script %}
     <script>
 function toggleCard(element) {
-  const imageWrapper = element.parentNode;
-  const cardDetails = imageWrapper.parentNode.querySelector('.card-details');
+  const card = element.closest('.card');
+  const cardImage = card.querySelector('.card-image');
+  const cardDetails = card.querySelector('.card-details');
 
-  imageWrapper.classList.toggle('image-hidden');
-  cardDetails.classList.toggle('show-details');
+  cardImage.classList.toggle('card-hidden');
+  cardDetails.classList.toggle('card-hidden');
 }
 
     </script>
