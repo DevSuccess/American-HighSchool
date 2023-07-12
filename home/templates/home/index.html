@@ -198,9 +198,10 @@ Home
          {% for activity in activitie_home %}
          <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="card">
-               <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" data-bs-toggle="collapse" data-bs-target="#collapseExample{{ activity.id }}">
-               <div class="card-body">
-                  <h5 class="card-title text-center">{{ activity.title }}</h5>
+               <div class="card-body text-center" onclick="toggleCard(this)">
+                  <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" data-bs-toggle="collapse" data-bs-target="#collapseExample{{ activity.id }}">
+                  <h5 class="card-title mb-0" style="display: none;">{{ activity.title }}</h5>
+                  <p class="card-text" style="display: none;">{{ activity.description }}</p>
                </div>
                <div class="collapse multi-collapse" id="collapseExample{{ activity.id }}">
                   <div class="card card-body">
@@ -440,4 +441,21 @@ Home
 {% endfor %}
 {% endif %}
 </div>
+{% endblock %}
+{% block script %}
+function toggleCard(element) {
+  const cardTitle = element.querySelector('.card-title');
+  const cardText = element.querySelector('.card-text');
+  const cardImage = element.querySelector('.card-img-top');
+
+  if (cardTitle.style.display === 'none') {
+    cardTitle.style.display = 'block';
+    cardText.style.display = 'block';
+    cardImage.style.display = 'none';
+  } else {
+    cardTitle.style.display = 'none';
+    cardText.style.display = 'none';
+    cardImage.style.display = 'block';
+  }
+}
 {% endblock %}
