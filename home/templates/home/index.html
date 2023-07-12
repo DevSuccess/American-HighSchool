@@ -201,10 +201,8 @@ Home
                <div class="card-body text-center">
                   <div class="image-container">
                      <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
-                     <div class="card-title-container">
+                     <div class="card-details">
                         <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
-                     </div>
-                     <div class="card-description-container">
                         <p class="card-text custom-card-text">{{ activity.description }}</p>
                      </div>
                   </div>
@@ -216,7 +214,6 @@ Home
    </div>
 </div>
 <!-- Service End -->
-
 <!-- Members Start -->
 <div class="container-xxl py-5">
    <div class="container">
@@ -445,30 +442,31 @@ Home
 {% endblock %}
 {% block style %}
     <style>
-.custom-card .card-title-container,
-.custom-card .card-description-container {
-   height: 0;
-   overflow: hidden;
-   transition: height 0.3s ease;
+.card-details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
-.custom-card.show-description .card-title-container,
-.custom-card.show-description .card-description-container {
-   height: auto;
-   transition: height 0.3s ease;
+.custom-card.show-details .card-details {
+  opacity: 1;
+  max-height: 1000px; /* Remplacez par une valeur appropriée pour s'adapter au contenu */
 }
     </style>
 {% endblock %}
 {% block script %}
     <script>
 function toggleCard(element) {
-  const imageContainer = element.parentNode;
-  const titleContainer = imageContainer.nextElementSibling;
-  const descriptionContainer = titleContainer.nextElementSibling;
+  const cardDetails = element.nextElementSibling;
 
-  imageContainer.style.display = 'none';
-  titleContainer.style.display = 'block';
-  descriptionContainer.style.display = 'block';
+  if (cardDetails.classList.contains('show-details')) {
+    cardDetails.classList.remove('show-details');
+    element.style.display = 'block';
+  } else {
+    cardDetails.classList.add('show-details');
+    element.style.display = 'none';
+  }
 }
     </script>
 {% endblock %}
