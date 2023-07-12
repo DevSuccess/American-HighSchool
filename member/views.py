@@ -29,7 +29,7 @@ from .models import Member
 
 def base_context(request):
     try:
-        members = Member.objects.all().filter()
+        members = Member.objects.latest('created_at')
     except Member.DoesNotExist:
         members = None
 
