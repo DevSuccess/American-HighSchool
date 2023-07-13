@@ -198,17 +198,31 @@ Home
     <div class="row gy-5 gx-4">
        {% for activity in activitie_home %}
        <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="card custom-card">
-             <div class="card-body text-center">
-                <div class="image-container">
-                   <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)" data-title="{{ activity.title }}" data-description="{{ activity.description }}">
-                </div>
-                <div class="title-desc-container d-none">
-                   <h5 class="card-title mb-0 custom-card-title"></h5>
-                   <p class="card-text custom-card-text"></p>
-                </div>
-             </div>
-          </div>
+          <div class="card text-center">
+   <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+         <li class="nav-item">
+            <a class="nav-link active" aria-current="true" href="#" onclick="showImage(event)">Active</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showText(event)">Link</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+         </li>
+      </ul>
+   </div>
+   <div class="card-body">
+      <div class="image-container">
+         <img class="card-img-top img-fluid mb-3" src="{{ activity.image.url }}" alt="Image">
+      </div>
+      <div class="text-container d-none">
+         <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
+         <p class="card-text custom-card-text">{{ activity.description }}</p>
+      </div>
+   </div>
+</div>
+
        </div>
    {% endfor %}
     </div>
@@ -443,50 +457,29 @@ Home
 {% endblock %}
 {% block style %}
     <style>
-.card .image-container {
-  position: relative;
-}
 
-.card .image-container .card-img-top {
-  transition: opacity 0.3s ease;
-}
-
-.card .title-desc-container {
-  display: none;
-}
-
-.card.show-details .image-container .card-img-top {
-  opacity: 0;
-}
-
-.card.show-details .title-desc-container {
-  display: block;
-}
-
-.custom-card-title,
-.custom-card-text {
-  margin: 0;
-}
  </style>
 {% endblock %}
 {% block script %}
     <script>
-function toggleCard(element) {
-  const card = element.closest('.card');
+function showImage(event) {
+  event.preventDefault();
+  const card = event.target.closest('.card');
   const imageContainer = card.querySelector('.image-container');
-  const titleDescContainer = card.querySelector('.title-desc-container');
-  const title = titleDescContainer.querySelector('.card-title');
-  const description = titleDescContainer.querySelector('.card-text');
+  const textContainer = card.querySelector('.text-container');
 
-  if (imageContainer.style.display === 'none') {
-    imageContainer.style.display = 'block';
-    titleDescContainer.classList.add('d-none');
-  } else {
-    imageContainer.style.display = 'none';
-    titleDescContainer.classList.remove('d-none');
-    title.textContent = element.dataset.title;
-    description.textContent = element.dataset.description;
-  }
+  imageContainer.style.display = 'block';
+  textContainer.style.display = 'none';
+}
+
+function showText(event) {
+  event.preventDefault();
+  const card = event.target.closest('.card');
+  const imageContainer = card.querySelector('.image-container');
+  const textContainer = card.querySelector('.text-container');
+
+  imageContainer.style.display = 'none';
+  textContainer.style.display = 'block';
 }
 
     </script>
