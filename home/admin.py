@@ -1,6 +1,10 @@
 from django.contrib import admin
 from . import models
 
+admin.site.site_header = 'Site Administration de AHS'
+admin.site.site_title = "Page d'adminstation de AHS"
+admin.site.index_title = "Manager"
+
 
 @admin.register(models.PresentationVideo)
 class PresentationVideoModelAdmin(admin.ModelAdmin):
