@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'accademics.apps.AccademicsConfig',
     'accreditation.apps.AccreditationConfig',
-    'activity.apps.ActivityConfig',
     'address.apps.AddressConfig',
     'blog.apps.BlogConfig',
     'contact.apps.ContactConfig',
