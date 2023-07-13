@@ -1,19 +1,27 @@
-# PyCharm files
-.idea/
-.idea/*
+# Django-related files and folders
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Static and media files
+staticfiles/
+media/
+
+# Django migrations
+**/migrations/
 
 # Environment variables
 .env
 local_env
 
-# Virtual environment
-venv/__pycache__/
-venv/*
-*.pyc
+# Editor and IDE files
+.idea/
+*.iml
+*.swp
 
-# .gitignore
+# Compiled Python files
 
-__pycache__/
-
-staticfiles/
-media/
+# System and temporary files
+.DS_Store
+Thumbs.db
