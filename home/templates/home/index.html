@@ -199,16 +199,16 @@ Home
   {% for activity in activitie_home %}
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
       <div class="card custom-card">
-        <div class="card-body text-center">
-          <div class="image-container">
-            <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
-            <div class="card-details">
-              <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
-              <p class="card-text custom-card-text">{{ activity.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="card-body text-center">
+    <div class="image-container">
+      <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
+    </div>
+    <div class="title-desc-container">
+      <h5 class="card-title mb-0 custom-card-title">{{ activity.title }}</h5>
+      <p class="card-text custom-card-text">{{ activity.description }}</p>
+    </div>
+  </div>
+</div>
     </div>
   {% endfor %}
 </div>
@@ -444,46 +444,29 @@ Home
 {% endblock %}
 {% block style %}
     <style>
-.card .image-container {
-  position: relative;
-}
-
-.card .image-container .card-img-top {
-  transition: opacity 0.3s ease;
-
-}
-
-.card.image-hidden .card-img-top {
-  opacity: 0;
-
-}
-
-.card .card-details {
-  display: none;
-  transition: opacity 0.3s ease;
-}
-
-.card .show-details {
+.image-container {
   display: block;
-  opacity: 1;
 }
 
-.custom-card-title,
-.custom-card-text {
-  margin: 0;
+.title-desc-container {
+  display: none;
 }
-
     </style>
 {% endblock %}
 {% block script %}
     <script>
 function toggleCard(element) {
   const card = element.closest('.card');
-  const cardDetails = card.querySelector('.card-details');
+  const imageContainer = card.querySelector('.image-container');
+  const titleDescContainer = card.querySelector('.title-desc-container');
 
-  card.classList.toggle('image-hidden');
-  card.classList.add('hidden');
-  cardDetails.classList.toggle('show-details');
+  if (imageContainer.style.display === 'none') {
+    imageContainer.style.display = 'block';
+    titleDescContainer.style.display = 'none';
+  } else {
+    imageContainer.style.display = 'none';
+    titleDescContainer.style.display = 'block';
+  }
 }
 
     </script>
