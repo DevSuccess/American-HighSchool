@@ -485,9 +485,10 @@ function toggleCard(element) {
   } else {
     imageContainer.style.display = 'none';
     titleDescContainer.classList.remove('d-none');
-    title.textContent = "{{ activity.title }}";
-    description.textContent = "{{ activity.description }}";
+    title.textContent = element.dataset.title;
+    description.textContent = element.dataset.description;
   }
 }
+
     </script>
 {% endblock %}
