@@ -20,17 +20,15 @@ class UserPost(ImageModel):
         return self.name
 
 
-class Post(ImageModel):
+class Post(BaseModel, ImageModel):
     title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(UserPost, on_delete=models.CASCADE)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
-    created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name_plural = "Les News"
-        ordering = ['-created_on']
+        ordering = ['-created_at']
 
     def __str__(self):
         return self.title

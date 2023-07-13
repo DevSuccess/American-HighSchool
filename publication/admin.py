@@ -12,11 +12,11 @@ class UserPostAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'admin_photo', 'status', 'created_on')
-    list_filter = ('status', 'created_on')
-    fields = ['title', 'author', 'content', 'image', 'status', 'created_on', 'updated_on']
+    list_display = ('title', 'admin_photo', 'status', 'created_at')
+    list_filter = ('status', 'created_at')
+    fields = ['title', 'author', 'content', 'image', 'status', 'created_at', 'updated_at']
     search_fields = ('title',)
     # prepopulated_fields = {'slug': ('title',)}
-    readonly_fields = ['created_on', 'updated_on']
-    date_hierarchy = 'created_on'
-    ordering = ('-created_on',)
+    readonly_fields = ['created_at', 'updated_at']
+    date_hierarchy = 'created_at'
+    ordering = ('-created_at',)
