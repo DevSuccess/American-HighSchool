@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new/template/news/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/publication/template/publication/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/publication/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +79,11 @@
       <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/publication/template/publication" />
+      <recent name="$PROJECT_DIR$/publication" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/templates/layouts" />
       <recent name="$PROJECT_DIR$/static/assets/img/background" />
-      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\hour\templates\hour" />
-      <recent name="E:\Freelance\ITTI\American Highschool Madagascar\Web\accreditation" />
     </key>
   </component>
   <component name="RunManager">
@@ -172,7 +170,7 @@
       <workItem from="1689177508894" duration="13341000" />
       <workItem from="1689216319752" duration="5593000" />
       <workItem from="1689225519180" duration="9588000" />
-      <workItem from="1689235686665" duration="1480000" />
+      <workItem from="1689235686665" duration="2057000" />
     </task>
     <servers />
   </component>
