@@ -195,24 +195,23 @@ Home
          </div>
       </div>
 {#   AAA#}
-<div class="row gy-5 gx-4">
-  {% for activity in activitie_home %}
-    <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-<div class="card custom-card">
-  <div class="card-body text-center">
-    <div class="image-container">
-      <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
+    <div class="row gy-5 gx-4">
+       {% for activity in activitie_home %}
+       <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="card custom-card">
+             <div class="card-body text-center">
+                <div class="image-container">
+                   <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)" data-title="{{ activity.title }}" data-description="{{ activity.description }}">
+                </div>
+                <div class="title-desc-container d-none">
+                   <h5 class="card-title mb-0 custom-card-title"></h5>
+                   <p class="card-text custom-card-text"></p>
+                </div>
+             </div>
+          </div>
+       </div>
+   {% endfor %}
     </div>
-    <div class="title-desc-container d-none">
-      <h5 class="card-title mb-0 custom-card-title"></h5>
-      <p class="card-text custom-card-text"></p>
-    </div>
-  </div>
-</div>
-    </div>
-  {% endfor %}
-</div>
-{#AAA#}
    </div>
 </div>
 <!-- Service End -->
