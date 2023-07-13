@@ -3,9 +3,10 @@ from django.db import models
 from Web.utils import BaseModel, ImageModel
 
 TYPES = (
-    ('A', 'Tesol'),
-    ('B', 'Bacc National'),
-    ('C', 'Bacc American'),
+    ('A', 'A'),
+    ('B', 'B'),
+    ('C', 'C'),
+    ('D', 'D'),
 )
 
 
