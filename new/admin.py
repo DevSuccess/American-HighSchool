@@ -12,15 +12,16 @@ class UserPostAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('author', 'content', 'status', 'created_on')
+    list_display = ('title', 'content', 'status', 'created_on')
     list_filter = ('status', 'created_on')
-    search_fields = ('author__name', 'content')
+    # search_fields = ('author__name', 'content')
+    search_fields = ('content')
     date_hierarchy = 'created_on'
     readonly_fields = ('created_on', 'updated_on')
 
     fieldsets = (
         ('Post Details', {
-            'fields': ('author', 'content', 'image')
+            'fields': ('author', 'title', 'content', 'image')
         }),
         ('Status', {
             'fields': ('status',)

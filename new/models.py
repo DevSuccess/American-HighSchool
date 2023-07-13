@@ -29,7 +29,6 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = "news"
         verbose_name_plural = "Les News"
         ordering = ['-created_on']
 
