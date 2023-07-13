@@ -204,9 +204,9 @@ Home
     <div class="image-container">
       <img class="card-img-top img-fluid mb-3 cursor-pointer" src="{{ activity.image.url }}" alt="Icon" onclick="toggleCard(this)">
     </div>
-    <div class="title-desc-container">
-      <h5 class="card-title mb-0 custom-card-title d-none" onclick="toggleCard(this)">{{ activity.title }}</h5>
-      <p class="card-text custom-card-text d-none" onclick="toggleCard(this)">{{ activity.description }}</p>
+    <div class="title-desc-container d-none">
+      <h5 class="card-title mb-0 custom-card-title"></h5>
+      <p class="card-text custom-card-text"></p>
     </div>
   </div>
 </div>
@@ -476,7 +476,20 @@ Home
     <script>
 function toggleCard(element) {
   const card = element.closest('.card');
-  card.classList.toggle('show-details');
+  const imageContainer = card.querySelector('.image-container');
+  const titleDescContainer = card.querySelector('.title-desc-container');
+  const title = titleDescContainer.querySelector('.card-title');
+  const description = titleDescContainer.querySelector('.card-text');
+
+  if (imageContainer.style.display === 'none') {
+    imageContainer.style.display = 'block';
+    titleDescContainer.classList.add('d-none');
+  } else {
+    imageContainer.style.display = 'none';
+    titleDescContainer.classList.remove('d-none');
+    title.textContent = element.dataset.title;
+    description.textContent = element.dataset.description;
+  }
 }
     </script>
 {% endblock %}
