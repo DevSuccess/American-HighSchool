@@ -92,7 +92,7 @@
   };
 
   // Build html for the lightbox and the overlay.
-  // Attach event handlers to the new DOM elements. click click click
+  // Attach event handlers to the news DOM elements. click click click
   Lightbox.prototype.build = function() {
     if ($('#lightbox').length > 0) {
         return;

@@ -919,7 +919,7 @@
 	/**
 	 * Sets the absolute position of the current item.
 	 * @public
-	 * @param {Number} [position] - The new absolute position or nothing to leave it unchanged.
+	 * @param {Number} [position] - The news absolute position or nothing to leave it unchanged.
 	 * @returns {Number} - The absolute position of the current item.
 	 */
 	Owl.prototype.current = function(position) {
@@ -966,7 +966,7 @@
 	/**
 	 * Resets the absolute position of the current item.
 	 * @public
-	 * @param {Number} position - The absolute position of the new item.
+	 * @param {Number} position - The absolute position of the news item.
 	 */
 	Owl.prototype.reset = function(position) {
 		position = this.normalize(position);
@@ -1284,7 +1284,7 @@
 	/**
 	 * Replaces the current content.
 	 * @public
-	 * @param {HTMLElement|jQuery|String} content - The new content.
+	 * @param {HTMLElement|jQuery|String} content - The news content.
 	 */
 	Owl.prototype.replace = function(content) {
 		this.$stage.empty();
@@ -2613,7 +2613,7 @@
 	};
 
 	/**
-	 * Gets a new timeout
+	 * Gets a news timeout
 	 * @private
 	 * @param {Number} [timeout] - The interval before the next animation starts.
 	 * @param {Number} [speed] - The animation speed for the animations.

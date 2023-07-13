@@ -502,7 +502,7 @@ function goToStep(wizard, options, state, index)
     var oldIndex = state.currentIndex;
     if (wizard.triggerHandler("stepChanging", [state.currentIndex, index]))
     {
-        // Save new state
+        // Save news state
         state.currentIndex = index;
         saveCurrentStateToCookie(wizard, options, state);
 
@@ -571,7 +571,7 @@ function initialize(options)
 }
 
 /**
- * Inserts a new step to a specific position.
+ * Inserts a news step to a specific position.
  *
  * @static
  * @private
@@ -957,13 +957,13 @@ function removeStep(wizard, options, state, index)
     getStepPanel(wizard, index).remove();
     getStepAnchor(wizard, index).parent().remove();
 
-    // Set the "first" class to the new first step button 
+    // Set the "first" class to the news first step button
     if (index === 0)
     {
         wizard.find(".steps li").first().addClass("first");
     }
 
-    // Set the "last" class to the new last step button 
+    // Set the "last" class to the news last step button
     if (index === state.stepCount)
     {
         wizard.find(".steps li").eq(index).addClass("last");
@@ -1157,13 +1157,13 @@ function renderTitle(wizard, options, state, header, index)
         stepCollection.find("li").eq(index - 1).after(stepItem);
     }
 
-    // Set the "first" class to the new first step button
+    // Set the "first" class to the news first step button
     if (index === 0)
     {
         stepCollection.find("li").removeClass("first").eq(index).addClass("first");
     }
 
-    // Set the "last" class to the new last step button
+    // Set the "last" class to the news last step button
     if (index === (state.stepCount - 1))
     {
         stepCollection.find("li").removeClass("last").eq(index).addClass("last");
@@ -1328,7 +1328,7 @@ $.fn.steps = function (method)
 };
 
 /**
- * Adds a new step.
+ * Adds a news step.
  *
  * @method add
  * @param step {Object} The step object to add
@@ -1397,7 +1397,7 @@ $.fn.steps.getStep = function (index)
 };
 
 /**
- * Inserts a new step to a specific position.
+ * Inserts a news step to a specific position.
  *
  * @method insert
  * @param index {Integer} The position (zero-based) to add
