@@ -17,11 +17,6 @@ class AboutHelpModelAdmin(admin.ModelAdmin):
     readonly_fields = ['created_at', 'updated_at']
 
 
-@admin.register(models.AboutITTI)
-class AboutITTIModelAdmin(admin.ModelAdmin):
-    pass
-
-
 @admin.register(models.About)
 class AboutModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'libel', 'description']

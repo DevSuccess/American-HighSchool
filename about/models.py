@@ -31,14 +31,6 @@ class AboutHelp(BaseModel):
         verbose_name_plural = "Les Supports d'Aide Client (About) "
 
 
-class AboutITTI(BaseModel):
-    pass
-
-    class Meta:
-        db_table = "about_itti"
-        verbose_name_plural = 'Les Informations sur ITTI'
-
-
 class About(models.Model):
     TYPES = (
         ('A', 'Mission'),
