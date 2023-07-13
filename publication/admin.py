@@ -14,6 +14,6 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'status', 'created_on')
     list_filter = ('status', 'created_on')
     search_fields = ('title',)
-    prepopulated_fields = {'slug': ('title',)}
+    # prepopulated_fields = {'slug': ('title',)}
     date_hierarchy = 'created_on'
     ordering = ('-created_on',)
