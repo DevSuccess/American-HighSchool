@@ -21,8 +21,3 @@ def base_context(request):
         'maps': maps
     }
     return context
-
-
-
-def index(request):
-    pass

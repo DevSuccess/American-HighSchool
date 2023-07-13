@@ -10,7 +10,3 @@ def base_context(request):
         'activitie_home': activitie_home
     }
     return context
-
-
-def index(request):
-    pass

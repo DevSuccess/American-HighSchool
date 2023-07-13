@@ -14,11 +14,3 @@ class AddressModelAdmin(admin.ModelAdmin):
         return obj.admin_map()
 
     admin_map.short_description = 'Map'
-
-
-@admin.register(models.AddressITTI)
-class AddressModelAdmin(admin.ModelAdmin):
-    list_display = ['lot', 'street', 'city', 'state', 'active']
-    fields = [('lot', 'street'), 'city', 'active', 'state', 'zip_code', 'created_at', 'updated_at']
-    list_display_links = ['lot', 'street']
-    readonly_fields = ['created_at', 'updated_at']

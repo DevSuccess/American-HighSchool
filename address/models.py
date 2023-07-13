@@ -27,12 +27,3 @@ class AddressAHSM(BaseModel, BaseAddress):
 
     def admin_map(self):
         return mark_safe(f"{self.map}")
-
-
-class AddressITTI(BaseModel, BaseAddress):
-    class Meta:
-        verbose_name_plural = 'Les Adrèsses de ITTI'
-
-    def __str__(self):
-        db_table = "address_itti"
-        return self.street + ' de ITTI'
