@@ -2,15 +2,30 @@
 {% load static %}
 {% block title %}Accademics{% endblock %}
 {% block content %}
-<div id="list-example" class="list-group">
-{% for accademic in accademics %}
-    <a class="list-group-item list-group-item-action" href="#{{ accademic.type }}">{{ accademic.name }}</a>
-{% endfor %}
-</div>
-<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-    {% for accademic in accademics %}
-        <h4 id="{{ accademic.type }}">{{ accademic.name }}</h4>
-        <p>{{ accademic.description }}</p>
-    {% endfor %}
-</div>
+    <div class="row">
+        <div class="col-md-4">
+            <div id="list-example" class="list-group">
+                {% for accademic in accademics %}
+                    <a class="list-group-item list-group-item-action" href="#{{ accademic.type }}">{{ accademic.name }}</a>
+                {% endfor %}
+            </div>
+            <div class="col-md-8">
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                    {% for accademic in accademics %}
+                        <h4 id="{{ accademic.type }}">{{ accademic.name }}</h4>
+                        <p>{{ accademic.description }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block style %}
+    <style>
+        .member {
+            position: relative;
+        }
+    </style>
+{% endblock %}
+{% block script %}
 {% endblock %}
