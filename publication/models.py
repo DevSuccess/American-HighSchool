@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from Web.utils import ImageModel, BaseModel
+
 # Create your models here.
 STATUS = (
     (0, "Draft"),  # Brouillons
@@ -8,8 +10,7 @@ STATUS = (
 )
 
 
-class UserPost(models.Model):
-    image = models.ImageField(upload_to='news/images/users/')
+class UserPost(ImageModel):
     name = models.CharField(max_length=200, unique=True)
 
     class Meta:
@@ -19,18 +20,15 @@ class UserPost(models.Model):
         return self.name
 
 
-class Post(models.Model):
+class Post(BaseModel, ImageModel):
     title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(UserPost, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='news/images/posts/', blank=True, null=True)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
-    created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name_plural = "Les News"
-        ordering = ['-created_on']
+        ordering = ['-created_at']
 
     def __str__(self):
         return self.title
