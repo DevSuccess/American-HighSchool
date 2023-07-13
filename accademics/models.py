@@ -19,6 +19,7 @@ class Accademics(BaseModel, ImageModel):
     class Meta:
         db_table = "accademic"
         verbose_name_plural = "Les accademies dans AHSM"
+        ordering = ['type']
 
     def __str__(self):
         return self.name
