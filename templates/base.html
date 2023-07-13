@@ -47,7 +47,11 @@
 
     {% include 'layouts/partials/_topbar.html' %}
     {% include 'layouts/partials/_navbar.html' %}
-    {% block content %}{% endblock %}
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
     {% include 'layouts/partials/_footer.html' %}
 
     <!-- JavaScript Libraries -->
