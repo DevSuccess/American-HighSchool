@@ -24,3 +24,15 @@ class PresentationImage(BaseModel, ImageModel):
     class Meta:
         db_table = "p_image"
         verbose_name_plural = 'Les Présentations Photo AHSM'
+
+
+class Activity(BaseModel, ImageModel):
+    title = models.CharField(max_length=150)
+    description = models.TextField(max_length=500, null=True)
+
+    class Meta:
+        db_table = "activity"
+        verbose_name_plural = 'Les Activités extra-scolaires'
+
+    def __str__(self):
+        return self.title

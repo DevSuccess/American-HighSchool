@@ -14,3 +14,10 @@ class PresentationImageModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'active', 'admin_photo', 'created_at', 'updated_at']
     fields = ['title', 'description', 'active', 'image', 'created_at', 'updated_at']
     readonly_fields = ['created_at', 'updated_at']
+
+
+@admin.register(models.Activity)
+class ActivityModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'active', 'description', 'admin_photo']
+    fields = [('title', 'active'), 'description', 'image', 'created_at', 'updated_at']
+    readonly_fields = ['created_at', 'updated_at']

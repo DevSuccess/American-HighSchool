@@ -11,11 +11,12 @@ class HomeView(View):
             movies = models.PresentationVideo.objects.latest('created_at')
         except ObjectDoesNotExist:
             movies = None
-
+        activities = models.Activity.objects.all()
         pictures = models.PresentationImage.objects.all()
         context = {
             'current_page': request.path,
             'movies': movies,
             'pictures': pictures,
+            'activities': activities
         }
         return render(request, 'home/index.html', context)
