@@ -216,15 +216,14 @@ Home
    </div>
 </div>
 <!-- Member End -->
-<!-- Visiting Hours Start -->
-<div class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+<div class="container-xl bg-primary visiting-hours my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
    <div class="container py-5">
       <div class="row g-5">
          <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
             <h1 class="display-6 text-white mb-5">Visiting Hours</h1>
             <ul class="list-group list-group-flush">
                {% for hour_list in hour_lists %}
-               <li class="list-group-item">
+               <li class="list-group-item d-flex justify-content-between align-items-center">
                   <span>{{ hour_list.day }}</span>
                   <span>{{ hour_list.message }}</span>
                   <span>{{ hour_list.open }} - {{ hour_list.close }}</span>
@@ -234,7 +233,7 @@ Home
          </div>
          <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
             <h1 class="display-6 text-white mb-5">Contact Info</h1>
-            <table class="table">
+            <table class="table table-borderless text-light">
                <tbody>
                   <tr>
                      <td>Office</td>
@@ -247,9 +246,9 @@ Home
                      <td>{{ info.title }}</td>
                      <td>
                         {% for phone in info.contacts.all %}
-                        <p class="mb-2"><i class="fas fa-phone"></i> {{ phone.number | phone2numeric }}</p>
+                        <p class="mb-2"><i class="fas fa-phone me-2"></i> {{ phone.number | phone2numeric }}</p>
                         {% endfor %}
-                        <p class="mb-0"><i class="fas fa-envelope"></i> {{ info.email }}</p>
+                        <p class="mb-0"><i class="fas fa-envelope me-2"></i> {{ info.email }}</p>
                      </td>
                   </tr>
                   {% endfor %}
@@ -259,7 +258,7 @@ Home
       </div>
    </div>
 </div>
-<!-- Visiting Hours End -->
+
 <!-- Membership Start -->
 <div class="container-xxl py-5">
    <div class="container">
