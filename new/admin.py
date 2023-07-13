@@ -15,7 +15,7 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'status', 'created_on')
     list_filter = ('status', 'created_on')
     # search_fields = ('author__name', 'content')
-    search_fields = ('content')
+    search_fields = ('title',)
     date_hierarchy = 'created_on'
     readonly_fields = ('created_on', 'updated_on')
 
