@@ -121,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'Indian/Antananarivo'
 
