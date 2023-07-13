@@ -21,7 +21,7 @@
       <a href="{% url 'home:index' %}" class="nav-item nav-link {% if current_page == '/' %}active{% endif %}" >Home</a>
       <a href="{% url 'about:index' %}" class="nav-item nav-link {% if current_page == '/about/' %}active{% endif %}">About Us</a>
       <a href="{% url 'accademics:index' %}" class="nav-item nav-link {% if current_page == '/accademics/' %}active{% endif %}">Accademics</a>
-      <a href="#" class="nav-item nav-link position-relative ">
+      <a href="{% url 'new:index' %}" class="nav-item nav-link position-relative ">
           News
           <span
               class="position-absolute top-15 start-100 translate-middle

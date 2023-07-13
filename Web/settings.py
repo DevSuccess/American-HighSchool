@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'hour.apps.HourConfig',
     'member.apps.MemberConfig',
+    'new.apps.NewConfig',
     'price.apps.PriceConfig',
     'register.apps.RegisterConfig',
     'testimonie.apps.TestimonieConfig',

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Academics{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    {% for new in news %}
+        <div class="card">
+            <div class="card-body">
+                <div class="media">
+                    <img src="{{ new.author.image.url }}" class="mr-3 rounded-circle user-profile" alt="User Profile Image">
+                    <div class="media-body">
+                        <h5 class="mt-0">{{ new.author.name }}</h5>
+                        <p class="mb-4">{{ new.content }}</p>
+                        <img src="{{ new.image.url }}" class="img-fluid post-image" alt="Post Image">
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <button class="btn btn-primary me-3"><i class="far fa-thumbs-up"></i> Like</button>
+                                <button class="btn btn-primary me-3"><i class="far fa-comment"></i> Comment</button>
+                                <button class="btn btn-primary"><i class="far fa-share-square"></i> Share</button>
+                            </div>
+                            <small class="text-muted">Posted on {{ new.created_on }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block style %}
+<style>
+    .user-profile {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+    }
+
+    .post-image {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+</style>
+{% endblock %}
