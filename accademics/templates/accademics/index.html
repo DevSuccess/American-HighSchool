@@ -17,14 +17,19 @@
             </div>
         </div>
         <div class="col-sm-9">
-            {% for accademic in accademics %}
-                <div id="{{ accademic.type }}">
-                    <h2>{{ accademic.name }}</h2>
-                    <p>{{ accademic.description }}</p>
-                </div>
-                <hr>
-            {% endfor %}
-		</div>
+    {% for accademic in accademics %}
+        <div id="{{ accademic.type }}" class="row align-items-center">
+            <div class="col-md-6">
+                <h2>{{ accademic.name }}</h2>
+                <p>{{ accademic.description }}</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ accademic.image.url }}" alt="{{ accademic.name }} Image" class="img-fluid" width="200">
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+</div>
     </div>
 </div>
 </section>
