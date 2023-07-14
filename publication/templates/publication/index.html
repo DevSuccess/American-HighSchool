@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container mt-4">
     {% for new in news %}
-        <div class="card">
+        <div class="card mt-3">
             <div class="card-body">
                 <div class="media">
                     <img src="{{ new.author.image.url }}" class="mr-3 rounded-circle user-profile" alt="User Profile Image">
@@ -35,15 +35,55 @@
 {% block style %}
 <style>
     .user-profile {
-      width: 64px;
-      height: 64px;
-      object-fit: cover;
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
     }
 
     .post-image-custom {
-      width: 100%;
-      height: auto;
-      margin-top: 10px;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: #fff;
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    .media {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .media-body {
+        flex: 1;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .text-muted {
+        font-size: 12px;
     }
 </style>
 {% endblock %}
