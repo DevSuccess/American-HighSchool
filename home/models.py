@@ -41,7 +41,6 @@ class PresentationImage(BaseModel, ImageModel):
 
 class Activity(BaseModel, ImageModel):
     title = models.CharField(max_length=150)
-    description = models.TextField(max_length=500, null=True)
 
     class Meta:
         db_table = "activity"
