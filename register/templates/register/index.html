@@ -1,10 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block style %}
-   <style>
+  <style>
+    main {
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .emoji-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
     .emoji {
+      font-size: 120px;
+      margin-bottom: 20px;
+    }
+
+    p {
       font-size: 24px;
-      margin-right: 5px;
+      color: #555555;
+      line-height: 1.5;
     }
   </style>
 {% endblock %}
@@ -13,13 +39,10 @@ Register
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1>Page avec style et emojis</h1>
-    <p>Cette fonctionnalité n'est pas disponible pour l'instant. 😞</p>
-    <p>Vous pouvez utiliser des emojis pour exprimer vos émotions :</p>
-    <p><span class="emoji">😄</span>Heureux</p>
-    <p><span class="emoji">😢</span>Triste</p>
-    <p><span class="emoji">😍</span>Amoureux</p>
-    <p><span class="emoji">🤔</span>Pensif</p>
+<main>
+  <div class="emoji-container">
+    <span class="emoji">😢</span>
+    <p>Cette fonctionnalité n'est pas disponible pour l'instant.</p>
   </div>
+</main>
 {% endblock %}
