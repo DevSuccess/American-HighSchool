@@ -32,9 +32,9 @@ class PresentationImageAdmin(admin.ModelAdmin):
 
 @admin.register(Activity)
 class ActivityAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'admin_photo', 'created_at', 'updated_at')
-    search_fields = ('title', 'description')
-    fields = ('title', 'description', 'image', 'admin_photo', 'created_at', 'updated_at')
+    list_display = ('title', 'admin_photo', 'created_at', 'updated_at')
+    search_fields = ('title',)
+    fields = ('title', 'image', 'admin_photo', 'created_at', 'updated_at')
     readonly_fields = ('admin_photo', 'created_at', 'updated_at')
 
 
