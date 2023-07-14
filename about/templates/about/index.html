@@ -16,34 +16,18 @@
                 <h4 class="light muted">American High School Madagascar</h4>
             </div>
             <div class="row services">
-                <div class="col-md-4">
-                    <div class="service">
-                        <div class="icon-holder">
-                            <img src="{% static 'assets/img/icon/heart-blue.png' %}" alt="" class="icon">
+                {% for aboute in aboutes %}
+                    <div class="col-md-4">
+                        <div class="service">
+                            <div class="icon-holder">
+                                <img src="{{ aboute.image.url }}" alt="{{ aboute.title }}" class="icon">
+                            </div>
+                            <h4 class="heading">{{ aboute.title }}</h4>
+                            <p class="description">{{ aboute.description }}</p>
                         </div>
-                        <h4 class="heading">Cardio Training</h4>
-                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <div class="icon-holder">
-                            <img src="{% static 'assets/img/icon/guru-blue.png' %}" alt="" class="icon">
+                {% endfor %}
 
-                        </div>
-                        <h4 class="heading">Yoga Pilates</h4>
-                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service">
-                        <div class="icon-holder">
-                            <img src="{% static 'assets/img/icon/weight-blue.png' %}" alt="" class="icon">
-                        </div>
-                        <h4 class="heading">Power Training</h4>
-                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="cut cut-bottom"></div>
