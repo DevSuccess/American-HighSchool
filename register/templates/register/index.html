@@ -32,6 +32,9 @@
       color: #555555;
       line-height: 1.5;
     }
+    .btn-home {
+      margin-top: 20px;
+    }
   </style>
 {% endblock %}
 {% block title %}
@@ -43,6 +46,7 @@ Register
   <div class="emoji-container">
     <span class="emoji">😢</span>
     <p>Cette fonctionnalité n'est pas disponible pour l'instant.</p>
+    <a href="{% url 'home:index' %}" class="btn btn-primary btn-home">Accueil</a>
   </div>
 </main>
 {% endblock %}
