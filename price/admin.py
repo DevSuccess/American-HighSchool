@@ -13,12 +13,8 @@ class LevelAdmin(admin.ModelAdmin):
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
     list_display = (
-        'value', 'promotion', 'registration', 'birth', 'levels', 'formatted_price', 'formatted_registration')
+        'value', 'promotion', 'registration', 'birth', 'levels', 'formatted_value', 'formatted_value')
     list_filter = ('levels',)
     search_fields = ('value', 'promotion', 'registration', 'birth', 'levels__name')
-    fields = ('value', 'promotion', 'registration', 'birth', 'levels', 'formatted_price', 'formatted_registration')
-    readonly_fields = ('formatted_price', 'formatted_registration')
-
-    def save_model(self, request, obj, form, change):
-        obj.calculate_price_promo()
-        super().save_model(request, obj, form, change)
+    fields = ('value', 'promotion',  'registration', 'birth', 'levels', 'formatted_value', 'formatted_registration')
+    readonly_fields = ('formatted_value', 'formatted_registration')

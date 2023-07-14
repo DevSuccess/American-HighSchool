@@ -33,24 +33,20 @@ class Price(BaseModel, ImageModel):
     )
     levels = models.OneToOneField(Level, on_delete=models.CASCADE, null=True)
 
-    def formatted_price(self):
-        return "{:,.0f} MGA".format(self.price_promo)
-
     def formatted_registration(self):
         if self.registration is not None:
             return "{:,.0f} MGA".format(self.registration)
         else:
             return ""
 
-    def calculate_price_promo(self):
-        if self.promotion is not None:
-            self.price_promo = self.value * (1 - self.promotion / 100)
+    def formatted_value(self):
+        if self.value is not None:
+            return "{:,.0f} MGA".format(self.value)
         else:
-            self.price_promo = self.value
+            return ""
 
-    def save(self, *args, **kwargs):
-        self.calculate_price_promo()
-        super().save(*args, **kwargs)
+
+
 
     def __str__(self):
         return f"{self.value}"
