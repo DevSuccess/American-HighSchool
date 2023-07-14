@@ -2,15 +2,9 @@
 {% load static %}
 {% block title %}About Us{% endblock %}
 {% block content %}
-<!-- Header - set the background image for the header in the line below-->
-{#<header class="bg-image-full" style="">#}
-{#   <div class="text-center">#}
-{#      <img class="img-fluid rounded-circle" src="{% static 'assets/img/background/bg1.png' %}" alt="..." />#}
-{#   </div>#}
-{#</header>#}
 <main>
     <section id="services" class="section section-padded">
-        <div class="bg-image-full" style="background-image: url({% static 'assets/img/background/bg1.png' %});">
+        <div class="bg-image-full" style="background-image: {% static 'assets/img/background/bg1.png' %};">
             <div class="container" >
                 <div class="row text-center title">
                     <h2>About AHS</h2>
