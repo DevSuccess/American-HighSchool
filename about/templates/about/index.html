@@ -13,7 +13,7 @@
 </header>
 <main>
     <section id="services" class="section section-padded">
-        <div class="container" >
+        <div class="container">
             <div class="row services">
                 {% for aboute in aboutes %}
                     <div class="col-md-4">
@@ -35,122 +35,126 @@
 {% block style %}
     <style>
     @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
-main {
-    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    overflow-x: hidden;
-    color: #2a3237;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
-.section {
-    padding: 40px 0;
-    background: #fff;
-}
+    main {
+        font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        overflow-x: hidden;
+        color: #2a3237;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-.text-center {
-    text-align: center;
-}
+    .section {
+        padding: 40px 0;
+        background: #fff;
+    }
 
-.title {
-    margin: 0 auto 50px;
-    max-width: 600px;
-}
+    .title {
+        margin: 0 auto 50px;
+        max-width: 600px;
+    }
 
-.title h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
+    .title h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
 
-.title h4 {
-    font-size: 18px;
-    color: #8a8e91;
-}
+    .title h4 {
+        font-size: 18px;
+        color: #8a8e91;
+    }
 
-.services {
-    margin: 40px 0;
-}
+    .services {
+        margin: 40px 0;
+    }
 
-.service {
-    width: 100%;
-    height: 320px;
-    margin: 80px 0;
-    text-align: center;
-    border: 1px solid #ddd;
-    transition: all 0.3s ease;
-}
+    .service {
+        width: 100%;
+        height: 320px;
+        margin: 80px 0;
+        text-align: center;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
 
-.service:hover {
-    border-color: red;
-}
+    .service:hover {
+        border-color: red;
+    }
 
-.service .icon-holder {
-    position: relative;
-    top: 100px;
-    display: inline-block;
-    margin-bottom: 40px;
-    padding: 10px;
-    background: white;
-    transition: all 0.3s ease;
-}
+    .service .icon-holder {
+        position: relative;
+        top: 100px;
+        display: inline-block;
+        margin-bottom: 40px;
+        padding: 10px;
+        background: white;
+        transition: all 0.3s ease;
+    }
 
-.service .icon-holder img.icon {
-    width: 40px;
-}
+    .service .icon-holder img.icon {
+        width: 40px;
+    }
 
-.service .heading {
-    position: relative;
-    top: 80px;
-    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
+    .service .heading {
+        position: relative;
+        top: 80px;
+        transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
 
-.service:hover .icon-holder {
-    top: -30px;
-}
+    .service:hover .icon-holder {
+        top: -30px;
+    }
 
-.service:hover .heading {
-    top: -30px;
-}
+    .service:hover .heading {
+        top: -30px;
+    }
 
-.service .description {
-    width: 80%;
-    margin: 0 auto;
-    opacity: 0;
-    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transform: scale(0);
-}
+    .service .description {
+        width: 80%;
+        margin: 0 auto;
+        opacity: 0;
+        transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform: scale(0);
+    }
 
-.service:hover .description {
-    opacity: 1;
-    transform: scale(1);
-}
+    .service:hover .description {
+        opacity: 1;
+        transform: scale(1);
+    }
 
-main {
-    font-family: 'Nouvelle-Police', sans-serif;
-}
+    main {
+        font-family: 'Nouvelle-Police', sans-serif;
+    }
 
-h2, h4 {
-    font-family: 'Autre-Police', sans-serif;
-}
+    h2, h4 {
+        font-family: 'Autre-Police', sans-serif;
+    }
 
-.text-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    {#color: black;#}
-}
+    .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
 
-.text-overlay .title {
-    margin: 0 auto;
-    max-width: 600px;
-}
+    .text-overlay .title {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    /* Styles pour les écrans plus petits */
+    @media (max-width: 767px) {
+        .text-overlay .title {
+            font-size: 24px;
+        }
+    }
 
     </style>
 {% endblock %}
