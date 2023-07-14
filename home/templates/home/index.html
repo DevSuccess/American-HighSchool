@@ -278,11 +278,10 @@ Home
                 <div class="membership-item position-relative">
                     <img class="img-fluid" src="{{ price.image.url }}" alt="" />
                     <h1 class="display-1">0{{ forloop.counter }}</h1>
-                    <h4 class="text-white mb-3"><b>{{ price.formatted_price }}</b></h4>
+                    <h4 class="text-white mb-3"><b>{{ price.formatted_value }}</b></h4>
                     <h3 class="text-danger mb-4">{{ price.levels.name }}</h3>
                     <h3 class="text-primary mb-4">{{ price.formatted_registration }} <i>(Registration Fee)</i></h3>
                     <p><i class="fa fa-check text-primary me-3"></i>{{ price.birth }} ans</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>{{ price.promotion }}% Promo</p>
                     <a class="btn btn-outline-light px-4 mt-3" href="{% url 'register:index' %}">Get Started</a>
                 </div>
             </div>
