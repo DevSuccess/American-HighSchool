@@ -2,15 +2,14 @@
 {% load static %}
 {% block title %}About Us{% endblock %}
 {% block content %}
-<!-- Header - set the background image for the header in the line below-->
-<header class="bg-image-full" style="">
-   <div class="text-center">
-      <img class="img-fluid rounded-circle" src="{% static 'assets/img/background/bg1.png' %}" alt="..." />
-       <div class="row title">
+<header class="bg-image-full" style="position: relative;">
+    <img class="img-fluid rounded-circle" src="{% static 'assets/img/background/bg1.png' %}" alt="..." />
+    <div class="text-overlay">
+        <div class="row title text-center">
             <h2>About AHS</h2>
             <h4 class="light muted">American High School Madagascar</h4>
         </div>
-   </div>
+    </div>
 </header>
 <main>
     <section id="services" class="section section-padded">
@@ -133,6 +132,24 @@ main {
 
 h2, h4 {
     font-family: 'Autre-Police', sans-serif;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.text-overlay .title {
+    margin: 0 auto;
+    max-width: 600px;
 }
 
     </style>
