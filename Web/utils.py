@@ -309,7 +309,7 @@ class ImageModel(models.Model):
         validators=[
             FileExtensionValidator(allowed_extensions=['png', 'jpg', 'gif', 'jpeg', 'webp', 'svg', 'bmp'])
         ],
-        default='', null=True
+        default='', null=True, blank=True
     )
 
     def admin_photo(self):

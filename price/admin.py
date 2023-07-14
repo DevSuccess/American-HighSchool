@@ -17,6 +17,6 @@ class PriceAdmin(admin.ModelAdmin):
     list_filter = ('levels',)
     search_fields = ('value', 'promotion', 'registration', 'birth', 'levels__name')
     fields = (
-        'value', 'promotion', ('image', 'admin_photo'), 'registration',
+        'value', 'promotion', ('image',), 'admin_photo', 'registration',
         'birth', 'levels', 'formatted_value', 'formatted_registration')
-    readonly_fields = ('formatted_value', 'formatted_registration')
+    readonly_fields = ('admin_photo', 'formatted_value', 'formatted_registration')
