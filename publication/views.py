@@ -4,7 +4,7 @@ from .models import Post
 
 # Create your views here.
 def index(request):
-    news = Post.objects.filter(status=1).order_by('-created_on')
+    news = Post.objects.filter(status=1).order_by('-created_at')
     context = {
         'news': news
     }
