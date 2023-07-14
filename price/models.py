@@ -22,7 +22,7 @@ class Price(BaseModel, ImageModel):
         validators=[
             MaxValueValidator(100),
             MinValueValidator(0)
-        ], blank=True, max_digits=10, decimal_places=2
+        ], blank=True, null=True, max_digits=10, decimal_places=2
     )
     birth = models.IntegerField(
         validators=[
