@@ -1,6 +1,6 @@
 #header h1 a {
   display: inline-block;
-  background-image: url('static/assets/img/icon/logo.ico');
+  background-image: url('icon.ico');
   background-repeat: no-repeat;
   background-size: contain;
   width: 200px; /* Ajustez la largeur selon vos besoins */
