@@ -4,7 +4,7 @@ from .models import Post, Slogan
 
 
 def index(request):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    queryset = Post.objects.filter(status=1).order_by('-created_at')
     slogan = Slogan.objects.all().first()
     context = {
         'current_page': request.path,
