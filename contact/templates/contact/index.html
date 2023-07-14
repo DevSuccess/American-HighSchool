@@ -41,7 +41,7 @@ Contact
                   <p class="mb-2">
                      <span class="text-primary me-2">#</span>Call Now
                   </p>
-                  {% for contacts_help in contacts %}
+                  {% for contacts_help in contacts_helps %}
                   <h5 class="mb-0">{{ contacts_help.number }}</h5>
                   {% endfor %}
                </div>
@@ -56,11 +56,9 @@ Contact
                   <p class="mb-2">
                      <span class="text-primary me-2">#</span>Mail Now
                   </p>
-                  {% for info in contact_home %}
                   <marquee behavior="scroll" direction="left" scrollamount="5">
                      <h5 class="mb-0" title="mail">info@itti-americanhighschoolmada.com</h5>
                   </marquee>
-                  {% endfor %}
                </div>
             </div>
          </div>
