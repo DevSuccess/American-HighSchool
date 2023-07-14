@@ -11,7 +11,7 @@ class SupportAdmin(admin.ModelAdmin):
 
 @admin.register(Info)
 class InfoAdmin(admin.ModelAdmin):
-    list_display = ('title', 'type', 'admin_photo')
-    list_filter = ('type',)
+    list_display = ('title', 'admin_photo')
     search_fields = ('title', 'description')
-    fields = ('title', 'libel', 'description', 'type', 'image')
+    fields = ('title', 'description', 'image', 'admin_photo')
+    readonly_fields = ('admin_photo',)

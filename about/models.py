@@ -17,18 +17,11 @@ class Support(models.Model):
 
 
 class Info(ImageModel):
-    TYPES = (
-        ('A', 'Mission'),
-        ('B', 'Vision'),
-        ('C', 'Programme')
-    )
     title = models.CharField(max_length=150)
-    libel = models.TextField(blank=True, null=True, default=' ')
     description = models.TextField()
-    type = models.CharField(max_length=1, choices=TYPES)
 
     class Meta:
         verbose_name_plural = 'Les Missions, Visions et Organisations'
 
     def __str__(self):
-        return f"{self.type} : {self.title}"
+        return f"{self.title}"
