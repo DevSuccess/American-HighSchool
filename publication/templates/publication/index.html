@@ -11,19 +11,21 @@
                 <div class="media">
                     <img src="{{ new.author.image.url }}" class="mr-3 rounded-circle user-profile" alt="User Profile Image">
                     <div class="media-body">
-                        <h5 class="mt-0">{{ new.author.name }}</h5>
-                        <p class="mb-4">{{ new.content }}</p>
-                        {% if new.image.url %}
-                            <img src="{{ new.image.url }}" class="img-fluid post-image-custom" alt="Post Image">
-                        {% endif %}
-                        <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div>
+                                <h5 class="mt-0 mb-1">{{ new.author.name }}</h5>
+                                <small class="text-muted">Posted on {{ new.created_at }}</small>
+                            </div>
                             <div>
                                 <button class="btn btn-primary me-3"><i class="far fa-thumbs-up"></i> Like</button>
                                 <button class="btn btn-primary me-3"><i class="far fa-comment"></i> Comment</button>
                                 <button class="btn btn-primary"><i class="far fa-share-square"></i> Share</button>
                             </div>
-                            <small class="text-muted">Posted on {{ new.created_at }}</small>
                         </div>
+                        <p class="mb-4">{{ new.content }}</p>
+                        {% if new.image.url %}
+                            <img src="{{ new.image.url }}" class="img-fluid post-image-custom" alt="Post Image">
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -38,16 +40,16 @@
         width: 64px;
         height: 64px;
         object-fit: cover;
-        border: 2px solid #fff;
+        border-radius: 50%;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     }
 
     .post-image-custom {
-        width: 100%;
+        max-width: 100%;
         height: auto;
-        margin-top: 10px;
         border-radius: 10px;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        margin-top: 10px;
     }
 
     .card {
