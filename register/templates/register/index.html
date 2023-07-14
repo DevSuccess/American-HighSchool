@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
+
 {% block style %}
     <link rel="stylesheet" type="text/css" href="{% static 'dist/fonts/material-design-iconic-font/css/material-design-iconic-font.css' %}">
     <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
@@ -9,26 +10,21 @@
 {% block title %}
 Register
 {% endblock %}
+
 {% block content %}
 <div class="wrapper">
     <form method="post" action="{% url 'home:index' %}" id="wizard">
-        <!-- SECTION 1 -->
         {% csrf_token %}
-{#        {% if messages %}#}
-{#            {% for message in messages %}#}
-{#                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>#}
-{#            {% endfor %}#}
-{#        {% endif %}#}
         {% if messages %}
             {% for message in messages %}
-            <div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="d-flex">
-                    <div class="toast-body">
-                        {{ message }}
+                <div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            {{ message }}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                     </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
-            </div>
             {% endfor %}
         {% endif %}
         <h2></h2>
@@ -37,7 +33,7 @@ Register
                 <div class="image-holder">
                     <img src="{% static 'assets/img/background/img1.jpg' %}" class="img-fluid" alt="">
                 </div>
-                <div class="form-content" >
+                <div class="form-content">
                     <div class="form-header">
                         <h3>Registration</h3>
                     </div>
@@ -75,18 +71,10 @@ Register
                             </div>
                         </div>
                     </div>
-{#                    <div class="checkbox-circle">#}
-{#                        <label>#}
-{#                            <input type="checkbox" class="hidden me-4" checked>#}
-{#                            <span class="checkmark ml-3 mr-3"></span>#}
-{#                            Ces valleurs doit être obligatoire#}
-{#                        </label>#}
-{#                    </div>#}
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2 -->
         <h2></h2>
         <section>
             <div class="inner">
@@ -125,7 +113,6 @@ Register
             </div>
         </section>
 
-        <!-- SECTION 3 -->
         <h2></h2>
         <section>
             <div class="inner">
@@ -142,52 +129,212 @@ Register
                             {{ form.message }}
                         </div>
                     </div>
-{#                    <div class="checkbox-circle mt-24">#}
-{#                        <label>#}
-{#                            <input type="checkbox" checked>  Please accept <a href="#">terms and conditions ?</a>#}
-{#                            <span class="checkmark"></span>#}
-{#                        </label>#}
-{#                    </div>#}
                 </div>
             </div>
         </section>
     </form>
 </div>
-    <!-- Contact End -->
+
 {% if messages %}
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
     {% for message in messages %}
-      <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-        {% if message.tags == 'warning' %}
-        <div class="toast-header text-white bg-danger">
-          <i class="fas fa-exclamation-triangle me-2"></i> <!-- Icône pour un avertissement -->
-        {% else %}
-        <div class="toast-header text-white bg-success">
-          <i class="fas fa-check-circle me-2"></i> <!-- Icône pour une réussite -->
-        {% endif %}
-          <strong class="me-auto">{{ message.tags|upper }}</strong>
-          <small>{{ message.timestamp }}</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            {% if message.tags == 'warning' %}
+                <div class="toast-header text-white bg-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+            {% else %}
+                <div class="toast-header text-white bg-success">
+                    <i class="fas fa-check-circle me-2"></i>
+            {% endif %}
+            <strong class="me-auto">{{ message.tags|upper }}</strong>
+            <small>{{ message.timestamp }}</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
-          {{ message }}
+            {{ message }}
         </div>
-      </div>
+    </div>
     {% endfor %}
 </div>
 {% endif %}
+    <style>
+        /* Ajoutez vos styles CSS personnalisés ici */
 
-<!-- JQUERY -->
-<script src="js/jquery-3.3.1.min.js"></script>
+.wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+}
 
-<!-- JQUERY STEP -->
-<script src="js/jquery.steps.js"></script>
-<script src="js/main.js"></script>
-<!-- Template created and distributed by Colorlib -->
+.inner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
 
+.image-holder {
+    display: none;
+}
 
-{% endblock %}
-{% block script %}
+.form-content {
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-header h3 {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-holder {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.form-holder.w-100 {
+    flex-basis: 100%;
+}
+
+.checkbox-tick {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-tick label {
+    margin-right: 20px;
+}
+
+.select {
+    position: relative;
+    width: 100%;
+}
+
+.select-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.select-control i {
+    font-size: 18px;
+    color: #aaa;
+}
+
+.select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 999;
+}
+
+.select-dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Styles spécifiques à chaque section */
+
+#wizard {
+    position: relative;
+}
+
+#wizard h2 {
+    display: none;
+}
+
+#wizard section {
+    display: none;
+}
+
+#wizard section.current {
+    display: block;
+}
+
+    </style>
+
+    <script>
+    $(document).ready(function() {
+    $("#wizard").steps({
+        headerTag: "h2",
+        bodyTag: "section",
+        transitionEffect: "fade",
+        autoFocus: true,
+        labels: {
+            next: "Suivant",
+            previous: "Précédent",
+            finish: "Envoyer",
+        },
+        onStepChanging: function (event, currentIndex, newIndex) {
+            if (currentIndex < newIndex) {
+                // Validation des champs de la section précédente avant de passer à la section suivante
+                return validateSection(currentIndex);
+            }
+            return true;
+        },
+        onFinishing: function (event, currentIndex) {
+            // Validation des champs de la dernière section avant l'envoi du formulaire
+            return validateSection(currentIndex);
+        },
+        onFinished: function (event, currentIndex) {
+            // Soumission du formulaire
+            $("#wizard").submit();
+        }
+    });
+
+    function validateSection(index) {
+        var isValid = true;
+
+        // Validation des champs de la section actuelle
+        if (index === 0) {
+            // Validation des champs de la première section
+            isValid = validateFields("#first_name", "#last_name", "#email", "#phone", "#age");
+        } else if (index === 1) {
+            // Validation des champs de la deuxième section
+            isValid = validateFields("#address", "#city", "#zip_code", "#country");
+        } else if (index === 2) {
+            // Validation des champs de la troisième section
+            isValid = validateFields("#message");
+        }
+
+        return isValid;
+    }
+
+    function validateFields() {
+        var isValid = true;
+
+        // Vérification des champs vides
+        for (var i = 0; i < arguments.length; i++) {
+            var field = $(arguments[i]);
+
+            if (field.val().trim() === "") {
+                isValid = false;
+                field.addClass("error");
+            } else {
+                field.removeClass("error");
+            }
+        }
+
+        return isValid;
+    }
+});
+
+    </script>
 <script src="{% static 'dist/js/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'dist/js/jquery.steps.js' %}"></script>
 <script src="{% static 'dist/js/main.js' %}"></script>
