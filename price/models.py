@@ -23,7 +23,7 @@ class Price(BaseModel, ImageModel):
             MinValueValidator(0)
         ], blank=True, max_digits=10, decimal_places=2
     )
-    registration = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
+    registration = models.DecimalField(max_digits=10, decimal_places=2)
     birth = models.IntegerField(
         validators=[
             MaxValueValidator(70),
