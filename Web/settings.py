@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'publication.apps.PublicationConfig',
     'register.apps.RegisterConfig',
     'testimonie.apps.TestimonieConfig',
-    'crispy_forms',
 ]
 
 MIDDLEWARE = [
