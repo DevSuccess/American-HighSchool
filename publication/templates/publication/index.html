@@ -6,25 +6,25 @@
 {% block content %}
 <div class="container mt-4">
     {% for new in news %}
-        <div class="card mt-3">
-            <div class="card-body">
-                <div class="media">
-                    <img src="{{ new.author.image.url }}" class="mr-3 rounded-circle user-profile" alt="User Profile Image">
-                    <div class="media-body">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
+        <div class="publication-card mt-3">
+            <div class="publication-card-body">
+                <div class="publication-media">
+                    <img src="{{ new.author.image.url }}" class="publication-user-profile" alt="User Profile Image">
+                    <div class="publication-media-body">
+                        <div class="publication-header">
                             <div>
-                                <h5 class="mt-0 mb-1">{{ new.author.name }}</h5>
-                                <small class="text-muted">Posted on {{ new.created_at }}</small>
+                                <h5 class="publication-author-name">{{ new.author.name }}</h5>
+                                <small class="publication-posted-on">Posted on {{ new.created_at }}</small>
                             </div>
-                            <div>
-                                <button class="btn btn-primary me-3"><i class="far fa-thumbs-up"></i> Like</button>
-                                <button class="btn btn-primary me-3"><i class="far fa-comment"></i> Comment</button>
-                                <button class="btn btn-primary"><i class="far fa-share-square"></i> Share</button>
+                            <div class="publication-actions">
+                                <button class="publication-action-btn"><i class="far fa-thumbs-up"></i> Like</button>
+                                <button class="publication-action-btn"><i class="far fa-comment"></i> Comment</button>
+                                <button class="publication-action-btn"><i class="far fa-share-square"></i> Share</button>
                             </div>
                         </div>
-                        <p class="mb-4">{{ new.content }}</p>
+                        <p class="publication-content">{{ new.content }}</p>
                         {% if new.image.url %}
-                            <img src="{{ new.image.url }}" class="img-fluid post-image-custom" alt="Post Image">
+                            <img src="{{ new.image.url }}" class="publication-image" alt="Post Image">
                         {% endif %}
                     </div>
                 </div>
@@ -36,23 +36,7 @@
 
 {% block style %}
 <style>
-    .user-profile {
-        width: 64px;
-        height: 64px;
-        object-fit: cover;
-        border-radius: 50%;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .post-image-custom {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-        margin-top: 10px;
-    }
-
-    .card {
+    .publication-card {
         border: none;
         border-radius: 10px;
         padding: 15px;
@@ -60,48 +44,77 @@
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     }
 
-    .card-body {
+    .publication-card-body {
         padding: 0;
     }
 
-    .media {
+    .publication-media {
         display: flex;
         align-items: flex-start;
     }
 
-    .media-body {
+    .publication-user-profile {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .publication-media-body {
         flex: 1;
     }
 
-    h5 {
+    .publication-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .publication-author-name {
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 5px;
         color: #333;
     }
 
-    p {
-        font-size: 16px;
-        margin-bottom: 10px;
-        color: #666;
+    .publication-posted-on {
+        font-size: 12px;
+        color: #999;
     }
 
-    .btn {
+    .publication-actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .publication-action-btn {
         padding: 5px 10px;
         font-size: 14px;
         background-color: #337ab7;
         color: #fff;
         border-radius: 20px;
         transition: background-color 0.3s ease;
+        margin-right: 5px;
     }
 
-    .btn:hover {
+    .publication-action-btn:hover {
         background-color: #23527c;
     }
 
-    .text-muted {
-        font-size: 12px;
-        color: #999;
+    .publication-content {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    .publication-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        margin-top: 10px;
     }
 </style>
 {% endblock %}
