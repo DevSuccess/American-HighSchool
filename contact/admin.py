@@ -1,31 +1,23 @@
 from django.contrib import admin
-from . import models
+from .models import Contact, Social, ContactUs
 
 
-# Register your models here.
-@admin.register(models.ContactHelp)
-class ContactHelpModelAdmin(admin.ModelAdmin):
-    list_display = ['number', 'active', 'created_at', 'updated_at']
-    fields = ['number', 'active', 'created_at', 'updated_at']
-    readonly_fields = ['created_at', 'updated_at']
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('number',)
+    fields = ('number',)
+    search_fields = ('number',)
 
 
-@admin.register(models.ContactUs)
-class ContactUsModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'email', 'subject', 'active', 'message', 'created_at']
-    fields = ['name', 'email', 'subject', 'active', 'message', 'created_at', 'updated_at']
-    readonly_fields = ['created_at', 'updated_at']
+@admin.register(Social)
+class SocialAdmin(admin.ModelAdmin):
+    list_display = ('network_name', 'social_type', 'url')
+    fields = ('network_name', 'social_type', 'url')
 
 
-@admin.register(models.ContactClient)
-class ContactClientModelAdmin(admin.ModelAdmin):
-    list_display = ['email', 'phone', 'active', 'created_at', 'updated_at']
-    fields = ['email', 'phone', 'active', 'created_at', 'updated_at']
-    readonly_fields = ['created_at', 'updated_at']
-
-
-@admin.register(models.Social)
-class SocialModelAdmin(admin.ModelAdmin):
-    list_display = ['network_name', 'social_type', 'url', 'active', 'created_at']
-    fields = ['network_name', 'social_type', 'url', 'active', 'created_at', 'updated_at']
-    readonly_fields = ['created_at', 'updated_at']
+@admin.register(ContactUs)
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'subject', 'created_at')
+    search_fields = ('name', 'email', 'subject')
+    fields = ('name', 'email', 'subject', 'message', 'created_at', 'updated_at')
+    readonly_fields = ('name', 'email', 'subject', 'message', 'created_at', 'updated_at')

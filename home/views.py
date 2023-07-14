@@ -13,10 +13,20 @@ class HomeView(View):
             movies = None
         activities = models.Activity.objects.all()
         pictures = models.PresentationImage.objects.all()
+        try:
+            page_gardes = models.PageGarde.objects.latest('created_at')
+        except ObjectDoesNotExist:
+            page_gardes =  None
+        try:
+            memberships = models.Membership.objects.latest('created_at')
+        except ObjectDoesNotExist:
+            memberships = None
         context = {
             'current_page': request.path,
             'movies': movies,
             'pictures': pictures,
-            'activities': activities
+            'page_gardes': page_gardes,
+            'activities': activities,
+            'memberships': memberships
         }
         return render(request, 'home/index.html', context)

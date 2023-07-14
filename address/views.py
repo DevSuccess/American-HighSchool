@@ -11,13 +11,12 @@ def get_src_content(iframe_html):
 
 
 def base_context(request):
-    addresses = models.AddressAHSM.objects.all()
-    maps_values = [value.map for value in addresses]
-
-    maps = [get_src_content(html) for html in maps_values]
+    addresses = models.Localisation.objects.all()
+    # maps_values = [value.map for value in addresses]
+    #
+    # maps = [get_src_content(html) for html in maps_values]
 
     context = {
         'addresses_ahsm': addresses,
-        'maps': maps
     }
     return context

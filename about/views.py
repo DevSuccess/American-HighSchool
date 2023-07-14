@@ -3,26 +3,14 @@ from . import models
 
 
 # Create your views here.
-def base_context(request):
-    try:
-        abouts = models.AboutAHSM.objects.all().first()
-    except models.AboutAHSM.DoesNotExist:
-        abouts = None
-    contacts = models.AboutHelp.objects.all()
-    context = {
-        'about_home': abouts,
-        'contact_home': contacts
-    }
-
-    return context
-
-
 def index(request):
-    mission = models.About.objects.filter(type='A')
-    vision = models.About.objects.filter(type='B')
+    mission = models.Info.objects.filter(type='A')
+    vision = models.Info.objects.filter(type='B')
+    organisation = models.Info.objects.filter(type='C')
     context = {
         'current_page': request.path,
         'mission': mission,
-        'vision': vision
+        'vision': vision,
+        'organisation': organisation
     }
     return render(request, 'about/index.html', context)

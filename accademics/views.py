@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Accademics
+from .models import Academic
 
 
 # Create your views here.
 def index(request):
-    accademics = Accademics.objects.all()
+    accademics = Academic.objects.all()
     context = {
         'accademics': accademics,
     }

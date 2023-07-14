@@ -1,10 +1,11 @@
 from django.contrib import admin
-from . import models
+from .models import Testimonial
 
 
-# Register your models here.
-@admin.register(models.Testimonial)
-class TestimonialModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'content', 'start', 'occupation', 'admin_photo']
-    fields = ['name', 'content', 'start', 'occupation', 'contacts', 'image', 'active']
-    readonly_fields = ['created_at', 'updated_at']
+@admin.register(Testimonial)
+class TestimonialAdmin(admin.ModelAdmin):
+    list_display = ('name', 'start', 'occupation')
+    list_filter = ('start',)
+    search_fields = ('name', 'occupation')
+    fields = ('name', 'content', 'start', 'occupation', 'image', 'admin_photo', 'created_at', 'updated_at')
+    readonly_fields = ('admin_photo', 'created_at', 'updated_at')

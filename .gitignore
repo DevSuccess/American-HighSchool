@@ -9,7 +9,7 @@ staticfiles/
 media/
 
 # Django migrations
-#**/migrations/
+**/migrations/*
 
 # Environment variables
 .env

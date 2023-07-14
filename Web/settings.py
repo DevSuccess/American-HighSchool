@@ -67,7 +67,6 @@ contexts = [
     'django.template.context_processors.request',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
-    'about.views.base_context',
     'address.views.base_context',
     'contact.views.base_context',
     'hour.views.base_context',

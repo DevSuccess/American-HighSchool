@@ -1,40 +1,26 @@
 from django.db import models
-from Web.utils import BaseModel, ImageModel, VideoModel
-from contact.models import ContactHelp
+from Web.utils import ImageModel
+from contact.models import Contact
 
 
 # Create your models here.
-class AboutAHSM(BaseModel, ImageModel):
-    title = models.CharField(max_length=150)
-    key = models.CharField(max_length=100)
-    libel = models.CharField(max_length=250)
-    content = models.TextField()
-
-    class Meta:
-        db_table = "about_ahsm"
-        verbose_name_plural = "Les Informations sur AHSH"
-
-    def __str__(self):
-        return self.title
-
-
-class AboutHelp(BaseModel):
+class Support(models.Model):
     title = models.CharField(max_length=100)
     email = models.EmailField(max_length=150)
-    contacts = models.ManyToManyField(ContactHelp, related_name="about_to_contact")
+    contacts = models.ManyToManyField(Contact)
 
     def __str__(self):
         return self.title
 
     class Meta:
-        db_table = "about_help"
-        verbose_name_plural = "Les Supports d'Aide Client (About) "
+        verbose_name_plural = "Le Support AHS"
 
 
-class About(models.Model):
+class Info(ImageModel):
     TYPES = (
         ('A', 'Mission'),
-        ('B', 'Vision')
+        ('B', 'Vision'),
+        ('C', 'Programme')
     )
     title = models.CharField(max_length=150)
     libel = models.TextField(blank=True, null=True, default=' ')
@@ -42,8 +28,7 @@ class About(models.Model):
     type = models.CharField(max_length=1, choices=TYPES)
 
     class Meta:
-        db_table = "about_us"
-        verbose_name_plural = 'Les Missions et Visions'
+        verbose_name_plural = 'Les Missions, Visions et Organisations'
 
     def __str__(self):
         return f"{self.type} : {self.title}"

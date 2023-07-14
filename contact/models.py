@@ -3,18 +3,17 @@ from Web.utils import SOCIALS, BaseModel, ImageModel, VideoModel
 
 
 # Create your models here.
-class ContactHelp(BaseModel):
+class Contact(models.Model):
     number = models.CharField(max_length=200)
 
     def __str__(self):
         return self.number
 
     class Meta:
-        db_table = "contact_help"
-        verbose_name_plural = "Les Supports d'Aide client (Contact)"
+        verbose_name_plural = "Les Contacts de AHS"
 
 
-class Social(BaseModel):
+class Social(models.Model):
     network_name = models.CharField(max_length=200)
     social_type = models.CharField(max_length=25, choices=SOCIALS)
     url = models.URLField()
@@ -24,7 +23,7 @@ class Social(BaseModel):
 
     class Meta:
         db_table = "social"
-        verbose_name_plural = 'Les Réseaux Sociaux AHSM'
+        verbose_name_plural = 'Les Réseaux Sociaux de AHS'
 
 
 class ContactUs(BaseModel):
@@ -38,16 +37,4 @@ class ContactUs(BaseModel):
 
     class Meta:
         db_table = "contact_us"
-        verbose_name_plural = 'Les Posts Clients pour AHSM'
-
-
-class ContactClient(BaseModel):
-    email = models.EmailField(max_length=250, blank=True)
-    phone = models.CharField(max_length=15, blank=True)
-
-    def __str__(self):
-        return self.email
-
-    class Meta:
-        db_table = "contact_client"
-        verbose_name_plural = 'Les Contacts des temoignants Clients'
+        verbose_name_plural = 'Les Posts Clients pour AHS'

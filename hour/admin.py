@@ -1,9 +1,10 @@
 from django.contrib import admin
-from . import models
+from .models import Hour
 
 
-# Register your models here.
-@admin.register(models.Hour)
-class HourModelAdmin(admin.ModelAdmin):
-    list_display = ['day', 'open', 'close', 'message']
-    fields = ['day', ('open', 'close'), 'message']
+@admin.register(Hour)
+class HourAdmin(admin.ModelAdmin):
+    list_display = ('day', 'open', 'close', 'message')
+    list_filter = ('day',)
+    search_fields = ('day', 'open', 'close', 'message')
+    fields = ('day', 'open', 'close', 'message')

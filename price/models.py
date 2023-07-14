@@ -4,7 +4,7 @@ from Web.utils import BaseModel, ImageModel
 
 
 # Create your models here.
-class Level(BaseModel):
+class Level(models.Model):
     name = models.CharField(max_length=150)
     status = models.BooleanField(default=True)
 
@@ -12,8 +12,7 @@ class Level(BaseModel):
         return self.name
 
     class Meta:
-        db_table = "level"
-        verbose_name_plural = "Les Niveaux d'Etude existant a l'AHSM"
+        verbose_name_plural = "Les Niveaux d'Etude existant à l'AHS"
 
 
 class Price(BaseModel, ImageModel):
@@ -24,7 +23,6 @@ class Price(BaseModel, ImageModel):
             MinValueValidator(0)
         ], blank=True, max_digits=10, decimal_places=2
     )
-    price_promo = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
     registration = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
     birth = models.IntegerField(
         validators=[
@@ -55,5 +53,4 @@ class Price(BaseModel, ImageModel):
         return f"{self.value}"
 
     class Meta:
-        db_table = "price"
-        verbose_name_plural = 'Les Prix de formation ASHM'
+        verbose_name_plural = 'Les Prix de formation AHS'

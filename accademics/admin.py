@@ -1,10 +1,10 @@
 from django.contrib import admin
-from . import models
+from .models import Academic
 
 
-# Register your models here.
-@admin.register(models.Accademics)
-class AccademicModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'description', 'active', 'admin_photo']
-    fields = ['name', 'description', 'image', 'type', 'active', 'created_at', 'updated_at']
-    readonly_fields = ['updated_at', 'created_at']
+@admin.register(Academic)
+class AcademicAdmin(admin.ModelAdmin):
+    list_display = ('name', 'admin_photo', 'created_at', 'updated_at')
+    search_fields = ('name', 'description')
+    fields = ('name', 'description', 'image', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')

@@ -15,14 +15,3 @@ class Member(BaseModel, ImageModel):
     class Meta:
         db_table = "member"
         verbose_name_plural = "Les Membres constituant AHSM"
-
-
-class AllMember(BaseModel, ImageModel):
-    title = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        db_table = "all_member"
-        verbose_name_plural = "L'Image des membres"

@@ -9,23 +9,19 @@ from . import models
 # Create your views here.
 def base_context(request):
     # contacts_us = models.ContactUs.objects.all()
-    contacts_helps = models.ContactHelp.objects.all()
+    contacts_helps = models.Contact.objects.all()
     socials = models.Social.objects.all()
 
-    # Liste pour stocker les numéros de téléphone
-    phone_numbers = []
-
-    # Parcourir les objets Info et obtenir les numéros de téléphone associés
-
-    phone_numbers.extend([phone.number for phone in contacts_helps])
-
-    # Sélectionner un numéro aléatoire parmi les numéros disponibles
-    number_info = random.choice(phone_numbers) if phone_numbers else ""
+    # # Liste pour stocker les numéros de téléphone
+    # phone_numbers = []
+    # phone_numbers.extend([phone.number for phone in contacts_helps])
+    #
+    # # Sélectionner un numéro aléatoire parmi les numéros disponibles
+    # numbers = random.choice(phone_numbers) if phone_numbers else ""
 
     context = {
         # 'contacts_us': contacts_us,
         'contacts_helps': contacts_helps,
-        'number_info': number_info,
         'socials': socials
     }
     return context

@@ -1,16 +1,17 @@
 from django.contrib import admin
-from . import models
+from django.utils.safestring import mark_safe
+
+from .models import Localisation
 
 
-# Register your models here.
-@admin.register(models.AddressAHSM)
-class AddressModelAdmin(admin.ModelAdmin):
-    list_display = ['lot', 'street', 'admin_map']
-    fields = [('lot', 'street'), 'city', 'active', 'state', 'map', 'zip_code', 'created_at', 'updated_at']
-    list_display_links = ['lot', 'street']
-    readonly_fields = ['created_at', 'updated_at']
+@admin.register(Localisation)
+class LocalisationAdmin(admin.ModelAdmin):
+    list_display = ('street', 'city', 'lot', 'state', 'zip_code', 'admin_map')
+    list_filter = ('state',)
+    search_fields = ('street', 'city', 'zip_code')
+    fields = ('street', 'city', 'lot', 'state', 'zip_code', 'map', 'admin_map')
+    readonly_fields = ('admin_map',)
 
     def admin_map(self, obj):
-        return obj.admin_map()
-
+        return mark_safe(obj.map)
     admin_map.short_description = 'Map'

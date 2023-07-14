@@ -1,19 +1,20 @@
 from django.contrib import admin
-from . import models
+from .models import Post, Slogan
 
 
-# Register your models here.
-@admin.register(models.Post)
-class PostModelAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'author', 'content', 'status', 'created_on', 'updated_on')
-    fields = ['title', 'slug', 'author', 'content', 'status', 'image', 'created_on', 'updated_on']
-    readonly_fields = ['created_on', 'updated_on']
-    search_fields = ['title', 'content']
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'status', 'admin_photo', 'created_at')
+    list_filter = ('status', 'created_at')
+    search_fields = ('title', 'content')
     prepopulated_fields = {'slug': ('title',)}
+    fields = ('title', 'slug', 'author', 'content', 'status', 'image', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')
 
 
-@admin.register(models.Slogan)
-class SloganModelAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'admin_photo', 'created_at', 'updated_at')
-    fields = ['title', 'description', 'note', 'image', 'created_at', 'updated_at']
-    readonly_fields = ['created_at', 'updated_at']
+@admin.register(Slogan)
+class SloganAdmin(admin.ModelAdmin):
+    list_display = ('title', 'note', 'admin_photo', 'created_at')
+    search_fields = ('title', 'note')
+    fields = ('title', 'note', 'description', 'image', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')

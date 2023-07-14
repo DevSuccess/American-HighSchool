@@ -1,24 +1,24 @@
 from django.contrib import admin
-from . import models
+from .models import Level, Price
 
 
-# Register your models here.
-@admin.register(models.Price)
-class PriceModelAdmin(admin.ModelAdmin):
-    list_display = ['value', 'registration', 'promotion', 'active', 'price_promo', 'admin_photo', 'birth', 'get_level']
-    fields = ['value', 'registration', 'promotion', 'levels', 'active', 'price_promo', ('birth', 'image'), 'created_at', 'updated_at']
-    readonly_fields = ['price_promo', 'created_at', 'updated_at']
-
-    def get_level(self, obj):
-        if obj.levels is not None:
-            return obj.levels.name
-        return None
-
-    get_level.short_description = 'Level'
+@admin.register(Level)
+class LevelAdmin(admin.ModelAdmin):
+    list_display = ('name', 'status')
+    list_filter = ('status',)
+    search_fields = ('name',)
+    fields = ('name', 'status')
 
 
-@admin.register(models.Level)
-class LevelModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'status', 'created_at', 'updated_at']
-    fields = ['name', 'status', 'created_at', 'updated_at']
-    readonly_fields = ['created_at', 'updated_at']
+@admin.register(Price)
+class PriceAdmin(admin.ModelAdmin):
+    list_display = (
+        'value', 'promotion', 'registration', 'birth', 'levels', 'formatted_price', 'formatted_registration')
+    list_filter = ('levels',)
+    search_fields = ('value', 'promotion', 'registration', 'birth', 'levels__name')
+    fields = ('value', 'promotion', 'registration', 'birth', 'levels', 'formatted_price', 'formatted_registration')
+    readonly_fields = ('formatted_price', 'formatted_registration')
+
+    def save_model(self, request, obj, form, change):
+        obj.calculate_price_promo()
+        super().save_model(request, obj, form, change)
