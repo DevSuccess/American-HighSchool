@@ -17,13 +17,13 @@ class Level(models.Model):
 
 class Price(BaseModel, ImageModel):
     value = models.DecimalField(max_digits=10, decimal_places=2)
+    registration = models.DecimalField(max_digits=10, decimal_places=2)
     promotion = models.DecimalField(
         validators=[
             MaxValueValidator(100),
             MinValueValidator(0)
         ], blank=True, max_digits=10, decimal_places=2
     )
-    registration = models.DecimalField(max_digits=10, decimal_places=2)
     birth = models.IntegerField(
         validators=[
             MaxValueValidator(70),
@@ -37,7 +37,10 @@ class Price(BaseModel, ImageModel):
         return "{:,.0f} MGA".format(self.price_promo)
 
     def formatted_registration(self):
-        return "{:,.0f} MGA".format(self.registration)
+        if self.registration is not None:
+            return "{:,.0f} MGA".format(self.registration)
+        else:
+            return ""
 
     def calculate_price_promo(self):
         if self.promotion is not None:
