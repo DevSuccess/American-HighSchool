@@ -132,32 +132,11 @@ Home
         </div>
     </div>
     <!-- Facts End -->
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <p><span class="text-primary me-2">#</span>Our Services</p>
-                    <h1 class="display-5 mb-0 text-center">
-                        Extracurricular Activities For
-                        <span class="text-primary">AHS</span> Students
-                    </h1>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
-                        <i class="fa fa-3x fa-mobile-alt text-white"></i>
-                        <div class="ms-4">
-                            <p class="text-white mb-0">Call for more info</p>
-                            {% for phone in contacts_helps %}
-                                <h2 class="text-white mb-0">{{ phone.number }}</h2>
-                            {% endfor %}
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {# AAA#}
-            <div class="row gy-5 gx-4">
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row gy-5 gx-4">
+            <div class="col-lg-6">
                 {% for activity in activities %}
                 <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="card-wrapper">
@@ -178,10 +157,34 @@ Home
                 </div>
                 {% endfor %}
             </div>
-
+            <div class="col-lg-6">
+                <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Image">
+            </div>
+        </div>
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <p><span class="text-primary me-2">#</span>Our Services</p>
+                <h1 class="display-5 mb-0 text-center">
+                    Extracurricular Activities For
+                    <span class="text-primary">AHS</span> Students
+                </h1>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
+                    <i class="fa fa-3x fa-mobile-alt text-white"></i>
+                    <div class="ms-4">
+                        <p class="text-white mb-0">Call for more info</p>
+                        {% for phone in contacts_helps %}
+                        <h2 class="text-white mb-0">{{ phone.number }}</h2>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
+
     <!-- Members Start -->
     <div class="container-xxl py-5">
         <div class="container">
