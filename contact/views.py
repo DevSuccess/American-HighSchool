@@ -64,3 +64,4 @@ class ContactView(View):
         }
 
         return render(request, 'contact/index.html', context)
+

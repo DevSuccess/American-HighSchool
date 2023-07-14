@@ -41,7 +41,7 @@ Contact
                   <p class="mb-2">
                      <span class="text-primary me-2">#</span>Call Now
                   </p>
-                  {% for contacts_help in contacts_helps %}
+                  {% for contacts_help in contacts %}
                   <h5 class="mb-0">{{ contacts_help.number }}</h5>
                   {% endfor %}
                </div>
@@ -58,7 +58,7 @@ Contact
                   </p>
                   {% for info in contact_home %}
                   <marquee behavior="scroll" direction="left" scrollamount="5">
-                     <h5 class="mb-0" title="{{ info.email }}">{{ info.email }}</h5>
+                     <h5 class="mb-0" title="mail">info@itti-americanhighschoolmada.com</h5>
                   </marquee>
                   {% endfor %}
                </div>
@@ -115,10 +115,10 @@ Contact
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                <div class="h-100" style="min-height: 400px">
-                  {% for map in maps %}
+                  {% for addresse in addresses %}
                   <iframe
                      class="rounded w-100 h-100"
-                     src="{{ map }}"
+                     src="{{ addresse.map }}"
                      frameborder="0"
                      allowfullscreen=""
                      aria-hidden="false"
