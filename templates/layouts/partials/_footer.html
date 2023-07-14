@@ -13,16 +13,17 @@
                {{ address.lot }} {{ address.street }} {{ address.city }}
                {% endfor %}
             </div>
-            {% for info in contact_home %}
+            {% for info in contacts_helps %}
             <div class="mb-2">
                <i class="fa fa-phone-alt me-3"></i>
-               {{ number_info }}
-            </div>
-            <div class="mb-2">
-               <i class="fa fa-envelope me-3"></i>
-               {{ info.email|truncatechars:25 }}
+               {{ info.number }}
             </div>
             {% endfor %}
+            <div class="mb-2">
+               <i class="fa fa-envelope me-3"></i>
+                info@itti-americanhighschoolmada.com
+{#               {{ info.email|truncatechars:25 }}#}
+            </div>
             <div class="d-flex pt-2">
                {% if socials %}
                {% for social in socials %}

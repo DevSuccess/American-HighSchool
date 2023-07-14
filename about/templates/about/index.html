@@ -6,45 +6,151 @@
 <header class="py-5 bg-image-full" style="">
    <div class="text-center my-5">
       <img class="img-fluid rounded-circle mb-4" src="{% static 'assets/img/background/bg1.png' %}" alt="..." />
-      <h1 class="text-black fs-3 fw-bolder">About AHS</h1>
-      <p class="text-black-50 mb-0">American High School Madagascar</p>
    </div>
 </header>
-<!-- Content section-->
-<section class="py-5">
-   <div class="container my-5">
-      <div class="row justify-content-center">
-         {% for foo in mission %}
-         <div class="mt-2 col-lg-6">
-            <h2>{{ foo.title }}</h2>
-            <p class="lead"></p>
-            <p class="mb-0">
-               {{ foo.description }}
-            </p>
-         </div>
-         {% endfor %}
-      </div>
-   </div>
-</section>
-<!-- Image element - set the background image for the header in the line below-->
-<div class="py-5 bg-image-full" style="background-image: url('{% static 'assets/img/icon/logo.jpeg' %}')">
-   <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
-   <div style="height: 20rem"></div>
-</div>
-<!-- Content section-->
-<section class="py-5">
-   <div class="container my-5">
-      {% for foo in vision %}
-      <div class="row justify-content-center">
-         <div class="col-lg-6">
-            <h2>{{ foo.title }}</h2>
-            <p class="lead">
-               {{ foo.description }}
-            </p>
-            <p class="mb-0">{{ foo.libel }}</p>
-         </div>
-      </div>
-      {% endfor %}
-   </div>
-</section>
+<main>
+    <section id="services" class="section section-padded">
+        <div class="container">
+            <div class="row text-center title">
+                <h2>About AHS</h2>
+                <h4 class="light muted">American High School Madagascar</h4>
+            </div>
+            <div class="row services">
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="icon-holder">
+                            <img src="{% static 'assets/img/icon/heart-blue.png' %}" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">Cardio Training</h4>
+                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="icon-holder">
+                            <img src="{% static 'assets/img/icon/guru-blue.png' %}" alt="" class="icon">
+
+                        </div>
+                        <h4 class="heading">Yoga Pilates</h4>
+                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service">
+                        <div class="icon-holder">
+                            <img src="{% static 'assets/img/icon/weight-blue.png' %}" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">Power Training</h4>
+                        <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cut cut-bottom"></div>
+    </section>
+</main>
+{% endblock %}
+{% block style %}
+    <style>
+    @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+main {
+    font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    color: #2a3237;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.section {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title {
+    margin: 0 auto 50px;
+    max-width: 600px;
+}
+
+.title h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.title h4 {
+    font-size: 18px;
+    color: #8a8e91;
+}
+
+.services {
+    margin: 40px 0;
+}
+
+.service {
+    width: 100%;
+    height: 320px;
+    margin: 80px 0;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.service:hover {
+    border-color: #00a8ff;
+}
+
+.service .icon-holder {
+    position: relative;
+    top: 100px;
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.service .icon-holder img.icon {
+    width: 40px;
+}
+
+.service .heading {
+    position: relative;
+    top: 80px;
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.service:hover .icon-holder {
+    top: -30px;
+}
+
+.service:hover .heading {
+    top: -30px;
+}
+
+.service .description {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(0);
+}
+
+.service:hover .description {
+    opacity: 1;
+    transform: scale(1);
+}
+
+main {
+    font-family: 'Nouvelle-Police', sans-serif;
+}
+
+h2, h4 {
+    font-family: 'Autre-Police', sans-serif;
+}
+
+    </style>
 {% endblock %}
