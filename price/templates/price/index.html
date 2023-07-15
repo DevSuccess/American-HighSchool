@@ -19,7 +19,7 @@ Price
 								<h5 class="light light-white">1 - 5 sessions / month</h5>
 							</div>
 						</div>
-						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar">
+						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
 						<div class="title">
 							<h4>Ben Adamson</h4>
 							<h5 class="muted regular">Fitness Instructor</h5>
@@ -35,7 +35,7 @@ Price
 								<h5 class="light light-white">1 - 5 sessions / month</h5>
 							</div>
 						</div>
-						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar">
+						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
 						<div class="title">
 							<h4>Eva Williams</h4>
 							<h5 class="muted regular">Personal Trainer</h5>
@@ -51,7 +51,7 @@ Price
 								<h5 class="light light-white">1 - 5 sessions / month</h5>
 							</div>
 						</div>
-						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar">
+						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
 						<div class="title">
 							<h4>John Phillips</h4>
 							<h5 class="muted regular">Personal Trainer</h5>
@@ -285,6 +285,14 @@ section {
 
 .margin-top {
 	margin-top: 150px;
+}
+
+/* New style to make the avatar (image) smaller */
+.avatar.small-image {
+    width: 100px; /* Adjust the width as per your requirement */
+    height: 100px; /* Adjust the height as per your requirement */
+    border-radius: 50%;
+    margin-top: -30px;
 }
 
     </style>
