@@ -16,33 +16,32 @@
     <section class="wedo_section layout_padding">
         <div class="container mb-2">
             <div class="row">
-                {% for accademic in accademics %}
+                {% for academic in academics %} {# Typo: Changed "accademic" to "academic" #}
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
                         <div class="img-box text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
-                            <i class="fas fa-5x">{{ accademic.value.birth}}</i> Years
+                            <i class="fas fa-5x">{{ academic.value.birth }}</i> Years
                         </div>
                         <div class="detail-box">
                             <h5 class="fw-bold">
-                                {{ accademic.value.name }}
+                                {{ academic.value.name }}
                             </h5>
                             <p>
-                                {{ accademic.description }}
+                                {{ academic.description }}
                             </p>
                             <a href="{% url 'register:index' %}" class="btn btn-primary">
                                 <i class="fas fa-rocket"></i> Get Started
                             </a>
-
                         </div>
                     </div>
                 </div>
                 {% endfor %}
-
             </div>
         </div>
     </section>
 </main>
 {% endblock %}
+
 
 
 {% block style %}
