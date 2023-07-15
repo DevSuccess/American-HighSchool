@@ -31,7 +31,7 @@ class Price(BaseModel, ImageModel):
         ],
         choices=[(i, str(i)) for i in range(72)]
     )
-    levels = models.OneToOneField(Level, on_delete=models.CASCADE, null=True)
+    levels = models.ForeignKey(Level, on_delete=models.CASCADE, null=True)
 
     def formatted_registration(self):
         if self.registration is not None:

@@ -7,19 +7,20 @@ Price
 <section id="team" class="section gray-bg">
     <div class="container">
         <div class="row title text-center">
-            <h2 class="margin-top">Team</h2>
+            <h2 class="margin-top">Princing</h2>
             <h4 class="light muted">We're a dream team!</h4>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            {% for price in prices %}
+                <div class="col-md-4">
                 <div class="team text-center">
                     <div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
                         <div class="overlay text-center">
-                            <h3 class="white">$69.00</h3>
-                            <h5 class="light light-white">1 - 5 sessions / month</h5>
+                            <h3 class="white">{{ price.value }}</h3>
+                            <h5 class="light light-white">{{ price.birth }} years</h5>
                         </div>
                     </div>
-                    <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
+                    <img src="{{ price.image.url }}" alt="{{ price.value }}" class="avatar small-image">
                     <div class="title">
                         <h4>Ben Adamson</h4>
                         <h5 class="muted regular">Fitness Instructor</h5>
@@ -27,6 +28,7 @@ Price
                     <button data-toggle="modal" data-target="#modal1" class="btn-team btn-team-blue-fill">Sign Up Now</button>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 	</section>
