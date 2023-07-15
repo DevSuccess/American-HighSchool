@@ -31,6 +31,7 @@ class ContactView(View):
     def get(self, request):
         form = forms.ContactForm()
         context = {
+            'current_page': request.path,
             'form': form,
         }
         return render(request, 'contact/index.html', context)
@@ -58,7 +59,6 @@ class ContactView(View):
         messages_list = messages.get_messages(request)
 
         context = {
-            'current_page': request.path,
             'form': form,
             'messages': messages_list
         }
