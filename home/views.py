@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.core.exceptions import ObjectDoesNotExist
-from accreditation import models
+from accreditation import models as mdl
 from . import models
 
 
@@ -23,7 +23,7 @@ class HomeView(View):
         except ObjectDoesNotExist:
             memberships = None
 
-        accreditations = models.List.objects.all()
+        accreditations = mdl.List.objects.all()
         context = {
             'current_page': request.path,
             'movies': movies,
