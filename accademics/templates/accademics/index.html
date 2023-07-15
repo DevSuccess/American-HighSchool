@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Accademics{% endblock %}
+{% block title %}Academics{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -38,7 +38,7 @@
                                 passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
                                 in the middle of text. All the Lorem Ipsum
                             </p>
-                            <a href="">
+                            <a href="#">
                                 Read More
                             </a>
                         </div>
@@ -47,7 +47,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
                         <div class="img-box">
-                            <img src="images/wedo-img3.png" alt="">
+                            <img src="{% static 'images/wedo-img3.png' %}" alt="">
                         </div>
                         <div class="detail-box">
                             <h5>
@@ -57,7 +57,7 @@
                                 passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
                                 in the middle of text. All the Lorem Ipsum
                             </p>
-                            <a href="">
+                            <a href="#">
                                 Read More
                             </a>
                         </div>
@@ -66,7 +66,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
                         <div class="img-box">
-                            <img src="images/wedo-img4.png" alt="">
+                            <img src="{% static 'images/wedo-img4.png' %}" alt="">
                         </div>
                         <div class="detail-box">
                             <h5>
@@ -76,7 +76,7 @@
                                 passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
                                 in the middle of text. All the Lorem Ipsum
                             </p>
-                            <a href="">
+                            <a href="#">
                                 Read More
                             </a>
                         </div>
@@ -85,7 +85,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
                         <div class="img-box">
-                            <img src="images/wedo-img1.png" alt="">
+                            <img src="{% static 'images/wedo-img1.png' %}" alt="">
                         </div>
                         <div class="detail-box">
                             <h5>
@@ -95,7 +95,7 @@
                                 passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
                                 in the middle of text. All the Lorem Ipsum
                             </p>
-                            <a href="">
+                            <a href="#">
                                 Read More
                             </a>
                         </div>
@@ -137,22 +137,6 @@
         background-image: url({% static 'assets/img/icon/wedo-img-bg1.png' %});
         background-size: 100% 100%;
     }
-
-    {#.wedo_section .box .img-box:before {#}
-    {#    content: "";#}
-    {#    position: absolute;#}
-    {#    width: 70%;#}
-    {#    height: 70%;#}
-    {#    top: 53%;#}
-    {#    left: 45%;#}
-    {#    -webkit-transform: translate(-50%, -50%);#}
-    {#    transform: translate(-50%, -50%);#}
-        {#background-image: url('');#}
-    {#    background-size: 100% 100%;#}
-    {#    opacity: 0;#}
-    {#    -webkit-transition: all .3s;#}
-    {#    transition: all .3s;#}
-    {#}#}
 
     .wedo_section .box .img-box img {
         width: 55px;
