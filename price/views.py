@@ -3,7 +3,7 @@ from . import models
 
 
 # Create your views here.
-def base_context(request):
+def index(request):
     prices = models.Price.objects.all()
     levels = models.Level.objects.all()
 
@@ -12,4 +12,5 @@ def base_context(request):
         'levels': levels
     }
 
-    return context
+    return render(request, 'price/index.html', context)
+

@@ -70,7 +70,6 @@ contexts = [
     'contact.views.base_context',
     'hour.views.base_context',
     'member.views.base_context',
-    'price.views.base_context',
     'testimonie.views.base_context',
 ]
 

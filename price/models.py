@@ -4,7 +4,7 @@ from Web.utils import BaseModel, ImageModel
 
 
 # Create your models here.
-class Level(models.Model):
+class Level(ImageModel):
     name = models.CharField(max_length=150)
     status = models.BooleanField(default=True)
 
@@ -44,9 +44,6 @@ class Price(BaseModel, ImageModel):
             return "{:,.0f} MGA".format(self.value)
         else:
             return ""
-
-
-
 
     def __str__(self):
         return f"{self.value}"

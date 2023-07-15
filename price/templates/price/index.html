@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Price
+{% endblock %}
+{% block content %}
+<section id="team" class="section gray-bg">
+		<div class="container">
+			<div class="row title text-center">
+				<h2 class="margin-top">Team</h2>
+				<h4 class="light muted">We're a dream team!</h4>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="team text-center">
+						<div class="cover" style="background:url('img/team/team-cover1.jpg'); background-size:cover;">
+							<div class="overlay text-center">
+								<h3 class="white">$69.00</h3>
+								<h5 class="light light-white">1 - 5 sessions / month</h5>
+							</div>
+						</div>
+						<img src="img/team/team3.jpg" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Ben Adamson</h4>
+							<h5 class="muted regular">Fitness Instructor</h5>
+						</div>
+						<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<div class="cover" style="background:url('img/team/team-cover2.jpg'); background-size:cover;">
+							<div class="overlay text-center">
+								<h3 class="white">$69.00</h3>
+								<h5 class="light light-white">1 - 5 sessions / month</h5>
+							</div>
+						</div>
+						<img src="img/team/team1.jpg" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Eva Williams</h4>
+							<h5 class="muted regular">Personal Trainer</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team text-center">
+						<div class="cover" style="background:url('img/team/team-cover3.jpg'); background-size:cover;">
+							<div class="overlay text-center">
+								<h3 class="white">$69.00</h3>
+								<h5 class="light light-white">1 - 5 sessions / month</h5>
+							</div>
+						</div>
+						<img src="img/team/team2.jpg" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>John Phillips</h4>
+							<h5 class="muted regular">Personal Trainer</h5>
+						</div>
+						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+{% block style %}
+    <style>
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+body {
+	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	overflow-x: hidden;
+	color: #2a3237;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	position: relative;
+	margin: 10px 0;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+
+
+.btn {
+	font-size: 18px;
+	display: inline-block;
+	padding: 15px 30px;
+	color: white;
+	border: 2px solid transparent;
+	border-radius: 2px;
+	background: transparent;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+	color: white;
+}
+
+.btn.btn-blue {
+	background: #00a8ff;
+}
+
+.btn.btn-blue:hover {
+	background: #31b9ff;
+}
+
+.btn.btn-blue-fill {
+	color: #00a8ff;
+	border-color: #00a8ff;
+	background: transparent;
+}
+
+.btn.btn-blue-fill:hover {
+	color: white;
+	background: #00a8ff;
+}
+
+.btn.btn-white-fill {
+	color: #fff;
+	border-color: #fff;
+	background: transparent;
+}
+
+.btn.btn-white-fill:hover {
+	color: #00a8ff;
+	background: #fff;
+}
+
+
+/* Sections */
+section {
+	position: relative;
+}
+
+.section {
+	padding: 40px 0;
+	background: #fff;
+}
+
+.section-padded {
+	padding: 140px 0 40px;
+}
+
+
+
+.team {
+	margin: 80px 0;
+	padding-bottom: 60px;
+	background: white;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07);
+}
+
+.team .cover .overlay {
+	height: 250px;
+	padding-top: 60px;
+	opacity: 0;
+	background: rgba(0, 168, 255, 0.9);
+	-webkit-transition: opacity 0.45s ease;
+	transition: opacity 0.45s ease;
+}
+
+.team:hover .cover .overlay {
+	opacity: 1;
+}
+
+.team .avatar {
+	position: relative;
+	z-index: 2;
+	margin-top: -60px;
+	border-radius: 50%;
+}
+
+.team .title {
+	margin: 50px 0;
+}
+
+
+.form-control.form-white::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #fff;
+}
+
+.form-control.form-white:-moz-placeholder {
+	opacity: 1;
+	/* Mozilla Firefox 4 to 18 */
+	color: #fff;
+}
+
+.form-control.form-white::-moz-placeholder {
+	opacity: 1;
+	/* Mozilla Firefox 19+ */
+	color: #fff;
+}
+
+.form-control.form-white:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #fff;
+}
+
+.form-control.form-white:focus {
+	background: rgba(255,255,255,0.2);
+}
+
+
+.btn.btn-submit {
+	width: 100%;
+	margin-top: 30px;
+	color: #00a8ff;
+	border: 2px solid #fff;
+	background: #fff;
+}
+
+.btn.btn-submit:focus {
+	font-weight: bold;
+}
+
+.btn.btn-submit:hover {
+	color: #00a8ff;
+	background: #fff;
+}
+
+
+/* Colors */
+
+.white {
+	color: white;
+}
+
+.light-white {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.white-bg {
+	background: white;
+}
+
+.gray-bg {
+	background: #f7f7f7;
+}
+
+.blue {
+	color: #00a8ff;
+}
+
+.blue-bg {
+	background: #00a8ff;
+}
+
+.muted {
+	color: #989da0;
+}
+
+.margin-top {
+	margin-top: 150px;
+}
+
+    </style>
+{% endblock %}

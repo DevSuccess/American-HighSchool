@@ -31,6 +31,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('hour/', include('hour.urls')),
     path('member/', include('member.urls')),
+    path('price/', include('price.urls')),
     path('publication/', include('publication.urls')),
     path('register/', include('register.urls')),
     path('tesmonie/', include('testimonie.urls')),

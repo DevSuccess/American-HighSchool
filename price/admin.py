@@ -4,10 +4,11 @@ from .models import Level, Price
 
 @admin.register(Level)
 class LevelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'status')
+    list_display = ('name', 'status', 'admin_photo')
     list_filter = ('status',)
     search_fields = ('name',)
-    fields = ('name', 'status')
+    fields = ('name', 'status', 'image', 'admin_photo')
+    readonly_fields = ('admin_photo',)
 
 
 @admin.register(Price)
