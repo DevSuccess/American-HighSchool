@@ -4,20 +4,20 @@ from .models import Level, Price
 
 @admin.register(Level)
 class LevelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'status', 'admin_photo')
+    list_display = ('name', 'birth', 'status', 'admin_photo')
     list_filter = ('status',)
-    search_fields = ('name',)
-    fields = ('name', 'status', 'image', 'admin_photo')
+    search_fields = ('name', 'birth',)
+    fields = ('name', 'status', 'birth', 'image', 'admin_photo')
     readonly_fields = ('admin_photo',)
 
 
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
     list_display = (
-        'value', 'promotion', 'registration', 'admin_photo', 'birth', 'formatted_value', 'formatted_value')
+        'value', 'promotion', 'registration', 'admin_photo', 'formatted_value', 'formatted_value')
     list_filter = ('levels',)
-    search_fields = ('value', 'promotion', 'registration', 'birth', 'levels__name')
+    search_fields = ('value', 'promotion', 'registration', 'levels__name')
     fields = (
         'value', 'promotion', ('image',), 'admin_photo', 'registration',
-        'birth', 'levels', 'formatted_value', 'formatted_registration')
+        'levels', 'formatted_value', 'formatted_registration')
     readonly_fields = ('admin_photo', 'formatted_value', 'formatted_registration')

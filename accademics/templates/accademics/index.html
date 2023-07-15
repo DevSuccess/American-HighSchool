@@ -16,45 +16,27 @@
     <section class="wedo_section layout_padding">
         <div class="container">
             <div class="row">
+                {% for accademic in accademics %}
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
                         <div class="img-box text-white">
-                             <i class="fas fa-10x">2</i>
+                            <i class="fas fa-5x">{{ accademic.value.birth }}</i>
                         </div>
                         <div class="detail-box">
                             <h5>
-                                Social Marketing
+                                {{ accademic.value.name }}
                             </h5>
                             <p>
-                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
-                                in the middle of text. All the Lorem Ipsum
+                                {{ accademic.description }}
                             </p>
                             <a href="#">
-                                Read More
+                                Get Started
                             </a>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="box pr-0 pr-lg-5">
-                        <div class="img-box">
-                            <img src="{% static 'images/wedo-img1.png' %}" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Digital Marketing
-                            </h5>
-                            <p>
-                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
-                                in the middle of text. All the Lorem Ipsum
-                            </p>
-                            <a href="#">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

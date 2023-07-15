@@ -7,6 +7,13 @@ from Web.utils import BaseModel, ImageModel
 class Level(ImageModel):
     name = models.CharField(max_length=150)
     status = models.BooleanField(default=True)
+    birth = models.IntegerField(
+        validators=[
+            MaxValueValidator(70),
+            MinValueValidator(2)
+        ],
+        choices=[(i, str(i)) for i in range(72)], null=True, blank=True
+    )
 
     def __str__(self):
         return self.name
@@ -23,13 +30,6 @@ class Price(BaseModel, ImageModel):
             MaxValueValidator(100),
             MinValueValidator(0)
         ], blank=True, null=True, max_digits=10, decimal_places=2
-    )
-    birth = models.IntegerField(
-        validators=[
-            MaxValueValidator(70),
-            MinValueValidator(2)
-        ],
-        choices=[(i, str(i)) for i in range(72)]
     )
     levels = models.ForeignKey(Level, on_delete=models.CASCADE, null=True)
 
