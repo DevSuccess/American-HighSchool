@@ -4,50 +4,319 @@
 {% block title %}Accademics{% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="container-lg my-2">
-            <h1>Welcome to AHS English School</h1>
-            <p class="lead">Explore our academic programs by scrolling through this web page, where you'll find a comprehensive range of courses and disciplines designed to cater to your educational needs and aspirations.</p>
-        </div>
-        <section data-bs-spy="scroll" data-bs-offset="15" data-bs-target="#myScrollspy">
-            <div class="container-lg my-2">
-                <div class="row">
-                    <div class="col-sm-3" id="myScrollspy">
-                        <div class="list-group">
-                            {% for accademic in accademics %}
-                                <a class="list-group-item list-group-item-action" href="#{{ accademic.type }}">{{ accademic.name }}</a>
-                            {% endfor %}
+<div class="container">
+    <div class="container-lg my-2">
+        <h1>Welcome to AHS English School</h1>
+        <p class="lead">Explore our academic programs by scrolling through this web page, where you'll find a
+            comprehensive range of courses and disciplines designed to cater to your educational needs and aspirations.
+        </p>
+    </div>
+</div>
+<main class="sub_page">
+    <section class="wedo_section layout_padding">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    What We do
+                </h2>
+                <p>
+                    Content here, content here', making it look like readable English. Many desktop publishing
+                    packages and web page editors now
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="box pr-0 pr-lg-5">
+                        <div class="img-box">
+                            <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Social Marketing
+                            </h5>
+                            <p>
+                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
+                                in the middle of text. All the Lorem Ipsum
+                            </p>
+                            <a href="">
+                                Read More
+                            </a>
                         </div>
                     </div>
-                    <div class="col-sm-9">
-                        {% for accademic in accademics %}
-                            <div id="{{ accademic.type }}" class="row align-items-center mb-5">
-                                <div class="col-md-6">
-                                    <h2>{{ accademic.name }}</h2>
-                                    <p>{{ accademic.description }}</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="{{ accademic.image.url }}" alt="{{ accademic.name }} Image" class="img-fluid" width="300">
-                                </div>
-                            </div>
-                        {% endfor %}
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="box pr-0 pr-lg-5">
+                        <div class="img-box">
+                            <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Content Marketing
+                            </h5>
+                            <p>
+                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
+                                in the middle of text. All the Lorem Ipsum
+                            </p>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="box pr-0 pr-lg-5">
+                        <div class="img-box">
+                            <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Data Analysis
+                            </h5>
+                            <p>
+                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
+                                in the middle of text. All the Lorem Ipsum
+                            </p>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="box pr-0 pr-lg-5">
+                        <div class="img-box">
+                            <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <h5>
+                                Digital Marketing
+                            </h5>
+                            <p>
+                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
+                                in the middle of text. All the Lorem Ipsum
+                            </p>
+                            <a href="">
+                                Read More
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</main>
 {% endblock %}
 
 {% block style %}
 <style>
-   section {
-      position: relative;
-   }
+    main {
+        font-family: "Helvetica", "Poppins", sans-serif;
+        overflow-x: hidden;
+    }
+    .wedo_section .heading_container h2 {
+        text-transform: none;
+    }
 
-   .list-group {
-      position: sticky;
-      top: 15px;
-   }
+    .wedo_section .box {
+        margin-top: 45px;
+    }
+
+    .wedo_section .box .img-box {
+        position: relative;
+        width: 175px;
+        height: 175px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-image: url({% static 'assets/img/background/bg6.jpeg' %});
+        background-size: 100% 100%;
+    }
+
+    .wedo_section .box .img-box:before {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        top: 53%;
+        left: 45%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-image: url({% static 'assets/img/background/bg6.jpeg' %});
+        background-size: 100% 100%;
+        opacity: 0;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .wedo_section .box .img-box img {
+        width: 55px;
+        margin-right: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .wedo_section .box .detail-box {
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .wedo_section .box .detail-box h5 {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .wedo_section .box .detail-box a {
+        display: inline-block;
+        background-color: #0a1b89;
+        color: #ffffff;
+        padding: 10px 25px;
+        border-radius: 0;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border: none;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+    .wedo_section .box .detail-box a:hover {
+        background-color: #f7941d;
+    }
+
+    .wedo_section .box:hover .img-box:before {
+        opacity: 1;
+    }
+
+    .wedo_section .box:hover .detail-box {
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .wedo_section .box:hover .detail-box h5 {
+        color: #f7941d;
+    }
+
+    .info_section h4 {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .info_section .info_contact .contact_link_box a {
+        margin: 5px 0;
+        color: #ffffff;
+    }
+
+    .info_section .info_contact .contact_link_box a i {
+        margin-right: 5px;
+    }
+
+    .info_section .info_contact .contact_link_box a:hover {
+        color: #f7941d;
+    }
+
+    .info_section .info_social a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #ffffff;
+        border-radius: 100%;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+
+    .info_section .info_social a:hover {
+        color: #f7941d;
+    }
+
+    .info_section {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .info_section .info_links a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .info_section .info_links a img {
+        margin-right: 10px;
+    }
+
+    .info_section .info_links a:hover,
+    .info_section .info_links a.active {
+        color: #f7941d;
+    }
+
+    .info_section form input {
+        border: none;
+        border-bottom: 1px solid #ffffff;
+        background-color: transparent;
+        width: 100%;
+        height: 45px;
+        color: #ffffff;
+        outline: none;
+    }
+
+    .info_section form input::-webkit-input-placeholder {
+        color: #ffffff;
+    }
+
+    .info_section form input:-ms-input-placeholder {
+        color: #ffffff;
+    }
+
+    .info_section form input::-ms-input-placeholder {
+        color: #ffffff;
+    }
+
+    .info_section form input::placeholder {
+        color: #ffffff;
+    }
+
+    .info_section form button {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        background-color: #f7941d;
+        color: #ffffff;
+        padding: 10px 55px;
+        border-radius: 0;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        border: none;
+        margin-top: 15px;
+    }
+
+    .info_section form button:hover {
+        background-color: #081671;
+    }
+
+    /* end info section */
 </style>
 {% endblock %}
 
