@@ -12,22 +12,35 @@
         </p>
     </div>
 </div>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Academics{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="container-lg my-2">
+        <h1>Welcome to AHS English School</h1>
+        <p class="lead">Explore our academic programs by scrolling through this web page, where you'll find a comprehensive range of courses and disciplines designed to cater to your educational needs and aspirations.</p>
+    </div>
+</div>
+
 <main class="sub_page">
     <section class="wedo_section layout_padding">
         <div class="container mb-2">
             <div class="row">
-                {% for academic in academics %} {# Typo: Changed "accademic" to "academic" #}
+                {% for accademic in accademics %}
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
                         <div class="img-box text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
-                            <i class="fas fa-5x">{{ academic.value.birth }}</i> Years
+                            <i class="fas fa-5x">{{ accademic.value.birth}}</i> Years
                         </div>
                         <div class="detail-box">
                             <h5 class="fw-bold">
-                                {{ academic.value.name }}
+                                {{ accademic.value.name }}
                             </h5>
                             <p>
-                                {{ academic.description }}
+                                {{ accademic.description }}
                             </p>
                             <a href="{% url 'register:index' %}" class="btn btn-primary">
                                 <i class="fas fa-rocket"></i> Get Started
@@ -41,7 +54,6 @@
     </section>
 </main>
 {% endblock %}
-
 
 
 {% block style %}
