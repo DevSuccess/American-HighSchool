@@ -6,150 +6,149 @@ Contact
 {% block content %}
 <!-- Contact Start -->
 <style>
-   .truncate-text {
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   word-wrap: break-word; /* Ajout de cette propriété */
-   }
+    .truncate-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: break-word;
+        /* Ajout de cette propriété */
+    }
 </style>
 <div class="">
-<div class="container-xxl py-5">
-   <div class="container">
-      <div class="row g-4 mb-5">
-         <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-               <div class="btn-lg-square bg-white flex-shrink-0">
-                  <i class="fa fa-map-marker-alt text-danger"></i>
-               </div>
-               <div class="ms-4">
-                  <p class="mb-2">
-                     <span class="text-danger me-2">#</span>Address
-                  </p>
-                  {% for address in addresses_ahsm %}
-                  <h5 class="mb-0">{{ address.lot }} {{ address.street }}</h5>
-                  {% endfor %}
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-               <div class="btn-lg-square bg-white flex-shrink-0">
-                  <i class="fa fa-phone-alt text-danger"></i>
-               </div>
-               <div class="ms-4">
-                  <p class="mb-2">
-                     <span class="text-danger me-2">#</span>Call Now
-                  </p>
-                  {% for contacts_help in contacts_helps %}
-                  <h5 class="mb-0">{{ contacts_help.number }}</h5>
-                  {% endfor %}
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-               <div class="btn-lg-square bg-white flex-shrink-0">
-                  <i class="fa fa-envelope-open text-danger"></i>
-               </div>
-               <div class="ms-4">
-                  <p class="mb-2">
-                     <span class="text-danger me-2">#</span>Mail Now
-                  </p>
-                  <marquee behavior="scroll" direction="left" scrollamount="5">
-                     <h5 class="mb-0" title="mail">info@itti-americanhighschoolmada.com</h5>
-                  </marquee>
-               </div>
-            </div>
-         </div>
-         <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-               <p><span class="text-danger me-2">#</span>Contact Us</p>
-               <h1 class="display-5 mb-4">Vous avez une question ? Please Contact Us!</h1>
-               <p class="mb-4">
-                  Veuillez compléter le formulaire de contact et envoyer une quelconque remarque.
-                  Obtenez la version PDF de notre contact en cliquant sur ce lien suivant :
-                  <a href="#">Download Now</a>.
-               </p>
-               <form method="post" action="">
-                  {% csrf_token %}
-                  <div class="row g-3">
-                     <div class="col-md-6">
-                        <div class="form-floating">
-                           {{ form.name }}
-                           <label for="name">Your Name</label>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="h-100 bg-light d-flex align-items-center p-5">
+                        <div class="btn-lg-square bg-white flex-shrink-0">
+                            <i class="fa fa-map-marker-alt text-danger"></i>
                         </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-floating">
-                           {{ form.email }}
-                           <label for="email">Your Email</label>
+                        <div class="ms-4">
+                            <p class="mb-2">
+                                <span class="text-danger me-2">#</span>Address
+                            </p>
+                            {% for address in addresses_ahsm %}
+                            <h5 class="mb-0">{{ address.lot }} {{ address.street }}</h5>
+                            {% endfor %}
                         </div>
-                     </div>
-                     <div class="col-12">
-                        <div class="form-floating">
-                           {{ form.subject }}
-                           <label for="subject">Subject</label>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="h-100 bg-light d-flex align-items-center p-5">
+                        <div class="btn-lg-square bg-white flex-shrink-0">
+                            <i class="fa fa-phone-alt text-danger"></i>
                         </div>
-                     </div>
-                     <div class="col-12">
-                        <div class="form-floating">
-                           {{ form.message }}
-                           <label for="message">Message</label>
+                        <div class="ms-4">
+                            <p class="mb-2">
+                                <span class="text-danger me-2">#</span>Call Now
+                            </p>
+                            {% for contacts_help in contacts_helps %}
+                            <h5 class="mb-0">{{ contacts_help.number }}</h5>
+                            {% endfor %}
                         </div>
-                     </div>
-                     {% if form.non_field_errors %}
-                     {% for error in form.non_field_errors %}
-                     <p class="alert alert-danger my-3">{{ error }}</p>
-                     {% endfor %}
-                     {% endif %}
-                     <div class="col-12">
-                        <button class="btn btn-primary w-100 py-3" type="submit">
-                        Send Message
-                        </button>
-                     </div>
-                  </div>
-               </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100 bg-light d-flex align-items-center p-5">
+                        <div class="btn-lg-square bg-white flex-shrink-0">
+                            <i class="fa fa-envelope-open text-danger"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">
+                                <span class="text-danger me-2">#</span>Mail Now
+                            </p>
+                            <marque behavior="scroll" direction="left" scrollamount="5">
+                                <h5 class="mb-0" title="mail">info@itti-americanhighschoolmada.com</h5>
+                            </marque>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-               <div class="h-100" style="min-height: 400px">
-                  {% for addresse in addresses_ahsm %}
-                  <iframe
-                     class="rounded w-100 h-100"
-                     src="{{ addresse.map }}"
-                     frameborder="0"
-                     allowfullscreen=""
-                     aria-hidden="false"
-                     tabindex="0"
-                     ></iframe>
-                  {% endfor %}
-               </div>
+        </div>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p><span class="text-danger me-2">#</span>Contact Us</p>
+                    <h1 class="display-5 mb-4">Vous avez une question ? Please Contact Us!</h1>
+                    <p class="mb-4">
+                        Veuillez compléter le formulaire de contact et envoyer une quelconque remarque.
+                        Obtenez la version PDF de notre contact en cliquant sur ce lien suivant :
+                        <a href="#">Download Now</a>.
+                    </p>
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ form.name }}
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ form.email }}
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.subject }}
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.message }}
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            {% if form.non_field_errors %}
+                            {% for error in form.non_field_errors %}
+                            <p class="alert alert-danger my-3">{{ error }}</p>
+                            {% endfor %}
+                            {% endif %}
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100" style="min-height: 400px">
+                        {% for addresse in addresses_ahsm %}
+                        <iframe class="rounded w-100 h-100" src="{{ addresse.map }}" frameborder="0" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
 </div>
 <!-- Contact End -->
 {% if messages %}
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-   <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-      {% for message in messages %}
-      {% if message.tags == 'warning' %}
-      <div class="toast-header text-white bg-danger">
-         <i class="fas fa-exclamation-triangle me-2"></i> <!-- Icône pour un avertissement -->
-      {% else %}
-      <div class="toast-header text-white bg-success">
-         <i class="fas fa-check-circle me-2"></i> <!-- Icône pour une réussite -->
-      {% endif %}
-      <strong class="me-auto">{{ message.tags|upper }}</strong>
-      <small>{{ message.timestamp }}</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-         {{ message }}
-      </div>
-      {% endfor %}
-   </div>
+    <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        {% for message in messages %}
+        {% if message.tags == 'warning' %}
+        <div class="toast-header text-white bg-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i> <!-- Icône pour un avertissement -->
+            {% else %}
+            <div class="toast-header text-white bg-success">
+                <i class="fas fa-check-circle me-2"></i> <!-- Icône pour une réussite -->
+                {% endif %}
+                <strong class="me-auto">{{ message.tags|upper }}</strong>
+                <small>{{ message.timestamp }}</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endif %}
 
