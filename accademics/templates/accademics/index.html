@@ -78,24 +78,23 @@
     }
 
 
-.wedo_section .box:before {
-  content: "";
-  position: absolute;
-  width: 70%;
-  height: 70%;
-  top: 53%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-image: url({% static 'assets/img/icon/wedo-img-bg2.png' %});
-  background-size: 100% 100%;
-  opacity: 0;
-    z-index: 50;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
+    .wedo_section .box .img-box:before {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        top: 53%;
+        left: 45%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-image: url({% static 'assets/img/icon/wedo-img-bg2.png' %});
+        background-size: 100% 100%;
+        opacity: 0;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
 
-    .wedo_section .box .img-box img {
+    .wedo_section .box .img-box i {
         width: 55px;
         margin-right: 10px;
         position: relative;
