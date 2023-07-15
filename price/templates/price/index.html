@@ -8,7 +8,8 @@ Price
     <div class="container">
         <div class="row title text-center">
             <h2 class="margin-top">Princing</h2>
-            <h4 class="light muted">We're a dream team!</h4>
+            <h4 class="light muted">Your Children Can Be A Proud Member Of
+                    <span class="text-danger">ITTI AHS</span></h4>
         </div>
         <div class="row">
             {% for price in prices %}
@@ -17,13 +18,13 @@ Price
                     <div class="cover" style="background:url({{ price.image.url }}); background-size:cover;">
                         <div class="overlay text-center">
                             <h3 class="white">{{ price.formatted_value }}</h3>
-                            <h5 class="light light-white">{{ price.birth }} years</h5>
+                            <h5 class="light light-white">{{ price.formatted_registration }} Registration Fee</h5>
                         </div>
                     </div>
                     <img src="{{ price.levels.image.url }}" alt="{{ price.levels.name }}" class="avatar small-image">
                     <div class="title">
                         <h4>{{ price.levels.name }}</h4>
-                        <h5 class="muted regular">{{ price.formatted_registration }} Registration Fee</h5>
+                        <h5 class="muted regular">{{ price.birth }} Years</h5>
                     </div>
                     <button data-toggle="modal" data-target="#modal1" class="btn-team btn-team-blue-fill">Get Started</button>
                 </div>
