@@ -24,39 +24,7 @@ Price
                         <h4>Ben Adamson</h4>
                         <h5 class="muted regular">Fitness Instructor</h5>
                     </div>
-                    <button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="team text-center">
-                    <div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
-                        <div class="overlay text-center">
-                            <h3 class="white">$69.00</h3>
-                            <h5 class="light light-white">1 - 5 sessions / month</h5>
-                        </div>
-                    </div>
-                    <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
-                    <div class="title">
-                        <h4>Eva Williams</h4>
-                        <h5 class="muted regular">Personal Trainer</h5>
-                    </div>
-                    <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="team text-center">
-                    <div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
-                        <div class="overlay text-center">
-                            <h3 class="white">$69.00</h3>
-                            <h5 class="light light-white">1 - 5 sessions / month</h5>
-                        </div>
-                    </div>
-                    <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
-                    <div class="title">
-                        <h4>John Phillips</h4>
-                        <h5 class="muted regular">Personal Trainer</h5>
-                    </div>
-                    <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+                    <button data-toggle="modal" data-target="#modal1" class="btn-team btn-team-blue-fill">Sign Up Now</button>
                 </div>
             </div>
         </div>
@@ -66,72 +34,72 @@ Price
 {% block style %}
     <style>
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
-{#h1,#}
-{#h2,#}
-{#h3,#}
-{#h4,#}
-{#h5,#}
-{#h6 {#}
-{#	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;#}
-{#	position: relative;#}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	position: relative;
 	{#margin: 10px 0;#}
-{#}#}
-{##}
-{#h1 {#}
-{#	font-size: 60px;#}
-{#}#}
-{##}
-{#h2 {#}
-{#	font-size: 48px;#}
-{#}#}
-{##}
-{#h3 {#}
-{#	font-size: 30px;#}
-{#}#}
-{##}
-{#h4 {#}
-{#	font-size: 24px;#}
-{#}#}
-{##}
-{#h5 {#}
-{#	font-size: 18px;#}
-{#}#}
-{##}
-{#h6 {#}
-{#	font-size: 16px;#}
-{#}#}
-{##}
-{##}
-{##}
-{#.btn {#}
-{#	font-size: 18px;#}
-{#	display: inline-block;#}
-{#	padding: 15px 30px;#}
-{#	color: white;#}
-{#	border: 2px solid transparent;#}
-{#	border-radius: 2px;#}
-{#	background: transparent;#}
-{#	-webkit-transition: all 0.3s ease;#}
-{#	transition: all 0.3s ease;#}
-{#}#}
-{##}
-{#.btn:hover,#}
-{#.btn:focus {#}
-{#	color: white;#}
-{#}#}
-{##}
-{##}
-{#.btn.btn-blue-fill {#}
-{#	color: #00a8ff;#}
-{#	border-color: #00a8ff;#}
-{#	background: transparent;#}
-{#}#}
-{##}
-{#.btn.btn-blue-fill:hover {#}
-{#	color: white;#}
-{#	background: #00a8ff;#}
-{#}#}
-{##}
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+
+
+.btn-team {
+	font-size: 18px;
+	display: inline-block;
+	padding: 15px 30px;
+	color: white;
+	border: 2px solid transparent;
+	border-radius: 2px;
+	background: transparent;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.btn-team:hover,
+.btn-team:focus {
+	color: white;
+}
+
+
+.btn-team.btn-team-blue-fill {
+	color: #00a8ff;
+	border-color: #00a8ff;
+	background: transparent;
+}
+
+.btn-team.btn-team-blue-fill:hover {
+	color: white;
+	background: #00a8ff;
+}
+
 
 /* Sections */
 section {
