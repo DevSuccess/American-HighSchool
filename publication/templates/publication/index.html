@@ -1,36 +1,35 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}News{% endblock %}
-
 {% block content %}
 <div class="container mt-4">
-    {% for new in news %}
-        <div class="publication-card mt-3">
-            <div class="publication-card-body">
-                <div class="publication-media">
-                    <img src="{{ new.author.image.url }}" class="publication-user-profile" alt="User Profile Image">
-                    <div class="publication-media-body">
-                        <div class="publication-header">
-                            <div>
-                                <h5 class="publication-author-name">{{ new.author.name }}</h5>
-                                <small class="publication-posted-on">Posted on {{ new.created_at }}</small>
+    <div class="row">
+        {% for new in news %}
+        <div class="col-md-6">
+            <div class="publication-card mt-3">
+                <div class="publication-card-body">
+                    <div class="publication-media">
+                        <img src="{{ new.author.image.url }}" class="publication-user-profile" alt="User Profile Image">
+                        <div class="publication-media-body">
+                            <div class="publication-header">
+                                <div>
+                                    <h5 class="publication-author-name">{{ new.author.name }}</h5>
+                                    <small class="publication-posted-on">Posted on {{ new.created_at }}</small>
+                                </div>
+                                <div class="publication-actions">
+                                    <button class="publication-action-btn"><i class="far fa-thumbs-up"></i> Like</button>
+                                    <button class="publication-action-btn"><i class="far fa-comment"></i> Comment</button>
+                                    <button class="publication-action-btn"><i class="far fa-share-square"></i> Share</button>
+                                </div>
                             </div>
-                            <div class="publication-actions">
-                                <button class="publication-action-btn"><i class="far fa-thumbs-up"></i> Like</button>
-                                <button class="publication-action-btn"><i class="far fa-comment"></i> Comment</button>
-                                <button class="publication-action-btn"><i class="far fa-share-square"></i> Share</button>
-                            </div>
-                        </div>
-                        <p class="publication-content">{{ new.content }}</p>
-                        {% if new.image.url %}
+                            <p class="publication-content">{{ new.content }}</p>
+                            {% if new.image.url %}
                             <img src="{{ new.image.url }}" class="publication-image" alt="Post Image">
-                        {% endif %}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
 
