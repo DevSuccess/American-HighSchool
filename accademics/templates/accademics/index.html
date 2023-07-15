@@ -15,15 +15,6 @@
 <main class="sub_page">
     <section class="wedo_section layout_padding">
         <div class="container">
-            <div class="heading_container">
-                <h2>
-                    What We do
-                </h2>
-                <p>
-                    Content here, content here', making it look like readable English. Many desktop publishing
-                    packages and web page editors now
-                </p>
-            </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
@@ -44,44 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box pr-0 pr-lg-5">
-                        <div class="img-box">
-                            <img src="{% static 'images/wedo-img3.png' %}" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Content Marketing
-                            </h5>
-                            <p>
-                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
-                                in the middle of text. All the Lorem Ipsum
-                            </p>
-                            <a href="#">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box pr-0 pr-lg-5">
-                        <div class="img-box">
-                            <img src="{% static 'images/wedo-img4.png' %}" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Data Analysis
-                            </h5>
-                            <p>
-                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
-                                in the middle of text. All the Lorem Ipsum
-                            </p>
-                            <a href="#">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
                         <div class="img-box">
@@ -186,22 +140,12 @@
         color: #f7941d;
     }
 
-
-
-
-
-    /* info section */
-    .info_section {
-        background-color: #0a1b89;
-        color: #ffffff;
-    }
-
     .info_section h4 {
         font-weight: 600;
         margin-bottom: 20px;
     }
 
-    .info_section .info_contact .contact_link_box {
+    .info_section .info_contact {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -221,7 +165,7 @@
     }
 
     .info_section .info_contact .contact_link_box a:hover {
-        color: #f7941d;
+        color: red;
     }
 
     .info_section .info_social {
@@ -248,7 +192,7 @@
     }
 
     .info_section .info_social a:hover {
-        color: #f7941d;
+        color: red;
     }
 
     .info_section .info_links {
@@ -280,7 +224,7 @@
 
     .info_section .info_links a:hover,
     .info_section .info_links a.active {
-        color: #f7941d;
+        color: red;
     }
 
     .info_section form input {
@@ -313,7 +257,7 @@
         width: 100%;
         text-align: center;
         display: inline-block;
-        background-color: #f7941d;
+        background-color: red;
         color: #ffffff;
         padding: 10px 55px;
         border-radius: 0;
