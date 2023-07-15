@@ -23,7 +23,7 @@ class HomeView(View):
         except ObjectDoesNotExist:
             memberships = None
 
-        accreditations = mdl.List.objects.all()
+        lists = mdl.List.objects.all()
         context = {
             'current_page': request.path,
             'movies': movies,
@@ -31,6 +31,6 @@ class HomeView(View):
             'page_gardes': page_gardes,
             'activities': activities,
             'memberships': memberships,
-            'accreditations': accreditations
+            'lists': lists
         }
         return render(request, 'home/index.html', context)

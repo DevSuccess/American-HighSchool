@@ -266,74 +266,60 @@ Home
 				<a class="btn btn-primary py-3 px-5" href="{% url 'contact_us:index' %}">Contact Us</a>
 			</div>
 		</div>
-        <div class="row">
-            {% for accrd in accreditations %}
-                <div class="col-md-4">
-                    <img src="{{ accrd.image.url }}" alt="{{ accrd.name }}">
-                </div>
-            {% endfor %}
-        </div>
-	</div>
-	<!-- Membership End -->
-	<!-- Testimonial Start -->
-	<div class="container-xxl py-5">
-		<div class="container">
-			<h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-				Our Clients Say!
-			</h1>
-			<div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-				{% for testimonial in testimonials_home %}
-				<div class="testimonial-item text-center">
-					<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
-						src="{{ testimonial.image.url }}" style="width: 100px; height: 100px" alt="image" />
-					<div class="testimonial-text rounded text-center p-4">
-						<p>
-							{{ testimonial.content }}
-						</p>
-						<h5 class="mb-1">{{ testimonial.name }}</h5>
-						<span class="fst-italic">{{ testimonial.occupation }}</span>
-					</div>
+		<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+			<div class="row">
+				{% for list in lists %}
+				<div class="col-md-4">
+					<img src="{{ list.image.url }}" alt="{{ list.name }}">
 				</div>
 				{% endfor %}
 			</div>
 		</div>
 	</div>
-	<!-- Testimonial End -->
-	{% if messages %}
-	{% for message in messages %}
-	<div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert"
-		aria-live="assertive" aria-atomic="true">
-		<div class="d-flex">
-			<div class="toast-body">
-				{{ message }}
+</div>
+<!-- Membership End -->
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+	<div class="container">
+		<h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+			Our Clients Say!
+		</h1>
+		<div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+			{% for testimonial in testimonials_home %}
+			<div class="testimonial-item text-center">
+				<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="{{ testimonial.image.url }}"
+					style="width: 100px; height: 100px" alt="image" />
+				<div class="testimonial-text rounded text-center p-4">
+					<p>
+						{{ testimonial.content }}
+					</p>
+					<h5 class="mb-1">{{ testimonial.name }}</h5>
+					<span class="fst-italic">{{ testimonial.occupation }}</span>
+				</div>
 			</div>
-			<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-				aria-label="Close"></button>
+			{% endfor %}
 		</div>
 	</div>
-	{% endfor %}
-	{% endif %}
-	{% endblock %}
+</div>
+<!-- Testimonial End -->
+{% if messages %}
+{% for message in messages %}
+<div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert"
+	aria-live="assertive" aria-atomic="true">
+	<div class="d-flex">
+		<div class="toast-body">
+			{{ message }}
+		</div>
+		<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+			aria-label="Close"></button>
+	</div>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}
 
-	{% block style %}
-	<style>
-		.card-wrapper {
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			align-items: center;
-			/* Centrer les éléments horizontalement */
-			justify-content: center;
-			/* Centrer les éléments verticalement */
-		}
+{% block style %}
+<style>
 
-		.card {
-			flex: 1;
-		}
-
-		.card-img {
-			height: 100%;
-			object-fit: cover;
-		}
-	</style>
-	{% endblock %}
+</style>
+{% endblock %}
