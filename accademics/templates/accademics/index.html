@@ -12,19 +12,6 @@
         </p>
     </div>
 </div>
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}Academics{% endblock %}
-
-{% block content %}
-<div class="container">
-    <div class="container-lg my-2">
-        <h1>Welcome to AHS English School</h1>
-        <p class="lead">Explore our academic programs by scrolling through this web page, where you'll find a comprehensive range of courses and disciplines designed to cater to your educational needs and aspirations.</p>
-    </div>
-</div>
-
 <main class="sub_page">
     <section class="wedo_section layout_padding">
         <div class="container mb-2">
@@ -32,7 +19,8 @@
                 {% for accademic in accademics %}
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
-                        <div class="img-box text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
+                        <div
+                            class="img-box text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
                             <i class="fas fa-5x">{{ accademic.value.birth}}</i> Years
                         </div>
                         <div class="detail-box">
@@ -49,6 +37,7 @@
                     </div>
                 </div>
                 {% endfor %}
+
             </div>
         </div>
     </section>
@@ -62,6 +51,7 @@
         font-family: "Helvetica", "Poppins", sans-serif;
         overflow-x: hidden;
     }
+
     .wedo_section .heading_container h2 {
         text-transform: none;
     }
@@ -263,7 +253,7 @@
     }
 
     .info_section form button:hover {
-        background-color: #081671;
+        background-color: #0d6efd;
     }
 
     /* end info section */
