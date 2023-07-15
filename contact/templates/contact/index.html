@@ -75,6 +75,7 @@ Contact
                         Obtenez la version PDF de notre contact en cliquant sur ce lien suivant :
                         <a href="#">Download Now</a>.
                     </p>
+
                     <form method="post" action="">
                         {% csrf_token %}
                         <div class="row g-3">
@@ -90,6 +91,8 @@ Contact
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
                                     {{ form.subject }}
