@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.core.exceptions import ObjectDoesNotExist
+from accreditation import models
 from . import models
 
 
@@ -21,12 +22,15 @@ class HomeView(View):
             memberships = models.Membership.objects.latest('created_at')
         except ObjectDoesNotExist:
             memberships = None
+
+        accreditations = models.List.objects.all()
         context = {
             'current_page': request.path,
             'movies': movies,
             'pictures': pictures,
             'page_gardes': page_gardes,
             'activities': activities,
-            'memberships': memberships
+            'memberships': memberships,
+            'accreditations': accreditations
         }
         return render(request, 'home/index.html', context)

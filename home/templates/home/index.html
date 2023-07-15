@@ -5,329 +5,335 @@ Home
 {% endblock %}
 {% block content %}
 <style>
-    .custom-shadow {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+	.custom-shadow {
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
 
-    .custom-image {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        object-fit: cover;
-    }
+	.custom-image {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+		object-fit: cover;
+	}
 </style>
 <!-- Header Start -->
 <div class="container-fluid bg-dark p-0 mb-5">
-    <div class="row g-0 flex-column-reverse flex-lg-row">
-        <div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
-            <div class="header-bg h-100 d-flex flex-column justify-content-center p-5">
-                <h1 class="display-4 text-light mb-5">
-                    {{ movies.description}}
-                </h1>
-                <div class="d-flex align-items-center pt-4 animated slideInDown">
-                    <a href="{% url 'about:index' %}" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Read More</a>
-                    <button type="button" class="btn-play" data-bs-toggle="modal" data-src="{{ video_url }}"
-                        data-bs-target="#videoModal">
-                        <span></span>
-                    </button>
-                    <h6 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-            <div class="owl-carousel header-carousel">
-                {% for picture in pictures %}
-                <div class="owl-carousel-item">
-                    <img class="img-fluid" src="{{ picture.image.url }}" alt="{{ picture.title }}" />
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">{{ movies.title | upper }}</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <video width='150' controls>
-                            <source type='video/mp4' src='{{ movies.video.url }}'>
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
+	<div class="row g-0 flex-column-reverse flex-lg-row">
+		<div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
+			<div class="header-bg h-100 d-flex flex-column justify-content-center p-5">
+				<h1 class="display-4 text-light mb-5">
+					{{ movies.description}}
+				</h1>
+				<div class="d-flex align-items-center pt-4 animated slideInDown">
+					<a href="{% url 'about:index' %}" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Read More</a>
+					<button type="button" class="btn-play" data-bs-toggle="modal" data-src="{{ video_url }}"
+						data-bs-target="#videoModal">
+						<span></span>
+					</button>
+					<h6 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h6>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+			<div class="owl-carousel header-carousel">
+				{% for picture in pictures %}
+				<div class="owl-carousel-item">
+					<img class="img-fluid" src="{{ picture.image.url }}" alt="{{ picture.title }}" />
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- Video Modal Start -->
+	<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content rounded-0">
+				<div class="modal-header">
+					<h3 class="modal-title" id="exampleModalLabel">{{ movies.title | upper }}</h3>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!-- 16:9 aspect ratio -->
+					<div class="ratio ratio-16x9">
+						<video width='150' controls>
+							<source type='video/mp4' src='{{ movies.video.url }}'>
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Video Modal End -->
 </div>
 <!-- Header End -->
 <div class="">
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p><span class="text-primary me-2">#</span>{{ page_gardes.title }}</p>
-                    <h1 class="display-5 mb-4">
-                        {{ page_gardes.libel}}
-                        <span class="text-primary">{{ page_gardes.key }}</span>!
-                    </h1>
-                    <p class="mb-4">
-                        {{ page_gardes.content }}
-                    </p>
-                    {% for level in levels %}
-                    <h5 class="mb-3">
-                        <i class="far fa-check-circle text-primary me-3"></i>
-                        {{ level.name }}
-                    </h5>
-                    {% endfor %}
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="{% url 'about:index' %}">Read More</a>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="img-border">
-                        <img class="img-fluid" src="{{ page_gardes.image.url }}"
-                            alt="{{ page_gardes.libel }} {{ page_gardes.key }}" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-    <!-- Facts Start -->
-    <div class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container-fluid">
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <i class="fa fa-users fa-3x text-primary mb-3"></i>
-                    {# <h1 class="text-white mb-2" data-toggle="counter-up">---</h1>#}
-                    <h1 class="text-white mb-2">---</h1>
-                    <p class="text-white mb-0">Free place</p>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <i class="fa fa-binoculars fa-3x text-primary mb-3"></i>
-                    <!-- Icône jumelles pour représenter un visiteur -->
-                    {# <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>#}
-                    <h1 class="text-white mb-2">---</h1>
-                    <p class="text-white mb-0">Daily Vigitors</p>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
-                    {# <h1 class="text-white mb-2" data-toggle="counter-up">19</h1>#}
-                    <h1 class="text-white mb-2">---</h1>
-                    <p class="text-white mb-0">Total Membership</p>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <i class="fa fa-globe fa-3x text-primary mb-3"></i>
-                    <!-- Icône globe pour représenter un visiteur -->
-                    {# <h1 class="text-white mb-2" data-toggle="counter-up">345</h1>#}
-                    <h1 class="text-white mb-2">---</h1>
-                    <p class="text-white mb-0">Number of Student</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Facts End -->
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <p><span class="text-primary me-2">#</span>Our Services</p>
-                    <h1 class="display-5 mb-0 text-center">
-                        Extracurricular Activities For
-                        <span class="text-primary">AHS</span> Students
-                    </h1>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
-                        <i class="fa fa-3x fa-mobile-alt text-white"></i>
-                        <div class="ms-4">
-                            <p class="text-white mb-0">Call for more info</p>
-                            {% for phone in contacts_helps %}
-                            <h2 class="text-white mb-0">{{ phone.number }}</h2>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+	<!-- About Start -->
+	<div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+					<p><span class="text-primary me-2">#</span>{{ page_gardes.title }}</p>
+					<h1 class="display-5 mb-4">
+						{{ page_gardes.libel}}
+						<span class="text-primary">{{ page_gardes.key }}</span>!
+					</h1>
+					<p class="mb-4">
+						{{ page_gardes.content }}
+					</p>
+					{% for level in levels %}
+					<h5 class="mb-3">
+						<i class="far fa-check-circle text-primary me-3"></i>
+						{{ level.name }}
+					</h5>
+					{% endfor %}
+					<a class="btn btn-primary py-3 px-5 mt-3" href="{% url 'about:index' %}">Read More</a>
+				</div>
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+					<div class="img-border">
+						<img class="img-fluid" src="{{ page_gardes.image.url }}"
+							alt="{{ page_gardes.libel }} {{ page_gardes.key }}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About End -->
+	<!-- Facts Start -->
+	<div class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+		<div class="container-fluid">
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+					<i class="fa fa-users fa-3x text-primary mb-3"></i>
+					{# <h1 class="text-white mb-2" data-toggle="counter-up">---</h1>#}
+					<h1 class="text-white mb-2">---</h1>
+					<p class="text-white mb-0">Free place</p>
+				</div>
+				<div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+					<i class="fa fa-binoculars fa-3x text-primary mb-3"></i>
+					<!-- Icône jumelles pour représenter un visiteur -->
+					{# <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>#}
+					<h1 class="text-white mb-2">---</h1>
+					<p class="text-white mb-0">Daily Vigitors</p>
+				</div>
+				<div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+					<i class="fa fa-certificate fa-3x text-primary mb-3"></i>
+					{# <h1 class="text-white mb-2" data-toggle="counter-up">19</h1>#}
+					<h1 class="text-white mb-2">---</h1>
+					<p class="text-white mb-0">Total Membership</p>
+				</div>
+				<div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+					<i class="fa fa-globe fa-3x text-primary mb-3"></i>
+					<!-- Icône globe pour représenter un visiteur -->
+					{# <h1 class="text-white mb-2" data-toggle="counter-up">345</h1>#}
+					<h1 class="text-white mb-2">---</h1>
+					<p class="text-white mb-0">Number of Student</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Facts End -->
+	<!-- Service Start -->
+	<div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+				<div class="col-lg-6">
+					<p><span class="text-primary me-2">#</span>Our Services</p>
+					<h1 class="display-5 mb-0 text-center">
+						Extracurricular Activities For
+						<span class="text-primary">AHS</span> Students
+					</h1>
+				</div>
+				<div class="col-lg-6">
+					<div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
+						<i class="fa fa-3x fa-mobile-alt text-white"></i>
+						<div class="ms-4">
+							<p class="text-white mb-0">Call for more info</p>
+							{% for phone in contacts_helps %}
+							<h2 class="text-white mb-0">{{ phone.number }}</h2>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <div class="row gy-5">
-                <div class="col-lg-6">
-                    <div class="d-flex justify-content-center">
-                        <img src="{% static 'assets/img/background/b7.jpeg' %}" class="img-fluid rounded"
-                            alt="Image à gauche" style="max-height: 400px;">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="d-flex justify-content-center">
-                        <img src="{% static 'assets/img/background/bg6.jpeg' %}" class="img-fluid rounded"
-                            alt="Image à droite" style="max-height: 400px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
+			<div class="row gy-5">
+				<div class="col-lg-6">
+					<div class="d-flex justify-content-center">
+						<img src="{% static 'assets/img/background/b7.jpeg' %}" class="img-fluid rounded"
+							alt="Image à gauche" style="max-height: 400px;">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="d-flex justify-content-center">
+						<img src="{% static 'assets/img/background/bg6.jpeg' %}" class="img-fluid rounded"
+							alt="Image à droite" style="max-height: 400px;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Service End -->
 
-    <!-- Members Start -->
-    <div class="container-xxl py-5">
-        <div class="container-fluid">
-            <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <p><span class="text-primary me-2">#</span>{{ memberships.title }}</p>
-                    <h1 class="display-5 mb-0">
-                        Let`s See Our <span class="text-primary">AHS</span> Awsome
-                        Members
-                    </h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Explore More Members</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="row g-4">
-                            <div class="col">
-                                <div class="card custom-shadow">
-                                    <img src="{{ memberships.image.url }}" alt="{{ memberships.title }}"
-                                        class="card-img-top custom-image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- Members Start -->
+	<div class="container-xxl py-5">
+		<div class="container-fluid">
+			<div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+				<div class="col-lg-6">
+					<p><span class="text-primary me-2">#</span>{{ memberships.title }}</p>
+					<h1 class="display-5 mb-0">
+						Let`s See Our <span class="text-primary">AHS</span> Awsome
+						Members
+					</h1>
+				</div>
+				<div class="col-lg-6 text-lg-end">
+					<a class="btn btn-primary py-3 px-5" href="">Explore More Members</a>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+						<div class="row g-4">
+							<div class="col">
+								<div class="card custom-shadow">
+									<img src="{{ memberships.image.url }}" alt="{{ memberships.title }}"
+										class="card-img-top custom-image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- Member End -->
 <div class="container-xl bg-primary visiting-hours my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
-                <h1 class="display-6 text-white mb-5">Visiting Hours</h1>
-                <ul class="list-group list-group-flush">
-                    {% for hour_list in hour_lists %}
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <span>{{ hour_list.day }}</span>
-                        <span>{{ hour_list.message }}</span>
-                        <span>{{ hour_list.open }} - {{ hour_list.close }}</span>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="display-6 text-white mb-5">Contact Info</h1>
-                <table class="table table-borderless text-light">
-                    <tbody>
-                        <tr>
-                            <td>Office</td>
-                            {% for address in addresses_ahsm %}
-                            <td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
-                            {% endfor %}
-                        </tr>
-                        <tr>
-                            <td>{{ info.title }}</td>
-                            <td>
-                                {% for phone in contacts_helps %}
-                                <p class="mb-2"><i class="fas fa-phone me-2"></i> {{ phone.number | phone2numeric }}</p>
-                                {% endfor %}
-                                <p class="mb-0"><i class="fas fa-envelope me-2"></i>info@itti-americanhighschoolmada.com
-                                </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+	<div class="container py-5">
+		<div class="row g-5">
+			<div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+				<h1 class="display-6 text-white mb-5">Visiting Hours</h1>
+				<ul class="list-group list-group-flush">
+					{% for hour_list in hour_lists %}
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						<span>{{ hour_list.day }}</span>
+						<span>{{ hour_list.message }}</span>
+						<span>{{ hour_list.open }} - {{ hour_list.close }}</span>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
+				<h1 class="display-6 text-white mb-5">Contact Info</h1>
+				<table class="table table-borderless text-light">
+					<tbody>
+						<tr>
+							<td>Office</td>
+							{% for address in addresses_ahsm %}
+							<td>{{ address.lot }} {{ address.street }} {{ address.state }}</td>
+							{% endfor %}
+						</tr>
+						<tr>
+							<td>{{ info.title }}</td>
+							<td>
+								{% for phone in contacts_helps %}
+								<p class="mb-2"><i class="fas fa-phone me-2"></i> {{ phone.number | phone2numeric }}</p>
+								{% endfor %}
+								<p class="mb-0"><i class="fas fa-envelope me-2"></i>info@itti-americanhighschoolmada.com
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- Membership Start -->
 <div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <p><span class="text-primary me-2">#</span>Price</p>
-                <h1 class="display-5 mb-0">
-                    Your Children Can Be A Proud Member Of
-                    <span class="text-primary">ITTI AHS</span>
-                </h1>
-            </div>
-            <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="{% url 'contact_us:index' %}">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Membership End -->
-<!-- Testimonial Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            Our Clients Say!
-        </h1>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-            {% for testimonial in testimonials_home %}
-            <div class="testimonial-item text-center">
-                <img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="{{ testimonial.image.url }}"
-                    style="width: 100px; height: 100px" alt="image" />
-                <div class="testimonial-text rounded text-center p-4">
-                    <p>
-                        {{ testimonial.content }}
-                    </p>
-                    <h5 class="mb-1">{{ testimonial.name }}</h5>
-                    <span class="fst-italic">{{ testimonial.occupation }}</span>
+	<div class="container">
+		<div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+			<div class="col-lg-6">
+				<p><span class="text-primary me-2">#</span>Price</p>
+				<h1 class="display-5 mb-0">
+					Your Children Can Be A Proud Member Of
+					<span class="text-primary">ITTI AHS</span>
+				</h1>
+			</div>
+			<div class="col-lg-6 text-lg-end">
+				<a class="btn btn-primary py-3 px-5" href="{% url 'contact_us:index' %}">Contact Us</a>
+			</div>
+		</div>
+        <div class="row">
+            {% for accrd in accreditations %}
+                <div class="col-md-4">
+                    <img src="{{ accrd.image.url }}" alt="{{ accrd.name }}">
                 </div>
-            </div>
             {% endfor %}
         </div>
-    </div>
-</div>
-<!-- Testimonial End -->
-{% if messages %}
-{% for message in messages %}
-<div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert"
-    aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-        <div class="toast-body">
-            {{ message }}
-        </div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-            aria-label="Close"></button>
-    </div>
-</div>
-{% endfor %}
-{% endif %}
-{% endblock %}
+	</div>
+	<!-- Membership End -->
+	<!-- Testimonial Start -->
+	<div class="container-xxl py-5">
+		<div class="container">
+			<h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+				Our Clients Say!
+			</h1>
+			<div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+				{% for testimonial in testimonials_home %}
+				<div class="testimonial-item text-center">
+					<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
+						src="{{ testimonial.image.url }}" style="width: 100px; height: 100px" alt="image" />
+					<div class="testimonial-text rounded text-center p-4">
+						<p>
+							{{ testimonial.content }}
+						</p>
+						<h5 class="mb-1">{{ testimonial.name }}</h5>
+						<span class="fst-italic">{{ testimonial.occupation }}</span>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- Testimonial End -->
+	{% if messages %}
+	{% for message in messages %}
+	<div class="toast align-items-center text-white alert alert-{{ message.tags }} border-0" role="alert"
+		aria-live="assertive" aria-atomic="true">
+		<div class="d-flex">
+			<div class="toast-body">
+				{{ message }}
+			</div>
+			<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+				aria-label="Close"></button>
+		</div>
+	</div>
+	{% endfor %}
+	{% endif %}
+	{% endblock %}
 
-{% block style %}
-<style>
-    .card-wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        align-items: center;
-        /* Centrer les éléments horizontalement */
-        justify-content: center;
-        /* Centrer les éléments verticalement */
-    }
+	{% block style %}
+	<style>
+		.card-wrapper {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			align-items: center;
+			/* Centrer les éléments horizontalement */
+			justify-content: center;
+			/* Centrer les éléments verticalement */
+		}
 
-    .card {
-        flex: 1;
-    }
+		.card {
+			flex: 1;
+		}
 
-    .card-img {
-        height: 100%;
-        object-fit: cover;
-    }
-</style>
-{% endblock %}
+		.card-img {
+			height: 100%;
+			object-fit: cover;
+		}
+	</style>
+	{% endblock %}
