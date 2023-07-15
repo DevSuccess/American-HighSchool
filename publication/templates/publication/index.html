@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container-xxl">
     <div class="container mt-4">
-        <div class="row">
+        <div class="row justify-content-center">
             {% for new in news %}
             <div class="col-md-6">
                 <div class="card mt-3">
@@ -19,6 +19,10 @@
                                 <small class="text-muted">Posted on {{ new.created_at }}</small>
                             </div>
                         </div>
+                        <p>{{ new.content }}</p>
+                        {% if new.image.url %}
+                        <img src="{{ new.image.url }}" class="img-fluid rounded" alt="Post Image">
+                        {% endif %}
                         <div class="btn-group justify-content-end mb-2">
                             <button type="button" class="btn btn-sm btn-primary"><i
                                     class="far fa-thumbs-up"></i> Like</button>
@@ -27,10 +31,6 @@
                             <button type="button" class="btn btn-sm btn-primary"><i
                                     class="far fa-share-square"></i> Share</button>
                         </div>
-                        <p>{{ new.content }}</p>
-                        {% if new.image.url %}
-                        <img src="{{ new.image.url }}" class="img-fluid rounded" alt="Post Image">
-                        {% endif %}
                     </div>
                 </div>
             </div>
