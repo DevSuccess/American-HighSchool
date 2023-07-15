@@ -5,62 +5,62 @@ Price
 {% endblock %}
 {% block content %}
 <section id="team" class="section gray-bg">
-		<div class="container">
-			<div class="row title text-center">
-				<h2 class="margin-top">Team</h2>
-				<h4 class="light muted">We're a dream team!</h4>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="team text-center">
-						<div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
-							<div class="overlay text-center">
-								<h3 class="white">$69.00</h3>
-								<h5 class="light light-white">1 - 5 sessions / month</h5>
-							</div>
-						</div>
-						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
-						<div class="title">
-							<h4>Ben Adamson</h4>
-							<h5 class="muted regular">Fitness Instructor</h5>
-						</div>
-						<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="team text-center">
-						<div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
-							<div class="overlay text-center">
-								<h3 class="white">$69.00</h3>
-								<h5 class="light light-white">1 - 5 sessions / month</h5>
-							</div>
-						</div>
-						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
-						<div class="title">
-							<h4>Eva Williams</h4>
-							<h5 class="muted regular">Personal Trainer</h5>
-						</div>
-						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="team text-center">
-						<div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
-							<div class="overlay text-center">
-								<h3 class="white">$69.00</h3>
-								<h5 class="light light-white">1 - 5 sessions / month</h5>
-							</div>
-						</div>
-						<img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
-						<div class="title">
-							<h4>John Phillips</h4>
-							<h5 class="muted regular">Personal Trainer</h5>
-						</div>
-						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="container">
+        <div class="row title text-center">
+            <h2 class="margin-top">Team</h2>
+            <h4 class="light muted">We're a dream team!</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="team text-center">
+                    <div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
+                        <div class="overlay text-center">
+                            <h3 class="white">$69.00</h3>
+                            <h5 class="light light-white">1 - 5 sessions / month</h5>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
+                    <div class="title">
+                        <h4>Ben Adamson</h4>
+                        <h5 class="muted regular">Fitness Instructor</h5>
+                    </div>
+                    <button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team text-center">
+                    <div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
+                        <div class="overlay text-center">
+                            <h3 class="white">$69.00</h3>
+                            <h5 class="light light-white">1 - 5 sessions / month</h5>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
+                    <div class="title">
+                        <h4>Eva Williams</h4>
+                        <h5 class="muted regular">Personal Trainer</h5>
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team text-center">
+                    <div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
+                        <div class="overlay text-center">
+                            <h3 class="white">$69.00</h3>
+                            <h5 class="light light-white">1 - 5 sessions / month</h5>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/img/background/bg6.jpeg' %}" alt="Team Image" class="avatar small-image">
+                    <div class="title">
+                        <h4>John Phillips</h4>
+                        <h5 class="muted regular">Personal Trainer</h5>
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
 	</section>
 {% endblock %}
 {% block style %}
@@ -74,7 +74,7 @@ h5,
 h6 {
 	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	position: relative;
-	margin: 10px 0;
+	{#margin: 10px 0;#}
 }
 
 h1 {
@@ -161,10 +161,10 @@ section {
 	background: #fff;
 }
 
-.section-padded {
-	padding: 140px 0 40px;
-}
-
+{#.section-padded {#}
+{#	padding: 140px 0 40px;#}
+{#}#}
+{##}
 
 
 .team {
@@ -274,9 +274,9 @@ section {
 	color: #989da0;
 }
 
-.margin-top {
-	margin-top: 150px;
-}
+{#.margin-top {#}
+{#	margin-top: 150px;#}
+{#}#}
 
 /* New style to make the avatar (image) smaller */
 .avatar.small-image {
