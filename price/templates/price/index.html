@@ -14,18 +14,18 @@ Price
             {% for price in prices %}
                 <div class="col-md-4">
                 <div class="team text-center">
-                    <div class="cover" style="background:url({% static 'assets/img/background/bg6.jpeg' %}); background-size:cover;">
+                    <div class="cover" style="background:url({{ price.image.url }}); background-size:cover;">
                         <div class="overlay text-center">
-                            <h3 class="white">{{ price.value }}</h3>
+                            <h3 class="white">{{ price.formatted_value }}</h3>
                             <h5 class="light light-white">{{ price.birth }} years</h5>
                         </div>
                     </div>
-                    <img src="{{ price.image.url }}" alt="{{ price.value }}" class="avatar small-image">
+                    <img src="{{ price.levels.image.url }}" alt="{{ price.levels.name }}" class="avatar small-image">
                     <div class="title">
-                        <h4>Ben Adamson</h4>
-                        <h5 class="muted regular">Fitness Instructor</h5>
+                        <h4>{{ price.levels.name }}</h4>
+                        <h5 class="muted regular">{{ price.formatted_registration }} Registration Fee</h5>
                     </div>
-                    <button data-toggle="modal" data-target="#modal1" class="btn-team btn-team-blue-fill">Sign Up Now</button>
+                    <button data-toggle="modal" data-target="#modal1" class="btn-team btn-team-blue-fill">Get Started</button>
                 </div>
             </div>
             {% endfor %}
