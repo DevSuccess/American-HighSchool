@@ -21,7 +21,9 @@
                     <div class="box pr-0 pr-lg-5">
                         <div
                             class="img-box text-white bg-danger rounded-circle d-flex justify-content-center align-items-center">
-                            <i class="fas fa-5x">{{ accademic.value.birth}}</i> Years
+                            <span>
+                                <i class="fas fa-5x">{{ accademic.value.birth}}</i> Years
+                            </span>
                         </div>
                         <div class="detail-box">
                             <h5 class="fw-bold">
@@ -94,7 +96,7 @@
         transition: all .3s;
     }
 
-    .wedo_section .box .img-box i {
+    .wedo_section .box .img-box span {
         width: 55px;
         margin-right: 10px;
         position: relative;
