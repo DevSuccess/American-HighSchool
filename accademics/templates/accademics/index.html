@@ -19,17 +19,17 @@
                 {% for accademic in accademics %}
                 <div class="col-md-6 col-lg-3">
                     <div class="box pr-0 pr-lg-5">
-                        <div class="img-box text-white">
+                        <div class="img-box text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
                             <i class="fas fa-5x">{{ accademic.value.birth}}</i> Years
                         </div>
                         <div class="detail-box">
-                            <h5>
+                            <h5 class="fw-bold">
                                 {{ accademic.value.name }}
                             </h5>
                             <p>
                                 {{ accademic.description }}
                             </p>
-                            <a href="#">
+                            <a href="#" class="btn btn-primary">
                                 Get Started
                             </a>
                         </div>
@@ -42,6 +42,7 @@
     </section>
 </main>
 {% endblock %}
+
 
 {% block style %}
 <style>
@@ -93,7 +94,7 @@
 
     .wedo_section .box .detail-box a {
         display: inline-block;
-        background-color: #0a1b89;
+        background-color: #0d6efd;
         color: #ffffff;
         padding: 10px 25px;
         border-radius: 0;
