@@ -4,36 +4,38 @@
 {% block title %}News{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <div class="row">
-        {% for new in news %}
-        <div class="col-md-6">
-            <div class="card mt-3">
-                <div class="card-body">
-                    <div class="media">
-                        <img src="{{ new.author.image.url }}" class="rounded-circle mr-3" width="64" height="64" alt="User Profile Image">
-                        <div class="media-body">
-                            <div class="d-flex justify-content-between align-items-center">
+<div class="container-xxl">
+    <div class="container mt-4">
+        <div class="row">
+            {% for new in news %}
+            <div class="col-md-6">
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="media">
+                            <img src="{{ new.author.image.url }}" class="rounded-circle mr-3" width="64" height="64"
+                                alt="User Profile Image">
+                            <div class="media-body">
                                 <h5 class="mb-1">{{ new.author.name }}</h5>
                                 <small class="text-muted">Posted on {{ new.created_at }}</small>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-2">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-primary"><i class="far fa-thumbs-up"></i> Like</button>
-                                    <button type="button" class="btn btn-sm btn-primary"><i class="far fa-comment"></i> Comment</button>
-                                    <button type="button" class="btn btn-sm btn-primary"><i class="far fa-share-square"></i> Share</button>
+                                <div class="btn-group mt-2">
+                                    <button type="button" class="btn btn-sm btn-primary"><i
+                                            class="far fa-thumbs-up"></i> Like</button>
+                                    <button type="button" class="btn btn-sm btn-primary"><i
+                                            class="far fa-comment"></i> Comment</button>
+                                    <button type="button" class="btn btn-sm btn-primary"><i
+                                            class="far fa-share-square"></i> Share</button>
                                 </div>
                             </div>
-                            <p class="mt-2">{{ new.content }}</p>
-                            {% if new.image.url %}
-                            <img src="{{ new.image.url }}" class="img-fluid rounded" alt="Post Image">
-                            {% endif %}
                         </div>
+                        <p class="mt-2">{{ new.content }}</p>
+                        {% if new.image.url %}
+                        <img src="{{ new.image.url }}" class="img-fluid rounded" alt="Post Image">
+                        {% endif %}
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
 {% endblock %}
