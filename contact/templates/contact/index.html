@@ -57,9 +57,9 @@ Contact
                             <p class="mb-2">
                                 <span class="text-danger me-2">#</span>Mail Now
                             </p>
-                            <marque behavior="scroll" direction="left" scrollamount="5">
+                            <marquee behavior="scroll" direction="left" scrollamount="5">
                                 <h5 class="mb-0" title="mail">info@itti-americanhighschoolmada.com</h5>
-                            </marque>
+                            </marquee>
                         </div>
                     </div>
                 </div>
@@ -77,49 +77,47 @@ Contact
                     </p>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="container">
-                        <form method="post" action="">
-                            {% csrf_token %}
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        {{ form.name }}
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        {{ form.email }}
-                                        <label for="email">Your Email</label>
-                                    </div>
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ form.name }}
+                                    <label for="name">Your Name</label>
                                 </div>
                             </div>
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        {{ form.subject }}
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        {{ form.message }}
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                {% if form.non_field_errors %}
-                                    {% for error in form.non_field_errors %}
-                                        <p class="alert alert-danger my-3">{{ error }}</p>
-                                    {% endfor %}
-                                {% endif %}
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">
-                                        Send Message
-                                    </button>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    {{ form.email }}
+                                    <label for="email">Your Email</label>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.subject }}
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    {{ form.message }}
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            {% if form.non_field_errors %}
+                            {% for error in form.non_field_errors %}
+                            <p class="alert alert-danger my-3">{{ error }}</p>
+                            {% endfor %}
+                            {% endif %}
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100" style="min-height: 400px">
