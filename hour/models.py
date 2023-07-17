@@ -19,7 +19,7 @@ class Hour(models.Model):
     class Meta:
         db_table = "hour"
         verbose_name_plural = "Les Horaires de AHSM"
-        ordering = ['day']
+        ordering = ['day', 'open']
 
     def __str__(self):
         return self.day
