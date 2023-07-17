@@ -84,7 +84,7 @@
       <h2><i class="fas fa-calendar-alt icon"></i>All Hours</h2>
       {% for hour in hours %}
         <div class="hour">
-          <p class="day">{{ hour.day }}</p>
+          <p class="day">{{ hour.get_day_display }}</p>
           <p class="time"><i class="far fa-clock icon"></i>{{ hour.open|time:"g:i A" }} - {{ hour.close|time:"g:i A" }}</p>
           {% if hour.message %}
             <p class="message">{{ hour.message }}</p>
