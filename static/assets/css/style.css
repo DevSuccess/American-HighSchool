@@ -1,6 +1,7 @@
 /********** Template CSS **********/
 :root {
     --primary: red;
+    --secondary: #13629e;
     --light: #F3F4F5;
     --dark: #282F34;
 }
@@ -106,7 +107,7 @@ h1{
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 @media (max-width: 991.98px) {
