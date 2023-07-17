@@ -4,17 +4,15 @@ from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.utils.safestring import mark_safe
 
-
 DAYS = (
-    ('Mon', 'Lundi'),
-    ('Tue', 'Mardi'),
-    ('Wed', 'Mercredi'),
-    ('Thu', 'Jeudi'),
-    ('Fri', 'Vendredi'),
-    ('Sat', 'Samedi'),
-    ('Sun', 'Dimanche'),
+    ('Monday', 'Monday'),
+    ('Tuesday', 'Tuesday'),
+    ('Wednesday', 'Wednesday'),
+    ('Thursday', 'Thursday'),
+    ('Friday', 'Friday'),
+    ('Saturday', 'Saturday'),
+    ('Sunday', 'Sunday')
 )
-
 
 SOCIALS = (
     ('fab fa-linkedin-in', 'LinkedIn'),
@@ -295,7 +293,7 @@ def upload_path(instance, filename):
 
 
 class BaseModel(models.Model):
-    active = models.BooleanField(default=True,)
+    active = models.BooleanField(default=True, )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
