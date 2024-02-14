@@ -21,15 +21,15 @@
       <a href="{% url 'home:index' %}" class="nav-item nav-link {% if current_page == '/' %}active{% endif %}" >Home</a>
       <a href="{% url 'about:index' %}" class="nav-item nav-link {% if current_page == '/about/' %}active{% endif %}">About Us</a>
       <a href="{% url 'accademics:index' %}" class="nav-item nav-link {% if current_page == '/accademics/' %}active{% endif %}">Accademics</a>
-      <a href="{% url 'publication:index' %}" class="nav-item nav-link position-relative {% if current_page == '/publication/' %}active{% endif %} ">
-          News
-          <span
-              class="position-absolute top-15 start-100 translate-middle
-               badge border border-light rounded-circle bg-danger p-1">
-              <span class="visually-hidden">unread messages</span>
-          </span>
-      </a>
-{#      <a href="{% url 'blog:index' %}" class="nav-item nav-link {% if current_page == '/blog/' %}active{% endif %}">Blog</a>#}
+{#      <a href="{% url 'publication:index' %}" class="nav-item nav-link position-relative {% if current_page == '/publication/' %}active{% endif %} ">#}
+{#          News#}
+{#          <span#}
+{#              class="position-absolute top-15 start-100 translate-middle#}
+{#               badge border border-light rounded-circle bg-danger p-1">#}
+{#              <span class="visually-hidden">unread messages</span>#}
+{#          </span>#}
+{#      </a>#}
+      <a href="{% url 'blog:index' %}" class="nav-item nav-link {% if current_page == '/blog/' %}active{% endif %}">Blog</a>
       <div class="nav-item dropdown">
         <a href="#"
           class="
