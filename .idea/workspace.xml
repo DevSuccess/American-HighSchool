@@ -4,96 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="">
+    <list default="true" id="1478ebe9-f9ff-4dda-83f0-903cb3c678a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" />
-    <setting file="mock:///AIAssistantSnippet" root0="ESSENTIAL" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/static/assets/lib/lightbox/css/lightbox.min.css" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2RFhbhqjZgz4Fy4yIKKknDCxGkF" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2cLNI21lnS1mFvYQ7cEVuzX9kPH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-    <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/run/media/muriel/Storage/Freelance/ITTI/American Highschool Madagascar/Web/static/assets/img/background&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django Server.American-HighSchool.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/assets/img/background" />
-      <recent name="$PROJECT_DIR$/testimonie" />
-      <recent name="$PROJECT_DIR$/register" />
-      <recent name="$PROJECT_DIR$/publication" />
-      <recent name="$PROJECT_DIR$/price" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/publication/templates" />
-      <recent name="$PROJECT_DIR$/publication/template/publication" />
-      <recent name="$PROJECT_DIR$/publication" />
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/templates/layouts" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="Web" type="Python.DjangoServer" factoryName="Django server">
-      <module name="Web" />
+    <configuration name="American-HighSchool" type="Python.DjangoServer" factoryName="Django server" singleton="false">
+      <module name="American-HighSchool" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Web.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10 (American-HighSchool)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -109,78 +74,49 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <module name="American-HighSchool" />
+      <option name="ENV_FILES" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Web.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10 (American-HighSchool)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6b0b7f5f-237f-457c-8d76-3623c0c1ab09" name="Changes" comment="" />
-      <created>1686851814056</created>
+      <changelist id="1478ebe9-f9ff-4dda-83f0-903cb3c678a8" name="Changes" comment="" />
+      <created>1707886815847</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1686851814056</updated>
-      <workItem from="1686851941012" duration="14081000" />
-      <workItem from="1686892033068" duration="26373000" />
-      <workItem from="1686921781074" duration="1271000" />
-      <workItem from="1686930463244" duration="16453000" />
-      <workItem from="1686979240355" duration="7657000" />
-      <workItem from="1686987344652" duration="8098000" />
-      <workItem from="1687020892373" duration="6134000" />
-      <workItem from="1687152446479" duration="10727000" />
-      <workItem from="1687166424098" duration="13637000" />
-      <workItem from="1687191288017" duration="9607000" />
-      <workItem from="1687238318825" duration="5268000" />
-      <workItem from="1687245124164" duration="35000" />
-      <workItem from="1687262699953" duration="5977000" />
-      <workItem from="1687276259747" duration="8946000" />
-      <workItem from="1687286444383" duration="317000" />
-      <workItem from="1687316176850" duration="10138000" />
-      <workItem from="1687330056346" duration="1271000" />
-      <workItem from="1687341527754" duration="4821000" />
-      <workItem from="1687347820835" duration="7554000" />
-      <workItem from="1687364813722" duration="13724000" />
-      <workItem from="1687410420848" duration="12114000" />
-      <workItem from="1687427231304" duration="1569000" />
-      <workItem from="1687454153762" duration="6066000" />
-      <workItem from="1687488252648" duration="3813000" />
-      <workItem from="1687496583836" duration="26806000" />
-      <workItem from="1687535753295" duration="8306000" />
-      <workItem from="1687574566481" duration="10730000" />
-      <workItem from="1687615693488" duration="346000" />
-      <workItem from="1687633867115" duration="795000" />
-      <workItem from="1687789604547" duration="209000" />
-      <workItem from="1687789904364" duration="1751000" />
-      <workItem from="1687791737852" duration="63000" />
-      <workItem from="1687797581910" duration="77000" />
-      <workItem from="1687861310723" duration="1827000" />
-      <workItem from="1687864906997" duration="89000" />
-      <workItem from="1688026902111" duration="9563000" />
-      <workItem from="1688122956571" duration="11231000" />
-      <workItem from="1688141004572" duration="17296000" />
-      <workItem from="1688179959377" duration="23055000" />
-      <workItem from="1688313370553" duration="10467000" />
-      <workItem from="1688360721614" duration="12718000" />
-      <workItem from="1688407624021" duration="308000" />
-      <workItem from="1688584391753" duration="1004000" />
-      <workItem from="1688657697022" duration="73000" />
-      <workItem from="1688713049628" duration="273000" />
-      <workItem from="1688982799479" duration="10354000" />
-      <workItem from="1689017940158" duration="625000" />
-      <workItem from="1689152144709" duration="2684000" />
-      <workItem from="1689177508894" duration="13341000" />
-      <workItem from="1689216319752" duration="5593000" />
-      <workItem from="1689225519180" duration="9588000" />
-      <workItem from="1689235686665" duration="9663000" />
-      <workItem from="1689247602967" duration="1149000" />
-      <workItem from="1689262133306" duration="7313000" />
-      <workItem from="1689311506955" duration="29013000" />
-      <workItem from="1689352245204" duration="6986000" />
-      <workItem from="1689402132185" duration="10281000" />
-      <workItem from="1689413285199" duration="5844000" />
-      <workItem from="1689420032284" duration="2164000" />
-      <workItem from="1689434968682" duration="4105000" />
-      <workItem from="1689570869570" duration="3299000" />
-      <workItem from="1689586104271" duration="4768000" />
-      <workItem from="1689610787025" duration="54000" />
+      <updated>1707886815847</updated>
+      <workItem from="1707886820035" duration="1712000" />
     </task>
     <servers />
   </component>

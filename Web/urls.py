@@ -27,7 +27,7 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('accademics/', include('accademics.urls')),
     path('accreditation/', include('accreditation.urls')),
-    path('blog/', include('blog.urls')),
+    # path('blog/', include('blog.urls')),
     path('contact/', include('contact.urls')),
     path('hour/', include('hour.urls')),
     path('member/', include('member.urls')),

@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'accademics.apps.AccademicsConfig',
     'accreditation.apps.AccreditationConfig',
     'address.apps.AddressConfig',
-    'blog.apps.BlogConfig',
+    # 'blog.apps.BlogConfig',
     'contact.apps.ContactConfig',
     'home.apps.HomeConfig',
     'hour.apps.HourConfig',
