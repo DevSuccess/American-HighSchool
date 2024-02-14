@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'hour.apps.HourConfig',
     'member.apps.MemberConfig',
     'price.apps.PriceConfig',
-    # 'publication.apps.PublicationConfig',
+    'publication.apps.PublicationConfig',
     'register.apps.RegisterConfig',
     'testimonie.apps.TestimonieConfig',
 ]
