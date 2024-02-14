@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1478ebe9-f9ff-4dda-83f0-903cb3c678a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/partials/_navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707886815847</updated>
-      <workItem from="1707886820035" duration="1712000" />
+      <workItem from="1707886820035" duration="2516000" />
     </task>
     <servers />
   </component>
